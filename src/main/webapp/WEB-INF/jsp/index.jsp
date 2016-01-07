@@ -20,7 +20,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         }
     </script>
     <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
+   <%-- <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>--%>
     <script src="js/jquery.min.js"></script>
 </head>
 
@@ -249,17 +249,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- FlexSlider -->
         <script defer src="js/jquery.flexslider.js"></script>
         <script type="text/javascript">
-            $(function () {
-                SyntaxHighlighter.all();
-            });
-            $(window).load(function () {
+            /*$(window).load(function () {
                 $('.flexslider').flexslider({
                     animation: "slide",
                     start: function (slider) {
                         $('body').removeClass('loading');
                     }
                 });
-            });
+            });*/
         </script>
         <!-- FlexSlider -->
 

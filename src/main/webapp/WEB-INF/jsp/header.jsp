@@ -2,9 +2,11 @@
 <%@page pageEncoding="UTF-8" %>
 <div class="header">
     <div class="container">
-        <div class="logo">
+       <%-- <div class="logo header-top" style="font-size: 24pt; font-weight:bold ;color:#ffffff;font-family:'微软雅黑;margin-left: 100px;;" >
             <!--<a href="index.html"><img src="images/logo.png" class="img-responsive" alt="" /></a>-->
-        </div>
+
+            江苏凌比特微电子技术有限公司
+        </div>--%>
         <div class="hader-top">
             <div class="head-nav">
                 <span class="menu"> </span>
@@ -14,16 +16,15 @@
                     <li><a href="/beidou" data-hover="关于北斗">关于北斗</a></li>
                     <li><a href="/news" data-hover="行业新闻">行业新闻</a></li>
                     <li><a href="/customers" data-hover="公司客户">公司客户</a></li>
-                    <li><a href="/contact" data-hover="联系我们">联系我们</a></li>
                     <div class="clearfix"></div>
                 </ul>
                 <!-- script-for-nav -->
 
                 <!-- script-for-nav -->
             </div>
-            <%--<div class="head-right">
+            <div class="head-right">
                 <P><a href="/contact">联系我们</a></P>
-            </div>--%>
+            </div>
             <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
@@ -33,7 +34,9 @@
 
 
     $(function () {
-        $("ul>li").on("click", function () {
+        $("ul li").on("click", function () {
+
+            console.log("click----------");
             $(this).addClass("active");
         })
     });
