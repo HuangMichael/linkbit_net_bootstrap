@@ -285,11 +285,12 @@ span{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	-ms-background-size: cover;
-	min-height: 700px;
+	min-height: 200px;
+	max-height: 300px;
 	text-align: center;
 }
 .tittle {
-	padding-top: 38em;
+	padding-top: 1em;  /*38em*/
 }
 .tittle h4 {
 	color: #fff;
@@ -893,17 +894,17 @@ div.register-bottom-grid {
 /*-- responsive-mediaquries --*/
 @media(max-width:1024px){
 .thought h1 {
-	font-size: 1.8em;
+	font-size: 18pt;
 	width:54%;
 }
 .banner-info h4 {
-	font-size: 1.3em;
+	font-size: 12pt;
 }
 .banner-info p {
-	font-size: 1em;
+	font-size: 10pt;
 }
 .link {
-	font-size: 0.9em; 
+	font-size: 9pt;
 }
 .wmuSliderPrev {
 	background-position: -185px -7px;

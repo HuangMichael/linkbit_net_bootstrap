@@ -28,18 +28,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- header -->
 <jsp:include page="header.jsp"/>
 <!-- header -->
-<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">企业网站模板</a></div>
 <!-- thought -->
 <div class="thought">
     <div class="container">
-        <h1>The thought and consideration we put into our products go well beyond desing.</h1>
+        <h1>北斗伴侣</h1>
     </div>
     <div class="wmuSlider example1 section" id="section-1">
         <article style="position: absolute; width: 100%; opacity: 0;">
             <div class="banner-info">
                 <div class="container">
                     <div class="col-md-5 thought-left">
-                        <img src="images/img1.png" class="img-responsive" alt=""/>
+                        <img src="images/product1.jpg" class="img-responsive" alt=""/>
                     </div>
                     <div class="col-md-7 thought-right">
                         <div class="communt">
@@ -47,10 +46,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <i class="man"></i>
                             </div>
                             <div class="communt-right">
-                                <h4>Community</h4>
-
-                                <p>More than <span>2 millon people</span>use products built by the Source community.</p>
-                                <a href="details.html" class="link">Get Involved</a>
+                                <h4>RDSS双向定位</h4>
+                                <p><span>全球首款</span>内置北斗短报文通信功能和导航功能的5寸大屏智能手机。</p>
+                                <a href="details.html" class="link">了解更多</a>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -59,11 +57,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <i class="bulb"></i>
                             </div>
                             <div class="communt-right">
-                                <h4>Design & Performance</h4>
-
-                                <p>Creating an entirely new design meantinventing an entirely new techonology with a
-                                    level of precision you’d excepet.</p>
-                                <a href="details.html" class="link">Get Involved</a>
+                                <h4>RDSS短报文通信</h4>
+                                <p><span>全球首款</span>内置北斗短报文通信功能和导航功能的5寸大屏智能手机。</p>
+                                <a href="details.html" class="link">了解更多</a>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -72,9 +68,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <i class="bar"></i>
                             </div>
                             <div class="communt-right">
-                                <h4>Accurate results</h4>
-
-                                <p>We give you - easy to understand, real time data on your smarthphone.</p>
+                                <h4>RNSS单项定位</h4>
+                                <p><span>全球首款</span>内置北斗短报文通信功能和导航功能的5寸大屏智能手机，多种通讯方式相结合，实现无通讯盲区， 用户间无缝连接。</p>
                                 <a href="details.html" class="link">Get Involved</a>
                             </div>
                             <div class="clearfix"></div>
@@ -207,7 +202,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="slides">
                     <li>
                         <div class="tittle">
-                            <h4>Why Source is awsome?</h4>
+                            <h4>RDSS双向定位</h4>
 
                             <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve
                                 complex business challenges.</p>
@@ -293,18 +288,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- bull -->
 <!-- our-ne -->
-<div class="our-ne">
+<%--<div class="our-ne">
     <div class="container">
         <h3>Our Newsletter</h3>
         <h4>It is for me? Source is used by over 1.000 users</h4>
-
         <form>
-            <input type="text" class="text" value="Your email" onFocus="this.value = '';"
-                   onBlur="if (this.value == '') {this.value = 'Your email';}">
+            <input type="text" class="text" placeholder="请输入您的电子邮箱">
         </form>
         <label></label>
     </div>
-</div>
+</div>--%>
 <!-- our-ne -->
 <!-- footer -->
 

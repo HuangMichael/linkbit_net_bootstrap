@@ -30,43 +30,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="register">
             <form>
                 <div class="register-top-grid">
-                    <h3>PERSONAL INFORMATION</h3>
+                    <h3>个人信息</h3>
+
                     <div class="wow fadeInLeft" data-wow-delay="0.4s">
-                        <span>First Name<label>*</label></span>
+                        <span>姓名<label>*</label></span>
                         <input type="text">
                     </div>
                     <div class="wow fadeInRight" data-wow-delay="0.4s">
-                        <span>Last Name<label>*</label></span>
+                        <span>联系方式<label>*</label></span>
+                        <input type="text">
+                    </div>
+                    <div class="wow fadeInLeft" data-wow-delay="0.4s">
+                        <span>单位名称<label></label></span>
                         <input type="text">
                     </div>
                     <div class="wow fadeInRight" data-wow-delay="0.4s">
-                        <span>Email Address<label>*</label></span>
+                        <span>电子邮箱<label></label></span>
                         <input type="text">
                     </div>
                     <div class="clearfix"></div>
-                    <a class="news-letter" href="#">
-                        <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for
-                            Newsletter</label>
-                    </a>
-                </div>
-                <div class="register-bottom-grid">
-                    <h3>LOGIN INFORMATION</h3>
 
-                    <div class="wow fadeInLeft" data-wow-delay="0.4s">
-                        <span>Password<label>*</label></span>
-                        <input type="text">
-                    </div>
-                    <div class="wow fadeInRight" data-wow-delay="0.4s">
-                        <span>Confirm Password<label>*</label></span>
-                        <input type="text">
-                    </div>
                 </div>
             </form>
             <div class="clearfix"></div>
             <div class="register-but">
                 <form>
-                    <input type="submit" value="submit">
-
+                    <input type="submit" value="提交">
                     <div class="clearfix"></div>
                 </form>
             </div>

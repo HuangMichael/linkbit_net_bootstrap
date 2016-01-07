@@ -14,27 +14,21 @@
                     <li><a href="/beidou" data-hover="关于北斗">关于北斗</a></li>
                     <li><a href="/news" data-hover="行业新闻">行业新闻</a></li>
                     <li><a href="/customers" data-hover="公司客户">公司客户</a></li>
+                    <li><a href="/contact" data-hover="联系我们">联系我们</a></li>
                     <div class="clearfix"></div>
                 </ul>
                 <!-- script-for-nav -->
-                <script>
-                    $("span.menu").click(function () {
-                        $(".head-nav ul").slideToggle(300, function () {
-                            // Animation complete.
-                        });
-                    });
-                </script>
+
                 <!-- script-for-nav -->
             </div>
-            <div class="head-right">
+            <%--<div class="head-right">
                 <P><a href="/contact">联系我们</a></P>
-            </div>
+            </div>--%>
             <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
     </div>
 </div>
-
 <script type="text/javascript">
 
 
@@ -42,5 +36,11 @@
         $("ul>li").on("click", function () {
             $(this).addClass("active");
         })
-    })
+    });
+
+    $("span.menu").click(function () {
+        $(".head-nav ul").slideToggle(300, function () {
+
+        });
+    });
 </script>
