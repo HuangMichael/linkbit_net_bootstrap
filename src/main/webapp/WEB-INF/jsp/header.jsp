@@ -15,7 +15,7 @@
                     <li><a href="/product" data-hover="公司产品">公司产品</a></li>
                     <li><a href="/beidou" data-hover="关于北斗">关于北斗</a></li>
                     <li><a href="/news" data-hover="行业新闻">行业新闻</a></li>
-                    <li><a href="/customers" data-hover="公司客户">公司客户</a></li>
+                    <li><a href="/contact" data-hover="联系我们">联系我们</a></li>
                     <div class="clearfix"></div>
                 </ul>
                 <!-- script-for-nav -->
@@ -23,7 +23,7 @@
                 <!-- script-for-nav -->
             </div>
             <div class="head-right">
-                <P><a href="/contact">联系我们</a></P>
+                <P><a href="/admin">管理员入口</a></P>
             </div>
             <div class="clearfix"></div>
         </div>

@@ -2,88 +2,40 @@
 <%@page pageEncoding="UTF-8" %>
 <!DOCTYPE HTML>
 <html>
+
 <head>
-    <base href="/">
-    <title>江苏凌比特微电子技术有限公司</title>
+    <title>Home</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Source Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
     <script type="application/x-javascript">
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
     </script>
     <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-   <%-- <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>--%>
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
     <script src="js/jquery.min.js"></script>
 </head>
 
 <body>
 <!-- header -->
-<jsp:include page="header.jsp"/>
+<jsp:include page="header.jsp" flush="true"/>
+
 <!-- header -->
+<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">企业网站模板</a></div>
 <!-- thought -->
 <div class="thought">
     <div class="container">
-        <h1>北斗伴侣</h1>
+        <h1>The thought and consideration we put into our products go well beyond desing.</h1>
     </div>
     <div class="wmuSlider example1 section" id="section-1">
         <article style="position: absolute; width: 100%; opacity: 0;">
             <div class="banner-info">
                 <div class="container">
                     <div class="col-md-5 thought-left">
-                        <img src="images/product1.jpg" class="img-responsive" alt=""/>
-                    </div>
-                    <div class="col-md-7 thought-right">
-                        <div class="communt">
-                            <div class="communt-left">
-                                <i class="man"></i>
-                            </div>
-                            <div class="communt-right">
-                                <h4>RDSS双向定位</h4>
-                                <p><span>全球首款</span>内置北斗短报文通信功能和导航功能的5寸大屏智能手机。</p>
-                                <a href="details.html" class="link">了解更多</a>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="communt">
-                            <div class="communt-left">
-                                <i class="bulb"></i>
-                            </div>
-                            <div class="communt-right">
-                                <h4>RDSS短报文通信</h4>
-                                <p><span>全球首款</span>内置北斗短报文通信功能和导航功能的5寸大屏智能手机。</p>
-                                <a href="details.html" class="link">了解更多</a>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="communt">
-                            <div class="communt-left">
-                                <i class="bar"></i>
-                            </div>
-                            <div class="communt-right">
-                                <h4>RNSS单项定位</h4>
-                                <p><span>全球首款</span>内置北斗短报文通信功能和导航功能的5寸大屏智能手机，多种通讯方式相结合，实现无通讯盲区， 用户间无缝连接。</p>
-                                <a href="details.html" class="link">Get Involved</a>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </article>
-        <article style="position: absolute; width: 100%; opacity: 0;">
-            <div class="banner-info">
-                <div class="container">
-                    <div class="col-md-5 thought-left">
-                        <img src="images/phone.png" class="img-responsive" alt=""/>
+                        <img src="images/img1.png" class="img-responsive" alt="" />
                     </div>
                     <div class="col-md-7 thought-right">
                         <div class="communt">
@@ -92,12 +44,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="communt-right">
                                 <h4>Community</h4>
-
-                                <p>More than <span>2 millon people</span> use products built by the Source community.
-                                </p>
+                                <p>More than <span>2 millon people</span>use products built by the Source community.</p>
                                 <a href="details.html" class="link">Get Involved</a>
                             </div>
-                            <div class="clearfix"></div>
+                            <div class="clearfix"> </div>
                         </div>
                         <div class="communt">
                             <div class="communt-left">
@@ -105,12 +55,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="communt-right">
                                 <h4>Design & Performance</h4>
-
-                                <p>Creating an entirely new design meantinventing an entirely new techonology with a
-                                    level of precision you’d excepet.</p>
+                                <p>Creating an entirely new design meantinventing an entirely new techonology with a level of precision you’d excepet.</p>
                                 <a href="details.html" class="link">Get Involved</a>
                             </div>
-                            <div class="clearfix"></div>
+                            <div class="clearfix"> </div>
                         </div>
                         <div class="communt">
                             <div class="communt-left">
@@ -118,14 +66,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="communt-right">
                                 <h4>Accurate results</h4>
-
-                                <p>More than 2 millon people use products built by the Source community.</p>
+                                <p>We give you - easy to understand, real time data on your smarthphone.</p>
                                 <a href="details.html" class="link">Get Involved</a>
                             </div>
-                            <div class="clearfix"></div>
+                            <div class="clearfix"> </div>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
+                    <div class="clearfix"> </div>
                 </div>
             </div>
         </article>
@@ -133,7 +80,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="banner-info">
                 <div class="container">
                     <div class="col-md-5 thought-left">
-                        <img src="images/img1.png" class="img-responsive" alt=""/>
+                        <img src="images/phone.png" class="img-responsive" alt="" />
                     </div>
                     <div class="col-md-7 thought-right">
                         <div class="communt">
@@ -142,12 +89,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="communt-right">
                                 <h4>Community</h4>
-
-                                <p>More than <span>2 millon people</span> use products built by the Source community.
-                                </p>
+                                <p>More than <span>2 millon people</span> use products built by the Source community.</p>
                                 <a href="details.html" class="link">Get Involved</a>
                             </div>
-                            <div class="clearfix"></div>
+                            <div class="clearfix"> </div>
                         </div>
                         <div class="communt">
                             <div class="communt-left">
@@ -155,12 +100,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="communt-right">
                                 <h4>Design & Performance</h4>
-
-                                <p>Creating an entirely new design meantinventing an entirely new techonology with a
-                                    level of precision you’d excepet.</p>
+                                <p>Creating an entirely new design meantinventing an entirely new techonology with a level of precision you’d excepet.</p>
                                 <a href="details.html" class="link">Get Involved</a>
                             </div>
-                            <div class="clearfix"></div>
+                            <div class="clearfix"> </div>
                         </div>
                         <div class="communt">
                             <div class="communt-left">
@@ -168,14 +111,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="communt-right">
                                 <h4>Accurate results</h4>
-
                                 <p>More than 2 millon people use products built by the Source community.</p>
                                 <a href="details.html" class="link">Get Involved</a>
                             </div>
-                            <div class="clearfix"></div>
+                            <div class="clearfix"> </div>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </article>
+        <article style="position: absolute; width: 100%; opacity: 0;">
+            <div class="banner-info">
+                <div class="container">
+                    <div class="col-md-5 thought-left">
+                        <img src="images/img1.png" class="img-responsive" alt="" />
+                    </div>
+                    <div class="col-md-7 thought-right">
+                        <div class="communt">
+                            <div class="communt-left">
+                                <i class="man"></i>
+                            </div>
+                            <div class="communt-right">
+                                <h4>Community</h4>
+                                <p>More than <span>2 millon people</span> use products built by the Source community.</p>
+                                <a href="details.html" class="link">Get Involved</a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="communt">
+                            <div class="communt-left">
+                                <i class="bulb"></i>
+                            </div>
+                            <div class="communt-right">
+                                <h4>Design & Performance</h4>
+                                <p>Creating an entirely new design meantinventing an entirely new techonology with a level of precision you’d excepet.</p>
+                                <a href="details.html" class="link">Get Involved</a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="communt">
+                            <div class="communt-left">
+                                <i class="bar"></i>
+                            </div>
+                            <div class="communt-right">
+                                <h4>Accurate results</h4>
+                                <p>More than 2 millon people use products built by the Source community.</p>
+                                <a href="details.html" class="link">Get Involved</a>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
                 </div>
             </div>
         </article>
@@ -202,45 +189,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="slides">
                     <li>
                         <div class="tittle">
-                            <h4>RDSS双向定位</h4>
-
-                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve
-                                complex business challenges.</p>
+                            <h4>Why Source is awsome?</h4>
+                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
                         </div>
                     </li>
                     <li>
                         <div class="tittle">
                             <h4>Lorem Ipsum is that it?</h4>
-
-                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve
-                                complex business challenges.</p>
+                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
                         </div>
                     </li>
                     <li>
                         <div class="tittle">
 
                             <h4>There are many variations?</h4>
-
-                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve
-                                complex business challenges.</p>
+                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
                         </div>
                     </li>
                     <li>
                         <div class="tittle">
 
                             <h4>Contrary to popular belief?</h4>
-
-                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve
-                                complex business challenges.</p>
+                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
                         </div>
                     </li>
                     <li>
                         <div class="tittle">
 
                             <h4>Why Source is awsome?</h4>
-
-                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve
-                                complex business challenges.</p>
+                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
                         </div>
                     </li>
                 </ul>
@@ -249,14 +226,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- FlexSlider -->
         <script defer src="js/jquery.flexslider.js"></script>
         <script type="text/javascript">
-            /*$(window).load(function () {
+            $(window).load(function(){
                 $('.flexslider').flexslider({
                     animation: "slide",
-                    start: function (slider) {
+                    start: function(slider){
                         $('body').removeClass('loading');
                     }
                 });
-            });*/
+            });
         </script>
         <!-- FlexSlider -->
 
@@ -267,39 +244,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="bull">
     <div class="container">
         <li>
-            <a href="#"><img src="images/m1.png" class="img-responsive" alt=""/></a>
+            <a href="#"><img src="images/m1.png" class="img-responsive" alt="" /></a>
         </li>
         <li>
-            <a href="#"><img src="images/m2.png" class="img-responsive" alt=""/></a>
+            <a href="#"><img src="images/m2.png" class="img-responsive" alt="" /></a>
         </li>
         <li>
-            <a href="#"><img src="images/m3.png" class="img-responsive" alt=""/></a>
+            <a href="#"><img src="images/m3.png" class="img-responsive" alt="" /></a>
         </li>
         <li>
-            <a href="#"><img src="images/m4.png" class="img-responsive" alt=""/></a>
+            <a href="#"><img src="images/m4.png" class="img-responsive" alt="" /></a>
         </li>
         <li>
-            <a href="#"><img src="images/m5.png" class="img-responsive" alt=""/></a>
+            <a href="#"><img src="images/m5.png" class="img-responsive" alt="" /></a>
         </li>
     </div>
 </div>
 <!-- bull -->
 <!-- our-ne -->
-<%--<div class="our-ne">
+<div class="our-ne">
     <div class="container">
-        <h3>Our Newsletter</h3>
-        <h4>It is for me? Source is used by over 1.000 users</h4>
+        <h3>咨询电话：025-88888888</h3>
+        <h4>留个联系方式吧!</h4>
         <form>
-            <input type="text" class="text" placeholder="请输入您的电子邮箱">
+            <input type="text" class="text" placeholder="您的电话"/>
         </form>
         <label></label>
     </div>
-</div>--%>
+</div>
 <!-- our-ne -->
 <!-- footer -->
-
-<jsp:include page="footer.jsp"/>
-</div>
+<jsp:include page="footer.jsp" flush="true" />
 <!-- footer -->
 </body>
 
