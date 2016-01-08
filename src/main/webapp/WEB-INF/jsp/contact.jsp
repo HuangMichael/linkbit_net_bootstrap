@@ -33,7 +33,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <div class="container">
         <div class="col-md-5">
-            <img src="images/station.png" width="500px" height=400px" class="img-responsive img-thumbnail" alt=""/>
+            <img src="images/station.png" width="400px" height=300px" class="img-responsive img-thumbnail" alt=""/>
 
         </div>
         <div class="col-md-7">
@@ -52,7 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <h2></h2>
 
         <div class="col-md-5">
-            <img src="images/map.png" width="500px" height=400px" class="img-responsive img-thumbnail" alt=""/>
+            <img src="images/map.png" width="400px" height=300px" class="img-responsive img-thumbnail" alt=""/>
 
         </div>
         <div class="col-md-7">

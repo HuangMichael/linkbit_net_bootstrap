@@ -11,7 +11,7 @@
             <div class="head-nav">
                 <span class="menu"> </span>
                 <ul class="cl-effect-16">
-                    <li><a href="/index" data-hover="公司主页">公司主页</a></li>
+                    <li><a href="/index" data-hover="首页">首页</a></li>
                     <li><a href="/product" data-hover="公司产品">公司产品</a></li>
                     <li><a href="/beidou" data-hover="关于北斗">关于北斗</a></li>
                     <li><a href="/news" data-hover="行业新闻">行业新闻</a></li>

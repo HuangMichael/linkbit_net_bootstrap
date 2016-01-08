@@ -189,35 +189,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="slides">
                     <li>
                         <div class="tittle">
-                            <h4>北斗系统介绍?</h4>
-                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
+                            <h4><a href="/showDetail">北斗系统介绍</a></h4>
+                            <p>介绍北斗系统组成</p>
                         </div>
                     </li>
                     <li>
                         <div class="tittle">
-                            <h4>北斗定位原理?</h4>
-                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tittle">
-
-                            <h4>北斗测速原理</h4>
-                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
+                            <h4><a href="/showDetail">北斗定位原理</a></h4>
+                            <p>从科学角度介绍北斗导航系统定位原理</p>
                         </div>
                     </li>
                     <li>
                         <div class="tittle">
 
-                            <h4>手机定位导航原理</h4>
-                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
+                            <h4><a href="/showDetail">北斗测速原理</a></h4>
+                            <p>从科学角度介绍北斗导航系统测速原理</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tittle">
+
+                            <h4><a href="/showDetail">手机定位导航原理</a></h4>
+                            <p>介绍手机定位导航测速</p>
                         </div>
                     </li>
                     <li>
                         <div class="tittle">
 
                             <h4>其他的一些科普知识</h4>
-                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
+                            <p> 与关于北斗模块相对应，可维护。</p>
                         </div>
                     </li>
                 </ul>
