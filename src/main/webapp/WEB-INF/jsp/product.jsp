@@ -37,41 +37,41 @@
                     <ul class="lb-album">
                         <li>
                             <a href="/showDetail">
-                                <img src="images/gallery3.jpg" class="img-responsive" alt="" href="/showDetail">
+                                <img src="images/gallery1.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="" href="/showDetail">
                                 <span></span>
                             </a>
                             <div class="lb-overlay" id="image-3">
-                                <img src="images/gallery3.jpg" class="img-responsive" alt="image03" href="/showDetail">
+                                <img src="images/gallery1.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="image03" href="/showDetail">
                                 <a href="#page" class="lb-close"> </a>
                             </div>
                         </li>
                         <li>
                             <a href="#image-2">
-                                <img src="images/gallery2.jpg" class="img-responsive" alt="" href="/showDetail">
+                                <img src="images/gallery1.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="" href="/showDetail">
                                 <span> </span>
                             </a>
                             <div class="lb-overlay" id="image-2">
-                                <img src="images/gallery2.jpg" class="img-responsive" alt="" href="/showDetail">
+                                <img src="images/gallery1.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="" href="/showDetail">
                                 <a href="/detail" class="lb-close"> </a>
                             </div>
                         </li>
                         <li>
                             <a href="#image-1">
-                                <img src="images/gallery1.jpg" class="img-responsive" alt="" href="/showDetail">
+                                <img src="images/gallery1.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="" href="/showDetail">
                                 <span> </span>
                             </a>
                             <div class="lb-overlay" id="image-1">
-                                <img src="images/gallery1.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery1.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="">
                                 <a href="/detail" class="lb-close"> </a>
                             </div>
                         </li>
                         <li>
                             <a href="#image-4">
-                                <img src="images/gallery4.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery4.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="">
                                 <span> </span>
                             </a>
                             <div class="lb-overlay" id="image-4">
-                                <img src="images/gallery4.jpg" class="img-responsive" alt="image04">
+                                <img src="images/gallery4.jpg" height="120px" width="160px"  class="img-responsive img-thumbnail" alt="image04">
                                 <a href="/detail" class="lb-close"> </a>
                             </div>
                         </li>
@@ -79,41 +79,41 @@
                     <ul class="lb-album">
                         <li>
                             <a href="#image-5">
-                                <img src="images/gallery5.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery5.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="">
                                 <span> </span>
                             </a>
                             <div class="lb-overlay" id="image-5">
-                                <img src="images/gallery5.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery5.jpg"  height="120px" width="160px" class="img-responsive img-thumbnail" alt="">
                                 <a href="/detail" class="lb-close"> </a>
                             </div>
                         </li>
                         <li>
                             <a href="#image-6">
-                                <img src="images/gallery6.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery6.jpg" height="120px" width="160px"  class="img-responsive img-thumbnail" alt="">
                                 <span> </span>
                             </a>
                             <div class="lb-overlay" id="image-6">
-                                <img src="images/gallery6.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery6.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="">
                                 <a href="/detail" class="lb-close"> </a>
                             </div>
                         </li>
                         <li>
                             <a href="#image-7">
-                                <img src="images/gallery7.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery7.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="">
                                 <span> </span>
                             </a>
                             <div class="lb-overlay" id="image-7">
-                                <img src="images/gallery7.jpg" class="img-responsive" alt="image03">
+                                <img src="images/gallery7.jpg" height="120px" width="160px"  class="img-responsive img-thumbnail" alt="image03">
                                 <a href="/detail" class="lb-close"> </a>
                             </div>
                         </li>
                         <li>
                             <a href="#image-8">
-                                <img src="images/gallery8.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery8.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="">
                                 <span> </span>
                             </a>
                             <div class="lb-overlay" id="image-8">
-                                <img src="images/gallery8.jpg" class="img-responsive" alt="image04">
+                                <img src="images/gallery8.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="image04">
                                 <a href="/detail" class="lb-close"> </a>
                             </div>
                         </li>
@@ -121,41 +121,41 @@
                     <ul class="lb-album">
                         <li>
                             <a href="#image-1">
-                                <img src="images/gallery1.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery1.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="">
                                 <span> </span>
                             </a>
                             <div class="lb-overlay" id="image-1">
-                                <img src="images/gallery1.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery1.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="">
                                 <a href="/detail" class="lb-close"> </a>
                             </div>
                         </li>
                         <li>
                             <a href="#image-2">
-                                <img src="images/gallery2.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery2.jpg" height="120px" width="160px"  class="img-responsive img-thumbnail" alt="">
                                 <span> </span>
                             </a>
                             <div class="lb-overlay" id="image-2">
-                                <img src="images/gallery2.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery2.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="">
                                 <a href="/detail" class="lb-close"> </a>
                             </div>
                         </li>
                         <li>
                             <a href="#image-3">
-                                <img src="images/gallery3.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery3.jpg" height="120px" width="160px"  class="img-responsive img-thumbnail" alt="">
                                 <span> </span>
                             </a>
                             <div class="lb-overlay" id="image-3">
-                                <img src="images/gallery3.jpg" class="img-responsive" alt="image03">
+                                <img src="images/gallery3.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="image03">
                                 <a href="/detail" class="lb-close"> </a>
                             </div>
                         </li>
                         <li>
                             <a href="#image-4">
-                                <img src="images/gallery4.jpg" class="img-responsive" alt="">
+                                <img src="images/gallery4.jpg" height="120px" width="160px"  class="img-responsive img-thumbnail" alt="">
                                 <span> </span>
                             </a>
                             <div class="lb-overlay" id="image-4">
-                                <img src="images/gallery4.jpg" class="img-responsive" alt="image04">
+                                <img src="images/gallery4.jpg" height="120px" width="160px" class="img-responsive img-thumbnail" alt="image04">
                                 <a href="/detail" class="lb-close"> </a>
                             </div>
                         </li>

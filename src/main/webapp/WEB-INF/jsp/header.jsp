@@ -11,7 +11,7 @@
             <div class="head-nav">
                 <span class="menu"> </span>
                 <ul class="cl-effect-16">
-                    <li class="active"><a href="/index" data-hover="公司主页">公司主页</a></li>
+                    <li><a href="/index" data-hover="公司主页">公司主页</a></li>
                     <li><a href="/product" data-hover="公司产品">公司产品</a></li>
                     <li><a href="/beidou" data-hover="关于北斗">关于北斗</a></li>
                     <li><a href="/news" data-hover="行业新闻">行业新闻</a></li>
@@ -22,9 +22,9 @@
 
                 <!-- script-for-nav -->
             </div>
-            <div class="head-right">
+            <%--<div class="head-right">
                 <P><a href="/admin">管理员入口</a></P>
-            </div>
+            </div>--%>
             <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>

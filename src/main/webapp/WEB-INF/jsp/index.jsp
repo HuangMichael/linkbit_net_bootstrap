@@ -28,7 +28,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- thought -->
 <div class="thought">
     <div class="container">
-        <h1>The thought and consideration we put into our products go well beyond desing.</h1>
+        <h1>公司最新产品展示</h1>
     </div>
     <div class="wmuSlider example1 section" id="section-1">
         <article style="position: absolute; width: 100%; opacity: 0;">
@@ -189,34 +189,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="slides">
                     <li>
                         <div class="tittle">
-                            <h4>Why Source is awsome?</h4>
+                            <h4>北斗系统介绍?</h4>
                             <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
                         </div>
                     </li>
                     <li>
                         <div class="tittle">
-                            <h4>Lorem Ipsum is that it?</h4>
-                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tittle">
-
-                            <h4>There are many variations?</h4>
+                            <h4>北斗定位原理?</h4>
                             <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
                         </div>
                     </li>
                     <li>
                         <div class="tittle">
 
-                            <h4>Contrary to popular belief?</h4>
+                            <h4>北斗测速原理</h4>
                             <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
                         </div>
                     </li>
                     <li>
                         <div class="tittle">
 
-                            <h4>Why Source is awsome?</h4>
+                            <h4>手机定位导航原理</h4>
+                            <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tittle">
+
+                            <h4>其他的一些科普知识</h4>
                             <p>Our workshop, methodologies, and practices help us confidentlyand collaboratively solve complex business challenges.</p>
                         </div>
                     </li>
