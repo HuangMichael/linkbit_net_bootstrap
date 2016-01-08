@@ -22,10 +22,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 <!-- header -->
 <jsp:include page="header.jsp" flush="true"/>
-
-<!-- header -->
-<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">企业网站模板</a></div>
-<!-- thought -->
 <div class="thought">
     <div class="container">
         <h1>公司最新产品展示</h1>
