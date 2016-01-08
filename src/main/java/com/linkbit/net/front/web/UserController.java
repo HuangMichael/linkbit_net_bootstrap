@@ -1,7 +1,7 @@
-package com.linkbit.net.web;
+package com.linkbit.net.front.web;
 
 
-import com.linkbit.net.front.domain.service.user.UserService;
+import com.linkbit.net.front.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
