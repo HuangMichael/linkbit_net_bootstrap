@@ -4,7 +4,6 @@ package com.linkbit.net.front.web;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.service.menu.MenuService;
 import com.linkbit.net.front.service.user.UserService;
-import com.linkbit.net.front.utils.EnumMenuType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -12,8 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -54,7 +51,7 @@ public class LoginController extends BaseController {
         //公司产品 关于北斗 公司介绍 公司客户 联系我们
         //创造菜单
 
-        String menuNameArray[] = new String[6];
+       /* String menuNameArray[] = new String[6];
         menuNameArray[0] = "index";
         menuNameArray[1] = "product";
         menuNameArray[2] = "beidou";
@@ -70,7 +67,7 @@ public class LoginController extends BaseController {
             menusList.add(menu);
 
         }
-        menuService.save(menusList);
+        menuService.save(menusList);*/
 
         return "product";
     }
