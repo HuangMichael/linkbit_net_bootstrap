@@ -1,18 +1,21 @@
 <%@page pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <jsp:include page="head.jsp" flush="true"/>
 <body>
 <!-- header -->
 <jsp:include page="header.jsp" flush="true"/>
 <div class="thought">
+    <c:forEach var="product" items="${latestProductList}">
     <div class="container">
-        <h1>公司最新产品展示</h1>
+        <h1>公司最新产品展示:${product.productName}</h1>
     </div>
     <div class="wmuSlider example1 section" id="section-1">
+
         <article style="position: absolute; width: 100%; opacity: 0;">
             <div class="banner-info">
                 <div class="container">
                     <div class="col-md-5 thought-left">
-                        <img src="images/img1.png" class="img-responsive" alt="" />
+                        <img src="${product.productImgUrl}" class="img-responsive" alt=""/>
                     </div>
                     <div class="col-md-7 thought-right">
                         <div class="communt">
@@ -53,100 +56,12 @@
                 </div>
             </div>
         </article>
-        <article style="position: absolute; width: 100%; opacity: 0;">
-            <div class="banner-info">
-                <div class="container">
-                    <div class="col-md-5 thought-left">
-                        <img src="images/phone.png" class="img-responsive" alt="" />
-                    </div>
-                    <div class="col-md-7 thought-right">
-                        <div class="communt">
-                            <div class="communt-left">
-                                <i class="man"></i>
-                            </div>
-                            <div class="communt-right">
-                                <h4>Community</h4>
-                                <p>More than <span>2 millon people</span> use products built by the Source community.</p>
-                                <a href="details.html" class="link">Get Involved</a>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="communt">
-                            <div class="communt-left">
-                                <i class="bulb"></i>
-                            </div>
-                            <div class="communt-right">
-                                <h4>Design & Performance</h4>
-                                <p>Creating an entirely new design meantinventing an entirely new techonology with a level of precision you’d excepet.</p>
-                                <a href="details.html" class="link">Get Involved</a>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="communt">
-                            <div class="communt-left">
-                                <i class="bar"></i>
-                            </div>
-                            <div class="communt-right">
-                                <h4>Accurate results</h4>
-                                <p>More than 2 millon people use products built by the Source community.</p>
-                                <a href="details.html" class="link">Get Involved</a>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-        </article>
-        <article style="position: absolute; width: 100%; opacity: 0;">
-            <div class="banner-info">
-                <div class="container">
-                    <div class="col-md-5 thought-left">
-                        <img src="images/img1.png" class="img-responsive" alt="" />
-                    </div>
-                    <div class="col-md-7 thought-right">
-                        <div class="communt">
-                            <div class="communt-left">
-                                <i class="man"></i>
-                            </div>
-                            <div class="communt-right">
-                                <h4>Community</h4>
-                                <p>More than <span>2 millon people</span> use products built by the Source community.</p>
-                                <a href="details.html" class="link">Get Involved</a>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="communt">
-                            <div class="communt-left">
-                                <i class="bulb"></i>
-                            </div>
-                            <div class="communt-right">
-                                <h4>Design & Performance</h4>
-                                <p>Creating an entirely new design meantinventing an entirely new techonology with a level of precision you’d excepet.</p>
-                                <a href="details.html" class="link">Get Involved</a>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="communt">
-                            <div class="communt-left">
-                                <i class="bar"></i>
-                            </div>
-                            <div class="communt-right">
-                                <h4>Accurate results</h4>
-                                <p>More than 2 millon people use products built by the Source community.</p>
-                                <a href="details.html" class="link">Get Involved</a>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-        </article>
+        </c:forEach>
+
         <ul class="wmuSliderPagination">
-            <li><a href="#" class="">0</a></li>
-            <li><a href="#" class="">1</a></li>
-            <li><a href="#" class="">2</a></li>
+            <c:forEach var="product" items="${latestProductList}" >
+            <li><a href="#" class="">${product.index}</a></li>
+            </c:forEach>
         </ul>
     </div>
 

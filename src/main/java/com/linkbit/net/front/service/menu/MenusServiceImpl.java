@@ -3,7 +3,6 @@ package com.linkbit.net.front.service.menu;
 
 import com.linkbit.net.front.domain.menu.Menu;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.List;
  * Created by huangbin on 2015/12/23 0023.
  */
 @Service
-public class MenusServiceImpl implements CrudRepository<Menu, Long> {
+public class MenusServiceImpl implements MenuService {
 
     @Autowired
 

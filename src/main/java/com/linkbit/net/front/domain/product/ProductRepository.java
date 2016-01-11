@@ -10,6 +10,5 @@ public interface ProductRepository extends CrudRepository<Product, Long> {
     @Override
     Iterable<Product> findAll();
 
-    //查询最新产品
-    Iterable<Product> findLastestProducts();
+
 }

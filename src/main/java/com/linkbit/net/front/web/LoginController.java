@@ -50,7 +50,7 @@ public class LoginController extends BaseController {
         request.getSession().setAttribute("menusList", menusList);
 
         //todo 查询最新产品
-        List<Product> latestProductList = productService.findLatestProducts();
+        Iterable<Product> latestProductList = productService.findAll();
 
         request.getSession().setAttribute("latestProductList", latestProductList);
 

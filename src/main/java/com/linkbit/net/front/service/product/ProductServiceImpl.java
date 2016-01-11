@@ -1,16 +1,23 @@
 package com.linkbit.net.front.service.product;
 
 import com.linkbit.net.front.domain.product.Product;
+import com.linkbit.net.front.domain.product.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  * Created by Administrator on 2016/1/11 0011.
  */
-public class ProductServiceImpl implements ProductService {
+@Service
+public class ProductServiceImpl implements ProductRepository {
+
+    @Autowired
+    ProductService productService;
     @Override
-    public List<Product> findAll() {
-        return null;
+    public Iterable<Product> findAll() {
+     return   productService.findAll();
     }
 
     @Override
@@ -34,7 +41,9 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Iterable<Product> findAll(Iterable<Long> longs) {
+    public List<Product> findAll(Iterable<Long> longs) {
+
+
         return null;
     }
 
@@ -63,11 +72,5 @@ public class ProductServiceImpl implements ProductService {
 
     }
 
-    @Override
-    public List<Product> findLatestProducts() {
-
-       // Product.findByShowInMainPage();
-        return null;
-    }
 }
 
