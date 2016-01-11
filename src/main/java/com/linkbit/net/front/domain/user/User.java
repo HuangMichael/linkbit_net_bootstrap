@@ -1,16 +1,23 @@
 package com.linkbit.net.front.domain.user;
 
+import lombok.Data;
 import org.springframework.stereotype.Component;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * Created by Administrator on 2015/12/24 0024.
  */
 @Component
+@Table(name="T_USER")
+@Data
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-
-
-
     private String userName;
     private String password;
     private String status;

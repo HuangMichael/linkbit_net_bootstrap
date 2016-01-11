@@ -192,7 +192,7 @@
       else
         if(typeof(this.models[ sheetName ]) === "undefined") {
           // alert( "Can't find " + sheetName );
-          return;
+
         } else {
           return this.models[ sheetName ];
         }

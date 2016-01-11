@@ -1,5 +1,6 @@
 <%@page contentType="text/html" %>
 <%@page pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <div class="header">
     <div class="container">
        <%-- <div class="logo header-top" style="font-size: 24pt; font-weight:bold ;color:#ffffff;font-family:'微软雅黑;margin-left: 100px;;" >
@@ -10,16 +11,13 @@
         <div class="hader-top">
             <div class="head-nav">
                 <span class="menu"> </span>
-                <ul class="cl-effect-16">
-                    <li><a href="/index" data-hover="首页">首页</a></li>
-                    <li><a href="/product" data-hover="公司产品">公司产品</a></li>
-                    <li><a href="/beidou" data-hover="关于北斗">关于北斗</a></li>
-                    <li><a href="/news" data-hover="行业新闻">行业新闻</a></li>
-                    <li><a href="/contact" data-hover="联系我们">联系我们</a></li>
+                <ul class="cl-effect-16" id="menu_ul">
+                    <c:forEach  var="menu" items="${menusList}">
+                        <li><a href="${menu.url}" data-hover="${menu.menuDesc}">${menu.menuDesc}</a></li>
+                    </c:forEach>
                     <div class="clearfix"></div>
                 </ul>
                 <!-- script-for-nav -->
-
                 <!-- script-for-nav -->
             </div>
             <%--<div class="head-right">
@@ -34,6 +32,19 @@
 
 
     $(function () {
+        //<li><a href="${menu.url}" data-hover="${menu.menuDesc}">${menu.menuDesc}</a></li>
+        var url = "/menu/findAll";
+
+        $.getJSON(url, null, function (data) {
+            for (var i in data) {
+                console.log("i------------" + i);
+                console.log("<li><a href='" + data[i]['url'] + "' data-hover='" + data[i]['menuDesc'] + "''" + data[i]['menuDesc'] + "'</a></li>");
+                $("#menu_ul").append("<li><a href='" + data[i]['url'] + "' data-hover='" + data[i]['menuDesc'] + "''" + data[i]['menuDesc'] + "'</a></li>");
+            }
+        });
+
+        //首页 公司产品 知识讲堂 行业咨询 联系我们
+
         $("ul li").on("click", function () {
 
             console.log("click----------");

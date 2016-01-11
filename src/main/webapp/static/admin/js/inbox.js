@@ -25,7 +25,7 @@ var Inbox = function () {
             },
             async: false
         });
-    }
+    };
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	Show WYSIWYG Editor
@@ -54,8 +54,8 @@ var Inbox = function () {
 		  } else {
 			$('#voiceBtn').hide();
 		  }
-		};
-		function showErrorAlert (reason, detail) {
+        }
+        function showErrorAlert (reason, detail) {
 			var msg='';
 			if (reason==='unsupported-file-type') { msg = "Unsupported format " +detail; }
 			else {
@@ -63,10 +63,10 @@ var Inbox = function () {
 			}
 			$('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>'+ 
 			 '<strong>File upload error</strong> '+msg+' </div>').prependTo('#alerts');
-		};
-		initToolbarBootstrapBindings();  
+        }
+        initToolbarBootstrapBindings();
 		$('#editor').wysiwyg({ fileUploadError: showErrorAlert} );
-    }
+    };
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Show Inbox view
@@ -92,7 +92,7 @@ var Inbox = function () {
             },
             async: false
         });
-    }
+    };
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Show email reply view
@@ -124,7 +124,7 @@ var Inbox = function () {
             },
             async: false
         });
-    }
+    };
 	/*-----------------------------------------------------------------------------------*/
 	/*	Show Compose view
 	/*-----------------------------------------------------------------------------------*/
@@ -152,7 +152,7 @@ var Inbox = function () {
             },
             async: false
         });
-    }
+    };
 	/*-----------------------------------------------------------------------------------*/
 	/*	Show Compose view
 	/*-----------------------------------------------------------------------------------*/
@@ -163,7 +163,7 @@ var Inbox = function () {
         $('.emailCompose .address').on('click', '.emailBCC', function () {
             handleBCCControl();
         });
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Show Compose view
 	/*-----------------------------------------------------------------------------------*/
@@ -176,7 +176,7 @@ var Inbox = function () {
             input.hide();
             the.show();
         });
-    }
+    };
 	/*-----------------------------------------------------------------------------------*/
 	/*	Show Compose view
 	/*-----------------------------------------------------------------------------------*/
@@ -189,7 +189,7 @@ var Inbox = function () {
             input.hide();
             the.show();
         });
-    }
+    };
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	Toggle button
@@ -203,7 +203,7 @@ var Inbox = function () {
         } else {
             el.attr("disabled", true);
         }
-    }
+    };
 
     return {
         init: function () {

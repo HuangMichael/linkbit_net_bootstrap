@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 
 /**
  * Created by huangbin on 2015/12/23 0023.
@@ -17,17 +19,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @EnableAutoConfiguration
 @RequestMapping("/menu")
 public class MenuController extends BaseController {
-
-
     @Autowired
     MenuService menuService;
-
     @RequestMapping("/findAll")
     @ResponseBody
-    public Iterable<Menu> findAllMenus() {
+    public List<Menu> findAllMenus() {
+        List<Menu> menusList = menuService.findAll();
 
-      Iterable<Menu> menusList =  menuService.findAll();
+        for(Menu menu:menusList){
 
+            System.out.println(menu);
+        }
         return menusList;
     }
 

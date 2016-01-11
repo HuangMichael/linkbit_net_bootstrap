@@ -16,7 +16,7 @@ var App = function () {
             var each = responsiveFunctions[i];
             each.call();
         }
-    }
+    };
 	/*-----------------------------------------------------------------------------------*/
 	/*	To get the correct viewport width based on  http://andylangton.co.uk/articles/javascript/get-viewport-size-javascript/
 	/*-----------------------------------------------------------------------------------*/
@@ -30,7 +30,7 @@ var App = function () {
             width: e[a + 'Width'],
             height: e[a + 'Height']
         }
-    }
+    };
 	/*-----------------------------------------------------------------------------------*/
 	/*	Check layout size
 	/*-----------------------------------------------------------------------------------*/
@@ -39,7 +39,7 @@ var App = function () {
 		is_mini_menu = $('#sidebar').hasClass('mini-menu');
 		//Check if fixed header is activated
 		is_fixed_header = $('#header').hasClass('navbar-fixed-top');
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Sidebar & Main Content size match
 	/*-----------------------------------------------------------------------------------*/
@@ -57,7 +57,7 @@ var App = function () {
         if (height >= content.height()) {
             content.attr('style', 'min-height:' + height + 'px !important');
         }
-    }
+    };
 	/*-----------------------------------------------------------------------------------*/
 	/*	Sidebar
 	/*-----------------------------------------------------------------------------------*/
@@ -112,7 +112,7 @@ var App = function () {
                 sub.slideDown(200);
             }
         });
-	}
+	};
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Collapse Sidebar Programatically
@@ -133,7 +133,7 @@ var App = function () {
 		collapsed = true;
 		/* Set a cookie so that mini-sidebar persists */
 		$.cookie('mini_sidebar', '1');
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Responsive Sidebar Collapse
 	/*-----------------------------------------------------------------------------------*/
@@ -158,7 +158,7 @@ var App = function () {
 				$('#sidebar').removeAttr('style');
 			}
 		}
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Sidebar Collapse
 	/*-----------------------------------------------------------------------------------*/
@@ -237,7 +237,7 @@ var App = function () {
 				});
 			}
         });
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handle Fixed Sidebar on Mobile devices
 	/*-----------------------------------------------------------------------------------*/
@@ -258,7 +258,7 @@ var App = function () {
             allowPageScroll: false,
             disableFadeOut: false
         });
-    }
+    };
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handle Fixed Sidebar
 	/*-----------------------------------------------------------------------------------*/
@@ -292,7 +292,7 @@ var App = function () {
             });
             handleSidebarAndContentHeight();
         }
-    }
+    };
 	/*-----------------------------------------------------------------------------------*/
 	/*	Windows Resize function
 	/*-----------------------------------------------------------------------------------*/
@@ -351,7 +351,7 @@ var App = function () {
          );
          //Set the initial state of the picker label
          $('#reportrange span').html('Custom');
-    }
+    };
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Team View
@@ -408,7 +408,7 @@ var App = function () {
             }
             return z
         }
-	}
+	};
 	var c = function () {
         $(".team-status").each(function () {
             var x = $(this);
@@ -446,7 +446,7 @@ var App = function () {
 		$('.tip-focus').tooltip({
 			trigger: 'focus'
 		});
-	}
+	};
 	
 	/*-----------------------------------------------------------------------------------*/
 	/* Box tools
@@ -486,7 +486,7 @@ var App = function () {
                 App.unblockUI(el);
             }, 1000);
         });
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	SlimScroll
 	/*-----------------------------------------------------------------------------------*/
@@ -506,7 +506,7 @@ var App = function () {
                 disableFadeOut: true
             });
         });
-    }
+    };
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Bootbox alerts
@@ -593,7 +593,7 @@ var App = function () {
 			}, 3000);
 		});
 		
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Popovers
 	/*-----------------------------------------------------------------------------------*/
@@ -616,7 +616,7 @@ var App = function () {
 		$('.pop-hover').popover({
 			trigger: 'hover'
 		});
-	}
+	};
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Hubspot messenger
@@ -631,7 +631,7 @@ var App = function () {
 			Messenger.options = {
 				extraClasses: 'messenger-fixed '+mypos,
 				theme: mytheme
-			}
+			};
 			//Call
 			Messenger().post({
 				message:"This is a normal notification!",
@@ -646,7 +646,7 @@ var App = function () {
 			Messenger.options = {
 				extraClasses: 'messenger-fixed '+mypos,
 				theme: mytheme
-			}
+			};
 			var msg;
 			msg = Messenger().post({
 			  message: 'Launching thermonuclear war...',
@@ -674,7 +674,7 @@ var App = function () {
 			Messenger.options = {
 				extraClasses: 'messenger-fixed '+mypos,
 				theme: mytheme
-			}
+			};
 			var i;
 			i = 0;
 			Messenger().run({
@@ -702,7 +702,7 @@ var App = function () {
 			Messenger.options = {
 				extraClasses: 'messenger-fixed '+mypos,
 				theme: mytheme
-			}
+			};
 			Messenger().run({
 			  successMessage: 'Data saved.',
 			  errorMessage: 'Error saving data',
@@ -712,13 +712,13 @@ var App = function () {
 			  url: 'http://www.example.com/data'
 			});
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Alerts
 	/*-----------------------------------------------------------------------------------*/
 	var handleAlerts = function () {
 		$(".alert").alert();
-	}
+	};
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Magic Suggest
@@ -769,7 +769,7 @@ var App = function () {
                 maxSelection: 1,
                 maxSelectionRenderer: function(){}
             })
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Timeago
 	/*-----------------------------------------------------------------------------------*/
@@ -785,13 +785,13 @@ var App = function () {
 			$("#yesterday").attr('data-original-title', yesterday);
 		  jQuery("abbr.timeago").timeago();
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Init Timeago
 	/*-----------------------------------------------------------------------------------*/
 	var initTimeAgo = function () {
 		jQuery("abbr.timeago").timeago();
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Date & Color Picker
 	/*-----------------------------------------------------------------------------------*/
@@ -809,7 +809,7 @@ var App = function () {
 		$("#colorpicker-event").colorpicker().on("changeColor", function (b) {
 			a.backgroundColor = b.color.toHex()
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Raty
 	/*-----------------------------------------------------------------------------------*/
@@ -855,7 +855,7 @@ var App = function () {
 			cancel: true,
 			target: '#target-div-hint'
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Stateful buttons
 	/*-----------------------------------------------------------------------------------*/
@@ -876,7 +876,7 @@ var App = function () {
 					   ,1500)}
 										 )}
 						 );
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Toggle buttons
 	/*-----------------------------------------------------------------------------------*/
@@ -892,12 +892,12 @@ var App = function () {
 		$('.radio1').on('switch-change', function () {
 		$('.radio1').bootstrapSwitch('toggleRadioStateAllowUncheck', false);
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	jQuery UI Sliders
 	/*-----------------------------------------------------------------------------------*/
 	var handleSliders = function () {
-	  function repositionTooltip( e, ui ){$
+	  function repositionTooltip( e, ui ){$;
         var div = $(ui.handle).data("bs.tooltip").$tip[0];
         var pos = $.extend({}, $(ui.handle).offset(), { width: $(ui.handle).get(0).offsetWidth,
                                                         height: $(ui.handle).get(0).offsetHeight
@@ -905,7 +905,7 @@ var App = function () {
         
         var actualWidth = div.offsetWidth;
         
-        tp = {left: pos.left + pos.width / 2 - actualWidth / 2}            
+        tp = {left: pos.left + pos.width / 2 - actualWidth / 2};
         $(div).offset(tp);
         
         $(div).find(".tooltip-inner").text( ui.value );     
@@ -942,7 +942,7 @@ var App = function () {
 	  $("#slider-horizontal-range-min").slider({
         range:"min",value:600,min:1,max:1000
       });
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	jQuery UI Progress
 	/*-----------------------------------------------------------------------------------*/
@@ -960,7 +960,7 @@ var App = function () {
 					start: new Date(), // now
 					finish: new Date().setTime(new Date().getTime() + 60 * iCms), // now + 60 sec
 					interval: 100
-				}
+				};
 				var aOpts = jQuery.extend(aDefOpts, aOptions);
 				var vPb = this;
 
@@ -998,7 +998,7 @@ var App = function () {
 						);
 					}
 				);
-			}
+			};
 
 			// default mode
 			$('#progress1').anim_progressbar();
@@ -1012,7 +1012,7 @@ var App = function () {
 			$('#progress3').anim_progressbar({interval: 1000});
 		});
 
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	jQuery Knob
 	/*-----------------------------------------------------------------------------------*/
@@ -1072,7 +1072,7 @@ var App = function () {
                         }
                     }
                 });
-	}
+	};
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Custom tabs
@@ -1095,7 +1095,7 @@ var App = function () {
 				var w = location.hash.substr(1);
 				$('a[href="#' + w + '"]').click()
 			}
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Fuel UX Tree
 	/*-----------------------------------------------------------------------------------*/
@@ -1133,7 +1133,7 @@ var App = function () {
 		
 		//To add font awesome support
 		$('.tree').find('[class*="fa-"]').addClass("fa");
-	}
+	};
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Nestable Lists
@@ -1179,7 +1179,7 @@ var App = function () {
 		});
 
 		$('#nestable3').nestable();
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Table Cloth
 	/*-----------------------------------------------------------------------------------*/
@@ -1198,7 +1198,7 @@ var App = function () {
 		  striped:true,
 		  clean:true
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Data Tables
 	/*-----------------------------------------------------------------------------------*/
@@ -1224,7 +1224,7 @@ var App = function () {
 			var length_sel = datatable.closest('.dataTables_wrapper').find('div[id$=_length] select');
 			length_sel.addClass('form-control input-sm');
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	jqGrid
 	/*-----------------------------------------------------------------------------------*/
@@ -1319,7 +1319,7 @@ var App = function () {
 			jQuery("#rowed3").jqGrid('inlineNav', "#prowed3");
 			/* Add tooltips */
 			$('.navtable .ui-pg-button').tooltip({container:'body'});
-	}
+	};
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Typeahead
@@ -1329,20 +1329,20 @@ var App = function () {
 			name: 'countries',
 			local: ["red", "blue", "green", "yellow", "brown", "black"]
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Autosize
 	/*-----------------------------------------------------------------------------------*/
 	var handleAutosize = function () {
 		$('textarea.autosize').autosize();
 		$('textarea.autosize').addClass('textarea-transition');
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	jquery Counatble
 	/*-----------------------------------------------------------------------------------*/
 	var handleCountable = function () {
 		$('.countable').simplyCountable();
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Select2
 	/*-----------------------------------------------------------------------------------*/
@@ -1359,7 +1359,7 @@ var App = function () {
 			else if (movie.synopsis !== undefined) {
 				markup += "<div class='movie-synopsis'>" + movie.synopsis + "</div>";
 			}
-			markup += "</td></tr></table>"
+			markup += "</td></tr></table>";
 			return markup;
 		}
 
@@ -1431,19 +1431,19 @@ var App = function () {
 		    $("#e8").select2({
 				tags:["red", "green", "blue"]
 			});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Uniform
 	/*-----------------------------------------------------------------------------------*/
 	var handleUniform = function () {
 		$(".uniform").uniform();
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	All Checkboxes
 	/*-----------------------------------------------------------------------------------*/
 	var handleAllUniform = function () {
 		$("select, input[type='checkbox']").uniform();
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	BT Wysiwyg
 	/*-----------------------------------------------------------------------------------*/
@@ -1472,7 +1472,7 @@ var App = function () {
 		  } else {
 			$('#voiceBtn').hide();
 		  }
-		};
+		}
 		function showErrorAlert (reason, detail) {
 			var msg='';
 			if (reason==='unsupported-file-type') { msg = "Unsupported format " +detail; }
@@ -1481,12 +1481,12 @@ var App = function () {
 			}
 			$('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>'+ 
 			 '<strong>File upload error</strong> '+msg+' </div>').prependTo('#alerts');
-		};
+		}
 		initToolbarBootstrapBindings();  
 		$('#editor').wysiwyg({ fileUploadError: showErrorAlert} );
 		/* Disable auto-inline */
 		CKEDITOR.disableAutoInline = true;
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Dropzone
 	/*-----------------------------------------------------------------------------------*/
@@ -1505,7 +1505,7 @@ var App = function () {
 			} catch(e) {
 			  alert('Dropzone.js does not support older browsers!');
 			}
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	XCharts
 	/*-----------------------------------------------------------------------------------*/
@@ -1916,7 +1916,7 @@ var App = function () {
 		chart4();
 		chart5();
 		chart6();
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Justgage
 	/*-----------------------------------------------------------------------------------*/
@@ -2005,7 +2005,7 @@ var App = function () {
           g6.refresh(getRandomInt(0, 100));
         }, 2500);
       };
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Easy Pie chart
 	/*-----------------------------------------------------------------------------------*/
@@ -2066,7 +2066,7 @@ var App = function () {
 		$('#js_update_4').on('click', function() {
 			chart4.update(Math.random()*100);
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Easy Pie chart for profile
 	/*-----------------------------------------------------------------------------------*/
@@ -2104,7 +2104,7 @@ var App = function () {
 			barColor: '#70AFC4'
 		});
 		var chart3 = window.chart = $('#pie_3').data('easyPieChart');
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Sparklines
 	/*-----------------------------------------------------------------------------------*/
@@ -2162,7 +2162,7 @@ var App = function () {
 			highlightSpotColor: Theme.colors.yellow
 		  });
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Fullcalendar
 	/*-----------------------------------------------------------------------------------*/
@@ -2188,14 +2188,14 @@ var App = function () {
 				revertDuration: 0  //  original position after the drag
 			});
 			
-		}
+		};
 		
 		var addEvent = function (title) {
             title = title.length == 0 ? "Untitled Event" : title;
             var html = $('<div class="external-event">' + title + '</div>');
             jQuery('#event-box').append(html);
             initDrag(html);
-        }
+        };
 
         $('#external-events div.external-event').each(function () {
             initDrag($(this))
@@ -2319,7 +2319,7 @@ var App = function () {
 			]
 		});
 		
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	JQVmaps
 	/*-----------------------------------------------------------------------------------*/
@@ -2361,7 +2361,7 @@ var App = function () {
 			}
 			map.width(map.parent().width());
 			map.vectorMap(data);
-		}
+		};
 		
 		//Init the maps
 		setMap("world");
@@ -2376,7 +2376,7 @@ var App = function () {
             setMap("russia");
             setMap("germany");
         });
-	}
+	};
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Isotope
@@ -2418,7 +2418,7 @@ var App = function () {
 		jQuery(window).resize(function() {
 			handleIsotopeStretch();
 		});
-	}
+	};
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handle hover in gallery
@@ -2431,7 +2431,7 @@ var App = function () {
 			var hoverContent = $(this).children('.hover-content');
 			hoverContent.removeClass('fadeIn').addClass('fadeOut');
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handle Colorbox
 	/*-----------------------------------------------------------------------------------*/
@@ -2459,7 +2459,7 @@ var App = function () {
 		// Resize Colorbox when resizing window or changing mobile device orientation
 		jQuery(window).resize(resizeColorBox);
 		window.addEventListener("orientationchange", resizeColorBox, false);
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handle Backstretch
 	/*-----------------------------------------------------------------------------------*/
@@ -2470,7 +2470,7 @@ var App = function () {
 		, "img/login/3.jpg"
 		, "img/login/4.jpg"
 		], {duration: 3000, fade: 750});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handle Chat
 	/*-----------------------------------------------------------------------------------*/
@@ -2504,7 +2504,7 @@ var App = function () {
             $('.'+elem+' .scroller').slimScroll({
                 scrollTo: list.height()
             });
-		}
+		};
 		//If button is pressed
 		$('.'+elem+' .chat-form .btn').click(function(e){
 			e.preventDefault();
@@ -2519,7 +2519,7 @@ var App = function () {
 				return false;
 			}
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handle Timeline
 	/*-----------------------------------------------------------------------------------*/
@@ -2534,7 +2534,7 @@ var App = function () {
 			css:        'js/timelinejs/css/timeline.css',     
             js:         'js/timelinejs/js/timeline-min.js'    
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handle Slidernav
 	/*-----------------------------------------------------------------------------------*/
@@ -2559,7 +2559,7 @@ var App = function () {
 				1300
 			);
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handle Active Toggle
 	/*-----------------------------------------------------------------------------------*/
@@ -2568,7 +2568,7 @@ var App = function () {
 			$('#list-toggle .list-group > a.active').removeClass('active');
 			$(this).addClass('active');
 		})
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handle Box Sortable
 	/*-----------------------------------------------------------------------------------*/
@@ -2583,7 +2583,7 @@ var App = function () {
 			forcePlaceholderSize:true,
 			tolerance:'pointer'
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handles the go to top button at the footer
 	/*-----------------------------------------------------------------------------------*/
@@ -2592,7 +2592,7 @@ var App = function () {
 			App.scrollTo();
 			e.preventDefault();
 		});
-	} 
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handles navbar fixed top
 	/*-----------------------------------------------------------------------------------*/
@@ -2605,7 +2605,7 @@ var App = function () {
 			//Manage margin top
 			$('#main-content').removeClass('margin-top-100').addClass('margin-top-50');
 		}
-	} 
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handles flot charts in dashboard
 	/*-----------------------------------------------------------------------------------*/
@@ -2978,7 +2978,7 @@ var App = function () {
 			chart3.update(Math.random()*100);
 			chart_revenue();
 		});
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handles vertically growing bars
 	/*-----------------------------------------------------------------------------------*/
@@ -2991,7 +2991,7 @@ var App = function () {
 				});				
 			});
 		}
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handles theme skin switches
 	/*-----------------------------------------------------------------------------------*/
@@ -3000,7 +3000,7 @@ var App = function () {
         var setSkin = function (color) {
             $('#skin-switcher').attr("href", "css/themes/" + color + ".css");
             $.cookie('skin_color', color);
-        }
+        };
 		$('ul.skins > li a').click(function () {
             var color = $(this).data("skin");
             setSkin(color);
@@ -3010,7 +3010,7 @@ var App = function () {
 		 if ($.cookie('skin_color')) {
             setSkin($.cookie('skin_color'));
         }
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handles Gritter on Load
 	/*-----------------------------------------------------------------------------------*/
@@ -3169,13 +3169,13 @@ var App = function () {
                 }, 4000);
 
             }, 25000);
-	}
+	};
 	/*-----------------------------------------------------------------------------------*/
 	/*	Handles Profile Edit
 	/*-----------------------------------------------------------------------------------*/
 	var handleProfileEdit = function () {
 		$(".datepicker").datepicker();
-	}
+	};
 	return {
 
         //Initialise theme pages

@@ -2,6 +2,7 @@ package com.linkbit.net.front.domain.menu;
 
 
 import com.linkbit.net.front.utils.EnumMenuType;
+import lombok.Data;
 
 import javax.persistence.*;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="T_MENU")
+@Data
 public class Menu {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -27,7 +29,6 @@ public class Menu {
     public Menu() {
 
     }
-
     public Menu(long id, String menuName, String menuDesc, String iconClass, String url, EnumMenuType menuType, long sortNo) {
         this.id = id;
         this.menuName = menuName;

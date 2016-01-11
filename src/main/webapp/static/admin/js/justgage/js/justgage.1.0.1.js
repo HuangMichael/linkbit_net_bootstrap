@@ -208,7 +208,7 @@ JustGage = function(config) {
       path += "A" + Ri + "," + Ri + " 0 0,0 " + (Cx - Ri) + "," + Cy + " ";
       path += "z ";
       return { path: path };
-  }  
+  };
   
   // gauge
   this.gauge = this.canvas.path().attr({
@@ -317,7 +317,7 @@ var percentColors = [
   "#a9d70b",
   "#f9c802",
   "#ff0000"
-]
+];
 
 JustGage.prototype.generateShadow = function(svg, defs) {
     // FILTER
@@ -372,14 +372,14 @@ JustGage.prototype.generateShadow = function(svg, defs) {
       this.canvas.canvas.childNodes[2].setAttribute("filter", "url(#" + this.config.id + "-inner-shadow)");
       this.canvas.canvas.childNodes[3].setAttribute("filter", "url(#" + this.config.id + "-inner-shadow)");
     }
-}
+};
 
 var getColorForPercentage = function(pct, col, grad) {
     
     var no = col.length;
     if (no === 1) return col[0];
     var inc = (grad) ? (1 / (no - 1)) : (1 / no);
-    var colors = new Array();
+    var colors = [];
     for (var i = 0; i < col.length; i++) {
       var percentage = (grad) ? (inc * i) : (inc * (i + 1));
       var rval = parseInt((cutHex(col[i])).substring(0,2),16);
@@ -409,7 +409,7 @@ var getColorForPercentage = function(pct, col, grad) {
             }
           }
       }
-} 
+};
 
 function getRandomInt (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;

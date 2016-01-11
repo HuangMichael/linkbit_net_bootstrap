@@ -2,7 +2,7 @@
 var timelineConfig = {
 	key: '0Avllson2aiLDdDljLUd4MWljU2hSMmlUWGFQN1lUOUE',
 	sheetName: 'Posts' // change to name of spreadsheet 'sheet' that contains the data
-}
+};
 
 $(function() {
 
@@ -239,7 +239,7 @@ $.Isotope.prototype._straightDownGetContainerSize = function() {
 
 $.Isotope.prototype._straightDownResizeChanged = function() {
   return true;
-}
+};
 
 /*
  * Isotope custom layout mode spineAlign
