@@ -84,39 +84,16 @@
         <section class="slider">
             <div class="flexslider">
                 <ul class="slides">
-                    <li>
-                        <div class="tittle">
-                            <h4><a href="/showDetail">北斗系统介绍</a></h4>
-                            <p>介绍北斗系统组成</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tittle">
-                            <h4><a href="/showDetail">北斗定位原理</a></h4>
-                            <p>从科学角度介绍北斗导航系统定位原理</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="tittle">
 
-                            <h4><a href="/showDetail">北斗测速原理</a></h4>
-                            <p>从科学角度介绍北斗导航系统测速原理</p>
-                        </div>
-                    </li>
+                    <c:forEach items="${latestKnowledgeList}" var="lk" varStatus="status">
                     <li>
                         <div class="tittle">
+                            <h4><a href="/showDetail">${lk.title}</a></h4>
 
-                            <h4><a href="/showDetail">手机定位导航原理</a></h4>
-                            <p>介绍手机定位导航测速</p>
+                            <p>${lk.keywords}</p>
                         </div>
                     </li>
-                    <li>
-                        <div class="tittle">
-
-                            <h4>其他的一些科普知识</h4>
-                            <p> 与关于北斗模块相对应，可维护。</p>
-                        </div>
-                    </li>
+                    </c:forEach>
                 </ul>
             </div>
         </section>
@@ -140,21 +117,12 @@
 <!-- bull -->
 <div class="bull">
     <div class="container">
+
+        <c:forEach items="${customerList}" var="customer">
         <li>
-            <a href="#"><img src="images/m1.png" class="img-responsive" alt="" /></a>
+            <a href="#"><img src="${customer.logoPath}"  width="120px" height="80px"  class="img-responsive img-thumbnail" alt="" /></a>
         </li>
-        <li>
-            <a href="#"><img src="images/m2.png" class="img-responsive" alt="" /></a>
-        </li>
-        <li>
-            <a href="#"><img src="images/m3.png" class="img-responsive" alt="" /></a>
-        </li>
-        <li>
-            <a href="#"><img src="images/m4.png" class="img-responsive" alt="" /></a>
-        </li>
-        <li>
-            <a href="#"><img src="images/m5.png" class="img-responsive" alt="" /></a>
-        </li>
+        </c:forEach>
     </div>
 </div>
 <!-- bull -->

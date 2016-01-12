@@ -1,6 +1,10 @@
 package com.linkbit.net.front.web;
 
 
+import com.linkbit.net.front.domain.Customers.Customer;
+import com.linkbit.net.front.domain.Customers.CustomerRepository;
+import com.linkbit.net.front.domain.knowledge.Knowledge;
+import com.linkbit.net.front.domain.knowledge.KnowledgeRepository;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.product.Product;
 import com.linkbit.net.front.domain.product.ProductRepository;
@@ -30,6 +34,12 @@ public class LoginController extends BaseController {
     ProductRepository productRepository;
 
     @Autowired
+    KnowledgeRepository knowledgeRepository;
+
+    @Autowired
+    CustomerRepository customerRepository;
+
+    @Autowired
     MenuService menuService;
     @RequestMapping("/")
     public String login(HttpServletRequest request) {
@@ -46,16 +56,20 @@ public class LoginController extends BaseController {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         return "index";
     }
-
-
     @RequestMapping("/index")
     public ModelAndView index() {
         // 查询最新产品
         List<Product> latestProductList = productRepository.findByOnline(true);
+        //查询最新知识库信息
+        List<Knowledge> latestKnowledgeList = knowledgeRepository.findByShowInMainPage(true);
+        //查询客户信息
+        List<Customer> customerList = customerRepository.findByShowInMainPage(true);
         //封装对象 传递到页面
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
         modelAndView.addObject("latestProductList", latestProductList);
+        modelAndView.addObject("latestKnowledgeList", latestKnowledgeList);
+        modelAndView.addObject("customerList", customerList);
         return modelAndView;
     }
 
@@ -76,16 +90,21 @@ public class LoginController extends BaseController {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         return "about";
     }
-    @RequestMapping("/beidou")
-    public String beidou() {
+
+    @RequestMapping("/knowledge")
+    public ModelAndView knowledge() {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        return "beidou";
+        List<Knowledge> knowledgeList = knowledgeRepository.findAll();
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("knowledge");
+        modelAndView.addObject("knowledgeList", knowledgeList);
+        return modelAndView;
     }
 
-    @RequestMapping("/customers")
+    @RequestMapping("/customer")
     public String customers() {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        return "customers";
+        return "customer";
     }
     @RequestMapping("/news")
     public String news() {

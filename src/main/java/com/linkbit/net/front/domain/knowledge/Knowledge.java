@@ -3,8 +3,7 @@ package com.linkbit.net.front.domain.knowledge;
 import com.linkbit.net.front.utils.KnowledgeType;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -16,6 +15,9 @@ import java.util.Date;
 @Table(name = "T_KNOWLEDGE")
 @Data
 public class Knowledge {
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long id;
     private String title; //文章名称
     private String keywords;  //关键字
     private String content; //内容
