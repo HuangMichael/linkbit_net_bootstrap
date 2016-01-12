@@ -6,6 +6,7 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\front\service\user\UsersServiceImpl
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\BaseController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\MenuController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\service\menu\MenuService.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\ProductRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\Product.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\service\BaseService.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\menu\Menu.java

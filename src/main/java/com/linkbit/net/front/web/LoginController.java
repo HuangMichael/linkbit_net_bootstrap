@@ -3,8 +3,8 @@ package com.linkbit.net.front.web;
 
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.product.Product;
+import com.linkbit.net.front.domain.product.ProductRepository;
 import com.linkbit.net.front.service.menu.MenuService;
-import com.linkbit.net.front.service.product.ProductService;
 import com.linkbit.net.front.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -28,7 +28,7 @@ public class LoginController extends BaseController {
     UserService userService;
 
     @Autowired
-    ProductService productService;
+    ProductRepository productRepository;
 
     @Autowired
     MenuService menuService;
@@ -50,15 +50,14 @@ public class LoginController extends BaseController {
         request.getSession().setAttribute("menusList", menusList);
 
         //todo 查询最新产品
-        Iterable<Product> latestProductList = productService.findAll();
-
-        request.getSession().setAttribute("latestProductList", latestProductList);
+        List<Product> latestProductList = productRepository.findByOnline(true);
 
         //封装对象 传递到页面
 
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
         modelAndView.addObject("menusList", menusList);
+        modelAndView.addObject("latestProductList", latestProductList);
         return modelAndView;
     }
     @RequestMapping("/product")

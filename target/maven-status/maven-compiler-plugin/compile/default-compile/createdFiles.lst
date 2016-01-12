@@ -4,6 +4,7 @@ com\linkbit\net\front\web\LoginController.class
 com\linkbit\net\front\domain\product\ProductCharactor.class
 com\linkbit\net\front\web\MenuController.class
 com\linkbit\net\front\service\user\UserService.class
+com\linkbit\net\front\domain\product\ProductRepository.class
 com\linkbit\net\front\web\UserController.class
 com\linkbit\net\Application.class
 com\linkbit\net\front\domain\user\UserRepository.class
