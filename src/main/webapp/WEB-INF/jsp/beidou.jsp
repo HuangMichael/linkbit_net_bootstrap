@@ -6,9 +6,9 @@
 <!-- about-section -->
 <div class="about-section">
     <div class="container">
-        <h2>关于北斗</h2>
+        <h2>知识讲堂</h2>
         <div class="col-md-12 about-left1">
-            <h3> Duis autem vel eum iriure </h3>
+            <h3> 知识画廊 </h3>
             <div class="left">
                 <div class="left-top">
                     <img src="images/news0.png"  height="210px" width="280px" class="img-responsive img-thumbnail" alt="" />

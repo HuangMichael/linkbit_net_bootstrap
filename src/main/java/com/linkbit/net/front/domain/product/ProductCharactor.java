@@ -15,6 +15,9 @@ public class ProductCharactor {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String charactorDesc;
+    @ManyToOne(cascade = CascadeType.ALL, optional = false)
+    @JoinColumn(name="product_id", referencedColumnName="id")//
+    private Product product;
 
 
 

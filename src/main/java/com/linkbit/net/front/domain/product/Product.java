@@ -3,7 +3,9 @@ package com.linkbit.net.front.domain.product;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by huangbin on 2016/1/11 0011.
@@ -23,4 +25,6 @@ public class Product {
     private Long sortNo;
     private Date onLineDate;
     private boolean online;
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<ProductCharactor> productCharactorSet = new ArrayList<ProductCharactor>();
 }

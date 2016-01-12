@@ -14,4 +14,6 @@ public interface ProductRepository extends Repository<Product, Long> {
 
 
     List<Product> findByOnline(boolean online);
+
+    List<Product> findAll();
 }

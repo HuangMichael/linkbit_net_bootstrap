@@ -9,7 +9,6 @@ import com.linkbit.net.front.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -33,8 +32,13 @@ public class LoginController extends BaseController {
     @Autowired
     MenuService menuService;
     @RequestMapping("/")
-    public String login() {
-        return "index";
+    public String login(HttpServletRequest request) {
+        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
+        //查询导航主菜单
+        List<Menu> menusList = menuService.findAll();
+        request.getSession().setAttribute("menusList", menusList);
+        // 跳转到index
+        return "redirect:/index";
     }
 
     @RequestMapping("/logout")
@@ -42,29 +46,31 @@ public class LoginController extends BaseController {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         return "index";
     }
+
+
     @RequestMapping("/index")
-    public ModelAndView index(HttpServletRequest request, Model model) {
-        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        //查询导航主菜单
-        List<Menu> menusList = menuService.findAll();
-        request.getSession().setAttribute("menusList", menusList);
-
-        //todo 查询最新产品
+    public ModelAndView index() {
+        // 查询最新产品
         List<Product> latestProductList = productRepository.findByOnline(true);
-
         //封装对象 传递到页面
-
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("index");
-        modelAndView.addObject("menusList", menusList);
         modelAndView.addObject("latestProductList", latestProductList);
         return modelAndView;
     }
+
     @RequestMapping("/product")
-    public String product() {
-        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        return "product";
+    public ModelAndView product() {
+        // 查询最新产品
+        List<Product> allProductList = productRepository.findAll();
+        //封装对象 传递到页面
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("product");
+        modelAndView.addObject("allProductList", allProductList);
+        return modelAndView;
     }
+
+
     @RequestMapping("/about")
     public String about() {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());

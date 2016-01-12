@@ -7,7 +7,6 @@
 <div class="thought">
 
     <div class="wmuSlider example1 section" id="section-1">
-
         <div class="container">
             <h1>公司最新产品展示</h1>
         </div>
@@ -26,7 +25,7 @@
                             <div class="communt-right">
                                 <h4>产品名称</h4>
                                 <p>${product.productName}</p>
-                                <a href="details.html" class="link">了解更多</a>
+
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -37,8 +36,12 @@
                             <div class="communt-right">
                                 <h4>产品特点</h4>
                                 <p>
-                                    定位精准  续航力强  适应性强</p>
-                                <a href="details.html" class="link">了解更多</a>
+
+                                    <c:forEach items="${product.productCharactorSet}" var="productchar">
+                                        ${productchar.charactorDesc}  <br>
+                                    </c:forEach>
+
+                                </p>
                             </div>
                             <div class="clearfix"> </div>
                         </div>
@@ -49,7 +52,7 @@
                             <div class="communt-right">
                                 <h4>上市时间</h4>
                                 <p>${product.onLineDate}</p>
-                                <a href="details.html" class="link">了解更多</a>
+
                             </div>
                             <div class="clearfix"> </div>
                         </div>
