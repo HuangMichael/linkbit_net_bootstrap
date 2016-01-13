@@ -4,6 +4,7 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\news\News.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\MenuController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\knowledge\Knowledge.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\company\Company.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\company\CompanyRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\knowledge\KnowledgeRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\ProductRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\customers\CustomerRepository.java
@@ -24,6 +25,8 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\Product.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\service\BaseService.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\menu\Menu.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\LoginController.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\company\CompanyPropertyRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\service\user\UserService.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\MainsiteErrorController.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\company\CompanyProperty.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\news\NewsRepository.java

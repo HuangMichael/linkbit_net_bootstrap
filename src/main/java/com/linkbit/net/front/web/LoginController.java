@@ -1,6 +1,8 @@
 package com.linkbit.net.front.web;
 
 
+import com.linkbit.net.front.domain.company.Company;
+import com.linkbit.net.front.domain.company.CompanyRepository;
 import com.linkbit.net.front.domain.customers.Customer;
 import com.linkbit.net.front.domain.customers.CustomerRepository;
 import com.linkbit.net.front.domain.knowledge.Knowledge;
@@ -46,6 +48,9 @@ public class LoginController extends BaseController {
 
     @Autowired
     NewsRepository newsRepository;
+
+    @Autowired
+    CompanyRepository companyRepository;
 
     @Autowired
     MenuService menuService;
@@ -139,11 +144,15 @@ public class LoginController extends BaseController {
     }
 
     @RequestMapping("/contact")
-    public String contact() {
+    public ModelAndView contact() {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        return "contact";
-    }
+        Company company = companyRepository.findAll().get(0);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("contact");
+        modelAndView.addObject("company", company);
+        return modelAndView;
 
+    }
     @RequestMapping("/showDetail")
     public String showDetail() {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
