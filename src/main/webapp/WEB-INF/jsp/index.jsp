@@ -5,7 +5,6 @@
 <!-- header -->
 <jsp:include page="header.jsp" flush="true"/>
 <div class="thought">
-
     <div class="wmuSlider example1 section" id="section-1">
         <div class="container">
             <h1>公司最新产品展示</h1>
@@ -36,7 +35,6 @@
                             <div class="communt-right">
                                 <h4>产品特点</h4>
                                 <p>
-
                                     <c:forEach items="${product.productCharactorSet}" var="productchar">
                                         ${productchar.charactorDesc}  <br>
                                     </c:forEach>
@@ -139,7 +137,9 @@
 </div>
 <!-- our-ne -->
 <!-- footer -->
+<div class="forever-bottom">
 <jsp:include page="footer.jsp" flush="true" />
+</div>
 <!-- footer -->
 </body>
 

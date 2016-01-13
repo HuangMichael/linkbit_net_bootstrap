@@ -1,4 +1,4 @@
-package com.linkbit.net.front.domain.Customers;
+package com.linkbit.net.front.domain.customers;
 
 import org.springframework.data.repository.Repository;
 

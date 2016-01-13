@@ -23,6 +23,7 @@ public class Product {
     private String productImgUrl;
     private Boolean showInMainPage;
     private Long sortNo;
+    @Temporal(TemporalType.DATE)
     private Date onLineDate;
     private boolean online;
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

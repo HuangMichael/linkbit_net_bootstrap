@@ -23,6 +23,7 @@ public class Knowledge {
     private String content; //内容
     private KnowledgeType knowledgeType;//知识库类型
     private String publisher; //发布者
+    @Temporal(TemporalType.DATE)
     private Date publishTime;//发布时间
     private Boolean display;//是否显示
     private Boolean showInMainPage;//  是否主页显示

@@ -19,4 +19,9 @@ public interface KnowledgeRepository extends Repository<Knowledge, Long> {
      * 查询所有的知识库信息
      */
     List<Knowledge> findAll();
+
+    /**
+     * 根据id查询对应的知识信息
+     */
+    Knowledge findById(Long id);
 }

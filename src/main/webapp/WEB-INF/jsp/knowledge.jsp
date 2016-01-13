@@ -7,31 +7,45 @@
 <!-- about-section -->
 <div class="about-section">
     <div class="container">
-        <h2>知识讲堂</h2>
-        <c:forEach items="${knowledgeList}" var="k" varStatus="status">
-            <div class="col-md-12 about-left1">
-                <h5><a href="#">${k.title}</a></h5>
-                <h5>关键字：<span class=" badge badge-success">${k.keywords}</span></h5>
+        <%--  <h2>关于北斗</h2>--%>
 
-                <p>
-                        ${k.content }
-                </p>
+        <div class="accordion" id="accordion2">
+            <c:forEach items="${knowledgeList}" var="k" varStatus="status">
+                <div class="accordion-group">
+                    <div class="accordion-heading about-left1">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"
+                           href="#collapse${status.index}">
+                            <h5 class="knowledge_title">${k.title}</h5>
 
-                <div style="float:right">
-                    <h5>发布时间：${k.publishTime}&nbsp;发布人：${k.publisher}</h5>
+                        </a>
                 </div>
-                    <%-- <a href="details.html">
-                         <button class="btn btn-1 btn-1a">了解更多</button>
-                     </a>--%>
-                <div class="clearfix"></div>
+                    <div id="collapse${status.index}" class="accordion-body collapse" style="height: 0px; ">
+                        <div class="accordion-inner">
+                            <div class="knowledge_keywords">关键字：<a href="#"
+                                                                   class="badge badge-primary">${k.keywords}</a></div>
+                                ${k.content}<br>
+
+                            <div class="knowledge_publishTime">发布时间：${k.publishTime}</div>
+
+                        </div>
+                    </div>
             </div>
-            <%--   <div class="clearfix"></div>--%>
-        </c:forEach>
+            </c:forEach>
+        </div>
     </div>
 </div>
 <!-- footer -->
 <jsp:include page="footer.jsp"/>
 <!-- footer -->
+<script src="js/bootstrap.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        /* $("a[name='readMore']").on("click", function () {
+         /!*alert($(this).attr("data-detail-id"));*!/
+         });*/
+    });
+</script>
 </body>
 
 </html>

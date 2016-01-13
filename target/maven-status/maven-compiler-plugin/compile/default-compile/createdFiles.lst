@@ -18,6 +18,7 @@ com\linkbit\net\Application.class
 com\linkbit\net\front\domain\user\UserRepository.class
 com\linkbit\net\front\domain\product\Product.class
 com\linkbit\net\front\utils\EnumMenuType.class
+com\linkbit\net\front\web\KnowledgeController.class
 com\linkbit\net\front\web\BaseController.class
 com\linkbit\net\front\service\BaseService.class
 com\linkbit\net\front\domain\menu\MenuRepository.class

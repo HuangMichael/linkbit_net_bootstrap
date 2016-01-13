@@ -19,5 +19,7 @@
     </script>
     <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
-    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/linkbit.css" type="text/css" media="screen"/>
+    <script src="js/jquery-1.12.0.min.js"></script>
 </head>

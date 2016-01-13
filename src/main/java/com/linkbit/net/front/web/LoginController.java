@@ -1,8 +1,8 @@
 package com.linkbit.net.front.web;
 
 
-import com.linkbit.net.front.domain.Customers.Customer;
-import com.linkbit.net.front.domain.Customers.CustomerRepository;
+import com.linkbit.net.front.domain.customers.Customer;
+import com.linkbit.net.front.domain.customers.CustomerRepository;
 import com.linkbit.net.front.domain.knowledge.Knowledge;
 import com.linkbit.net.front.domain.knowledge.KnowledgeRepository;
 import com.linkbit.net.front.domain.menu.Menu;
@@ -13,7 +13,10 @@ import com.linkbit.net.front.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -100,6 +103,20 @@ public class LoginController extends BaseController {
         modelAndView.addObject("knowledgeList", knowledgeList);
         return modelAndView;
     }
+
+
+
+    @RequestMapping(value = "/knowledgeDetail/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView getKnowledgeDetail(@PathVariable("id") long id) {
+        Knowledge knowledge = knowledgeRepository.findById(id);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("knowledgeDetail");
+        modelAndView.addObject("knowledge", knowledge);
+        return modelAndView;
+    }
+
+
 
     @RequestMapping("/customer")
     public String customers() {
