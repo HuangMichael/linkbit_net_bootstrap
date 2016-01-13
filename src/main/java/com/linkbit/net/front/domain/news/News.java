@@ -22,6 +22,7 @@ public class News {
     private String newsDesc;
     private String imgUrl;
     private String newsContent;
+    @Temporal(TemporalType.DATE)
     private Date publishTime;
     private String keywords;
     private Boolean status;

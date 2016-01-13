@@ -20,6 +20,7 @@ public class Knowledge {
     private Long id;
     private String title; //文章名称
     private String keywords;  //关键字
+    private String knowledgeDesc;  //摘要
     private String content; //内容
     private KnowledgeType knowledgeType;//知识库类型
     private String publisher; //发布者

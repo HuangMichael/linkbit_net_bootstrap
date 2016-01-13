@@ -6,6 +6,8 @@ import com.linkbit.net.front.domain.customers.CustomerRepository;
 import com.linkbit.net.front.domain.knowledge.Knowledge;
 import com.linkbit.net.front.domain.knowledge.KnowledgeRepository;
 import com.linkbit.net.front.domain.menu.Menu;
+import com.linkbit.net.front.domain.news.News;
+import com.linkbit.net.front.domain.news.NewsRepository;
 import com.linkbit.net.front.domain.product.Product;
 import com.linkbit.net.front.domain.product.ProductRepository;
 import com.linkbit.net.front.service.menu.MenuService;
@@ -41,6 +43,9 @@ public class LoginController extends BaseController {
 
     @Autowired
     CustomerRepository customerRepository;
+
+    @Autowired
+    NewsRepository newsRepository;
 
     @Autowired
     MenuService menuService;
@@ -124,9 +129,13 @@ public class LoginController extends BaseController {
         return "customer";
     }
     @RequestMapping("/news")
-    public String news() {
+    public ModelAndView news() {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        return "news";
+        List<News> newsList = newsRepository.findAll();
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("news");
+        modelAndView.addObject("newsList", newsList);
+        return modelAndView;
     }
 
     @RequestMapping("/contact")

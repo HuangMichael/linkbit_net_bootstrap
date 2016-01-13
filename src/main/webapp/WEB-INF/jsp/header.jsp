@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <div class="header">
     <div class="container">
-        <div class="row">
+
         <div class="hader-top">
             <div class="head-nav">
                 <span class="menu"> </span>
@@ -23,5 +23,5 @@
         </div>
            <div class="clearfix"></div>
         </div>
-    </div>
+
 </div>

@@ -5,6 +5,21 @@
     margin: 1em 0em;
 }
 
+
+
+.news_title {
+    font-size: 1.2em;
+    color: #000000;
+    font-weight: 600;
+    margin: 1em 0em;
+}
+
+
+.news_content {
+    margin: 1em 0em;
+}
+
+
 body {
 
     overflow: scroll;
@@ -13,7 +28,7 @@ body {
 .knowledge_keywords {
     color: red;
     font-weight: 200;
-    margin: 1.5em 0em;
+    margin: 1.5em;
 }
 
 .knowledge_publishTime {

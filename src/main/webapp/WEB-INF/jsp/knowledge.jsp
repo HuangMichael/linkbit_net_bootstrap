@@ -1,5 +1,5 @@
-<%@page pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@page pageEncoding="UTF-8" %>
 <jsp:include page="head.jsp" flush="true"/>
 <body>
 <!-- header -->
@@ -7,45 +7,36 @@
 <!-- about-section -->
 <div class="about-section">
     <div class="container">
-        <%--  <h2>关于北斗</h2>--%>
+        <c:forEach items="${knowledgeList}" var="k">
+            <div class="col-md-12 news_title">${k.title}</div>
+            <div class="col-md-9 ">关键字:<a class="badge badge-success">${k.keywords}</a></div>
+            <div class="col-md-3 ">发布时间:${k.publishTime}</div>
 
-        <div class="accordion" id="accordion2">
-            <c:forEach items="${knowledgeList}" var="k" varStatus="status">
-                <div class="accordion-group">
-                    <div class="accordion-heading about-left1">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"
-                           href="#collapse${status.index}">
-                            <h5 class="knowledge_title">${k.title}</h5>
-
-                        </a>
-                </div>
-                    <div id="collapse${status.index}" class="accordion-body collapse" style="height: 0px; ">
-                        <div class="accordion-inner">
-                            <div class="knowledge_keywords">关键字：<a href="#"
-                                                                   class="badge badge-primary">${k.keywords}</a></div>
-                                ${k.content}<br>
-
-                            <div class="knowledge_publishTime">发布时间：${k.publishTime}</div>
-
-                        </div>
-                    </div>
+            <div class="col-md-12 ">
+                <div id="content${k.id}" class="news_content">${k.knowledgeDesc}<br></div>
+                <a class="link" id="${k.id}">阅读明细</a>
             </div>
-            </c:forEach>
-        </div>
+
+        </c:forEach>
     </div>
 </div>
 <!-- footer -->
 <jsp:include page="footer.jsp"/>
 <!-- footer -->
-<script src="js/bootstrap.js"></script>
 
 <script type="text/javascript">
     $(function () {
-        /* $("a[name='readMore']").on("click", function () {
-         /!*alert($(this).attr("data-detail-id"));*!/
-         });*/
+        $(".link").on("click", function () {
+            var id = $(this).attr("id");
+            var url = "/knowledge/findById";
+            $.getJSON(url, {id: id}, function (data) {
+                $("#content" + id).show("fast", function () {
+                    $("#content" + id).html(data["content"]);
+                });
+            });
+
+        });
     });
 </script>
 </body>
-
 </html>

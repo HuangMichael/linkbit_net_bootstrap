@@ -1,13 +1,15 @@
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\KnowledgeController.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\NewsController.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\news\News.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\MenuController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\knowledge\Knowledge.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\knowledge\KnowledgeRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\ProductRepository.java
-F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\Customers\CustomerRepository.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\customers\CustomerRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\user\UserRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\service\menu\MenusServiceImpl.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\utils\EnumMenuType.java
-F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\Customers\Customer.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\customers\Customer.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\utils\KnowledgeType.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\UserController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\Application.java
@@ -23,3 +25,4 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\menu\Menu.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\LoginController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\service\user\UserService.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\MainsiteErrorController.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\news\NewsRepository.java
