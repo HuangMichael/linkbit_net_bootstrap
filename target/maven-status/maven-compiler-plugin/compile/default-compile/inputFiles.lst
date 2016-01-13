@@ -3,6 +3,7 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\NewsController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\news\News.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\MenuController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\knowledge\Knowledge.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\company\Company.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\knowledge\KnowledgeRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\ProductRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\customers\CustomerRepository.java
