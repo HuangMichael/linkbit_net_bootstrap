@@ -1,7 +1,8 @@
 package com.linkbit.net.front.web;
 
 
-import com.linkbit.net.front.service.user.UserService;
+import com.linkbit.net.front.domain.user.User;
+import com.linkbit.net.front.domain.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.linkbit.net.front.service.menu.domain.user.User;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController extends BaseController {
     @Autowired
-    UserService userService;
+    UserRepository userRepository;
 
     @RequestMapping("/create")
     public String create() {
@@ -32,23 +32,22 @@ public class UserController extends BaseController {
 
     @RequestMapping("/edit")
     public String edit(int id) {
-
         return "edit";
     }
 
 
-    @RequestMapping(value = "/findAllUsers", method = RequestMethod.GET)
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
     @ResponseBody
-    public List<User> findAllUsers() {
+    public List<User> findAll() {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        List<User> usersList = userService.findAllUsers();
+        List<User> usersList = userRepository.findAll();
         return usersList;
     }
 
     @RequestMapping("/index")
     public String index(Model model) {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        List<User> userList = userService.findAllUsers();
+        List<User> userList = userRepository.findAll();
         model.addAttribute("userList", userList);
         return "/user/list";
     }

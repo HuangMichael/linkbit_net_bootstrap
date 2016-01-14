@@ -1,19 +1,19 @@
 package com.linkbit.net.front.web;
 
 
-import com.linkbit.net.front.service.menu.domain.company.Company;
-import com.linkbit.net.front.service.menu.domain.company.CompanyRepository;
-import com.linkbit.net.front.service.menu.domain.customers.Customer;
-import com.linkbit.net.front.service.menu.domain.customers.CustomerRepository;
-import com.linkbit.net.front.service.menu.domain.knowledge.Knowledge;
-import com.linkbit.net.front.service.menu.domain.knowledge.KnowledgeRepository;
-import com.linkbit.net.front.service.menu.domain.menu.Menu;
-import com.linkbit.net.front.service.menu.domain.menu.MenuRepository;
-import com.linkbit.net.front.service.menu.domain.news.News;
-import com.linkbit.net.front.service.menu.domain.news.NewsRepository;
-import com.linkbit.net.front.service.menu.domain.product.Product;
-import com.linkbit.net.front.service.menu.domain.product.ProductRepository;
-import com.linkbit.net.front.service.user.UserService;
+import com.linkbit.net.front.domain.company.Company;
+import com.linkbit.net.front.domain.company.CompanyRepository;
+import com.linkbit.net.front.domain.customers.Customer;
+import com.linkbit.net.front.domain.customers.CustomerRepository;
+import com.linkbit.net.front.domain.knowledge.Knowledge;
+import com.linkbit.net.front.domain.knowledge.KnowledgeRepository;
+import com.linkbit.net.front.domain.menu.Menu;
+import com.linkbit.net.front.domain.menu.MenuRepository;
+import com.linkbit.net.front.domain.news.News;
+import com.linkbit.net.front.domain.news.NewsRepository;
+import com.linkbit.net.front.domain.product.Product;
+import com.linkbit.net.front.domain.product.ProductRepository;
+import com.linkbit.net.front.domain.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -35,7 +35,7 @@ import java.util.List;
 @RequestMapping("/")
 public class LoginController extends BaseController {
     @Autowired
-    UserService userService;
+    UserRepository userRepository;
 
     @Autowired
     ProductRepository productRepository;
@@ -53,7 +53,7 @@ public class LoginController extends BaseController {
     CompanyRepository companyRepository;
 
     @Autowired
-    MenuRepository  menuRepository;
+    MenuRepository menuRepository;
     @RequestMapping("/")
     public String login(HttpServletRequest request) {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());

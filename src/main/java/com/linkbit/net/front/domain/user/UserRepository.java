@@ -1,18 +1,14 @@
-package com.linkbit.net.front.service.menu.domain.user;
+package com.linkbit.net.front.domain.user;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.Repository;
+
+import java.util.List;
 
 /**
- * Created by Administrator on 2015/12/23 0023.
+ * Created by huangbin on 2015/12/23 0023.
  */
-@Repository
-public class UserRepository {
+public interface UserRepository extends Repository<User, Long> {
 
-    /**
-     * 创建对象
-     */
+    List<User> findAll();
 
-    public void create() {
-        System.out.println("this is the method from " + this.getClass().getSimpleName());
-    }
 }

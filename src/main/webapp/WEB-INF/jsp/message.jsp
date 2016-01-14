@@ -11,46 +11,29 @@
             <div class="col-md-6">
                 <img src="images/message/service.png"
                      class="img-responsive img-thumbnail img-rounded message_bg">
-
             </div>
             <div class="col-md-6">
-                <form>
+                <form id="messageForm" action="/message0/save" action="post">
                     <div class="register-top-grid">
                         <h3>您的联系方式</h3>
-
                         <div class="col-md-6"><span>姓名<label>*</label></span>
-                            <input type="text"></div>
+                            <input type="text" id="userName" name="message.userName" required></div>
                         <div class="col-md-6"><span>电话<label>*</label></span>
-                            <input type="text"></div>
+                            <input type="text" id="telephone" name="message.telephone" required></div>
                         <div class="col-md-6"><span>工作单位<label>*</label></span>
-                            <input type="text"></div>
+                            <input type="text" id="workplace" name="message.workplace"></div>
                         <div class="col-md-6"><span>电子邮箱<label>*</label></span>
-                            <input type="text"></div>
+                            <input type="text" id="email" name="message.email"></div>
                         <div class="col-md-6"><span>留言<label>*</label></span>
-                            <textarea name="msg" cols="45" rows="5"></textarea></div>
+                            <textarea id="content" name="msg" cols="45" rows="5" required></textarea></div>
                         <div class="clearfix"></div>
                     </div>
-                    <%--<div class="register-bottom-grid">
-                        <h3>LOGIN INFORMATION</h3>
-
-                        <div class="wow fadeInLeft" data-wow-delay="0.4s">
-                            <span>Password<label>*</label></span>
-                            <input type="text">
-                        </div>
-                        <div class="wow fadeInRight" data-wow-delay="0.4s">
-                            <span>Confirm Password<label>*</label></span>
-                            <input type="text">
-                        </div>
-                    </div>--%>
-                </form>
                 <div class="clearfix"></div>
                 <div class="register-but">
-                    <form>
-                        <input type="submit" value="发送给我们">
-
+                    <input type="button" id="send" value="发送给我们">
                         <div class="clearfix"></div>
-                    </form>
                 </div>
+                </form>
             </div>
         </div>
 
@@ -62,6 +45,29 @@
     <jsp:include page="footer.jsp" flush="true"/>
 </div>
 <!-- footer -->
+<script type="text/javascript">
+    $(function () {
+        $("#send").on("click", function () {
+            var url = "/message0/save";
+            var message = new Object();
+            message.userName = $("#userName").val();
+            message.telephone = $("#telephone").val();
+            message.worksplace = $("#worksplace").val();
+            message.email = $("#email").val();
+            message.content = $("#content").val();
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: message,
+                success: function (data) {
+                    $("#send").val("保存成功");
+                    $("#send").attr("disabled", "disabled")
+                }
+            });
+
+        })
+    });
+</script>
 </body>
 
 </html>

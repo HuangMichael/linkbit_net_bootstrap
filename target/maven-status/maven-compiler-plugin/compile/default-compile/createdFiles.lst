@@ -8,17 +8,15 @@ com\linkbit\net\front\domain\knowledge\KnowledgeRepository.class
 com\linkbit\net\front\web\UserController.class
 com\linkbit\net\front\domain\company\CompanyProperty.class
 com\linkbit\net\front\domain\news\NewsRepository.class
-com\linkbit\net\front\service\menu\MenuService.class
-com\linkbit\net\front\service\user\UsersServiceImpl.class
 com\linkbit\net\front\domain\customers\CustomerRepository.class
-com\linkbit\net\front\service\menu\MenusServiceImpl.class
+com\linkbit\net\front\domain\message\Message.class
 com\linkbit\net\front\domain\company\CompanyPropertyRepository.class
 com\linkbit\net\front\web\LoginController.class
 com\linkbit\net\front\web\NewsController.class
 com\linkbit\net\front\web\MenuController.class
-com\linkbit\net\front\service\user\UserService.class
 com\linkbit\net\front\domain\company\CompanyRepository.class
 com\linkbit\net\front\domain\product\ProductRepository.class
+com\linkbit\net\front\web\MessageController.class
 com\linkbit\net\Application.class
 com\linkbit\net\front\domain\user\UserRepository.class
 com\linkbit\net\front\domain\customers\Customer.class
@@ -26,6 +24,6 @@ com\linkbit\net\front\domain\product\Product.class
 com\linkbit\net\front\utils\EnumMenuType.class
 com\linkbit\net\front\web\KnowledgeController.class
 com\linkbit\net\front\web\BaseController.class
+com\linkbit\net\front\domain\message\MessageRepository.class
 com\linkbit\net\front\domain\company\Company.class
-com\linkbit\net\front\service\BaseService.class
 com\linkbit\net\front\domain\menu\MenuRepository.class

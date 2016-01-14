@@ -15,4 +15,6 @@ public interface MenuRepository extends Repository<Menu, Long> {
 
     List<Menu> findAll();
 
+
+
 }

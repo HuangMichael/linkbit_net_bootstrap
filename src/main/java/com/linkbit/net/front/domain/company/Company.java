@@ -1,4 +1,4 @@
-package com.linkbit.net.front.menu.domain.company;
+package com.linkbit.net.front.domain.company;
 
 
 import lombok.Data;

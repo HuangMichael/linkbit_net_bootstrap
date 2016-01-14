@@ -1,8 +1,8 @@
 package com.linkbit.net.front.web;
 
 
-import com.linkbit.net.front.service.menu.domain.news.News;
-import com.linkbit.net.front.service.menu.domain.news.NewsRepository;
+import com.linkbit.net.front.domain.news.News;
+import com.linkbit.net.front.domain.news.NewsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
