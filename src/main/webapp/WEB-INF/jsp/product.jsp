@@ -14,13 +14,13 @@
                         <c:forEach items="${allProductList}" var="product" varStatus="status" begin="0" end="3">
                         <li>
                             <a href="#image-${status.index}">
-                                <img src="${product.productImgUrl}" height="120px" width="120px"
+                                <img src="${product.productImgUrl}" <%--height="120px" width="120px"--%>
                                      class="img-responsive img-thumbnail" alt="${product.productName}">
                                 <span> </span>
                             </a>
 
                             <div class="lb-overlay" id="image-${status.index}">
-                                <img src="${product.productImgUrl}" height="600px" width="800px"
+                                <img src="${product.productImgUrl}" <%--height="600px" width="800px"--%>
                                      class="img-responsive img-thumbnail" alt="">
                                 <a href="#" class="lb-close"> </a>
                             </div>
@@ -34,13 +34,13 @@
                         <c:forEach items="${allProductList}" var="product" varStatus="status" begin="4" end="7">
                             <li>
                                 <a href="#image-${status.index}">
-                                    <img src="${product.productImgUrl}" height="120px" width="120px"
+                                    <img src="${product.productImgUrl}" <%--height="120px" width="120px"--%>
                                          class="img-responsive img-thumbnail" alt="${product.productName}">
                                     <span> </span>
                                 </a>
 
                                 <div class="lb-overlay" id="image-${status.index}">
-                                    <img src="${product.productImgUrl}" height="600px" width="800px"
+                                    <img src="${product.productImgUrl}" <%--height="600px" width="800px"--%>
                                          class="img-responsive img-thumbnail" alt="">
                                     <a href="#" class="lb-close"> </a>
                                 </div>
@@ -54,13 +54,13 @@
                         <c:forEach items="${allProductList}" var="product" varStatus="status" begin="8" end="11">
                             <li>
                                 <a href="#image-${status.index}">
-                                    <img src="${product.productImgUrl}" height="120px" width="120px"
+                                    <img src="${product.productImgUrl}" <%--height="120px" width="120px"--%>
                                          class="img-responsive img-thumbnail" alt="${product.productName}">
                                     <span> </span>
                                 </a>
 
                                 <div class="lb-overlay" id="image-${status.index}">
-                                    <img src="${product.productImgUrl}" height="600px" width="800px"
+                                    <img src="${product.productImgUrl}" <%--height="600px" width="800px"--%>
                                          class="img-responsive img-thumbnail" alt="">
                                     <a href="#" class="lb-close"> </a>
                                 </div>

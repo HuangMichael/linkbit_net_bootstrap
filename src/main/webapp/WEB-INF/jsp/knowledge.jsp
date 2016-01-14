@@ -32,9 +32,9 @@
             $.getJSON(url, {id: id}, function (data) {
                 $("#content" + id).show("fast", function () {
                     $("#content" + id).html(data["content"]);
+                    $("#" + id).html("收起明细");
                 });
             });
-
         });
     });
 </script>
