@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.linkbit.net.front.domain.user.User;
+import com.linkbit.net.front.service.menu.domain.user.User;
 
 import java.util.List;
 

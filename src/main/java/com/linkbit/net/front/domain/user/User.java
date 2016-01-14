@@ -1,4 +1,4 @@
-package com.linkbit.net.front.domain.user;
+package com.linkbit.net.front.service.menu.domain.user;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;

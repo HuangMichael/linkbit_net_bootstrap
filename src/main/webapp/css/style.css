@@ -779,11 +779,19 @@ display: inline-block;
 	text-transform: uppercase;
 }
 .register-top-grid input[type="text"], .register-bottom-grid input[type="text"] {
-	border: 1px solid #EEE;
-	outline-color:#FF5B36;
-	width: 96%;
-	font-size: 1em;
-	padding: 0.5em;
+    border: 1px solid #EEE;
+    outline-color: #FF5B36;
+    width: 96%;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+.register-top-grid textarea {
+    border: 1px solid #EEE;
+    outline-color: #FF5B36;
+    width: 100%;
+    font-size: 1em;
+    padding: 0.5em;
 }
 .checkbox {
 	margin-bottom: 4px;
@@ -888,8 +896,17 @@ div.register-bottom-grid {
 	font-size: 2.1em;
 }
 .footer {
-	padding: 3em 0;
-}
+    /* background-color: green;
+     color: white;
+     width: 100%;
+     height: 16px;
+     position: absolute;
+     bottom: 0px;
+     left: 0px;*/
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 }
 /*-- responsive-mediaquries --*/
 @media(max-width:1024px){
@@ -1346,139 +1363,174 @@ h3.style1 {
 }
 }
 /*-- responsive-mediaquries --*/
-@media(max-width:320px){
-.content_bg h1 {
-	font-size: 1.4em;
-}
-p.para1 {
-	font-size: 0.875em;
-	overflow: hidden;
-	height: 85px;
-}
-.like-right {
-	width: 28%;
-	margin-left: 3%;
-}
-.follow h4 a {
-	font-size: 0.650em;
-}
-.follow {
-	width: 50%;
-}
-.footlo {
-	text-align: center;
-	margin: 1em 0;
-}
-.btn {
-	font-size: 0.8125em;
-	padding: 0.5em 1em;
-}
-.register-top-grid h3, .register-bottom-grid h3 {
-	font-size: 0.9em;
-}
-.head-right p a {
-	display:none;
-}
-.head-nav span.menu {
-	top: 2.1em;
-	right: 1.5em;
-}
-.thought h1 {
-	font-size: 1em;
-	width: 100%;
-}
-.banner-info p {
-	font-size: 0.875em;
-	width: 100%;
-}
-.communt-left {
-	float: left;
-	width: 20%;
-}
-.communt-right {
-	float: left;
-	width: 74%;
-	margin-left: 6%;
-}
-.why-so {
-	background: url(../images/banner1.jpg) no-repeat -483px -74px;
-	min-height: 170px;
-}
-.tittle {
-	padding-top: 2em;
-}
-.tittle h4 {
-	font-size: 1.3em;
-}
-.tittle p {
-	width: 100%;
-	font-size: 0.875em;
-}
-.bull li {
-	margin: 0.5em 0.2em;
-	width: 31%;
-	float: left;
-}
-.bull {
-	padding: 1em 0;
-}
-.our-ne h3 {
-	font-size: 1.2em;
-}
-.our-ne h4 {
-	font-size: 1em;
-}
-.our-ne input[type="text"] {
-	width: 70%;
-	font-size: 1em;
-	padding:0.3em 1em;
-}
-.our-ne label {
-	height: 4px;
-	width: 108px;
-	background: url(../images/casdow.png)no-repeat -138px 2px;
-	margin-top: 0em;
-}
-.our-ne {
-	padding: 1em 0;
-}
-.footer p {
-	font-size: 0.875em;
-}
-.like-left {
-	width: 50%;
-}
-.wmuSliderPrev, .wmuSliderNext {
-	width: 36px;
-	height: 36px;
-}
-.wmuSliderPrev {
-	background-position: -91px 0px;
-	left: 1em;
-	top: 13em;
-	background-size: 12em;
-}
-.wmuSliderNext {
-	background-position: -130px -1px;
-	right: 0em;
-	top: 13em;
-	background-size: 12em;
-}
-.thought-left img {
-	width: 56%;
-}
-.banner-info h4 {
-	font-size: 1em;
-}
-.like {
-	float: left;
-	width: 35%;
-}
-.follow {
-	width: 58%;
-}
-.twt {
-	width: 95%;
-	margin: 1.5em auto 0;
-}
+    @media (max-width: 320px) {
+        .content_bg h1 {
+            font-size: 1.4em;
+        }
+
+        p.para1 {
+            font-size: 0.875em;
+            overflow: hidden;
+            height: 85px;
+        }
+
+        .like-right {
+            width: 28%;
+            margin-left: 3%;
+        }
+
+        .follow h4 a {
+            font-size: 0.650em;
+        }
+
+        .follow {
+            width: 50%;
+        }
+
+        .footlo {
+            text-align: center;
+            margin: 1em 0;
+        }
+
+        .btn {
+            font-size: 0.8125em;
+            padding: 0.5em 1em;
+        }
+
+        .register-top-grid h3, .register-bottom-grid h3 {
+            font-size: 0.9em;
+        }
+
+        .head-right p a {
+            display: none;
+        }
+
+        .head-nav span.menu {
+            top: 2.1em;
+            right: 1.5em;
+        }
+
+        .thought h1 {
+            font-size: 1em;
+            width: 100%;
+        }
+
+        .banner-info p {
+            font-size: 0.875em;
+            width: 100%;
+        }
+
+        .communt-left {
+            float: left;
+            width: 20%;
+        }
+
+        .communt-right {
+            float: left;
+            width: 74%;
+            margin-left: 6%;
+        }
+
+        .why-so {
+            background: url(../images/banner1.jpg) no-repeat -483px -74px;
+            min-height: 170px;
+        }
+
+        .tittle {
+            padding-top: 2em;
+        }
+
+        .tittle h4 {
+            font-size: 1.3em;
+        }
+
+        .tittle p {
+            width: 100%;
+            font-size: 0.875em;
+        }
+
+        .bull li {
+            margin: 0.5em 0.2em;
+            width: 31%;
+            float: left;
+        }
+
+        .bull {
+            padding: 1em 0;
+        }
+
+        .our-ne h3 {
+            font-size: 1.2em;
+        }
+
+        .our-ne h4 {
+            font-size: 1em;
+        }
+
+        .our-ne input[type="text"] {
+            width: 70%;
+            font-size: 1em;
+            padding: 0.3em 1em;
+        }
+
+        .our-ne label {
+            height: 4px;
+            width: 108px;
+            background: url(../images/casdow.png) no-repeat -138px 2px;
+            margin-top: 0em;
+        }
+
+        .our-ne {
+            padding: 1em 0;
+        }
+
+        .footer p {
+            font-size: 0.875em;
+        }
+
+        .like-left {
+            width: 50%;
+        }
+
+        .wmuSliderPrev, .wmuSliderNext {
+            width: 36px;
+            height: 36px;
+        }
+
+        .wmuSliderPrev {
+            background-position: -91px 0px;
+            left: 1em;
+            top: 13em;
+            background-size: 12em;
+        }
+
+        .wmuSliderNext {
+            background-position: -130px -1px;
+            right: 0em;
+            top: 13em;
+            background-size: 12em;
+        }
+
+        .thought-left img {
+            width: 56%;
+        }
+
+        .banner-info h4 {
+            font-size: 1em;
+        }
+
+        .like {
+            float: left;
+            width: 35%;
+        }
+
+        .follow {
+            width: 58%;
+        }
+
+        .twt {
+            width: 95%;
+            margin: 1.5em auto 0;
+        }
+    }
 }

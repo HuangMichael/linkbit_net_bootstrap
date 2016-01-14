@@ -137,10 +137,9 @@
 </div>
 <!-- our-ne -->
 <!-- footer -->
-<div class="forever-bottom">
+
 <jsp:include page="footer.jsp" flush="true" />
-</div>
+
 <!-- footer -->
 </body>
-
 </html>

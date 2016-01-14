@@ -27,7 +27,7 @@
                 <!-- script-for-nav -->
             </div>
             <div class="head-right">
-                <P><a href="registration.html">联系我们</a></P>
+                <P><a href="/message">联系我们</a></P>
             </div>
             <div class="clearfix"> </div>
         </div>

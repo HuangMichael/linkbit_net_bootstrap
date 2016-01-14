@@ -1,7 +1,7 @@
 package com.linkbit.net.front.web;
 
-import com.linkbit.net.front.domain.knowledge.Knowledge;
-import com.linkbit.net.front.domain.knowledge.KnowledgeRepository;
+import com.linkbit.net.front.service.menu.domain.knowledge.Knowledge;
+import com.linkbit.net.front.service.menu.domain.knowledge.KnowledgeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;

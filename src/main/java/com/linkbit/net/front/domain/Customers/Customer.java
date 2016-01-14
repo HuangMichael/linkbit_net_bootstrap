@@ -1,4 +1,4 @@
-package com.linkbit.net.front.domain.customers;
+package com.linkbit.net.front.service.menu.domain.customers;
 
 import lombok.Data;
 

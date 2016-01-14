@@ -1,18 +1,18 @@
 package com.linkbit.net.front.web;
 
 
-import com.linkbit.net.front.domain.company.Company;
-import com.linkbit.net.front.domain.company.CompanyRepository;
-import com.linkbit.net.front.domain.customers.Customer;
-import com.linkbit.net.front.domain.customers.CustomerRepository;
-import com.linkbit.net.front.domain.knowledge.Knowledge;
-import com.linkbit.net.front.domain.knowledge.KnowledgeRepository;
-import com.linkbit.net.front.domain.menu.Menu;
-import com.linkbit.net.front.domain.news.News;
-import com.linkbit.net.front.domain.news.NewsRepository;
-import com.linkbit.net.front.domain.product.Product;
-import com.linkbit.net.front.domain.product.ProductRepository;
-import com.linkbit.net.front.service.menu.MenuService;
+import com.linkbit.net.front.service.menu.domain.company.Company;
+import com.linkbit.net.front.service.menu.domain.company.CompanyRepository;
+import com.linkbit.net.front.service.menu.domain.customers.Customer;
+import com.linkbit.net.front.service.menu.domain.customers.CustomerRepository;
+import com.linkbit.net.front.service.menu.domain.knowledge.Knowledge;
+import com.linkbit.net.front.service.menu.domain.knowledge.KnowledgeRepository;
+import com.linkbit.net.front.service.menu.domain.menu.Menu;
+import com.linkbit.net.front.service.menu.domain.menu.MenuRepository;
+import com.linkbit.net.front.service.menu.domain.news.News;
+import com.linkbit.net.front.service.menu.domain.news.NewsRepository;
+import com.linkbit.net.front.service.menu.domain.product.Product;
+import com.linkbit.net.front.service.menu.domain.product.ProductRepository;
 import com.linkbit.net.front.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -53,12 +53,12 @@ public class LoginController extends BaseController {
     CompanyRepository companyRepository;
 
     @Autowired
-    MenuService menuService;
+    MenuRepository  menuRepository;
     @RequestMapping("/")
     public String login(HttpServletRequest request) {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         //查询导航主菜单
-        List<Menu> menusList = menuService.findAll();
+        List<Menu> menusList = menuRepository.findAll();
         request.getSession().setAttribute("menusList", menusList);
         // 跳转到index
         return "redirect:/index";
@@ -158,4 +158,14 @@ public class LoginController extends BaseController {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         return "detail";
     }
+
+
+    @RequestMapping("/message")
+    public String message() {
+        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
+        return "message";
+
+    }
+
+
 }

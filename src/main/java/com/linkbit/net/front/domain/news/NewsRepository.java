@@ -1,4 +1,4 @@
-package com.linkbit.net.front.domain.news;
+package com.linkbit.net.front.service.menu.domain.news;
 
 
 import org.springframework.data.repository.Repository;

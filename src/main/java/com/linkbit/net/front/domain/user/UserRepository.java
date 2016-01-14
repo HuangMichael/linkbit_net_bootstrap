@@ -1,4 +1,4 @@
-package com.linkbit.net.front.domain.user;
+package com.linkbit.net.front.service.menu.domain.user;
 
 import org.springframework.stereotype.Repository;
 

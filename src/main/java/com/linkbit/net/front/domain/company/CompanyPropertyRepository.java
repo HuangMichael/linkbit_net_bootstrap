@@ -1,4 +1,4 @@
-package com.linkbit.net.front.domain.company;
+package com.linkbit.net.front.service.menu.domain.company;
 
 import org.springframework.data.repository.Repository;
 

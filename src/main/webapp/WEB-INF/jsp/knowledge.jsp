@@ -11,7 +11,6 @@
             <div class="col-md-12 news_title">${k.title}</div>
             <div class="col-md-9 ">关键字:<a class="badge badge-success">${k.keywords}</a></div>
             <div class="col-md-3 ">发布时间:${k.publishTime}</div>
-
             <div class="col-md-12 ">
                 <div id="content${k.id}" class="news_content">${k.knowledgeDesc}<br></div>
                 <a class="link" id="${k.id}">阅读明细</a>

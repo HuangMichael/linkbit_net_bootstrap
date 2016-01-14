@@ -2,7 +2,7 @@ package com.linkbit.net.front.web;
 
 
 import com.linkbit.net.front.domain.menu.Menu;
-import com.linkbit.net.front.service.menu.MenuService;
+import com.linkbit.net.front.domain.menu.MenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -20,11 +20,11 @@ import java.util.List;
 @RequestMapping("/menu")
 public class MenuController extends BaseController {
     @Autowired
-    MenuService menuService;
+    MenuRepository menuRepository;
     @RequestMapping("/findAll")
     @ResponseBody
     public List<Menu> findAllMenus() {
-        List<Menu> menusList = menuService.findAll();
+        List<Menu> menusList = menuRepository.findAll();
 
         for(Menu menu:menusList){
 

@@ -1,4 +1,4 @@
-package com.linkbit.net.front.domain.knowledge;
+package com.linkbit.net.front.service.menu.domain.knowledge;
 
 import com.linkbit.net.front.utils.KnowledgeType;
 import lombok.Data;
