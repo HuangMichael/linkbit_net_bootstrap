@@ -7,10 +7,8 @@
 <!-- header -->
 <div class="content_bg">
     <div class="container">
-        <h1>公司产品</h1>
         <div class="main">
             <div class="gallery">
-
                 <section>
                     <ul class="lb-album">
                         <c:forEach items="${allProductList}" var="product" varStatus="status" begin="0" end="3">

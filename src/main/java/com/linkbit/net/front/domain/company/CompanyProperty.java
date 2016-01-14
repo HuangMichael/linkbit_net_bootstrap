@@ -19,6 +19,7 @@ public class CompanyProperty {
     private Long id;
     private String title; //属性标题
     private String propertyDesc;  //属性描述
+    private String imgUrl;//图片路径
     private String content; //内容
     private Boolean status;//是否显示
     @ManyToOne(cascade = CascadeType.ALL, optional = false)

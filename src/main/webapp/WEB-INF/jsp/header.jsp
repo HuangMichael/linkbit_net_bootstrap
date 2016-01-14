@@ -3,7 +3,9 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <div class="header">
     <div class="container">
-
+        <div class="logo">
+           <img src="images/company/logo.png" width="110px" height="55px" class="img-responsive" alt=""/>
+        </div>
         <div class="hader-top">
             <div class="head-nav">
                 <span class="menu"> </span>

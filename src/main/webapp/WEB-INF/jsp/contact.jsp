@@ -9,7 +9,7 @@
     <div class="container">
         <c:forEach items="${company.companyPropertyList}" var="companyProperty">
         <div class="col-md-3">
-            <img src="images/station.png" width="200px" height=150px" class="img-responsive img-thumbnail" alt=""/>
+            <img src="${companyProperty.imgUrl}" width="160px" height=120px" class="img-responsive img-thumbnail" alt=""/>
         </div>
         <div class="col-md-9">
             <h5><a href="details.html"> ${companyProperty.title}</a></h5>

@@ -224,6 +224,7 @@ ul.wmuSliderPagination {
 	color: #71c8ec;
 	text-transform: uppercase;
 	font-weight: 700;
+	cursor: hand;
 }
 i.man {
 	width: 42px;
