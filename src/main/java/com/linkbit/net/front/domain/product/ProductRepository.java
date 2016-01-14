@@ -16,4 +16,9 @@ public interface ProductRepository extends Repository<Product, Long> {
     List<Product> findByOnline(boolean online);
 
     List<Product> findAll();
+
+    /**
+     * 根据产品了类型查找
+     */
+    List<Product> findByProductType(String type);
 }

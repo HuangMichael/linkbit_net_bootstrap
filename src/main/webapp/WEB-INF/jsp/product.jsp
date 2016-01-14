@@ -8,72 +8,28 @@
 <div class="content_bg">
     <div class="container">
         <div class="main">
-            <div class="gallery">
-                <section>
-                    <ul class="lb-album">
-                        <c:forEach items="${allProductList}" var="product" varStatus="status" begin="0" end="3">
-                        <li>
-                            <a href="#image-${status.index}">
-                                <img src="${product.productImgUrl}" <%--height="120px" width="120px"--%>
-                                     class="img-responsive img-thumbnail" alt="${product.productName}">
-                                <span> </span>
-                            </a>
-
-                            <div class="lb-overlay" id="image-${status.index}">
-                                <img src="${product.productImgUrl}" <%--height="600px" width="800px"--%>
-                                     class="img-responsive img-thumbnail" alt="">
-                                <a href="#" class="lb-close"> </a>
-                            </div>
-                        </li>
+            <div id="mi-slider" class="mi-slider">
+                <c:forEach items="${productMap}" var="plist">
+                    <ul>
+                        <c:forEach items="${plist}" var="p">
+                            <li><a href="#"><img src="${p.productImgUrl}" alt="${p.productName}"
+                                                 title="${p.productName}"><h4>${p.productName}</h4></a></li>
                         </c:forEach>
                     </ul>
-                </section>
-
-                <section>
-                    <ul class="lb-album">
-                        <c:forEach items="${allProductList}" var="product" varStatus="status" begin="4" end="7">
-                            <li>
-                                <a href="#image-${status.index}">
-                                    <img src="${product.productImgUrl}" <%--height="120px" width="120px"--%>
-                                         class="img-responsive img-thumbnail" alt="${product.productName}">
-                                    <span> </span>
-                                </a>
-
-                                <div class="lb-overlay" id="image-${status.index}">
-                                    <img src="${product.productImgUrl}" <%--height="600px" width="800px"--%>
-                                         class="img-responsive img-thumbnail" alt="">
-                                    <a href="#" class="lb-close"> </a>
-                                </div>
-                            </li>
-                        </c:forEach>
-                    </ul>
-                </section>
-
-                <section>
-                    <ul class="lb-album">
-                        <c:forEach items="${allProductList}" var="product" varStatus="status" begin="8" end="11">
-                            <li>
-                                <a href="#image-${status.index}">
-                                    <img src="${product.productImgUrl}" <%--height="120px" width="120px"--%>
-                                         class="img-responsive img-thumbnail" alt="${product.productName}">
-                                    <span> </span>
-                                </a>
-
-                                <div class="lb-overlay" id="image-${status.index}">
-                                    <img src="${product.productImgUrl}" <%--height="600px" width="800px"--%>
-                                         class="img-responsive img-thumbnail" alt="">
-                                    <a href="#" class="lb-close"> </a>
-                                </div>
-                            </li>
-                        </c:forEach>
-                    </ul>
-                </section>
-
-                <div class="clearfix"> </div>
+                </c:forEach>
+                <nav>
+                    <a href="#">北斗手表</a>
+                    <a href="#">北斗导航PDA</a>
+                    <a href="#">北斗指挥机</a>
+                    <a href="#">北斗导航仪</a>
+                </nav>
             </div>
         </div>
     </div>
 </div>
+<script>
+    $('#mi-slider').catslider();
+</script>
 
 <jsp:include page="footer.jsp"/>
 <!-- footer -->

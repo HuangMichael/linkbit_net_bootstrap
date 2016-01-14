@@ -24,7 +24,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -89,11 +91,18 @@ public class LoginController extends BaseController {
     @RequestMapping("/product")
     public ModelAndView product() {
         // 查询最新产品
-        List<Product> allProductList = productRepository.findAll();
+        //  List<Product> allProductList = productRepository.findAll();
+        String productType[] = {"1", "2", "3", "4"};
+        Map<String, List<Product>> productMap = new HashMap<String, List<Product>>();
+        for (String type : productType) {
+            productMap.put("productList" + type, productRepository.findByProductType(type));
+        }
         //封装对象 传递到页面
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("product");
-        modelAndView.addObject("allProductList", allProductList);
+        //modelAndView.addObject("allProductList", allProductList);
+        modelAndView.addObject("productMap", productMap.values());
+
         return modelAndView;
     }
 
