@@ -6,20 +6,20 @@
 <jsp:include page="header.jsp"/>
 <!-- about-section -->
 <div class="about-section">
-    <div class="container">
-        <div class="col-md-12 about-left1">
-            <h5><a href="#">${knowledge.title}</a></h5>
-            <p>
-                ${knowledge.content }
-            </p>
-            <div style="float:right">
-                <h5>发布时间：${knowledge.publishTime}&nbsp;发布人：${knowledge.publisher}</h5>
+    <div class="container" style="min-height: 604px">
+        <div class="main">
+            <div class="details">
+                <h3 class="style1">${knowledge.title}</h3>
+               <%-- <div class="det_pic">
+                    <img src="images/gallery3.jpg" class="img-responsive" alt="">
+                </div>--%>
+                <div class="det_text">
+                    <p class="para1">${knowledge.content}</p>
+                    <p class="para1">发布日期:${knowledge.publishTime}</p>
+                </div>
+                <div class="clear"></div>
             </div>
-            <a href="details.html" class="link">了解更多</a>
-
-            <div class="clearfix"></div>
         </div>
-        <div class="clearfix"></div>
     </div>
 </div>
 <!-- footer -->

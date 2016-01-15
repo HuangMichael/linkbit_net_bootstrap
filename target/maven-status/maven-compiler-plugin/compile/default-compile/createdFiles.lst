@@ -8,6 +8,7 @@ com\linkbit\net\front\domain\knowledge\KnowledgeRepository.class
 com\linkbit\net\front\web\UserController.class
 com\linkbit\net\front\domain\company\CompanyProperty.class
 com\linkbit\net\front\domain\news\NewsRepository.class
+com\linkbit\net\front\web\ProductController.class
 com\linkbit\net\front\domain\customers\CustomerRepository.class
 com\linkbit\net\front\domain\message\Message.class
 com\linkbit\net\front\domain\company\CompanyPropertyRepository.class

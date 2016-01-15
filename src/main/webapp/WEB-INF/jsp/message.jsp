@@ -5,8 +5,8 @@
 <!-- header -->
 <jsp:include page="header.jsp" flush="true"/>
 
-<div class="content_bg">
-    <div class="container">
+<div class="about-section">
+    <div class="container" style="min-height: 604px">
         <div class="register">
             <div class="col-md-6">
                 <img src="images/message/service.png"

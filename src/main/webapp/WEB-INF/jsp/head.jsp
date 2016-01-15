@@ -3,6 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <base href="/">
     <title>江苏凌比特微电子技术有限公司</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
@@ -25,5 +26,4 @@
     <script src="js/modernizr.custom.63321.js"></script>
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/jquery.catslider.js"></script>
-
 </head>

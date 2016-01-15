@@ -5,15 +5,16 @@
 <!-- header -->
 <jsp:include page="header.jsp"/>
 <!-- header -->
-<div class="content_bg">
+<div class="about-section">
     <div class="container">
         <div class="main">
             <div id="mi-slider" class="mi-slider">
                 <c:forEach items="${productMap}" var="plist">
                     <ul>
                         <c:forEach items="${plist}" var="p">
-                            <li><a href="#"><img src="${p.productImgUrl}" alt="${p.productName}"
-                                                 title="${p.productName}"><h4>${p.productName}</h4></a></li>
+                            <li><a href="/product/detail/${p.id}">
+                                <img src="${p.productImgUrl}" alt="${p.productName}" id="${p.id}" title="${p.productName}">
+                                <h4>${p.productName}</h4></a></li>
                         </c:forEach>
                     </ul>
                 </c:forEach>
@@ -25,10 +26,17 @@
                 </nav>
             </div>
         </div>
+        <div style="min-height: 80px" id="productDetail"></div>
     </div>
 </div>
 <script>
     $('#mi-slider').catslider();
+
+    $("img").on("click", function () {
+        $("#productDetail").append('<div style="min-height: 600px">this is detail</div>');
+    })
+
+
 </script>
 
 <jsp:include page="footer.jsp"/>

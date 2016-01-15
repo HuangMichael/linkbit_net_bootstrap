@@ -17,16 +17,11 @@ import com.linkbit.net.front.domain.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -88,23 +83,6 @@ public class LoginController extends BaseController {
         return modelAndView;
     }
 
-    @RequestMapping("/product")
-    public ModelAndView product() {
-        // 查询最新产品
-        //  List<Product> allProductList = productRepository.findAll();
-        String productType[] = {"1", "2", "3", "4"};
-        Map<String, List<Product>> productMap = new HashMap<String, List<Product>>();
-        for (String type : productType) {
-            productMap.put("productList" + type, productRepository.findByProductType(type));
-        }
-        //封装对象 传递到页面
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("product");
-        //modelAndView.addObject("allProductList", allProductList);
-        modelAndView.addObject("productMap", productMap.values());
-
-        return modelAndView;
-    }
 
 
     @RequestMapping("/about")
@@ -113,27 +91,7 @@ public class LoginController extends BaseController {
         return "about";
     }
 
-    @RequestMapping("/knowledge")
-    public ModelAndView knowledge() {
-        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        List<Knowledge> knowledgeList = knowledgeRepository.findAll();
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("knowledge");
-        modelAndView.addObject("knowledgeList", knowledgeList);
-        return modelAndView;
-    }
 
-
-
-    @RequestMapping(value = "/knowledgeDetail/{id}", method = RequestMethod.GET)
-    @ResponseBody
-    public ModelAndView getKnowledgeDetail(@PathVariable("id") long id) {
-        Knowledge knowledge = knowledgeRepository.findById(id);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("knowledgeDetail");
-        modelAndView.addObject("knowledge", knowledge);
-        return modelAndView;
-    }
 
 
 
@@ -142,15 +100,7 @@ public class LoginController extends BaseController {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         return "customer";
     }
-    @RequestMapping("/news")
-    public ModelAndView news() {
-        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        List<News> newsList = newsRepository.findAll();
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("news");
-        modelAndView.addObject("newsList", newsList);
-        return modelAndView;
-    }
+
 
     @RequestMapping("/contact")
     public ModelAndView contact() {

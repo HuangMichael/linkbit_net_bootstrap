@@ -4,7 +4,7 @@
 <body>
 <!-- header -->
 <jsp:include page="header.jsp" flush="true"/>
-<div class="thought">
+<div class="about-section">
     <div class="wmuSlider example1 section" id="section-1">
         <div class="container">
             <h1>公司最新产品展示</h1>
@@ -82,12 +82,10 @@
         <section class="slider">
             <div class="flexslider">
                 <ul class="slides">
-
                     <c:forEach items="${latestKnowledgeList}" var="lk" varStatus="status">
                     <li>
                         <div class="tittle">
-                            <h4><a href="/showDetail">${lk.title}</a></h4>
-
+                            <h4><a href="/knowledge/detail/${lk.id}">${lk.title}</a></h4>
                             <p>${lk.keywords}</p>
                         </div>
                     </li>
@@ -127,19 +125,21 @@
 <!-- our-ne -->
 <div class="our-ne">
     <div class="container">
-        <h3>咨询电话：025-88888888</h3>
-        <h4>留个联系方式吧!</h4>
-        <form>
-            <input type="text" class="text" placeholder="您的电话"/>
-        </form>
-        <label></label>
+        <div class="col-md-6"><img src="images/company/contact.png" height="80px" width="120px" class="img-circle img-thumbnail img-responsive">
+        </div>
+        <div class="col-md-6">
+            <address>
+                <strong>江苏凌比特微电子技术有限公司</strong><br>
+                <strong>地址:</strong>江苏省南京市浦口区惠达路6号北斗大厦602<br>
+                <abbr title="Phone">电话:</abbr>025-53580278
+            </address>
+        </div>
+
     </div>
 </div>
 <!-- our-ne -->
 <!-- footer -->
-
 <jsp:include page="footer.jsp" flush="true" />
-
 <!-- footer -->
 </body>
 </html>

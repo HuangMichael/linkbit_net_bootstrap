@@ -26,9 +26,9 @@
                 </script>
                 <!-- script-for-nav -->
             </div>
-            <div class="head-right">
+           <%-- <div class="head-right">
                 <P><a href="/message">联系我们</a></P>
-            </div>
+            </div>--%>
             <div class="clearfix"> </div>
         </div>
         <div class="clearfix"> </div>

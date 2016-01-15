@@ -8,7 +8,7 @@
 <div class="about-section">
     <div class="container">
         <c:forEach items="${knowledgeList}" var="k">
-            <div class="col-md-12 news_title">${k.title}</div>
+            <div class="col-md-12 news_title"><a href="/knowledge/detail/${k.id}">${k.title}</a></div>
             <div class="col-md-9 ">关键字:<a class="badge badge-success">${k.keywords}</a></div>
             <div class="col-md-3 ">发布时间:${k.publishTime}</div>
             <div class="col-md-12 ">

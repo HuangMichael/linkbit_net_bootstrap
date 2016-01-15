@@ -3,9 +3,8 @@
 <body>
 <!-- header -->
 <jsp:include page="header.jsp"/>
-
-<div class="content_bg">
-    <div class="container">
+<div class="about-section">
+    <div class="container" style="min-height: 604px">
         <div class="main">
             <div class="details">
                 <h3 class="style1">产品详细描述</h3>

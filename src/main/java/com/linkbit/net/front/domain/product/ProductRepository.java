@@ -21,4 +21,9 @@ public interface ProductRepository extends Repository<Product, Long> {
      * 根据产品了类型查找
      */
     List<Product> findByProductType(String type);
+
+    /**
+     * 根据产品id查找产品信息
+     */
+    Product findByid(long id);
 }
