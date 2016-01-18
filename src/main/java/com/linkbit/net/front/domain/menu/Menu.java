@@ -1,7 +1,6 @@
 package com.linkbit.net.front.domain.menu;
 
 
-import com.linkbit.net.front.utils.EnumMenuType;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -21,7 +20,7 @@ public class Menu {
     private String menuDesc;
     private String iconClass;
     private String url;
-    private EnumMenuType menuType;
+    private String menuType;
 
     private long sortNo;
 
@@ -29,7 +28,7 @@ public class Menu {
     public Menu() {
 
     }
-    public Menu(long id, String menuName, String menuDesc, String iconClass, String url, EnumMenuType menuType, long sortNo) {
+    public Menu(long id, String menuName, String menuDesc, String iconClass, String url, String menuType, long sortNo) {
         this.id = id;
         this.menuName = menuName;
         this.menuDesc = menuDesc;

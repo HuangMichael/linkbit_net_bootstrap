@@ -34,7 +34,7 @@ public class ProductController extends BaseController {
         }
         //封装对象 传递到页面
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("product");
+        modelAndView.setViewName("/front/product");
         modelAndView.addObject("productMap", productMap.values());
         return modelAndView;
     }
@@ -45,7 +45,7 @@ public class ProductController extends BaseController {
         Product product = productRepository.findByid(id);
         //封装对象 传递到页面
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("productDetail");
+        modelAndView.setViewName("/front/productDetail");
         modelAndView.addObject("product", product);
         return modelAndView;
     }

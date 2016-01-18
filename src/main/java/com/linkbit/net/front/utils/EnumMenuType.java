@@ -5,5 +5,5 @@ package com.linkbit.net.front.utils;
  *  菜单类型枚举
  */
 public enum EnumMenuType {
-    MODULE,APP,MENU
+   MENU,BMENU
 }

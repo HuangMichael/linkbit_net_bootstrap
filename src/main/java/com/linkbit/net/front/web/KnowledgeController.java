@@ -38,7 +38,7 @@ public class KnowledgeController extends BaseController{
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         List<Knowledge> knowledgeList = knowledgeRepository.findAll();
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("knowledge");
+        modelAndView.setViewName("/front/knowledge");
         modelAndView.addObject("knowledgeList", knowledgeList);
         return modelAndView;
     }
@@ -50,7 +50,7 @@ public class KnowledgeController extends BaseController{
     public ModelAndView getKnowledgeDetail(@PathVariable("id") long id) {
         Knowledge knowledge = knowledgeRepository.findById(id);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("knowledgeDetail");
+        modelAndView.setViewName("/front/knowledgeDetail");
         modelAndView.addObject("knowledge", knowledge);
         return modelAndView;
     }

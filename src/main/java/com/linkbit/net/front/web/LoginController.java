@@ -9,7 +9,6 @@ import com.linkbit.net.front.domain.knowledge.Knowledge;
 import com.linkbit.net.front.domain.knowledge.KnowledgeRepository;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
-import com.linkbit.net.front.domain.news.News;
 import com.linkbit.net.front.domain.news.NewsRepository;
 import com.linkbit.net.front.domain.product.Product;
 import com.linkbit.net.front.domain.product.ProductRepository;
@@ -55,7 +54,7 @@ public class LoginController extends BaseController {
     public String login(HttpServletRequest request) {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         //查询导航主菜单
-        List<Menu> menusList = menuRepository.findAll();
+        List<Menu> menusList = menuRepository.findByMenuType("0");
         request.getSession().setAttribute("menusList", menusList);
         // 跳转到index
         return "redirect:/index";
@@ -76,7 +75,7 @@ public class LoginController extends BaseController {
         List<Customer> customerList = customerRepository.findByShowInMainPage(true);
         //封装对象 传递到页面
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("index");
+        modelAndView.setViewName("/front/index");
         modelAndView.addObject("latestProductList", latestProductList);
         modelAndView.addObject("latestKnowledgeList", latestKnowledgeList);
         modelAndView.addObject("customerList", customerList);
@@ -88,7 +87,7 @@ public class LoginController extends BaseController {
     @RequestMapping("/about")
     public String about() {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        return "about";
+        return "/front/about";
     }
 
 
@@ -98,7 +97,7 @@ public class LoginController extends BaseController {
     @RequestMapping("/customer")
     public String customers() {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        return "customer";
+        return "/front/customer";
     }
 
 
@@ -107,7 +106,7 @@ public class LoginController extends BaseController {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         Company company = companyRepository.findAll().get(0);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("contact");
+        modelAndView.setViewName("/front/contact");
         modelAndView.addObject("company", company);
         return modelAndView;
 
@@ -115,14 +114,14 @@ public class LoginController extends BaseController {
     @RequestMapping("/showDetail")
     public String showDetail() {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        return "detail";
+        return "/front/detail";
     }
 
 
     @RequestMapping("/message")
     public String message() {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
-        return "message";
+        return "/front/message";
 
     }
 

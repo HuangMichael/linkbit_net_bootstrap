@@ -31,7 +31,7 @@ public class NewsController extends BaseController {
         log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         List<News> newsList = newsRepository.findAll();
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("news");
+        modelAndView.setViewName("/front/news");
         modelAndView.addObject("newsList", newsList);
         return modelAndView;
     }
@@ -56,7 +56,7 @@ public class NewsController extends BaseController {
     public ModelAndView getKnowledgeDetail(@PathVariable("id") long id) {
         News news = newsRepository.findById(id);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("newsDetail");
+        modelAndView.setViewName("/front/newsDetail");
         modelAndView.addObject("news", news);
         return modelAndView;
     }

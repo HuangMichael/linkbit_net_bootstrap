@@ -25,11 +25,14 @@ public class MenuController extends BaseController {
     @ResponseBody
     public List<Menu> findAllMenus() {
         List<Menu> menusList = menuRepository.findAll();
+        return menusList;
+    }
 
-        for(Menu menu:menusList){
 
-            System.out.println(menu);
-        }
+    @RequestMapping("/findFrontMenus")
+    @ResponseBody
+    public List<Menu> findFrontMenus() {
+        List<Menu> menusList = menuRepository.findByMenuType("0");
         return menusList;
     }
 
