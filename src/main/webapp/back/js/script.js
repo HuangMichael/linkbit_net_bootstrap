@@ -3352,9 +3352,9 @@ var App = function () {
         setTimeout(function () {
             var unique_id = $.gritter.add({
                 // (string | mandatory) the heading of the notification
-                title: 'Welcome to Cloud Admin!',
+                title: '欢迎访问网站后台管理系统!',
                 // (string | mandatory) the text inside the notification
-                text: 'Cloud is a feature-rich Responsive Admin Dashboard Template with a wide array of plugins!',
+                text: '欢迎光临江苏凌比特微电子技术有限公司官网！',
                 // (string | optional) the image to display on the left
                 image: 'img/gritter/cloud.png',
                 // (bool | optional) if you want it to fade out on its own or just sit there

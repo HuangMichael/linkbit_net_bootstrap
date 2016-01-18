@@ -701,12 +701,12 @@
                                 </ul>
                                 <!-- /BREADCRUMBS -->
                                 <div class="clearfix">
-                                    <h3 class="content-title pull-left">新闻管理</h3>
+                                    <h3 class="content-title pull-left">知识管理</h3>
                                     <!-- DATE RANGE PICKER -->
 
                                     <!-- /DATE RANGE PICKER -->
                                 </div>
-                                <div class="description">维护和发布新闻信息</div>
+                                <div class="description">维护和发布关于北斗信息</div>
                             </div>
                         </div>
                     </div>
@@ -718,7 +718,7 @@
                             <!-- BOX -->
                             <div class="box border blue">
                                 <div class="box-title">
-                                    <h4><i class="fa fa-table"></i>新闻信息</h4>
+                                    <h4><i class="fa fa-table"></i>知识信息</h4>
 
                                     <div class="tools hidden-xs">
                                         <a href="#box-config" data-toggle="modal" class="config">

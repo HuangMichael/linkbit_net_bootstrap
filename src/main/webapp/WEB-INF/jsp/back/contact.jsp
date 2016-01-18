@@ -803,41 +803,18 @@
                                                                 <div class="divide-20"></div>
                                                                 <!-- BUTTONS -->
                                                                 <div class="row">
+                                                                    <c:forEach items="${company.companyPropertyList}"
+                                                                               var="companyProperty">
                                                                     <div class="col-md-3">
                                                                         <a class="btn btn-danger btn-icon input-block-level"
                                                                            href="javascript:void(0);">
                                                                             <i class="fa fa-google-plus-square fa-2x"></i>
-
-                                                                            <div>Google Plus</div>
+                                                                            <div>${companyProperty.title}</div>
                                                                             <span class="label label-right label-warning">4</span>
                                                                         </a>
                                                                     </div>
-                                                                    <div class="col-md-3">
-                                                                        <a class="btn btn-primary btn-icon input-block-level"
-                                                                           href="javascript:void(0);">
-                                                                            <i class="fa fa-facebook-square fa-2x"></i>
+                                                                    </c:forEach>
 
-                                                                            <div>Facebook</div>
-                                                                            <span class="label label-right label-danger">7+</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <a class="btn btn-pink btn-icon input-block-level"
-                                                                           href="javascript:void(0);">
-                                                                            <i class="fa fa-dribbble fa-2x"></i>
-
-                                                                            <div>Dribbble</div>
-                                                                            <span class="label label-right label-info">1</span>
-                                                                        </a>
-                                                                    </div>
-                                                                    <div class="col-md-3">
-                                                                        <a class="btn btn-success btn-icon input-block-level"
-                                                                           href="javascript:void(0);">
-                                                                            <i class="fa fa-github fa-2x"></i>
-
-                                                                            <div>Github</div>
-                                                                        </a>
-                                                                    </div>
                                                                 </div>
                                                                 <!-- /BUTTONS -->
                                                             </div>

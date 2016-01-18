@@ -37,7 +37,7 @@
     <div class="container">
         <div class="navbar-brand">
             <!-- COMPANY LOGO -->
-            <a href="/index">
+            <a href="/" target="_blank">
                 <img src="img/logo/logo.png" alt="江苏凌比特微电子技术有限公司" class="img-responsive" height="213px" width="533px">
             </a>
             <!-- /COMPANY LOGO -->

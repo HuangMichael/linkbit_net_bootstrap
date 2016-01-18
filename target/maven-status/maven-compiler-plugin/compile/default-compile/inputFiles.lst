@@ -19,11 +19,13 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\customers\Customer.jav
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\utils\KnowledgeType.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackContactController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\UserController.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackCustomerController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\Application.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\ProductCharactor.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\user\User.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\message\Message.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\menu\MenuRepository.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackMessageController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackNewsController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\BaseController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\ContactController.java

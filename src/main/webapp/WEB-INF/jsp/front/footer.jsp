@@ -3,7 +3,7 @@
 <div class="footer">
     <div class="container">
         <div class="col-md-12">
-            <p>&copy;该网站版权归<a href="/index">江苏凌比特微电子技术有限公司</a>所有|<a href="/static/admin/index.html ">管理员入口</a></p>
+            <p>&copy;该网站版权归<a href="/index">江苏凌比特微电子技术有限公司</a>所有|<a href="/back/index ">管理员入口</a></p>
         </div>
         <div class="clearfix"></div>
     </div>

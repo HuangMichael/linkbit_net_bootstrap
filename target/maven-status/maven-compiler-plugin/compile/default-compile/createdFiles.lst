@@ -24,6 +24,8 @@ com\linkbit\net\front\web\MenuController.class
 com\linkbit\net\back\web\BackProductController.class
 com\linkbit\net\front\domain\company\CompanyRepository.class
 com\linkbit\net\front\domain\product\ProductRepository.class
+com\linkbit\net\back\web\BackMessageController.class
+com\linkbit\net\back\web\BackCustomerController.class
 com\linkbit\net\front\web\MessageController.class
 com\linkbit\net\Application.class
 com\linkbit\net\front\domain\user\UserRepository.class
