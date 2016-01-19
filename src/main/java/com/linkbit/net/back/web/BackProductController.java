@@ -7,7 +7,9 @@ import com.linkbit.net.front.domain.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -48,5 +50,11 @@ public class BackProductController {
         return productList;
     }
 
-
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @ResponseBody
+    public Product save(@ModelAttribute Product product) {
+        System.out.println("product-------------------" + product.toString());
+        productRepository.save(product);
+        return product;
+    }
 }

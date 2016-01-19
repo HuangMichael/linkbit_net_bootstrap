@@ -215,7 +215,7 @@ var App = function () {
                     jQuery('.sidebar-collapse i').removeClass(iconRight);
                     jQuery('.sidebar-collapse i').addClass(iconLeft);
                     /* Add placeholder from Search Bar */
-                    jQuery('.search').attr('placeholder', "Search");
+                    jQuery('.search').attr('placeholder', "搜索");
                     collapsed = false;
                     $.cookie('mini_sidebar', '0');
                 }

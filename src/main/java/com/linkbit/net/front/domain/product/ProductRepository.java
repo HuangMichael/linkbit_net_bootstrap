@@ -1,13 +1,13 @@
 package com.linkbit.net.front.domain.product;
 
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
 /**
  * Created by huangbin on 2016/1/11 0011.
  */
-public interface ProductRepository extends Repository<Product, Long> {
+public interface ProductRepository extends CrudRepository<Product, Long> {
 
 
     List<Product> findByProductName(String productName);
@@ -25,5 +25,13 @@ public interface ProductRepository extends Repository<Product, Long> {
     /**
      * 根据产品id查找产品信息
      */
-    Product findByid(long id);
+    Product findById(long id);
+
+    /**
+     * 保存产品信息
+     */
+    Product save(Product product);
+
+
+
 }

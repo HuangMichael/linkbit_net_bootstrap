@@ -42,7 +42,7 @@ public class ProductController extends BaseController {
     @RequestMapping("/detail/{id}")
     public ModelAndView detail(@PathVariable("id") Long id) {
         // 查询最新产品
-        Product product = productRepository.findByid(id);
+        Product product = productRepository.findById(id);
         //封装对象 传递到页面
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/front/productDetail");
