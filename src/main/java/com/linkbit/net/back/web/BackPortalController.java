@@ -26,7 +26,7 @@ public class BackPortalController {
     public String index(HttpServletRequest request) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         request.setAttribute("backMenusList", backMenusList);
-        return "/back/index";
+        return "/back/portal/index";
     }
 
 }

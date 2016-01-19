@@ -13,28 +13,6 @@
     <%@include file="../common/siderBar.jsp" %>
     <!-- /SIDEBAR -->
     <div id="main-content">
-        <!-- SAMPLE BOX CONFIGURATION MODAL FORM-->
-        <div class="modal fade" id="box-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Box Settings</h4>
-                    </div>
-                    <div class="modal-body">
-                        Here goes box setting content.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /SAMPLE BOX CONFIGURATION MODAL FORM-->
-        <!-- here-->
-
         <div class="container">
             <div class="row">
                 <div id="content" class="col-lg-12">
@@ -49,6 +27,10 @@
                                     </li>
                                     <li>产品信息</li>
                                 </ul>
+                            </div>
+                            <div id="msgBox" style="height: auto">
+                                <!-- BREADCRUMBS -->
+
                             </div>
                         </div>
                     </div>
@@ -81,23 +63,28 @@
                                            class="datatable table table-striped table-bordered table-hover">
                                         <thead>
                                         <tr>
-                                            <th>序号</th>
-                                            <th>产品名称</th>
-                                            <th class="hidden-xs">产品类型</th>
-                                            <th>上市时间</th>
-                                            <th class="hidden-xs">商品描述</th>
+                                            <th class="center">序号</th>
+                                            <th class="center">产品名称</th>
+                                            <th class="center hidden-xs">产品类型</th>
+                                            <th class="center">上市时间</th>
+                                            <th class="center hidden-xs">商品描述</th>
+                                            <th class="center ">编辑</th>
+                                            <th class="center ">删除</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <c:forEach items="${productList}" var="product" varStatus="status">
-                                            <tr class="gradeX">
-                                                <td>${status.index+1}</td>
-                                                <td><a href="#" data-toggle="modal"
+                                            <tr class="gradeX" id="tr${product.id}">
+                                                <td class="center">${status.index+1}</td>
+                                                <td class="center"><a href="#" data-toggle="modal"
                                                        data-target="#myModal${product.id}">${product.productName}</a>
                                                 </td>
-                                                <td class="hidden-xs">${product.productType}</td>
+                                                <td class=" center hidden-xs">${product.productType}</td>
                                                 <td class="center hidden-xs">${product.onLineDate}</td>
                                                 <td class="center">${product.productDesc}</td>
+                                                <td class="center "><a href="#">编辑</a></td>
+                                                <td class="center "><a id="delBtn${product.id}">删除</a>
+                                                </td>
                                             </tr>
                                             <div class="modal fade" id="myModal${product.id}" tabindex="-1"
                                                  role="dialog" aria-labelledby="myModalLabel">
@@ -174,11 +161,13 @@
                                         </tbody>
                                         <tfoot>
                                         <tr>
-                                            <th>序号</th>
-                                            <th>产品名称</th>
-                                            <th class="hidden-xs">产品类型</th>
-                                            <th>上市时间</th>
-                                            <th class="hidden-xs">商品描述</th>
+                                            <th class="center">序号</th>
+                                            <th class="center">产品名称</th>
+                                            <th class="center hidden-xs">产品类型</th>
+                                            <th class="center">上市时间</th>
+                                            <th class="center hidden-xs">商品描述</th>
+                                            <th class="center ">编辑</th>
+                                            <th class="center ">删除</th>
                                         </tr>
                                         </tfoot>
                                     </table>
@@ -190,7 +179,7 @@
                     <!-- /EXPORT TABLES -->
                     <div class="footer-tools">
 							<span class="go-top">
-								<i class="fa fa-chevron-up"></i> Top
+								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
                     </div>
                 </div><!-- /CONTENT-->
@@ -208,6 +197,9 @@
         App.setPage("dynamic_table");  //Set current page
         App.init(); //Initialise plugins and elements
     });
+
+
+    //更新操作
     $(":submit").click(function () {
         var id = $(this).attr("id").substring(4);
         var productName = $("#productName" + id).val();
@@ -223,20 +215,57 @@
         product.productType = productType;
         product.onlineDate = onlineDate;
         product.online = online;
-
-
         $.ajax({
             type: "POST",
             url: "/back/product/save",
             data: product,
             success: function (msg) {
                 $("#myModal" + id).modal('hide');
+                $.bootstrapGrowl("产品信息保存成功！", {
+                    type: 'info',
+                    align: 'right',
+                    stackup_spacing: 30
+                });
+
             },
             error: function () {
-                alert("failure");
+                $.bootstrapGrowl("产品信息保存失败！", {
+                    type: 'danger',
+                    align: 'right',
+                    stackup_spacing: 30
+                });
             }
         });
     });
+
+
+    //删除操作
+
+    $("a[id^=delBtn]").on("click", function () {
+        var id = $(this).attr("id").substring(6);
+        $.ajax({
+            type: "POST",
+            url: "/back/product/delete/" + id,
+            success: function () {
+                $("#tr" + id).fadeOut("slow");
+                $.bootstrapGrowl("产品信息删除成功！", {
+                    type: 'info',
+                    align: 'right',
+                    stackup_spacing: 30
+                });
+            },
+            error: function () {
+                $.bootstrapGrowl("产品信息删除失败！", {
+                    type: 'danger',
+                    align: 'right',
+                    stackup_spacing: 30
+                });
+            }
+        });
+    });
+
+
+
 
 </script><!-- /JAVASCRIPTS -->
 </body>

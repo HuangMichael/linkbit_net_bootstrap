@@ -7,10 +7,7 @@ import com.linkbit.net.front.domain.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -39,7 +36,7 @@ public class BackProductController {
         request.setAttribute("backMenusList", backMenusList);
 
         request.setAttribute("productList", productList);
-        return "/back/product";
+        return "/back/product/product";
     }
 
 
@@ -56,5 +53,23 @@ public class BackProductController {
         System.out.println("product-------------------" + product.toString());
         productRepository.save(product);
         return product;
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    @ResponseBody
+    public Product update(@ModelAttribute Product product, HttpServletRequest request) {
+        String id = request.getParameter("id");
+        Product oldProduct = productRepository.findById(Long.valueOf(id));
+
+        System.out.println("product-------------------" + product.toString());
+        productRepository.save(product);
+        return product;
+    }
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+    public void delete(@PathVariable long id) {
+        System.out.println("product----delete---------------" + id);
+        productRepository.delete(id);
+
     }
 }

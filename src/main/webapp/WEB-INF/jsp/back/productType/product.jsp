@@ -64,6 +64,8 @@
                                             <th class="hidden-xs">产品类型</th>
                                             <th>上市时间</th>
                                             <th class="hidden-xs">商品描述</th>
+                                            <th class="hidden-xs">编辑</th>
+                                            <th class="hidden-xs">删除</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -76,6 +78,8 @@
                                                 <td class="hidden-xs">${product.productType}</td>
                                                 <td class="center hidden-xs">${product.onLineDate}</td>
                                                 <td class="center">${product.productDesc}</td>
+                                                <td class="center">编辑</td>
+                                                <td class="center">删除</td>
                                             </tr>
                                             <div class="modal fade" id="myModal${product.id}" tabindex="-1"
                                                  role="dialog" aria-labelledby="myModalLabel">
@@ -157,6 +161,8 @@
                                             <th class="hidden-xs">产品类型</th>
                                             <th>上市时间</th>
                                             <th class="hidden-xs">商品描述</th>
+                                            <th class="hidden-xs">编辑</th>
+                                            <th class="hidden-xs">删除</th>
                                         </tr>
                                         </tfoot>
                                     </table>

@@ -20,5 +20,6 @@
 <script type="text/javascript" src="js/datatables/extras/TableTools/media/js/ZeroClipboard.min.js"></script>
 <!-- COOKIE -->
 <script type="text/javascript" src="js/jQuery-Cookie/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="js/jquery.bootstrap-growl.min.js"></script>
 <!-- CUSTOM SCRIPT -->
 <script src="js/script.js"></script>

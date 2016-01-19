@@ -33,5 +33,11 @@ public interface ProductRepository extends CrudRepository<Product, Long> {
     Product save(Product product);
 
 
+    /**
+     * 删除信息
+     */
+    void delete(Long id);
+
+
 
 }
