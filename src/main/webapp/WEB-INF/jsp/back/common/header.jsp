@@ -6,7 +6,7 @@
     <div class="container">
         <div class="navbar-brand">
             <!-- COMPANY LOGO -->
-            <a href="index.html">
+            <a href="/back/portal/index">
                 <img src="img/logo/logo.png" alt="Cloud Admin Logo" class="img-responsive" height="30" width="120">
             </a>
             <!-- /COMPANY LOGO -->

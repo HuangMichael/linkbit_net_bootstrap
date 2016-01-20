@@ -1,7 +1,5 @@
 package com.linkbit.net.back.web;
 
-import com.linkbit.net.front.domain.customers.Customer;
-import com.linkbit.net.front.domain.customers.CustomerRepository;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
 import com.linkbit.net.front.domain.message.Message;
@@ -35,6 +33,6 @@ public class BackMessageController extends BaseController {
         List<Message> messageList = messageRepository.findAll();
         request.setAttribute("backMenusList", backMenusList);
         request.setAttribute("messageList", messageList);
-        return "/back/message";
+        return "/back/message/message";
     }
 }

@@ -11,6 +11,7 @@ com\linkbit\net\front\web\UserController.class
 com\linkbit\net\back\web\BackMenuController.class
 com\linkbit\net\front\domain\company\CompanyProperty.class
 com\linkbit\net\front\domain\news\NewsRepository.class
+com\linkbit\net\back\web\BackProductCharactorController.class
 com\linkbit\net\front\web\ProductController.class
 com\linkbit\net\front\domain\customers\CustomerRepository.class
 com\linkbit\net\back\web\BackContactController.class
@@ -38,3 +39,4 @@ com\linkbit\net\front\web\BaseController.class
 com\linkbit\net\front\domain\message\MessageRepository.class
 com\linkbit\net\front\domain\company\Company.class
 com\linkbit\net\front\domain\menu\MenuRepository.class
+com\linkbit\net\front\domain\product\ProductCharactorRepository.class

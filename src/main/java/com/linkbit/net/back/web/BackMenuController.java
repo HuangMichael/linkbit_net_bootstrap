@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -35,6 +36,14 @@ public class BackMenuController {
         List<Menu> menusList = menuRepository.findByMenuType("1");
         return menusList;
 
+    }
+
+
+    @RequestMapping("/index")
+    public String index(HttpServletRequest request) {
+        List<Menu> backMenusList = menuRepository.findByMenuType("1");
+        request.setAttribute("backMenusList", backMenusList);
+        return "/back/menu/menu";
     }
 
 }

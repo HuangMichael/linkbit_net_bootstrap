@@ -33,7 +33,7 @@ public class BackNewsController {
         List<News> newsList = newsRepository.findAll();
         request.setAttribute("backMenusList", backMenusList);
         request.setAttribute("newsList", newsList);
-        return "/back/news";
+        return "/back/news/news";
     }
 
 }

@@ -359,7 +359,7 @@ var App = function () {
     var handleTeamView = function () {
         c();
         $(".team-status-toggle").click(function (y) {
-            y.preventDefault();
+            y.preventDefault();0
             w(this);
             $(this).parent().toggleClass("open");
             var z = x(this);
@@ -2394,7 +2394,7 @@ var App = function () {
     /*-----------------------------------------------------------------------------------*/
     /*	Easy Pie chart for profile
      /*-----------------------------------------------------------------------------------*/
-    var handleProfileSkillPie = function () {
+ /*   var handleProfileSkillPie = function () {
 
         //Pie 1
         $('#pie_1').easyPieChart({
@@ -2428,7 +2428,7 @@ var App = function () {
             barColor: '#70AFC4'
         });
         var chart3 = window.chart = $('#pie_3').data('easyPieChart');
-    };
+    };*/
     /*-----------------------------------------------------------------------------------*/
     /*	Sparklines
      /*-----------------------------------------------------------------------------------*/
@@ -3614,10 +3614,10 @@ var App = function () {
                 handleActiveToggle(); //Function to handle active toggle
             }
             if (App.isPage("user_profile")) {
-                handleProfileSkillPie(); //Function to show skills in pie
-                handleSparkline();	//Function to display sparklines
-                handleUniform();	//Function to handle uniform inputs
-                handleProfileEdit();	//Function to handle profile edit tab
+              //  handleProfileSkillPie(); //Function to show skills in pie
+               // handleSparkline();	//Function to display sparklines
+              //  handleUniform();	//Function to handle uniform inputs
+               // handleProfileEdit();	//Function to handle profile edit tab
             }
             if (App.isPage("mini_sidebar")) {
                 collapseSidebar();	//Function to display mini menu

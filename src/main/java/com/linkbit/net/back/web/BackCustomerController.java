@@ -33,6 +33,6 @@ public class BackCustomerController extends BaseController {
         List<Customer> customerList = customerRepository.findAll();
         request.setAttribute("backMenusList", backMenusList);
         request.setAttribute("customerList", customerList);
-        return "/back/customer";
+        return "/back/customer/customer";
     }
 }

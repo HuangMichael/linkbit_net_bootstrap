@@ -8,9 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by huangbin on 2016/1/18 0018.
@@ -71,5 +74,14 @@ public class BackProductController {
         System.out.println("product----delete---------------" + id);
         productRepository.delete(id);
 
+    }
+
+
+    @RequestMapping("/detail/{id}")
+    public ModelAndView detail(@PathVariable("id") Long id) {
+        Product product = productRepository.findById(id);
+        Map<String,Product>  map = new HashMap<String, Product>();map.put("product",product);
+        ModelAndView mv = new ModelAndView("/back/product/detail",map);
+        return mv;
     }
 }

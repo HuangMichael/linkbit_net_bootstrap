@@ -32,7 +32,7 @@ public class BackKnowledgeController {
         List<Knowledge> knowledgeList = knowledgeRepository.findAll();
         request.setAttribute("backMenusList", backMenusList);
         request.setAttribute("knowledgeList", knowledgeList);
-        return "/back/knowledge";
+        return "/back/knowledge/knowledge";
     }
 
 }

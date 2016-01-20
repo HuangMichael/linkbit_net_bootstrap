@@ -16,17 +16,17 @@ import java.util.List;
  */
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/back/")
+@RequestMapping("/back/portal/")
 public class BackPortalController {
 
     @Autowired
     MenuRepository menuRepository;
 
+
     @RequestMapping("/index")
     public String index(HttpServletRequest request) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
-        request.setAttribute("backMenusList", backMenusList);
+        request.getSession().setAttribute("backMenusList", backMenusList);
         return "/back/portal/index";
     }
-
 }

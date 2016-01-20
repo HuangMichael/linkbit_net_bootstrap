@@ -9,6 +9,7 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\knowledge\KnowledgeRep
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\ProductRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\ProductController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackPortalController.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackProductCharactorController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackMenuController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackProductController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\customers\CustomerRepository.java
@@ -29,6 +30,7 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackMessageController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackNewsController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\BaseController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\ContactController.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\ProductCharactorRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\Product.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackKnowledgeController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\menu\Menu.java
