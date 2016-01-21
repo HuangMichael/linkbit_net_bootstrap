@@ -258,13 +258,19 @@
                                id="charactorDesc"
                                name="productCharactor.charactorDesc">
                     </div>
+                    <div class="form-group">
+                        <label for="charactorDesc">产品名称</label>
+                        <input type="text" class="form-control"
+                               id="product.id"
+                               name="productCharactor.product.id">
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default"
                         data-dismiss="modal">关闭
                 </button>
-                <button type="button" id="create" name="create${product.id}"
+                <button type="submit" id="create" name="create${product.id}"
                         class="btn btn-primary">保存
                 </button>
             </div>
@@ -281,22 +287,22 @@
     });
 
 
+    var ProductCharactor = function (charactorDesc, status) {
+        this.charactorDesc = charactorDesc;
+        this.status = status;
+    }
+
     //新建记录
-    $("#create").click(function () {
+    $("#create").click("submit", function () {
         var charactorDesc = $("#charactorDesc").val();
-        var productId = $(this).attr("name").substring(6);
-        console.log("productId-------------" + productId);
-        var productCharactor = new Object();
-        productCharactor.charactorDesc = charactorDesc;
-        productCharactor.status = false;
-        /* productCharactor.product_id = productId;*/
+        var productId = ${product.id};
+        var productCharactor = new ProductCharactor(charactorDesc, true);
         $.ajax({
             type: "POST",
             url: "/back/productCharactor/save",
-            data: productCharactor,
+            data: {productCharactor:productCharactor},
             success: function (msg) {
                 $("#createModal").modal('hide');
-                addRow(productCharactor);
                 $.bootstrapGrowl("产品信息添加成功！", {
                     type: 'info',
                     align: 'right',
@@ -316,20 +322,20 @@
     });
 
 
-    var addRow = function (product) {
-        var html = '<tr class="gradeX">';
-        html += '<td class="center">1</td>';
+    /* var addRow = function (product) {
+
+
+     var html = '<tr class="gradeX">';
+     html += '<th class="center">1</th>';
         html += '<td class ="center"><a href ="#" data-toggle="modal" data-target="#myModal" >' + product.productName + '</a></td>';
         html += '<td class= "center hidden-xs" >' + product.productType + '</td>';
-        html += '<td class= "center hidden-xs" >' + product.onLineDate + '</td>';
-        html += '<td class = "center">' + product.productDesc + '</td>';
         html += '<td class = "center"><a href = "#" > 编辑 </a> </td>';
         html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
         html += '</tr>';
         $("#tbody").prepend(html);
-    }
+     }*/
 
-
+    /*
     //更新操作
     $(":submit").click(function () {
         var id = $(this).attr("id").substring(4);
@@ -367,7 +373,7 @@
                 });
             }
         });
-    });
+     });*/
 
 
     //删除操作

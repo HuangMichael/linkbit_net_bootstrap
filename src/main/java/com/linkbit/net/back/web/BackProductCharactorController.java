@@ -1,12 +1,16 @@
 package com.linkbit.net.back.web;
 
+import com.linkbit.net.front.domain.product.Product;
 import com.linkbit.net.front.domain.product.ProductCharactor;
 import com.linkbit.net.front.domain.product.ProductCharactorRepository;
 import com.linkbit.net.front.domain.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by huangbin on 2016/1/20 0018.
@@ -25,11 +29,11 @@ public class BackProductCharactorController {
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     @ResponseBody
-    public ProductCharactor save(@ModelAttribute ProductCharactor productCharactor) {
-        System.out.println("productCharactor-------------------" + productCharactor.toString());
-        productCharactor.setProduct(productRepository.findById(1));
+    public String save(ProductCharactor productCharactor) {
+        Product product = productRepository.findById(1);
+        productCharactor.setProduct(product);
         productCharactorRepository.save(productCharactor);
-        return productCharactor;
+        return "redirect:/back/product/index";
     }
 
 
