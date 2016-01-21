@@ -23,3 +23,4 @@
 <script type="text/javascript" src="js/jquery.bootstrap-growl.min.js"></script>
 <!-- CUSTOM SCRIPT -->
 <script src="js/script.js"></script>
+<script src="js/DateUtils.js"></script>

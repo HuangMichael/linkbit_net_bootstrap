@@ -53,7 +53,7 @@ public class BackProductController {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     @ResponseBody
     public Product save(@ModelAttribute Product product) {
-        System.out.println("product-------------------" + product.toString());
+        
         productRepository.save(product);
         return product;
     }
@@ -63,19 +63,17 @@ public class BackProductController {
     public Product update(@ModelAttribute Product product, HttpServletRequest request) {
         String id = request.getParameter("id");
         Product oldProduct = productRepository.findById(Long.valueOf(id));
-
-        System.out.println("product-------------------" + product.toString());
         productRepository.save(product);
         return product;
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+    @ResponseBody
     public void delete(@PathVariable long id) {
-        System.out.println("product----delete---------------" + id);
-        productRepository.delete(id);
+       Product product =  productRepository.findById(id);
+        productRepository.delete(product);
 
     }
-
 
     @RequestMapping("/detail/{id}")
     public ModelAndView detail(@PathVariable("id") Long id) {

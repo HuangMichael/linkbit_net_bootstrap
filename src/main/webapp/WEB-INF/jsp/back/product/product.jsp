@@ -314,12 +314,12 @@
 
 
     var addRow = function (product) {
+        var dateString = product.onLineDate.Format('yyyy-MM-dd');
         var html = '<tr class="gradeX">';
         html += '<td class="center">1</td>';
-        0
         html += '<td class ="center"><a href ="#" data-toggle="modal" data-target="#myModal" >' + product.productName + '</a></td>';
         html += '<td class= "center hidden-xs" >' + product.productType + '</td>';
-        html += '<td class= "center hidden-xs" >' + product.onLineDate + '</td>';
+        html += '<td class= "center hidden-xs" >' + dateString + ' </td>';
         html += '<td class = "center">' + product.productDesc + '</td>';
         html += '<td class = "center"><a href = "#" > 编辑 </a> </td>';
         html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
@@ -330,7 +330,6 @@
 
     //更新操作
     $(":submit").click(function () {
-        00000000000000
         var id = $(this).attr("id").substring(4);
         var productName = $("#productName" + id).val();
         var productDesc = $("#productDesc" + id).val();
@@ -373,6 +372,8 @@
 
     $("a[id^=delBtn]").on("click", function () {
         var id = $(this).attr("id").substring(6);
+
+        console.log("id------------------"+id);
         $.ajax({
             type: "POST",
             url: "/back/product/delete/" + id,

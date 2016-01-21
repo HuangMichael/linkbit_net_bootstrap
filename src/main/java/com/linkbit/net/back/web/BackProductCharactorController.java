@@ -34,9 +34,13 @@ public class BackProductCharactorController {
 
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
-    public void delete(@PathVariable long id) {
+    @ResponseBody
+    public Boolean delete(@PathVariable long id) {
         System.out.println("product----delete---------------" + id);
-        productCharactorRepository.delete(id);
+        ProductCharactor productCharactor = productCharactorRepository.findById(id);
+        productCharactor.setProduct(null);
+        productCharactorRepository.delete(productCharactor);
+        return true;
 
     }
 

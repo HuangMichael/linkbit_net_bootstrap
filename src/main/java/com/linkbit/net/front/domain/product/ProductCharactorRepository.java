@@ -25,4 +25,10 @@ public interface ProductCharactorRepository extends CrudRepository<ProductCharac
     void delete(Long id);
 
 
+    /**
+     * 删除产品属性 信息
+     */
+    void delete(ProductCharactor productCharactor);
+
+
 }
