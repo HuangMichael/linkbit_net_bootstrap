@@ -88,8 +88,8 @@
                                                                             <thead>
                                                                             <tr>
                                                                                 <th class="center">序号</th>
-                                                                                <th class="center">属性标题</th>
-                                                                                <th class="center hidden-xs">属性状态</th>
+                                                                                <th class="center hidden-xs">属性标题</th>
+                                                                                <th class="center">属性状态</th>
                                                                                 <th class="center ">编辑</th>
                                                                                 <th class="center ">删除</th>
                                                                             </tr>
@@ -101,8 +101,8 @@
                                                                                 <tr class="gradeX"
                                                                                     id="tr${property.id}">
                                                                                     <td class="center">${status.index+1}</td>
-                                                                                    <td class="center">${property.charactorDesc}</td>
-                                                                                    <td class="center hidden-xs">${property.status}</td>
+                                                                                    <td class="center  hidden-xs">${property.charactorDesc}</td>
+                                                                                    <td class="center">${property.status}</td>
                                                                                     <td class="center "><a href="#"
                                                                                                            data-toggle="modal"
                                                                                                            data-target="#myModal${property.id}">编辑</a>
@@ -182,8 +182,8 @@
                                                                             <tfoot>
                                                                             <tr>
                                                                                 <th class="center">序号</th>
-                                                                                <th class="center">属性标题</th>
-                                                                                <th class="center hidden-xs">属性状态</th>
+                                                                                <th class="center hidden-xs">属性标题</th>
+                                                                                <th class="center ">属性状态</th>
                                                                                 <th class="center ">编辑</th>
                                                                                 <th class="center ">删除</th>
                                                                             </tr>
@@ -286,23 +286,19 @@
          App.init(); //Initialise plugins and elements*!/*/
     });
 
-
-    var ProductCharactor = function (charactorDesc, status) {
-        this.charactorDesc = charactorDesc;
-        this.status = status;
-    }
-
+    var productId = ${product.id};
     //新建记录
     $("#create").click("submit", function () {
         var charactorDesc = $("#charactorDesc").val();
-        var productId = ${product.id};
-        var productCharactor = new ProductCharactor(charactorDesc, true);
+
+        var productCharactor = {"charactorDesc": charactorDesc};
         $.ajax({
             type: "POST",
             url: "/back/productCharactor/save",
-            data: {productCharactor:productCharactor},
+            data: productCharactor,
             success: function (msg) {
                 $("#createModal").modal('hide');
+                loadAll("#tbody", productId);
                 $.bootstrapGrowl("产品信息添加成功！", {
                     type: 'info',
                     align: 'right',
@@ -322,18 +318,24 @@
     });
 
 
-    /* var addRow = function (product) {
+    function loadAll(container, id) {
+        $(container).html("");
+        var url = "/back/product/findCharactorListById/" + id;
+        $.getJSON(url, function (data) {
+            for (var x in data) {
+                var html = "<tr id='tr" + data[x].id + "'>";
+                html += "<td class='center'>" + Number(x + 1) + "</td>";
+                html += "<td class='center'>" + data[x].status + "</td>";
+                html += "<td class='center hidden-xs'>" + data[x].charactorDesc + "</td>";
+                html += "<td class='center'><a>编辑</a></td>";
+                html += "<td class='center'><a>删除</a></td>";
+                html += "</tr>";
+                console.log(html);
+                $(container).append(html);
+            }
+        });
 
-
-     var html = '<tr class="gradeX">';
-     html += '<th class="center">1</th>';
-        html += '<td class ="center"><a href ="#" data-toggle="modal" data-target="#myModal" >' + product.productName + '</a></td>';
-        html += '<td class= "center hidden-xs" >' + product.productType + '</td>';
-        html += '<td class = "center"><a href = "#" > 编辑 </a> </td>';
-        html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
-        html += '</tr>';
-        $("#tbody").prepend(html);
-     }*/
+    }
 
     /*
     //更新操作
@@ -384,7 +386,8 @@
             type: "POST",
             url: "/back/productCharactor/delete/" + id,
             success: function () {
-                $("#tr" + id).fadeOut("slow");
+               // $("#tr" + id).fadeOut("slow");
+                loadAll("#tbody", productId);
                 $.bootstrapGrowl("产品信息删除成功！", {
                     type: 'info',
                     align: 'right',

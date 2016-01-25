@@ -1,690 +1,19 @@
 <%@page pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <base href="/back/">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>网站后台管理系统</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="stylesheet" type="text/css" href="css/cloud-admin.css">
-    <link rel="stylesheet" type="text/css" href="css/themes/default.css" id="skin-switcher">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <!-- STYLESHEETS --><!--[if lt IE 9]>
-    <script src="js/flot/excanvas.min.js"></script>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- ANIMATE -->
-    <link rel="stylesheet" type="text/css" href="css/animatecss/animate.min.css"/>
-    <!-- DATE RANGE PICKER -->
-    <link rel="stylesheet" type="text/css" href="js/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
-    <!-- TODO -->
-    <link rel="stylesheet" type="text/css" href="js/jquery-todo/css/styles.css"/>
-    <!-- FULL CALENDAR -->
-    <link rel="stylesheet" type="text/css" href="js/fullcalendar/fullcalendar.min.css"/>
-    <!-- GRITTER -->
-    <link rel="stylesheet" type="text/css" href="js/gritter/css/jquery.gritter.css"/>
-    <!-- FONTS -->
-    <link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-</head>
+<%@include file="../common/head.jsp" %>
 <body>
 <!-- HEADER -->
-<header class="navbar clearfix" id="header">
-    <div class="container">
-        <div class="navbar-brand">
-            <!-- COMPANY LOGO -->
-            <a href="index.html">
-                <img src="img/logo/logo.png" alt="Cloud Admin Logo" class="img-responsive" height="30" width="120">
-            </a>
-            <!-- /COMPANY LOGO -->
-            <!-- TEAM STATUS FOR MOBILE -->
-            <div class="visible-xs">
-                <a href="#" class="team-status-toggle switcher btn dropdown-toggle">
-                    <i class="fa fa-users"></i>
-                </a>
-            </div>
-            <!-- /TEAM STATUS FOR MOBILE -->
-            <!-- SIDEBAR COLLAPSE -->
-            <div id="sidebar-collapse" class="sidebar-collapse btn">
-                <i class="fa fa-bars"
-                   data-icon1="fa fa-bars"
-                   data-icon2="fa fa-bars"></i>
-            </div>
-            <!-- /SIDEBAR COLLAPSE -->
-        </div>
-        <!-- NAVBAR LEFT -->
-        <!-- /NAVBAR LEFT -->
-        <!-- BEGIN TOP NAVIGATION MENU -->
-        <ul class="nav navbar-nav pull-right">
-            <!-- BEGIN NOTIFICATION DROPDOWN -->
-            <li class="dropdown" id="header-notification">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-bell"></i>
-                    <span class="badge">7</span>
-                </a>
-                <ul class="dropdown-menu notification">
-                    <li class="dropdown-title">
-                        <span><i class="fa fa-bell"></i> 7 Notifications</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="label label-success"><i class="fa fa-user"></i></span>
-									<span class="body">
-										<span class="message">5 users online. </span>
-										<span class="time">
-											<i class="fa fa-clock-o"></i>
-											<span>Just now</span>
-										</span>
-									</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="label label-primary"><i class="fa fa-comment"></i></span>
-									<span class="body">
-										<span class="message">Martin commented.</span>
-										<span class="time">
-											<i class="fa fa-clock-o"></i>
-											<span>19 mins</span>
-										</span>
-									</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="label label-warning"><i class="fa fa-lock"></i></span>
-									<span class="body">
-										<span class="message">DW1 server locked.</span>
-										<span class="time">
-											<i class="fa fa-clock-o"></i>
-											<span>32 mins</span>
-										</span>
-									</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="label label-info"><i class="fa fa-twitter"></i></span>
-									<span class="body">
-										<span class="message">Twitter connected.</span>
-										<span class="time">
-											<i class="fa fa-clock-o"></i>
-											<span>55 mins</span>
-										</span>
-									</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="label label-danger"><i class="fa fa-heart"></i></span>
-									<span class="body">
-										<span class="message">Jane liked. </span>
-										<span class="time">
-											<i class="fa fa-clock-o"></i>
-											<span>2 hrs</span>
-										</span>
-									</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="label label-warning"><i class="fa fa-exclamation-triangle"></i></span>
-									<span class="body">
-										<span class="message">Database overload.</span>
-										<span class="time">
-											<i class="fa fa-clock-o"></i>
-											<span>6 hrs</span>
-										</span>
-									</span>
-                        </a>
-                    </li>
-                    <li class="footer">
-                        <a href="#">See all notifications <i class="fa fa-arrow-circle-right"></i></a>
-                    </li>
-                </ul>
-            </li>
-            <!-- END NOTIFICATION DROPDOWN -->
-            <!-- BEGIN INBOX DROPDOWN -->
-            <li class="dropdown" id="header-message">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-envelope"></i>
-                    <span class="badge">3</span>
-                </a>
-                <ul class="dropdown-menu inbox">
-                    <li class="dropdown-title">
-                        <span><i class="fa fa-envelope-o"></i> 3 Messages</span>
-						<span class="compose pull-right tip-right" title="Compose message"><i
-                                class="fa fa-pencil-square-o"></i></span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/avatars/avatar2.jpg" alt=""/>
-									<span class="body">
-										<span class="from">Jane Doe</span>
-										<span class="message">
-										Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse mole ...
-										</span>
-										<span class="time">
-											<i class="fa fa-clock-o"></i>
-											<span>Just Now</span>
-										</span>
-									</span>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/avatars/avatar1.jpg" alt=""/>
-									<span class="body">
-										<span class="from">Vince Pelt</span>
-										<span class="message">
-										Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse mole ...
-										</span>
-										<span class="time">
-											<i class="fa fa-clock-o"></i>
-											<span>15 min ago</span>
-										</span>
-									</span>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="img/avatars/avatar8.jpg" alt=""/>
-									<span class="body">
-										<span class="from">Debby Doe</span>
-										<span class="message">
-										Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse mole ...
-										</span>
-										<span class="time">
-											<i class="fa fa-clock-o"></i>
-											<span>2 hours ago</span>
-										</span>
-									</span>
-
-                        </a>
-                    </li>
-                    <li class="footer">
-                        <a href="#">See all messages <i class="fa fa-arrow-circle-right"></i></a>
-                    </li>
-                </ul>
-            </li>
-            <!-- END INBOX DROPDOWN -->
-            <!-- BEGIN TODO DROPDOWN -->
-            <li class="dropdown" id="header-tasks">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-tasks"></i>
-                    <span class="badge">3</span>
-                </a>
-                <ul class="dropdown-menu tasks">
-                    <li class="dropdown-title">
-                        <span><i class="fa fa-check"></i> 6 tasks in progress</span>
-                    </li>
-                    <li>
-                        <a href="#">
-									<span class="header clearfix">
-										<span class="pull-left">Software Update</span>
-										<span class="pull-right">60%</span>
-									</span>
-
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
-                                     aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                                    <span class="sr-only">60% Complete</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-									<span class="header clearfix">
-										<span class="pull-left">Software Update</span>
-										<span class="pull-right">25%</span>
-									</span>
-
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25"
-                                     aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
-                                    <span class="sr-only">25% Complete</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-									<span class="header clearfix">
-										<span class="pull-left">Software Update</span>
-										<span class="pull-right">40%</span>
-									</span>
-
-                            <div class="progress progress-striped">
-                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40"
-                                     aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                                    <span class="sr-only">40% Complete</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-									<span class="header clearfix">
-										<span class="pull-left">Software Update</span>
-										<span class="pull-right">70%</span>
-									</span>
-
-                            <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70"
-                                     aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                    <span class="sr-only">70% Complete</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-									<span class="header clearfix">
-										<span class="pull-left">Software Update</span>
-										<span class="pull-right">65%</span>
-									</span>
-
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-success" style="width: 35%">
-                                    <span class="sr-only">35% Complete (success)</span>
-                                </div>
-                                <div class="progress-bar progress-bar-warning" style="width: 20%">
-                                    <span class="sr-only">20% Complete (warning)</span>
-                                </div>
-                                <div class="progress-bar progress-bar-danger" style="width: 10%">
-                                    <span class="sr-only">10% Complete (danger)</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="footer">
-                        <a href="#">See all tasks <i class="fa fa-arrow-circle-right"></i></a>
-                    </li>
-                </ul>
-            </li>
-            <!-- END TODO DROPDOWN -->
-            <!-- BEGIN USER LOGIN DROPDOWN -->
-            <li class="dropdown user" id="header-user">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img alt="" src="img/avatars/avatar3.jpg"/>
-                    <span class="username">管理员</span>
-                    <i class="fa fa-angle-down"></i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#"><i class="fa fa-user"></i> My Profile</a></li>
-                    <li><a href="#"><i class="fa fa-cog"></i> Account Settings</a></li>
-                    <li><a href="#"><i class="fa fa-eye"></i> Privacy Settings</a></li>
-                    <li><a href="login.html"><i class="fa fa-power-off"></i> Log Out</a></li>
-                </ul>
-            </li>
-            <!-- END USER LOGIN DROPDOWN -->
-        </ul>
-        <!-- END TOP NAVIGATION MENU -->
-    </div>
-    <!-- TEAM STATUS -->
-    <div class="container team-status" id="team-status">
-        <div id="scrollbar">
-            <div class="handle">
-            </div>
-        </div>
-        <div id="teamslider">
-            <ul class="team-list">
-                <li class="current">
-                    <a href="javascript:void(0);">
-				  <span class="image">
-					  <img src="img/avatars/avatar3.jpg" alt=""/>
-				  </span>
-				  <span class="title">
-					You
-				  </span>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" style="width: 35%">
-                                <span class="sr-only">35% Complete (success)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-warning" style="width: 20%">
-                                <span class="sr-only">20% Complete (warning)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-danger" style="width: 10%">
-                                <span class="sr-only">10% Complete (danger)</span>
-                            </div>
-                        </div>
-					<span class="status">
-						<div class="field">
-                            <span class="badge badge-green">6</span> completed
-                            <span class="pull-right fa fa-check"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-orange">3</span> in-progress
-                            <span class="pull-right fa fa-adjust"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-red">1</span> pending
-                            <span class="pull-right fa fa-list-ul"></span>
-                        </div>
-				    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-				  <span class="image">
-					  <img src="img/avatars/avatar1.jpg" alt=""/>
-				  </span>
-				  <span class="title">
-					Max Doe
-				  </span>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" style="width: 15%">
-                                <span class="sr-only">35% Complete (success)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-warning" style="width: 40%">
-                                <span class="sr-only">20% Complete (warning)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-danger" style="width: 20%">
-                                <span class="sr-only">10% Complete (danger)</span>
-                            </div>
-                        </div>
-					<span class="status">
-						<div class="field">
-                            <span class="badge badge-green">2</span> completed
-                            <span class="pull-right fa fa-check"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-orange">8</span> in-progress
-                            <span class="pull-right fa fa-adjust"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-red">4</span> pending
-                            <span class="pull-right fa fa-list-ul"></span>
-                        </div>
-				    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-				  <span class="image">
-					  <img src="img/avatars/avatar2.jpg" alt=""/>
-				  </span>
-				  <span class="title">
-					Jane Doe
-				  </span>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" style="width: 65%">
-                                <span class="sr-only">35% Complete (success)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-warning" style="width: 10%">
-                                <span class="sr-only">20% Complete (warning)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-danger" style="width: 15%">
-                                <span class="sr-only">10% Complete (danger)</span>
-                            </div>
-                        </div>
-					<span class="status">
-						<div class="field">
-                            <span class="badge badge-green">10</span> completed
-                            <span class="pull-right fa fa-check"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-orange">3</span> in-progress
-                            <span class="pull-right fa fa-adjust"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-red">4</span> pending
-                            <span class="pull-right fa fa-list-ul"></span>
-                        </div>
-				    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-				  <span class="image">
-					  <img src="img/avatars/avatar4.jpg" alt=""/>
-				  </span>
-				  <span class="title">
-					Ellie Doe
-				  </span>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" style="width: 5%">
-                                <span class="sr-only">35% Complete (success)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-warning" style="width: 48%">
-                                <span class="sr-only">20% Complete (warning)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-danger" style="width: 27%">
-                                <span class="sr-only">10% Complete (danger)</span>
-                            </div>
-                        </div>
-					<span class="status">
-						<div class="field">
-                            <span class="badge badge-green">1</span> completed
-                            <span class="pull-right fa fa-check"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-orange">6</span> in-progress
-                            <span class="pull-right fa fa-adjust"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-red">2</span> pending
-                            <span class="pull-right fa fa-list-ul"></span>
-                        </div>
-				    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-				  <span class="image">
-					  <img src="img/avatars/avatar5.jpg" alt=""/>
-				  </span>
-				  <span class="title">
-					Lisa Doe
-				  </span>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" style="width: 21%">
-                                <span class="sr-only">35% Complete (success)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-warning" style="width: 20%">
-                                <span class="sr-only">20% Complete (warning)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-danger" style="width: 40%">
-                                <span class="sr-only">10% Complete (danger)</span>
-                            </div>
-                        </div>
-					<span class="status">
-						<div class="field">
-                            <span class="badge badge-green">4</span> completed
-                            <span class="pull-right fa fa-check"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-orange">5</span> in-progress
-                            <span class="pull-right fa fa-adjust"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-red">9</span> pending
-                            <span class="pull-right fa fa-list-ul"></span>
-                        </div>
-				    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-				  <span class="image">
-					  <img src="img/avatars/avatar6.jpg" alt=""/>
-				  </span>
-				  <span class="title">
-					Kelly Doe
-				  </span>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" style="width: 45%">
-                                <span class="sr-only">35% Complete (success)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-warning" style="width: 21%">
-                                <span class="sr-only">20% Complete (warning)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-danger" style="width: 10%">
-                                <span class="sr-only">10% Complete (danger)</span>
-                            </div>
-                        </div>
-					<span class="status">
-						<div class="field">
-                            <span class="badge badge-green">6</span> completed
-                            <span class="pull-right fa fa-check"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-orange">3</span> in-progress
-                            <span class="pull-right fa fa-adjust"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-red">1</span> pending
-                            <span class="pull-right fa fa-list-ul"></span>
-                        </div>
-				    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-				  <span class="image">
-					  <img src="img/avatars/avatar7.jpg" alt=""/>
-				  </span>
-				  <span class="title">
-					Jessy Doe
-				  </span>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" style="width: 7%">
-                                <span class="sr-only">35% Complete (success)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-warning" style="width: 30%">
-                                <span class="sr-only">20% Complete (warning)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-danger" style="width: 10%">
-                                <span class="sr-only">10% Complete (danger)</span>
-                            </div>
-                        </div>
-					<span class="status">
-						<div class="field">
-                            <span class="badge badge-green">1</span> completed
-                            <span class="pull-right fa fa-check"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-orange">6</span> in-progress
-                            <span class="pull-right fa fa-adjust"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-red">2</span> pending
-                            <span class="pull-right fa fa-list-ul"></span>
-                        </div>
-				    </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-				  <span class="image">
-					  <img src="img/avatars/avatar8.jpg" alt=""/>
-				  </span>
-				  <span class="title">
-					Debby Doe
-				  </span>
-
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" style="width: 70%">
-                                <span class="sr-only">35% Complete (success)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-warning" style="width: 20%">
-                                <span class="sr-only">20% Complete (warning)</span>
-                            </div>
-                            <div class="progress-bar progress-bar-danger" style="width: 5%">
-                                <span class="sr-only">10% Complete (danger)</span>
-                            </div>
-                        </div>
-					<span class="status">
-						<div class="field">
-                            <span class="badge badge-green">13</span> completed
-                            <span class="pull-right fa fa-check"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-orange">7</span> in-progress
-                            <span class="pull-right fa fa-adjust"></span>
-                        </div>
-						<div class="field">
-                            <span class="badge badge-red">1</span> pending
-                            <span class="pull-right fa fa-list-ul"></span>
-                        </div>
-				    </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- /TEAM STATUS -->
-</header>
+<%@include file="../common/header.jsp" %>
 <!--/HEADER -->
-<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">企业网站模板</a></div>
 <!-- PAGE -->
 <section id="page">
     <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar">
-        <div class="sidebar-menu nav-collapse">
-            <div class="divide-20"></div>
-            <!-- SEARCH BAR -->
-            <div id="search-bar">
-                <input class="search" type="text" placeholder="搜索"><i class="fa fa-search search-icon"></i>
-            </div>
-            <!-- /SEARCH BAR -->
-
-            <!-- SIDEBAR QUICK-LAUNCH -->
-            <!-- <div id="quicklaunch">
-            <!-- /SIDEBAR QUICK-LAUNCH -->
-
-            <!-- SIDEBAR MENU -->
-            <ul>
-                <c:forEach items="${backMenusList}" var="menu">
-                    <li>
-                        <a href="${menu.url}">
-                            <i class="${menu.iconClass}"></i> <span class="menu-text">${menu.menuDesc}</span>
-                            <span class="selected"></span>
-                        </a>
-                    </li>
-                </c:forEach>
-            </ul>
-            <!-- /SIDEBAR MENU -->
-        </div>
-    </div>
+    <%@include file="../common/siderBar.jsp" %>
     <!-- /SIDEBAR -->
     <div id="main-content">
-        <!-- SAMPLE BOX CONFIGURATION MODAL FORM-->
-        <div class="modal fade" id="box-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Box Settings</h4>
-                    </div>
-                    <div class="modal-body">
-                        Here goes box setting content.
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /SAMPLE BOX CONFIGURATION MODAL FORM-->
-        <!-- here-->
-
         <div class="container">
             <div class="row">
                 <div id="content" class="col-lg-12">
@@ -695,23 +24,14 @@
                                 <ul class="breadcrumb">
                                     <li>
                                         <i class="fa fa-home"></i>
-                                        <a href="index.html">后台管理系统</a>
+                                        <a href="/back/index">后台管理系统</a>
                                     </li>
-                                    <li>新闻管理</li>
+                                    <li>知识信息</li>
                                 </ul>
-                                <!-- /BREADCRUMBS -->
-                                <div class="clearfix">
-                                    <h3 class="content-title pull-left">知识管理</h3>
-                                    <!-- DATE RANGE PICKER -->
-
-                                    <!-- /DATE RANGE PICKER -->
-                                </div>
-                                <div class="description">维护和发布关于北斗信息</div>
                             </div>
                         </div>
                     </div>
                     <!-- TABLE IN MODAL -->
-                    <div class="separator"></div>
                     <!-- EXPORT TABLES -->
                     <div class="row">
                         <div class="col-md-12">
@@ -736,35 +56,128 @@
                                     </div>
                                 </div>
                                 <div class="box-body">
+                                    <button type="button" class="btn btn-default btn-mini navbar-btn"
+                                            data-toggle="modal"
+                                            data-target="#createModal">新建记录
+                                    </button>
                                     <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
                                            class="datatable table table-striped table-bordered table-hover">
                                         <thead>
                                         <tr>
-                                            <th>序号</th>
-                                            <th>知识关键字</th>
-                                            <th class="hidden-xs">知识标题</th>
-                                            <th>发布时间</th>
-                                            <th class="hidden-xs">是否显示</th>
+                                            <th class="center">序号</th>
+                                            <th class="center">文章名称</th>
+                                            <th class="center">关键字</th>
+                                            <th class="center">发布者</th>
+                                            <th class="center hidden-xs">发布时间</th>
+                                            <th class="center hidden-xs">是否显示</th>
+                                            <th class="center hidden-xs">主页显示</th>
+                                            <th class="center ">编辑</th>
+                                            <th class="center ">删除</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
-                                        <c:forEach items="${knowledgeList}" var="knowledge" varStatus="s">
-                                            <tr class="gradeX">
-                                                <td>${s.index+1}</td>
-                                                <td>${knowledge.keywords}</td>
-                                                <td class="hidden-xs">${knowledge.title}</td>
-                                                <td class="center hidden-xs">${knowledge.publishTime}</td>
-                                                <td class="center">${knowledge.display}</td>
+                                        <tbody id="tbody">
+                                        <c:forEach items="${knowledgeList}" var="knowledge" varStatus="status">
+                                            <tr class="gradeX" id="tr${knowledge.id}">
+                                                <td class="center">${status.index+1}</td>
+                                                <td class="center"><a
+                                                        href="/back/knowledge/detail/${knowledge.id}">${knowledge.title}</a>
+                                                </td>
+                                                <td class=" center">${knowledge.keywords}</td>
+                                                <td class=" center">${knowledge.publisher}</td>
+
+                                                <td class=" center hidden-xs"><fmt:formatDate
+                                                        value="${knowledge.publishTime}" pattern="yyyy-MM-dd"/></td>
+                                                <td class=" center hidden-xs">${knowledge.display}</td>
+                                                <td class=" center hidden-xs">${knowledge.showInMainPage}</td>
+                                                <td class="center "><a href="#" data-toggle="modal"
+                                                                       data-target="#myModal${knowledge.id}">编辑</a></td>
+                                                <td class="center "><a id="delBtn${knowledge.id}">删除</a>
+                                                </td>
                                             </tr>
+                                            <%-- <div class="modal fade" id="myModal${knowledge.id}" tabindex="-1"
+                                                  role="dialog" aria-labelledby="myModalLabel">
+                                                 <div class="modal-dialog" role="document">
+                                                     <div class="modal-content">
+                                                         <div class="modal-header">
+                                                             <button type="button" class="close" data-dismiss="modal"
+                                                                     aria-label="Close"><span
+                                                                     aria-hidden="true">&times;</span></button>
+                                                             <h4 class="modal-title" id="myModalLabel">产品信息明细</h4>
+                                                         </div>
+                                                         <div class="modal-body">
+                                                             <form id="knowledgeForm${knowledge.id}">
+                                                                 <div class="form-group">
+                                                                     <label for="knowledgeName${knowledge.id}">产品名称</label>
+                                                                     <input type="text" class="form-control"
+                                                                            id="knowledgeName${knowledge.id}"
+                                                                            name="knowledge.knowledgeName"
+                                                                            value="${knowledge.knowledgeName}">
+                                                                 </div>
+                                                                 <div class="form-group">
+                                                                     <label for="knowledgeType${knowledge.id}">产品类型</label>
+                                                                     <select class="form-control"
+                                                                             id="knowledgeType${knowledge.id}"
+                                                                             name="knowledge.knowledgeType">
+                                                                         <option value="1">PDA</option>
+                                                                         <option value="2">手机</option>
+                                                                         <option value="3">导航仪</option>
+                                                                         <option value="4">指挥机</option>
+                                                                         <option value="5">手表</option>
+                                                                     </select>
+                                                                 </div>
+                                                                 <div class="form-group">
+                                                                     <label for="knowledgeDesc${knowledge.id}">产品描述</label>
+                                                                     <input type="text" class="form-control"
+                                                                            id="knowledgeDesc${knowledge.id}"
+                                                                            name="knowledge.knowledgeDesc"
+                                                                            value="${knowledge.knowledgeDesc}">
+                                                                 </div>
+                                                                 <div class="form-group">
+                                                                     <label for="onLineDate${knowledge.id}">上线日期</label>
+                                                                     <input type="date" class="form-control"
+                                                                            id="onLineDate${knowledge.id}"
+                                                                            name="knowledge.onLineDate"
+                                                                            value="${knowledge.onLineDate}">
+                                                                 </div>
+                                                                 <div class="form-group">
+                                                                     <label for="exampleInputFile">产品图片</label>
+                                                                     <input type="file" id="exampleInputFile">
+
+                                                                     <p class="help-block">上传一张产品图片吧</p>
+                                                                 </div>
+                                                                 <div class="checkbox">
+                                                                     <label>
+                                                                         <input type="checkbox" id="online${knowledge.id}"
+                                                                                name="knowledge.online"
+                                                                                value="${knowledge.online}"> 是否显示
+                                                                     </label>
+                                                                 </div>
+                                                             </form>
+                                                         </div>
+                                                         <div class="modal-footer">
+                                                             <button type="button" class="btn btn-default"
+                                                                     data-dismiss="modal">关闭
+                                                             </button>
+                                                             <button type="submit" id="save${knowledge.id}" name="saveBtn"
+                                                                     class="btn btn-primary">保存
+                                                             </button>
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                             </div>--%>
                                         </c:forEach>
                                         </tbody>
                                         <tfoot>
                                         <tr>
-                                            <th>序号</th>
-                                            <th>知识关键字</th>
-                                            <th class="hidden-xs">知识标题</th>
-                                            <th>发布时间</th>
-                                            <th class="hidden-xs">是否显示</th>
+                                            <th class="center">序号</th>
+                                            <th class="center">文章名称</th>
+                                            <th class="center hidden-xs">关键字</th>
+                                            <th class="center">发布者</th>
+                                            <th class="center hidden-xs">发布时间</th>
+                                            <th class="center hidden-xs">是否显示</th>
+                                            <th class="center hidden-xs">主页显示</th>
+                                            <th class="center ">编辑</th>
+                                            <th class="center ">删除</th>
                                         </tr>
                                         </tfoot>
                                     </table>
@@ -776,46 +189,382 @@
                     <!-- /EXPORT TABLES -->
                     <div class="footer-tools">
 							<span class="go-top">
-								<i class="fa fa-chevron-up"></i> Top
+								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
                     </div>
                 </div><!-- /CONTENT-->
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade" id="createModal" tabindex="-1"
+         role="dialog" aria-labelledby="myModalLabel2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel2">新建知识信息</h4>
+                </div>
+
+
+                <%-- private String title; //文章名称
+                 private String keywords;  //关键字
+                 private String knowledgeDesc;  //摘要
+                 private String content; //内容
+                 private KnowledgeType knowledgeType;//知识库类型
+                 private String publisher; //发布者
+                 @Temporal(TemporalType.DATE)
+                 private Date publishTime;//发布时间
+                 private Boolean display;//是否显示
+                 private Boolean showInMainPage;//  是否主页显示--%>
+
+
+                <div class="modal-body">
+                    <form id="knowledgeCreateForm">
+                        <div class="form-group">
+                            <label for="title">文章名称</label>
+                            <input type="text" class="form-control"
+                                   id="title"
+                                   name="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="keywords">关键字</label>
+                            <input type="text" class="form-control"
+                                   id="keywords"
+                                   name="keywords">
+                        </div>
+                        <div class="form-group">
+                            <label for="knowledgeDesc">摘要</label>
+                            <input type="text" class="form-control"
+                                   id="knowledgeDesc"
+                                   name="knowledgeDesc"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="display"
+                                       name="display"
+                                > 是否显示
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="showInMainPage"
+                                       name="showInMainPage"> 主页显示
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="editor">内容</label>
+                            <div class="box border">
+                                <div class="box-title">
+                                    <h4><i class="fa fa-pencil-square-o"></i>
+                                    </h4>
+
+                                    <div class="tools hidden-xs">
+                                        <a href="#box-config" data-toggle="modal" class="config">
+                                            <i class="fa fa-cog"></i>
+                                        </a>
+                                        <a href="javascript:;" class="reload">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                        <a href="javascript:;" class="collapse">
+                                            <i class="fa fa-chevron-up"></i>
+                                        </a>
+                                        <a href="javascript:;" class="remove">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <div id="alerts"></div>
+                                    <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+                                        <div class="btn-group">
+                                            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title=""
+                                               data-original-title="Font"><i class="fa fa-font"></i><b
+                                                    class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a data-edit="fontName Serif" style="font-family:'Serif'">Serif</a>
+                                                </li>
+                                                <li><a data-edit="fontName Sans" style="font-family:'Sans'">Sans</a>
+                                                </li>
+                                                <li><a data-edit="fontName Arial" style="font-family:'Arial'">Arial</a>
+                                                </li>
+                                                <li><a data-edit="fontName Arial Black"
+                                                       style="font-family:'Arial Black'">Arial Black</a></li>
+                                                <li><a data-edit="fontName Courier" style="font-family:'Courier'">Courier</a>
+                                                </li>
+                                                <li><a data-edit="fontName Courier New"
+                                                       style="font-family:'Courier New'">Courier New</a></li>
+                                                <li><a data-edit="fontName Comic Sans MS"
+                                                       style="font-family:'Comic Sans MS'">Comic Sans MS</a></li>
+                                                <li><a data-edit="fontName Helvetica" style="font-family:'Helvetica'">Helvetica</a>
+                                                </li>
+                                                <li><a data-edit="fontName Impact"
+                                                       style="font-family:'Impact'">Impact</a></li>
+                                                <li><a data-edit="fontName Lucida Grande"
+                                                       style="font-family:'Lucida Grande'">Lucida Grande</a></li>
+                                                <li><a data-edit="fontName Lucida Sans"
+                                                       style="font-family:'Lucida Sans'">Lucida Sans</a></li>
+                                                <li><a data-edit="fontName Tahoma"
+                                                       style="font-family:'Tahoma'">Tahoma</a></li>
+                                                <li><a data-edit="fontName Times" style="font-family:'Times'">Times</a>
+                                                </li>
+                                                <li><a data-edit="fontName Times New Roman"
+                                                       style="font-family:'Times New Roman'">Times New Roman</a></li>
+                                                <li><a data-edit="fontName Verdana" style="font-family:'Verdana'">Verdana</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-group">
+                                            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title=""
+                                               data-original-title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b
+                                                    class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
+                                                <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
+                                                <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-group">
+                                            <a class="btn btn-default" data-edit="bold" title=""
+                                               data-original-title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                                            <a class="btn btn-default" data-edit="italic" title=""
+                                               data-original-title="Italic (Ctrl/Cmd+I)"><i
+                                                    class="fa fa-italic"></i></a>
+                                            <a class="btn btn-default" data-edit="strikethrough" title=""
+                                               data-original-title="Strikethrough"><i
+                                                    class="fa fa-strikethrough"></i></a>
+                                            <a class="btn btn-default" data-edit="underline" title=""
+                                               data-original-title="Underline (Ctrl/Cmd+U)"><i
+                                                    class="fa fa-underline"></i></a>
+                                        </div>
+                                        <div class="btn-group">
+                                            <a class="btn btn-default" data-edit="insertunorderedlist" title=""
+                                               data-original-title="Bullet list"><i class="fa fa-list-ul"></i></a>
+                                            <a class="btn btn-default" data-edit="insertorderedlist" title=""
+                                               data-original-title="Number list"><i class="fa fa-list-ol"></i></a>
+                                            <a class="btn btn-default" data-edit="outdent" title=""
+                                               data-original-title="Reduce indent (Shift+Tab)"><i
+                                                    class="fa fa-outdent"></i></a>
+                                            <a class="btn btn-default" data-edit="indent" title=""
+                                               data-original-title="Indent (Tab)"><i class="fa fa-indent"></i></a>
+                                        </div>
+                                        <div class="btn-group">
+                                            <a class="btn btn-default" data-edit="justifyleft" title=""
+                                               data-original-title="Align Left (Ctrl/Cmd+L)"><i
+                                                    class="fa fa-align-left"></i></a>
+                                            <a class="btn btn-default" data-edit="justifycenter" title=""
+                                               data-original-title="Center (Ctrl/Cmd+E)"><i
+                                                    class="fa fa-align-center"></i></a>
+                                            <a class="btn btn-default" data-edit="justifyright" title=""
+                                               data-original-title="Align Right (Ctrl/Cmd+R)"><i
+                                                    class="fa fa-align-right"></i></a>
+                                            <a class="btn btn-default" data-edit="justifyfull" title=""
+                                               data-original-title="Justify (Ctrl/Cmd+J)"><i
+                                                    class="fa fa-align-justify"></i></a>
+                                        </div>
+                                        <div class="btn-group">
+                                            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title=""
+                                               data-original-title="Hyperlink"><i class="fa fa-link"></i></a>
+
+                                            <div class="dropdown-menu input-append">
+                                                <input class="span2" placeholder="URL" type="text"
+                                                       data-edit="createLink">
+                                                <button class="btn btn-default" type="button">Add</button>
+                                            </div>
+                                            <a class="btn btn-default" data-edit="unlink" title=""
+                                               data-original-title="Remove Hyperlink"><i class="fa fa-scissors"></i></a>
+
+                                        </div>
+
+                                        <div class="btn-group">
+                                            <a class="btn btn-default" title="" id="pictureBtn"
+                                               data-original-title="Insert picture (or just drag &amp; drop)"><i
+                                                    class="fa fa-picture-o"></i></a>
+                                            <input type="file" data-role="magic-overlay" data-target="#pictureBtn"
+                                                   data-edit="insertImage"
+                                                   style="opacity: 0; position: absolute; top: 0px; left: 0px; width: 41px; height: 34px;">
+                                        </div>
+                                        <div class="btn-group">
+                                            <a class="btn btn-default" data-edit="undo" title=""
+                                               data-original-title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                                            <a class="btn btn-default" data-edit="redo" title=""
+                                               data-original-title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                                        </div>
+                                        <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech=""
+                                               style="display: none;">
+                                    </div>
+                                    <div id="editor" contenteditable="true">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" id="create" name="createBtn"
+                            class="btn btn-primary">保存
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 <!--/PAGE -->
 <!-- JAVASCRIPTS -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery/jquery-2.0.3.min.js"></script>
-<!-- JQUERY UI-->
-<script src="js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
-<!-- BOOTSTRAP -->
-<script src="bootstrap-dist/js/bootstrap.min.js"></script>
-
-
-<!-- DATE RANGE PICKER -->
-<script src="js/bootstrap-daterangepicker/moment.min.js"></script>
-
-<script src="js/bootstrap-daterangepicker/daterangepicker.min.js"></script>
-<!-- SLIMSCROLL -->
-<script type="text/javascript" src="js/jQuery-slimScroll-1.3.0/jquery.slimscroll.min.js"></script>
-<script type="text/javascript" src="js/jQuery-slimScroll-1.3.0/slimScrollHorizontal.min.js"></script>
-<!-- BLOCK UI -->
-<script type="text/javascript" src="js/jQuery-BlockUI/jquery.blockUI.min.js"></script>
-<!-- DATA TABLES -->
-<script type="text/javascript" src="js/datatables/media/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="js/datatables/media/assets/js/datatables.min.js"></script>
-<script type="text/javascript" src="js/datatables/extras/TableTools/media/js/TableTools.min.js"></script>
-<script type="text/javascript" src="js/datatables/extras/TableTools/media/js/ZeroClipboard.min.js"></script>
-<!-- COOKIE -->
-<script type="text/javascript" src="js/jQuery-Cookie/jquery.cookie.min.js"></script>
-<!-- CUSTOM SCRIPT -->
-<script src="js/script.js"></script>
+<%@include file="../common/footer.jsp" %>
 <script>
-    jQuery(document).ready(function () {
+    $(function () {
         App.setPage("dynamic_table");  //Set current page
+        App.setPage("rich_text_editors");
         App.init(); //Initialise plugins and elements
+    });
+
+
+    /*  private String title; //文章名称
+     private String keywords;  //关键字
+     private String knowledgeDesc;  //摘要
+     private String content; //内容
+     private KnowledgeType knowledgeType;//知识库类型
+     private String publisher; //发布者
+
+     private Date publishTime;//发布时间
+     private Boolean display;//是否显示
+     private Boolean showInMainPage;//  是否主页显示*/
+
+    //新建记录
+    $("#create").on("click", function () {
+        var knowledge = {
+            title: $("#title").val(),
+            keywords: $("#keywords").val(),
+            knowledgeDesc: $("#knowledgeDesc").val(),
+            publisher: $("#publisher").val(),
+            content: $("#editor").html(),
+            publishTime: new Date(),
+            display: $("#display").val(),
+            showInMainPage: $("#showInMainPage").val()
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "/back/knowledge/save",
+            data: knowledge,
+            success: function (msg) {
+                $("#createModal").modal('hide');
+                addRow(knowledge);
+                $.bootstrapGrowl("知识信息添加成功！", {
+                    type: 'info',
+                    align: 'right',
+                    stackup_spacing: 30
+                });
+                $(this).attr("disabled", "disabled");
+
+            },
+            error: function () {
+                $.bootstrapGrowl("知识信息添加失败！", {
+                    type: 'danger',
+                    align: 'right',
+                    stackup_spacing: 30
+                });
+            }
+        });
+    })
+    ;
+
+
+    var addRow = function (knowledge) {
+        var dateString = knowledge.onLineDate.Format('yyyy-MM-dd');
+        var html = '<tr class="gradeX">';
+        html += '<td class="center">1</td>';
+        html += '<td class ="center"><a href ="#" data-toggle="modal" data-target="#myModal" >' + knowledge.knowledgeName + '</a></td>';
+        html += '<td class= "center hidden-xs" >' + knowledge.knowledgeType + '</td>';
+        html += '<td class= "center hidden-xs" >' + dateString + ' </td>';
+        html += '<td class = "center">' + knowledge.knowledgeDesc + '</td>';
+        html += '<td class = "center"><a href = "#" > 编辑 </a> </td>';
+        html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
+        html += '</tr>';
+        $("#tbody").prepend(html);
+    }
+
+
+    /*  //更新操作
+     $(":submit").click(function () {
+     var id = $(this).attr("id").substring(4);
+     var knowledgeName = $("#knowledgeName" + id).val();
+     var knowledgeDesc = $("#knowledgeDesc" + id).val();
+     var knowledgeType = "1";
+     var onlineDate = new Date();
+     var online = $("#online" + id).val();
+
+
+     var knowledge = new Object();
+     knowledge.knowledgeName = knowledgeName;
+     knowledge.knowledgeDesc = knowledgeDesc;
+     knowledge.knowledgeType = knowledgeType;
+     knowledge.onlineDate = onlineDate;
+     knowledge.online = online;
+     $.ajax({
+     type: "POST",
+     url: "/back/knowledge/save",
+     data: knowledge,
+     success: function (msg) {
+     $("#createModal" + id).modal('hide');
+     $.bootstrapGrowl("知识信息保存成功！", {
+     type: 'info',
+     align: 'right',
+     stackup_spacing: 30
+     });
+
+     },
+     error: function () {
+     $.bootstrapGrowl("知识信息保存失败！", {
+     type: 'danger',
+     align: 'right',
+     stackup_spacing: 30
+     });
+     }
+     });
+     });*/
+
+
+    //删除操作
+
+    $("a[id^=delBtn]").on("click", function () {
+        var id = $(this).attr("id").substring(6);
+        $.ajax({
+            type: "POST",
+            url: "/back/knowledge/delete/" + id,
+            success: function () {
+                $("#tr" + id).fadeOut("slow");
+                $.bootstrapGrowl("知识信息删除成功！", {
+                    type: 'info',
+                    align: 'right',
+                    stackup_spacing: 30
+                });
+            },
+            error: function () {
+                $("#tr" + id).fadeOut("slow");
+                $.bootstrapGrowl("知识信息删除成功！", {
+                    type: 'info',
+                    align: 'right',
+                    stackup_spacing: 30
+                });
+            }
+        });
     });
 </script><!-- /JAVASCRIPTS -->
 </body>

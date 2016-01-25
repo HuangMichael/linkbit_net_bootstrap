@@ -7,7 +7,6 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface ProductCharactorRepository extends CrudRepository<ProductCharactor, Long> {
 
-
     /**
      * 根据产品属性id查找产品信息
      */

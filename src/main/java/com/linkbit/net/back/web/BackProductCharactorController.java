@@ -26,7 +26,6 @@ public class BackProductCharactorController {
     @Autowired
     ProductRepository productRepository;
 
-
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     @ResponseBody
     public String save(ProductCharactor productCharactor) {
@@ -36,11 +35,9 @@ public class BackProductCharactorController {
         return "redirect:/back/product/index";
     }
 
-
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
     public Boolean delete(@PathVariable long id) {
-        System.out.println("product----delete---------------" + id);
         ProductCharactor productCharactor = productCharactorRepository.findById(id);
         productCharactor.setProduct(null);
         productCharactorRepository.delete(productCharactor);

@@ -15,7 +15,7 @@ public class ProductCharactor {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String charactorDesc;
-    @ManyToOne(cascade = CascadeType.REMOVE, optional = false)
+    @ManyToOne(cascade = CascadeType.ALL, optional = true,fetch = FetchType.LAZY)
     @JoinColumn(name="product_id", referencedColumnName="id")//
     private Product product;
     private boolean status;

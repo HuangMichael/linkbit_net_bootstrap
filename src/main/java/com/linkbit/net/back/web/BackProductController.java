@@ -3,6 +3,7 @@ package com.linkbit.net.back.web;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
 import com.linkbit.net.front.domain.product.Product;
+import com.linkbit.net.front.domain.product.ProductCharactor;
 import com.linkbit.net.front.domain.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -81,5 +82,14 @@ public class BackProductController {
         Map<String,Product>  map = new HashMap<String, Product>();map.put("product",product);
         ModelAndView mv = new ModelAndView("/back/product/detail",map);
         return mv;
+    }
+
+
+    @RequestMapping(value="/findCharactorListById/{id}",method = RequestMethod.GET)
+    @ResponseBody
+    public List<ProductCharactor> findById(@PathVariable("id") Long id) {
+        Product product = productRepository.findById(id);
+        List<ProductCharactor> productCharactorList =  product.getProductCharactorSet();
+        return productCharactorList;
     }
 }

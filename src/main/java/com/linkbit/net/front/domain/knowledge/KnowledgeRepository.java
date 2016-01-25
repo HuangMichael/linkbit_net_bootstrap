@@ -24,4 +24,16 @@ public interface KnowledgeRepository extends Repository<Knowledge, Long> {
      * 根据id查询对应的知识信息
      */
     Knowledge findById(Long id);
+
+    /**
+     * 删除实体信息
+     */
+
+    void delete(Knowledge knowledge);
+
+    /**
+     * 保存实体信息
+     */
+
+    Knowledge save(Knowledge knowledge);
 }

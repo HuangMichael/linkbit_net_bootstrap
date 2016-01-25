@@ -24,3 +24,25 @@
 <!-- CUSTOM SCRIPT -->
 <script src="js/script.js"></script>
 <script src="js/DateUtils.js"></script>
+
+
+
+
+
+
+
+<!-- MARKDOWN -->
+<script type="text/javascript" src="js/bootstrap-markdown/js/markdown.js"></script>
+<script type="text/javascript" src="js/bootstrap-markdown/js/to-markdown.js"></script>
+<script type="text/javascript" src="js/bootstrap-markdown/js/bootstrap-markdown.min.js"></script>
+<!-- BLOCK UI -->
+<script type="text/javascript" src="js/jQuery-BlockUI/jquery.blockUI.min.js"></script>
+<!-- BOOTSTRAP WYSIWYG -->
+<script type="text/javascript" src="js/bootstrap-wysiwyg/jquery.hotkeys.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-wysiwyg/bootstrap-wysiwyg.min.js"></script>
+<!-- CKEDITOR -->
+<script type="text/javascript" src="js/ckeditor/ckeditor.js"></script>
+<!-- COOKIE -->
+<script type="text/javascript" src="js/jQuery-Cookie/jquery.cookie.min.js"></script>
+<!-- CUSTOM SCRIPT -->
+<script src="js/script.js"></script>
