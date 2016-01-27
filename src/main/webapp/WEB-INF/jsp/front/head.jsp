@@ -1,9 +1,14 @@
 <%@page contentType="text/html" %>
 <%@page pageEncoding="UTF-8" %>
+
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE HTML>
 <html>
 <head>
-    <base href="/front/">
+    <base href="<%=basePath%>/front/">
     <title>江苏凌比特微电子技术有限公司</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
