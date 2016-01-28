@@ -1,6 +1,7 @@
 package com.linkbit.net.front.domain.product;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.linkbit.net.front.domain.productType.ProductType;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -18,8 +19,8 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     private String productName;
-    private String productType;
     private String productDesc;
     private String productImgUrl;
     private Boolean showInMainPage;
@@ -30,8 +31,9 @@ public class Product {
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonBackReference("productCharactorSet")
     private List<ProductCharactor> productCharactorSet = new ArrayList<ProductCharactor>();
-
-
+    @ManyToOne(cascade = CascadeType.ALL, optional = true, fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_type_id", referencedColumnName = "id")//
+    private ProductType productType;
     public long getId() {
         return id;
     }
@@ -48,13 +50,7 @@ public class Product {
         this.productName = productName;
     }
 
-    public String getProductType() {
-        return productType;
-    }
 
-    public void setProductType(String productType) {
-        this.productType = productType;
-    }
 
     public String getProductDesc() {
         return productDesc;

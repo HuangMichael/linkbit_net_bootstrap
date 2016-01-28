@@ -9,9 +9,9 @@
     <div class="container">
         <div class="main">
             <div id="mi-slider" class="mi-slider">
-                <c:forEach items="${productMap}" var="plist">
+                <c:forEach items="${productTypeList}" var="type">
                     <ul>
-                        <c:forEach items="${plist}" var="p">
+                        <c:forEach items="${type.productList}" var="p">
                             <li><a href="/product/detail/${p.id}">
                                 <img src="${p.productImgUrl}" alt="${p.productName}" id="${p.id}" title="${p.productName}">
                                 <h4>${p.productName}</h4></a></li>
@@ -19,10 +19,9 @@
                     </ul>
                 </c:forEach>
                 <nav>
-                    <a href="#">北斗手表</a>
-                    <a href="#">北斗导航PDA</a>
-                    <a href="#">北斗指挥机</a>
-                    <a href="#">北斗导航仪</a>
+                    <c:forEach items="${productTypeList}" var="type">
+                    <a href="#">${type.typeName}</a>
+                   </c:forEach>
                 </nav>
             </div>
         </div>
@@ -32,11 +31,9 @@
 <script>
     $('#mi-slider').catslider();
 
-    $("img").on("click", function () {
+  /*  $("img").on("click", function () {
         $("#productDetail").append('<div style="min-height: 600px">this is detail</div>');
-    })
-
-
+    })*/
 </script>
 
 <jsp:include page="footer.jsp"/>

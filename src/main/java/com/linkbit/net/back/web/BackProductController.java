@@ -5,6 +5,8 @@ import com.linkbit.net.front.domain.menu.MenuRepository;
 import com.linkbit.net.front.domain.product.Product;
 import com.linkbit.net.front.domain.product.ProductCharactor;
 import com.linkbit.net.front.domain.product.ProductRepository;
+import com.linkbit.net.front.domain.productType.ProductType;
+import com.linkbit.net.front.domain.productType.ProductTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -24,21 +26,30 @@ import java.util.Map;
 @EnableAutoConfiguration
 @RequestMapping("/back/product/")
 public class BackProductController {
-
+    /**
+     * 菜单接口
+     */
     @Autowired
     MenuRepository menuRepository;
-
+    /**
+     * 产品接口
+     */
     @Autowired
     ProductRepository productRepository;
+
+    /**
+     * 产品类型接口
+     */
+    @Autowired
+    ProductTypeRepository productTypeRepository;
 
     @RequestMapping("/index")
     public String index(HttpServletRequest request) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
-
         List<Product> productList = productRepository.findAll();
-
+        List<ProductType> productTypeList = productTypeRepository.findByStatus(true);
+        request.setAttribute("productTypeList", productTypeList);
         request.setAttribute("backMenusList", backMenusList);
-
         request.setAttribute("productList", productList);
         return "/back/product/product";
     }
