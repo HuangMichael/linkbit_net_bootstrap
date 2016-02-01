@@ -10,7 +10,7 @@
         <ul>
             <c:forEach items="${backMenusList}" var="menu">
                 <li>
-                    <a href="${menu.url}">
+                    <a data-href="${menu.url}" name="menuLink">
                         <i class="${menu.iconClass}"></i> <span class="menu-text">${menu.menuDesc}</span>
                         <span class="selected"></span>
                     </a>

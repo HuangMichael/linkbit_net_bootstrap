@@ -32,7 +32,7 @@ public class Product {
     @JsonBackReference("productCharactorSet")
     private List<ProductCharactor> productCharactorSet = new ArrayList<ProductCharactor>();
     @ManyToOne(cascade = CascadeType.ALL, optional = true, fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_type_id", referencedColumnName = "id")//
+    @JoinColumn(name = "product_type_id", referencedColumnName = "id")
     private ProductType productType;
     public long getId() {
         return id;

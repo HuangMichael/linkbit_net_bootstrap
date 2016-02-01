@@ -7,9 +7,10 @@ import com.linkbit.net.front.domain.menu.MenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -19,6 +20,7 @@ import java.util.List;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/back/contact/")
+@SessionAttributes("backMenusList")
 public class BackContactController {
 
     @Autowired
@@ -27,11 +29,11 @@ public class BackContactController {
     CompanyRepository companyRepository;
 
     @RequestMapping("/index")
-    public String index(HttpServletRequest request) {
+    public String index(ModelMap modelMap ) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         Company company = companyRepository.findAll().get(0);
-        request.setAttribute("backMenusList", backMenusList);
-        request.setAttribute("company", company);
+        modelMap.put("backMenusList", backMenusList);
+        modelMap.put("company", company);
         return "/back/contact";
     }
 

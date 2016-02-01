@@ -7,35 +7,11 @@
 <body>
 <!-- HEADER -->
 <%@include file="../common/header.jsp" %>
+
+<div id="main-container">
 <section id="page">
     <!-- SIDEBAR -->
-    <div id="sidebar" class="sidebar">
-        <div class="sidebar-menu nav-collapse">
-            <div class="divide-20"></div>
-            <!-- SEARCH BAR -->
-            <div id="search-bar">
-                <input class="search" type="text" placeholder="搜索"><i class="fa fa-search search-icon"></i>
-            </div>
-            <!-- /SEARCH BAR -->
-
-            <!-- SIDEBAR QUICK-LAUNCH -->
-            <!-- <div id="quicklaunch">
-            <!-- /SIDEBAR QUICK-LAUNCH -->
-
-            <!-- SIDEBAR MENU -->
-            <ul>
-                <c:forEach items="${backMenusList}" var="menu">
-                    <li>
-                        <a href="${menu.url}">
-                            <i class="${menu.iconClass}"></i> <span class="menu-text">${menu.menuDesc}</span>
-                            <span class="selected"></span>
-                        </a>
-                    </li>
-                </c:forEach>
-            </ul>
-            <!-- /SIDEBAR MENU -->
-        </div>
-    </div>
+    <%@include file="../common/siderBar.jsp" %>
     <!-- /SIDEBAR -->
     <div id="main-content">
         <!-- SAMPLE BOX CONFIGURATION MODAL FORM-->
@@ -1046,6 +1022,7 @@
         </div>
     </div>
 </section>
+</div>
 <!--/PAGE -->
 <!-- JAVASCRIPTS -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -1097,10 +1074,13 @@
     jQuery(document).ready(function () {
         App.setPage("index");  //Set current page
         App.init(); //Initialise plugins and elements
-        var url = "/back/menu/findBackMenus";
-        $.getJSON(url, null, function (data) {
-            console.log("data--------" + data.length);
-        })
+        $("a[name='menuLink']").on("click", function () {
+          var url=$(this).data("href");
+            $("#main-container").load(url+" #page", null, function () {
+
+
+            });
+        });
     });
 </script>
 <!-- /JAVASCRIPTS -->

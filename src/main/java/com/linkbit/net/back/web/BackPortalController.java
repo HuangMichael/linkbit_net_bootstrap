@@ -5,9 +5,10 @@ import com.linkbit.net.front.domain.menu.MenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -17,6 +18,7 @@ import java.util.List;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/back/portal/")
+@SessionAttributes("backMenusList")
 public class BackPortalController {
 
     @Autowired
@@ -24,9 +26,9 @@ public class BackPortalController {
 
 
     @RequestMapping("/index")
-    public String index(HttpServletRequest request) {
+    public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
-        request.getSession().setAttribute("backMenusList", backMenusList);
+        modelMap.put("backMenusList", backMenusList);
         return "/back/portal/index";
     }
 }

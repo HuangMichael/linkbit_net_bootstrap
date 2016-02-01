@@ -7,13 +7,10 @@ import com.linkbit.net.front.domain.menu.MenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,6 +22,7 @@ import java.util.Map;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/back/knowledge/")
+@SessionAttributes("backMenusList")
 public class BackKnowledgeController {
 
     @Autowired
@@ -33,12 +31,12 @@ public class BackKnowledgeController {
     KnowledgeRepository knowledgeRepository;
 
     @RequestMapping("/index")
-    public String index(HttpServletRequest request) {
+    public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<Knowledge> knowledgeList = knowledgeRepository.findAll();
-        request.setAttribute("backMenusList", backMenusList);
-        request.setAttribute("knowledgeList", knowledgeList);
-        return "/back/knowledge/knowledge";
+        modelMap.put("backMenusList", backMenusList);
+        modelMap.put("knowledgeList", knowledgeList);
+        return "/back/knowledge/index";
     }
 
 
