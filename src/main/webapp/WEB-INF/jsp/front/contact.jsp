@@ -6,7 +6,7 @@
 <jsp:include page="header.jsp"/>
 <!-- about-section -->
 <div class="about-section">
-    <div class="container" style="max-height: 604px">
+    <div class="container">
         <c:forEach items="${company.companyPropertyList}" var="companyProperty">
         <div class="col-md-3">
             <img src="${companyProperty.imgUrl}" width="160px" height=120px" class="img-responsive img-thumbnail" alt=""/>

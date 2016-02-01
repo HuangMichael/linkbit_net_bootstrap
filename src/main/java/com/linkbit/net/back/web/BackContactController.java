@@ -34,7 +34,7 @@ public class BackContactController {
         Company company = companyRepository.findAll().get(0);
         modelMap.put("backMenusList", backMenusList);
         modelMap.put("company", company);
-        return "/back/contact";
+        return "/back/contact/index";
     }
 
 }

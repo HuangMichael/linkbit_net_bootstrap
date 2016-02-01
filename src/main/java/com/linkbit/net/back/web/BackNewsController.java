@@ -7,9 +7,10 @@ import com.linkbit.net.front.domain.news.NewsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -19,6 +20,7 @@ import java.util.List;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/back/news/")
+@SessionAttributes("backMenusList")
 public class BackNewsController {
 
     @Autowired
@@ -28,12 +30,12 @@ public class BackNewsController {
     NewsRepository newsRepository;
 
     @RequestMapping("/index")
-    public String index(HttpServletRequest request) {
+    public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<News> newsList = newsRepository.findAll();
-        request.setAttribute("backMenusList", backMenusList);
-        request.setAttribute("newsList", newsList);
-        return "/back/news/news";
+        modelMap.put("backMenusList", backMenusList);
+        modelMap.put("newsList", newsList);
+        return "/back/news/index";
     }
 
 }

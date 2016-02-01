@@ -26,6 +26,6 @@ public class ContactController extends BaseController {
     public String index(HttpServletRequest request) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         request.setAttribute("backMenusList", backMenusList);
-        return "/back/contact/contact";
+        return "/back/contact/index";
     }
 }

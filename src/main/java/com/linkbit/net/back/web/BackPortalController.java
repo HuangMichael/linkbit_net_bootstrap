@@ -26,9 +26,9 @@ public class BackPortalController {
 
 
     @RequestMapping("/index")
-    public String index(ModelMap modelMap) {
-        List<Menu> backMenusList = menuRepository.findByMenuType("1");
-        modelMap.put("backMenusList", backMenusList);
+        public String index(ModelMap modelMap) {
+            List<Menu> backMenusList = menuRepository.findByMenuType("1");
+            modelMap.put("backMenusList", backMenusList);
         return "/back/portal/index";
     }
 }

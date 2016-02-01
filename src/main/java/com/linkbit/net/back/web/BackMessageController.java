@@ -33,6 +33,6 @@ public class BackMessageController extends BaseController {
         List<Message> messageList = messageRepository.findAll();
         request.setAttribute("backMenusList", backMenusList);
         request.setAttribute("messageList", messageList);
-        return "/back/message/message";
+        return "/back/message/index";
     }
 }
