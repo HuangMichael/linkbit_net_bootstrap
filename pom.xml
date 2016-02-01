@@ -13,6 +13,14 @@
     </parent>
    <!--<packaging>war</packaging>-->
     <dependencies>
+        <!-- 加入对spring4的依赖-->
+       <!-- <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.2.4.RELEASE</version>
+        </dependency>-->
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
