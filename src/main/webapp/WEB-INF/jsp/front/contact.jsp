@@ -17,7 +17,7 @@
         <div class="holder"></div>
         <ul id="itemContainer">
             <c:forEach items="${company.companyPropertyList}" var="companyProperty">
-                <li class="list-inline">
+                <li class="list-inline" style="min-height: 150px">
                     <div class="col-md-3">
                         <img src="${companyProperty.imgUrl}" width="160px" height=120px"
                              class="img-responsive img-thumbnail" alt=""/>

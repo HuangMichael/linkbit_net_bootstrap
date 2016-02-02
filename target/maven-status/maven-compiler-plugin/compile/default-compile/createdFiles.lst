@@ -19,6 +19,7 @@ com\linkbit\net\back\web\BackCustomerController.class
 com\linkbit\net\front\domain\customers\Customer.class
 com\linkbit\net\front\utils\EnumMenuType.class
 com\linkbit\net\front\web\KnowledgeController.class
+com\linkbit\net\front\web\MainsiteErrorController.class
 com\linkbit\net\back\web\ContactController.class
 com\linkbit\net\front\web\BaseController.class
 com\linkbit\net\front\domain\message\MessageRepository.class
