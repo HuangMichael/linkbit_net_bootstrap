@@ -5,31 +5,21 @@
 <!-- header -->
 <jsp:include page="header.jsp"/>
 <!-- header -->
-<link rel="stylesheet" href="/front/plugins/product_how/css/datouwang.css">
 <div class="about-section">
     <div class="container" style="min-height: 604px">
-        <div class="col-md-5 thought-left page">
-                <div class="sp-wrap">
-                    <a href="${product.productImgUrl}">
-                        <img src="${product.productImgUrl}" alt="${product.productName}" class="img-responsive img-thumb img-rounded" />
-                    </a>
-                </div>
+        <div class="col-md-5 thought-left">
+            <img src="${product.productImgUrl}" height="500px" width="500px" class="img-responsive" alt=""/>
         </div>
         <div class="col-md-7 thought-right">
-            <div class="communt">
-                <div class="communt-right">
-                    <h4>产品名称</h4>
-                    <p>${product.productName}</p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
             <div class="communt">
                 <div class="communt-left">
 
                 </div>
                 <div class="communt-right">
-                    <h4>上市时间</h4>
-                    <p>${product.onLineDate}</p>
+                    <h4>产品名称</h4>
+
+                    <p>${product.productName}</p>
+
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -49,12 +39,24 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
+            <div class="communt">
+                <div class="communt-left">
+                   W
+                </div>
+                <div class="communt-right">
+                    <h4>上市时间</h4>
+
+                    <p>${product.onLineDate}</p>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
         </div>
         <div class="clearfix"></div>
     </div>
 </div>
+
 <jsp:include page="footer.jsp"/>
-<script type="text/javascript" src="/front/plugins/product_how/js/smoothproducts.js"></script>
 <!-- footer -->
 </body>
 </html>

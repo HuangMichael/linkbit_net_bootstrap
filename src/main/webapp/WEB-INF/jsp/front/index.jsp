@@ -6,9 +6,9 @@
 <jsp:include page="header.jsp" flush="true"/>
 <div class="about-section">
     <div class="wmuSlider example1 section" id="section-1">
-        <div class="container">
+      <%--  <div class="container">
             <h1>公司最新产品展示</h1>
-        </div>
+        </div>--%>
         <c:forEach var="product" items="${latestProductList}">
         <article style="position: absolute; width: 100%; opacity: 0;">
             <div class="banner-info">
@@ -18,34 +18,20 @@
                     </div>
                     <div class="col-md-7 thought-right">
                         <div class="communt">
-                            <div class="communt-left">
-                                <i class="man"></i>
+                           <div class="communt-left">
+                                <i class="glyphicon glyphicon-home"></i>
                             </div>
                             <div class="communt-right">
                                 <h4>产品名称</h4>
                                 <p>${product.productName}</p>
 
                             </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                        <div class="communt">
-                            <div class="communt-left">
-                                <i class="bulb"></i>
-                            </div>
-                            <div class="communt-right">
-                                <h4>产品特点</h4>
-                                <p>
-                                    <c:forEach items="${product.productCharactorSet}" var="productchar">
-                                        ${productchar.charactorDesc}  <br>
-                                    </c:forEach>
 
-                                </p>
-                            </div>
                             <div class="clearfix"> </div>
                         </div>
                         <div class="communt">
                             <div class="communt-left">
-                                <i class="bar"></i>
+                                <i class="glyphicon glyphicon-calendar"></i>
                             </div>
                             <div class="communt-right">
                                 <h4>上市时间</h4>
@@ -54,6 +40,21 @@
                             </div>
                             <div class="clearfix"> </div>
                         </div>
+                        <div class="communt">
+                            <div class="communt-left">
+                                <i class="glyphicon glyphicon-th-list"></i>
+                            </div>
+                            <div class="communt-right">
+                                <h4>产品特点</h4>
+                                <p>
+                                    <c:forEach items="${product.productCharactorSet}" var="productchar">
+                                        ${productchar.charactorDesc}  <br>
+                                    </c:forEach>
+                                </p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+
                     </div>
                     <div class="clearfix"> </div>
                 </div>

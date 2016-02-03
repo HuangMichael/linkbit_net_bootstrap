@@ -55,14 +55,11 @@
             message.worksplace = $("#worksplace").val();
             message.email = $("#email").val();
             message.content = $("#content").val();
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: message,
-                success: function (data) {
+            $.post(url,{ data: message},
+                 function (data) {
                     $("#send").val("保存成功");
                     $("#send").attr("disabled", "disabled")
-                }
+
             });
 
         })

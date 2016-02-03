@@ -8,7 +8,7 @@ import javax.persistence.*;
  * Created by Administrator on 2016/1/11 0011.
  */
 @Entity
-@Table(name = "T_PRODUCTCHARACTOR")
+@Table(name = "T_PRODUCT_CHARACTOR")
 @Data
 public class ProductCharactor {
     @Id
@@ -19,7 +19,7 @@ public class ProductCharactor {
     @JoinColumn(name="product_id", referencedColumnName="id")//
     private Product product;
     private boolean status;
-
+/*
 
     public Long getId() {
         return id;
@@ -51,5 +51,5 @@ public class ProductCharactor {
 
     public void setStatus(boolean status) {
         this.status = status;
-    }
+    }*/
 }

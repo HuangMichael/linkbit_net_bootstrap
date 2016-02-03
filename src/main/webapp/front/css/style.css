@@ -227,8 +227,8 @@ ul.wmuSliderPagination {
 	cursor: hand;
 }
 i.man {
-	width: 42px;
-	height: 42px;
+	width: 24px;
+	height: 24px;
 	background: url(../images/img-sprite.png)no-repeat -14px -4px;
 	display: inline-block;
 	vertical-align: middle;

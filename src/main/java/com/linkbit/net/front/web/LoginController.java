@@ -16,10 +16,11 @@ import com.linkbit.net.front.domain.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 
@@ -29,6 +30,7 @@ import java.util.List;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/")
+@SessionAttributes("menusList")
 public class LoginController extends BaseController {
     @Autowired
     UserRepository userRepository;
@@ -51,22 +53,22 @@ public class LoginController extends BaseController {
     @Autowired
     MenuRepository menuRepository;
     @RequestMapping("/")
-    public String login(HttpServletRequest request) {
-        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
+    public String login(ModelMap modelMap) {
         //查询导航主菜单
-        List<Menu> menusList = menuRepository.findByMenuType("0");
-        request.getSession().setAttribute("menusList", menusList);
+
         // 跳转到index
         return "redirect:/index";
     }
 
     @RequestMapping("/logout")
     public String logout() {
-        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         return "index";
     }
     @RequestMapping("/index")
-    public ModelAndView index() {
+    public ModelAndView index(ModelMap modelMap) {
+
+        List<Menu> menusList = menuRepository.findByMenuType("0");
+        modelMap.put("menusList", menusList);
         // 查询最新产品
         List<Product> latestProductList = productRepository.findByOnline(true);
         //查询最新知识库信息
@@ -86,41 +88,31 @@ public class LoginController extends BaseController {
 
     @RequestMapping("/about")
     public String about() {
-        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         return "/front/about";
     }
 
-
-
-
-
     @RequestMapping("/customer")
     public String customers() {
-        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         return "/front/customer";
     }
 
 
     @RequestMapping("/contact")
     public ModelAndView contact() {
-        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         Company company = companyRepository.findAll().get(0);
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/front/contact");
         modelAndView.addObject("company", company);
         return modelAndView;
-
     }
     @RequestMapping("/showDetail")
     public String showDetail() {
-        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         return "/front/detail";
     }
 
 
     @RequestMapping("/message")
     public String message() {
-        log.info(this.getClass().getSimpleName() + "--" + Thread.currentThread().getStackTrace()[1].getMethodName());
         return "/front/message";
 
     }
