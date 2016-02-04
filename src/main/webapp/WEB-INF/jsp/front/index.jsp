@@ -117,7 +117,7 @@
 
         <c:forEach items="${customerList}" var="customer">
         <li>
-            <a href="#"><img src="${customer.logoPath}"  width="120px" height="80px"  class="img-responsive img-thumbnail" alt="" /></a>
+            <a href="javascript:void(0)"><img src="${customer.logoPath}"  width="120px" height="80px"  class="img-responsive img-thumbnail" alt="" /></a>
         </li>
         </c:forEach>
     </div>
