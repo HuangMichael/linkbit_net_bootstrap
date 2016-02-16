@@ -4,6 +4,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@include file="../common/head.jsp" %>
+
+
 <body>
 <!-- HEADER -->
 <%@include file="../common/header.jsp" %>
@@ -77,7 +79,12 @@
                                                 <td class="center">${status.index+1}</td>
                                                 <td class="center"><a href="/back/productType/detail/${productType.id}">${productType.typeName}</a>
                                                 </td>
-                                                <td class="center">${productType.status}</td>
+                                                <td class="center">
+                                                    <div class="switch">
+
+                                                        <input type="checkbox" name="my-checkbox"
+                                                               checked="${productType.status}"/></div>
+                                                </td>
                                                 <td class="center "><a href="#" data-toggle="modal"
                                                                        data-target="#myModal${productType.id}">编辑</a></td>
                                                 <td class="center "><a id="delBtn${productType.id}">删除</a>
@@ -196,49 +203,15 @@
                 <div class="modal-body">
                     <form id="productCreateForm">
                         <div class="form-group">
-                            <label for="productName">产品类型名称</label>
+                            <label for="typeName">产品类型名称</label>
                             <input type="text" class="form-control"
-                                   id="productName"
-                                   name="product.productName">
-                        </div>
-                        <div class="form-group">
-                            <label for="productType">产品类型类型</label>
-                            <select class="form-control"
-                                    id="productType"
-                                    name="product.productType">
-                                <option value="1">PDA</option>
-                                <option value="2">手机</option>
-                                <option value="3">导航仪</option>
-                                <option value="4">指挥机</option>
-                                <option value="5">手表</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="productDesc">产品类型描述</label>
-                            <input type="text" class="form-control"
-                                   id="productDesc"
-                                   name="product.productDesc"
-                            >
-                        </div>
-                        <div class="form-group">
-                            <label for="onLineDate">上线日期</label>
-
-                            <div class="input-append date" id="onLineDate" data-date="12-02-2012"
-                                 data-date-format="dd-mm-yyyy">
-                                <input class="span2" size="16" type="text" value="12-02-2012">
-                                <span class="add-on"><i class="icon-th"></i></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputFile">产品类型图片</label>
-                            <input type="file" id="exampleInputFile2">
-
-                            <p class="help-block">上传一张产品类型图片吧</p>
+                                   id="typeName"
+                                   name="productType.typeName">
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" id="online"
-                                       name="product.online"
+                                <input type="checkbox" id="status"
+                                       name="productType.status"
                                 > 是否显示
                             </label>
                         </div>
@@ -265,29 +238,28 @@
     $(function () {
         App.setPage("dynamic_table");  //Set current page
         App.init(); //Initialise plugins and elements
+       // $("[name='my-checkbox']").bootstrapSwitch();
     });
 
 
     //新建记录
     $("#create").click(function () {
-        var productName = $("#productName").val();
-        var productDesc = $("#productDesc").val();
-        var productType = "1";
-        var onLineDate = new Date();
-        var online = $("#online").val();
-        var product = new Object();
-        product.productName = productName;
-        product.productDesc = productDesc;
-        product.productType = productType;
-        product.onLineDate = onLineDate;
-        product.online = online;
+        var typeName = $("#typeName").val();
+        var status = $("#status").val();
+
+        var productType = {
+            typeName: typeName,
+            status: status
+        }
+
+        console.log("productType----" + JSON.stringify(productType));
         $.ajax({
             type: "POST",
-            url: "/back/product/save",
-            data: product,
+            url: "/back/productType/save",
+            data: productType,
             success: function (msg) {
                 $("#createModal").modal('hide');
-                addRow(product);
+                // addRow(productType);
                 $.bootstrapGrowl("产品类型信息添加成功！", {
                     type: 'info',
                     align: 'right',
@@ -370,7 +342,7 @@
         console.log("id------------------" + id);
         $.ajax({
             type: "POST",
-            url: "/back/product/delete/" + id,
+            url: "/back/productType/delete/" + id,
             success: function () {
                 $("#tr" + id).fadeOut("slow");
                 $.bootstrapGrowl("产品类型信息删除成功！", {
@@ -381,7 +353,7 @@
             },
             error: function () {
                 $("#tr" + id).fadeOut("slow");
-                $.bootstrapGrowl("产品类型信息删除成功！", {
+                $.bootstrapGrowl("产品类型信息删除失败！", {
                     type: 'info',
                     align: 'right',
                     stackup_spacing: 30

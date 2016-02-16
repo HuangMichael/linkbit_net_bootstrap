@@ -1,8 +1,11 @@
+/*
 package com.linkbit.net;
 
+*/
 /**
  * Created by Administrator on 2016/1/27 0027.
- */
+ *//*
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +19,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-       /* http
+       */
+/* http
                 .authorizeRequests()
                 .antMatchers("/", "/index", "/product/", "/knowledge/", "/news/", "/contact/","/front/css","/front/images","/front/js").permitAll()
                 .anyRequest().authenticated()
@@ -26,7 +30,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .logout()
-                .permitAll();*/
+                .permitAll();*//*
+
 
     }
 
@@ -37,3 +42,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .withUser("user").password("password").roles("USER");
     }
 }
+*/

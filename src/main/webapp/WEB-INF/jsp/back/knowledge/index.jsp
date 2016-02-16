@@ -17,44 +17,14 @@
         <div class="container">
             <div class="row">
                 <div id="content" class="col-lg-12">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="page-header">
-                                <!-- BREADCRUMBS -->
-                                <ul class="breadcrumb">
-                                    <li>
-                                        <i class="fa fa-home"></i>
-                                        <a href="/back/index">后台管理系统</a>
-                                    </li>
-                                    <li>知识信息</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <%@include file="../common/banner.jsp" %>
                     <!-- TABLE IN MODAL -->
                     <!-- EXPORT TABLES -->
                     <div class="row">
                         <div class="col-md-12">
                             <!-- BOX -->
                             <div class="box border blue">
-                                <div class="box-title">
-                                    <h4><i class="fa fa-table"></i>知识信息</h4>
-
-                                    <div class="tools hidden-xs">
-                                        <a href="#box-config" data-toggle="modal" class="config">
-                                            <i class="fa fa-cog"></i>
-                                        </a>
-                                        <a href="javascript:;" class="reload">
-                                            <i class="fa fa-refresh"></i>
-                                        </a>
-                                        <a href="javascript:;" class="collapse">
-                                            <i class="fa fa-chevron-up"></i>
-                                        </a>
-                                        <a href="javascript:;" class="remove">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                                <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
                                     <button type="button" class="btn btn-default btn-mini navbar-btn"
                                             data-toggle="modal"
@@ -87,8 +57,8 @@
 
                                                 <td class=" center hidden-xs"><fmt:formatDate
                                                         value="${knowledge.publishTime}" pattern="yyyy-MM-dd"/></td>
-                                                <td class=" center hidden-xs">${knowledge.display}</td>
-                                                <td class=" center hidden-xs">${knowledge.showInMainPage}</td>
+                                                <td class=" center hidden-xs"><input type="checkbox" checked="${knowledge.display==true}"></td>
+                                                <td class=" center hidden-xs"><input type="checkbox" checked="${knowledge.showInMainPage==true}"></td>
                                                 <td class="center "><a href="#" data-toggle="modal"
                                                                        data-target="#myModal${knowledge.id}">编辑</a></td>
                                                 <td class="center "><a id="delBtn${knowledge.id}">删除</a>
@@ -208,20 +178,6 @@
                             aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel2">新建知识信息</h4>
                 </div>
-
-
-                <%-- private String title; //文章名称
-                 private String keywords;  //关键字
-                 private String knowledgeDesc;  //摘要
-                 private String content; //内容
-                 private KnowledgeType knowledgeType;//知识库类型
-                 private String publisher; //发布者
-                 @Temporal(TemporalType.DATE)
-                 private Date publishTime;//发布时间
-                 private Boolean display;//是否显示
-                 private Boolean showInMainPage;//  是否主页显示--%>
-
-
                 <div class="modal-body">
                     <form id="knowledgeCreateForm">
                         <div class="form-group">
@@ -453,14 +409,16 @@
             keywords: $("#keywords").val(),
             knowledgeDesc: $("#knowledgeDesc").val(),
             publisher: $("#publisher").val(),
-            content: $("#editor").html(),
+          //  content: $("#editor").html(),
             publishTime: new Date(),
-            display: $("#display").val(),
-            showInMainPage: $("#showInMainPage").val()
+            display: $("#display").attr("checked"),
+            showInMainPage: $("#showInMainPage").attr("checked"),
         };
 
+        console.log("knowledge--------------"+JSON.stringify(knowledge));
+
         $.ajax({
-            type: "POST",
+            type: "post",
             url: "/back/knowledge/save",
             data: knowledge,
             success: function (msg) {
@@ -487,7 +445,7 @@
 
 
     var addRow = function (knowledge) {
-        var dateString = knowledge.onLineDate.Format('yyyy-MM-dd');
+        var dateString = knowledge.publishTime.Format('yyyy-MM-dd');
         var html = '<tr class="gradeX">';
         html += '<td class="center">1</td>';
         html += '<td class ="center"><a href ="#" data-toggle="modal" data-target="#myModal" >' + knowledge.knowledgeName + '</a></td>';

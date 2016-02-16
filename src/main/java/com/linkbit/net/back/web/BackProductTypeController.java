@@ -33,13 +33,12 @@ public class BackProductTypeController {
         List<ProductType> productTypeList = productTypeRepository.findAll();
         request.setAttribute("backMenusList", backMenusList);
         request.setAttribute("productTypeList", productTypeList);
-        return "/back/productType/productType";
+        return "/back/productType/index";
     }
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    @ResponseBody
-    public ProductType save(@ModelAttribute ProductType productType) {
+    public String save(@ModelAttribute ProductType productType) {
         productTypeRepository.save(productType);
-        return productType;
+        return "/index";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)

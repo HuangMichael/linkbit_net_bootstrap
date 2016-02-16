@@ -8,6 +8,7 @@ com\linkbit\net\back\web\BackMenuController.class
 com\linkbit\net\front\domain\company\CompanyProperty.class
 com\linkbit\net\front\web\ProductController.class
 com\linkbit\net\ServletInitializer.class
+com\linkbit\net\back\domain\HeaderDTO.class
 com\linkbit\net\back\web\BackLoginController.class
 com\linkbit\net\back\web\BackPortalController.class
 com\linkbit\net\front\web\LoginController.class
@@ -24,7 +25,6 @@ com\linkbit\net\back\web\ContactController.class
 com\linkbit\net\front\web\BaseController.class
 com\linkbit\net\front\domain\message\MessageRepository.class
 com\linkbit\net\MvcConfig.class
-com\linkbit\net\WebSecurityConfig.class
 com\linkbit\net\front\domain\user\User.class
 com\linkbit\net\front\domain\product\ProductCharactor.class
 com\linkbit\net\front\domain\knowledge\Knowledge.class

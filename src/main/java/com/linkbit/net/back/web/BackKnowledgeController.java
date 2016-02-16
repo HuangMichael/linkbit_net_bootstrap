@@ -1,5 +1,6 @@
 package com.linkbit.net.back.web;
 
+import com.linkbit.net.back.domain.HeaderDTO;
 import com.linkbit.net.front.domain.knowledge.Knowledge;
 import com.linkbit.net.front.domain.knowledge.KnowledgeRepository;
 import com.linkbit.net.front.domain.menu.Menu;
@@ -21,7 +22,7 @@ import java.util.Map;
  */
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/back/knowledge/")
+@RequestMapping("/back/knowledge")
 @SessionAttributes("backMenusList")
 public class BackKnowledgeController {
 
@@ -34,6 +35,13 @@ public class BackKnowledgeController {
     public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<Knowledge> knowledgeList = knowledgeRepository.findAll();
+
+        HeaderDTO headerDTO = new HeaderDTO();
+        headerDTO.setSystemName("网站后台管理系统");
+        headerDTO.setAppName("知识信息");
+        modelMap.put("headerDTO", headerDTO);
+
+
         modelMap.put("backMenusList", backMenusList);
         modelMap.put("knowledgeList", knowledgeList);
         return "/back/knowledge/index";
@@ -63,10 +71,9 @@ public class BackKnowledgeController {
      * 保存知识信息
      */
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    @ResponseBody
-    public Knowledge save(Knowledge knowledge) {
+    public String save(@ModelAttribute  Knowledge knowledge) {
         knowledgeRepository.save(knowledge);
-        return knowledge;
+        return "/back/knowledge/index";
     }
 
 }
