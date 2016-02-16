@@ -19,7 +19,7 @@ public class ProductCharactor {
     @JoinColumn(name="product_id", referencedColumnName="id")//
     private Product product;
     private boolean status;
-/*
+
 
     public Long getId() {
         return id;
@@ -51,5 +51,5 @@ public class ProductCharactor {
 
     public void setStatus(boolean status) {
         this.status = status;
-    }*/
+    }
 }

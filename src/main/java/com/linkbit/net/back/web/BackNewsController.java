@@ -1,5 +1,6 @@
 package com.linkbit.net.back.web;
 
+import com.linkbit.net.back.domain.HeaderDTO;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
 import com.linkbit.net.front.domain.news.News;
@@ -33,6 +34,10 @@ public class BackNewsController {
     public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<News> newsList = newsRepository.findAll();
+        HeaderDTO headerDTO = new HeaderDTO();
+        headerDTO.setSystemName("网站后台管理系统");
+        headerDTO.setAppName("新闻信息");
+        modelMap.put("headerDTO", headerDTO);
         modelMap.put("backMenusList", backMenusList);
         modelMap.put("newsList", newsList);
         return "/back/news/index";

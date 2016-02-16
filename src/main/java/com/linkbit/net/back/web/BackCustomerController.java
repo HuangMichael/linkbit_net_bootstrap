@@ -1,5 +1,6 @@
 package com.linkbit.net.back.web;
 
+import com.linkbit.net.back.domain.HeaderDTO;
 import com.linkbit.net.front.domain.customers.Customer;
 import com.linkbit.net.front.domain.customers.CustomerRepository;
 import com.linkbit.net.front.domain.menu.Menu;
@@ -8,9 +9,9 @@ import com.linkbit.net.front.web.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -28,11 +29,15 @@ public class BackCustomerController extends BaseController {
     CustomerRepository customerRepository;
 
     @RequestMapping("/index")
-    public String index(HttpServletRequest request) {
+    public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<Customer> customerList = customerRepository.findAll();
-        request.setAttribute("backMenusList", backMenusList);
-        request.setAttribute("customerList", customerList);
+        HeaderDTO headerDTO = new HeaderDTO();
+        headerDTO.setSystemName("网站后台管理系统");
+        headerDTO.setAppName("客户信息");
+        modelMap.put("headerDTO",headerDTO);
+        modelMap.put("backMenusList", backMenusList);
+        modelMap.put("customerList", customerList);
         return "/back/customer/index";
     }
 }

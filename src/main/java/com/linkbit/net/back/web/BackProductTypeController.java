@@ -1,5 +1,6 @@
 package com.linkbit.net.back.web;
 
+import com.linkbit.net.back.domain.HeaderDTO;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
 import com.linkbit.net.front.domain.productType.ProductType;
@@ -7,6 +8,7 @@ import com.linkbit.net.front.domain.productType.ProductTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,11 +30,15 @@ public class BackProductTypeController {
     ProductTypeRepository productTypeRepository;
 
     @RequestMapping("/index")
-    public String index(HttpServletRequest request) {
+    public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<ProductType> productTypeList = productTypeRepository.findAll();
-        request.setAttribute("backMenusList", backMenusList);
-        request.setAttribute("productTypeList", productTypeList);
+        HeaderDTO headerDTO = new HeaderDTO();
+        headerDTO.setSystemName("网站后台管理系统");
+        headerDTO.setAppName("产品类型信息");
+        modelMap.put("headerDTO", headerDTO);
+        modelMap.put("backMenusList", backMenusList);
+        modelMap.put("productTypeList", productTypeList);
         return "/back/productType/index";
     }
     @RequestMapping(value = "/save", method = RequestMethod.POST)

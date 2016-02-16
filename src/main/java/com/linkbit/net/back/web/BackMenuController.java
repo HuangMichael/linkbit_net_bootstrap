@@ -1,14 +1,15 @@
 package com.linkbit.net.back.web;
 
+import com.linkbit.net.back.domain.HeaderDTO;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -40,9 +41,14 @@ public class BackMenuController {
 
 
     @RequestMapping("/index")
-    public String index(HttpServletRequest request) {
+    public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
-        request.setAttribute("backMenusList", backMenusList);
+
+        HeaderDTO headerDTO = new HeaderDTO();
+        headerDTO.setSystemName("网站后台管理系统");
+        headerDTO.setAppName("菜单信息");
+        modelMap.put("headerDTO",headerDTO);
+        modelMap.put("backMenusList", backMenusList);
         return "/back/menu/index";
     }
 

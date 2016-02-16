@@ -17,44 +17,14 @@
         <div class="container">
             <div class="row">
                 <div id="content" class="col-lg-12">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="page-header">
-                                <!-- BREADCRUMBS -->
-                                <ul class="breadcrumb">
-                                    <li>
-                                        <i class="fa fa-home"></i>
-                                        <a href="/back/index">后台管理系统</a>
-                                    </li>
-                                    <li>客户信息</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <%@include file="../common/banner.jsp" %>
                     <!-- TABLE IN MODAL -->
                     <!-- EXPORT TABLES -->
                     <div class="row">
                         <div class="col-md-12">
                             <!-- BOX -->
                             <div class="box border blue">
-                                <div class="box-title">
-                                    <h4><i class="fa fa-table"></i>客户信息</h4>
-
-                                    <div class="tools hidden-xs">
-                                        <a href="#box-config" data-toggle="modal" class="config">
-                                            <i class="fa fa-cog"></i>
-                                        </a>
-                                        <a href="javascript:;" class="reload">
-                                            <i class="fa fa-refresh"></i>
-                                        </a>
-                                        <a href="javascript:;" class="collapse">
-                                            <i class="fa fa-chevron-up"></i>
-                                        </a>
-                                        <a href="javascript:;" class="remove">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                                <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
                                     <button type="button" class="btn btn-default btn-mini navbar-btn"
                                             data-toggle="modal"
