@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b24faae-27e6-4984-b946-aadada685aee" name="Default" comment="修改banner，提取静态内容&#10;产品类别模块&#10;修改查询placeholder&#10; 取消导出复制等功能&#10;">
+    <list default="true" id="8b24faae-27e6-4984-b946-aadada685aee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/back/js/datatables/extras/TableTools/media/js/TableTools.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/back/js/datatables/extras/TableTools/media/js/TableTools.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/back/js/script.js" afterPath="$PROJECT_DIR$/src/main/webapp/back/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <list id="2f985057-9418-4726-b522-fd364c087c1a" name="Rejected commit: Default" comment="product typeName">
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/springboot-1.0-SNAPSHOT.jar" afterPath="" />
@@ -78,8 +74,8 @@
       <file leaf-file-name="jquery.dataTables.min.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6092486">
-              <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+            <state vertical-scroll-proportion="-0.45202312">
+              <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -1040,7 +1036,7 @@
       <workItem from="1454483472598" duration="6392000" />
       <workItem from="1454548858684" duration="2168000" />
       <workItem from="1454562559711" duration="2207000" />
-      <workItem from="1455584654607" duration="16722000" />
+      <workItem from="1455584654607" duration="16794000" />
     </task>
     <task id="LOCAL-00001" summary="findall报错 product">
       <created>1452504443422</created>
@@ -1084,11 +1080,17 @@
       <option name="project" value="LOCAL" />
       <updated>1455608314116</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="表格插件汉化&#10;">
+      <created>1455609620879</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1455609620879</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364934000" />
+    <option name="totallyTimeSpent" value="365006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1146,7 +1148,8 @@
     <MESSAGE value="v20160203修改了最新产品页面，修改了产品详细页面" />
     <MESSAGE value="新年版本" />
     <MESSAGE value="修改banner，提取静态内容&#10;产品类别模块&#10;修改查询placeholder&#10; 取消导出复制等功能&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改banner，提取静态内容&#10;产品类别模块&#10;修改查询placeholder&#10; 取消导出复制等功能&#10;" />
+    <MESSAGE value="表格插件汉化&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="表格插件汉化&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1538,8 +1541,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6092486">
-          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+        <state vertical-scroll-proportion="-0.45202312">
+          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
