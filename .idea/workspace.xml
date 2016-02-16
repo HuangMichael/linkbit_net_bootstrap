@@ -1036,7 +1036,7 @@
       <workItem from="1454483472598" duration="6392000" />
       <workItem from="1454548858684" duration="2168000" />
       <workItem from="1454562559711" duration="2207000" />
-      <workItem from="1455584654607" duration="16794000" />
+      <workItem from="1455584654607" duration="16799000" />
     </task>
     <task id="LOCAL-00001" summary="findall报错 product">
       <created>1452504443422</created>
@@ -1086,11 +1086,17 @@
       <option name="project" value="LOCAL" />
       <updated>1455609620879</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="表格插件汉化&#10;">
+      <created>1455609671399</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1455609671399</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="365006000" />
+    <option name="totallyTimeSpent" value="365011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
