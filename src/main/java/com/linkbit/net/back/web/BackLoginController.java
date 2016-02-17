@@ -30,6 +30,8 @@ import java.util.List;
 @SessionAttributes("user")
 public class BackLoginController extends BaseController {
 
+
+
     @Autowired
     MenuRepository menuRepository;
 
@@ -49,12 +51,11 @@ public class BackLoginController extends BaseController {
     public String index(@RequestParam("userName") String userName ,@RequestParam("password") String password , ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         User user =  userRepository.findByUserNameAndPassword(userName,MD5Util.md5(password));
-        String url="";
+        String url="/back/login/index";
         if(null!=user){
             modelMap.put("backMenusList", backMenusList);
+            modelMap.put("user",user);
             url="forward:/back/portal/index";
-        }else{
-            url="/back/login/index";
         }
         return url;
     }

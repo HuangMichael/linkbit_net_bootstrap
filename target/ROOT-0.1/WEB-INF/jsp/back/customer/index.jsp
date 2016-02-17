@@ -62,8 +62,8 @@
                                                 <td class="center"><a href="/back/customer/detail/${customer.id}">${customer.customerName}</a></td>
                                                 <td class=" center hidden-xs">${customer.telphone}</td>
 
-                                                <td class="center">${customer.showInMainPage}</td>
-                                                <td class="center">${customer.status}</td>
+                                                <td class="center"><input type="checkbox" checked="${customer.showInMainPage}"/></td>
+                                                <td class="center"><input type="checkbox" checked="${customer.status}"/></td>
                                                 <td class="center "><a href="#" data-toggle="modal"
                                                                        data-target="#myModal${customer.id}">编辑</a></td>
                                                 <td class="center "><a id="delBtn${customer.id}">删除</a>

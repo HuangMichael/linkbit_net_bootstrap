@@ -59,15 +59,15 @@
                                         </tr>
                                         </thead>
                                         <tbody id="tbody">
-                                        <c:forEach items="${companiesList}" var="company" varStatus="status">
+                                        <c:forEach items="${companyList}" var="company" varStatus="status">
                                             <tr class="gradeX" id="tr${company.id}">
                                                 <td class="center">${company.companyName}</td>
                                                 <td class="center">${company.logoPath}</td>
                                                 <td class="center hidden-xs">${company.address}</td>
                                                 <td class="center">${company.longtitude}</td>
                                                 <td class="center">${company.latitude}</td>
-                                                <td class="center">${company.telphone}</td>
-                                                <td class="center hidden-xs">${company.telphone}</td>
+                                                <td class="center">${company.telephone}</td>
+                                                <td class="center hidden-xs">${company.telephone}</td>
                                                 <td class="center ">${company.index+1}</td>
                                                 <td class="center ">${company.index+1}</td>
                                             </tr>

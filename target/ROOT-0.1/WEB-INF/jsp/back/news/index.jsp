@@ -56,7 +56,7 @@
                                                 <td class=" center hidden-xs"><fmt:formatDate
                                                         value="${news.publishTime}" pattern="yyyy-MM-dd"/></td>
                                                     <%-- <td class=" center hidden-xs">${news.display}</td>--%>
-                                                <td class=" center hidden-xs">${news.status}</td>
+                                                <td class=" center hidden-xs"><input type="checkbox" checked="${news.status}"></td>
                                                 <td class="center "><a href="#" data-toggle="modal"
                                                                        data-target="#myModal${news.id}">编辑</a></td>
                                                 <td class="center "><a id="delBtn${news.id}">删除</a>

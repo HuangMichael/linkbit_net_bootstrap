@@ -49,27 +49,27 @@
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">公司名称</th>
-                                            <th class="center hidden-xs">logo地址</th>
+                                            <th class="center">logo地址</th>
                                             <th class="center">公司地址</th>
                                             <th class="center">维度</th>
                                             <th class="center">经度</th>
-                                            <th class="center hidden-xs">电话</th>
+                                            <th class="center">电话</th>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
                                         </tr>
                                         </thead>
                                         <tbody id="tbody">
-                                        <c:forEach items="${companiesList}" var="company" varStatus="status">
+                                        <c:forEach items="${companyList}" var="company" varStatus="status">
                                             <tr class="gradeX" id="tr${company.id}">
+                                                <td class="center">${status.index+1}</td>
                                                 <td class="center">${company.companyName}</td>
                                                 <td class="center">${company.logoPath}</td>
-                                                <td class="center hidden-xs">${company.address}</td>
+                                                <td class="center">${company.address}</td>
                                                 <td class="center">${company.longtitude}</td>
                                                 <td class="center">${company.latitude}</td>
-                                                <td class="center">${company.telphone}</td>
-                                                <td class="center hidden-xs">${company.telphone}</td>
-                                                <td class="center ">${company.index+1}</td>
-                                                <td class="center ">${company.index+1}</td>
+                                                <td class="center">${company.telephone}</td>
+                                                <td class="center ">编辑</td>
+                                                <td class="center ">删除</td>
                                             </tr>
                                         </c:forEach>
                                         </tbody>

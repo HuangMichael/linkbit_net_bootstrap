@@ -7,7 +7,7 @@
         <div class="navbar-brand">
             <!-- COMPANY LOGO -->
             <a href="/back/portal/index">
-                <img src="img/logo/logo.png" alt="Cloud Admin Logo" class="img-responsive" height="30" width="120">
+                <img src="img/logo/logo.png" alt="${user.userName}" class="img-responsive" height="30" width="120">
             </a>
             <!-- /COMPANY LOGO -->
             <!-- TEAM STATUS FOR MOBILE -->
@@ -34,7 +34,7 @@
             <li class="dropdown user" id="header-user">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <img alt="" src="img/avatars/avatar3.jpg"/>
-                    <span class="username">管理员</span>
+                    <span class="username">${user.userName}</span>
                     <i class="fa fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu">
