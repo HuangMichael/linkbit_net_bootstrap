@@ -11,11 +11,11 @@
             </a>
             <!-- /COMPANY LOGO -->
             <!-- TEAM STATUS FOR MOBILE -->
-            <div class="visible-xs">
+        <%--    <div class="visible-xs">
                 <a href="#" class="team-status-toggle switcher btn dropdown-toggle">
                     <i class="fa fa-users"></i>
                 </a>
-            </div>
+            </div>--%>
             <!-- /TEAM STATUS FOR MOBILE -->
             <!-- SIDEBAR COLLAPSE -->
             <div id="sidebar-collapse" class="sidebar-collapse btn">
@@ -40,7 +40,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="#"><i class="fa fa-user"></i>个人信息</a></li>
                     <li><a href="#"><i class="fa fa-cog"></i>账户设置</a></li>
-                    <li><a href="#"><i class="fa fa-eye"></i>个人设置</a></li>
+                    <li><a href="/" target="_blank"><i class="fa fa-eye"></i>进入网站</a></li>
                     <li><a href="/back/logout"><i class="fa fa-power-off"></i>退出登录</a></li>
                 </ul>
             </li>

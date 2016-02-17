@@ -25,8 +25,10 @@ com\linkbit\net\front\web\KnowledgeController.class
 com\linkbit\net\front\web\MainsiteErrorController.class
 com\linkbit\net\front\web\BaseController.class
 com\linkbit\net\front\domain\message\MessageRepository.class
+com\linkbit\net\back\interceptors\Interceptor2.class
 com\linkbit\net\back\web\BackUserController.class
 com\linkbit\net\MvcConfig.class
+com\linkbit\net\back\interceptors\UserSecurityInterceptor.class
 com\linkbit\net\front\domain\user\User.class
 com\linkbit\net\front\domain\product\ProductCharactor.class
 com\linkbit\net\front\domain\knowledge\Knowledge.class
@@ -40,6 +42,7 @@ com\linkbit\net\front\domain\company\CompanyPropertyRepository.class
 com\linkbit\net\front\web\NewsController.class
 com\linkbit\net\back\web\BackProductTypeController.class
 com\linkbit\net\back\web\BackMessageController.class
+com\linkbit\net\WebConfig.class
 com\linkbit\net\front\web\MessageController.class
 com\linkbit\net\Application.class
 com\linkbit\net\front\domain\user\UserRepository.class
