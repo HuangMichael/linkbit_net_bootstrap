@@ -1,15 +1,22 @@
 package com.linkbit.net.back.web;
 
 
+import com.linkbit.net.back.utils.MD5Util;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
+import com.linkbit.net.front.domain.user.User;
+import com.linkbit.net.front.domain.user.UserRepository;
 import com.linkbit.net.front.web.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 
@@ -19,18 +26,48 @@ import java.util.List;
  */
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/back")
+@RequestMapping("/back/")
+@SessionAttributes("user")
 public class BackLoginController extends BaseController {
 
     @Autowired
     MenuRepository menuRepository;
 
-    @RequestMapping("/index")
-    public String index(HttpServletRequest request) {
-        List<Menu> backMenusList = menuRepository.findByMenuType("1");
-        request.setAttribute("backMenusList", backMenusList);
-        return "/back/index";
+    @Autowired
+    UserRepository userRepository;
+
+    public MenuRepository getMenuRepository() {
+        return menuRepository;
+    }
+
+    public void setMenuRepository(MenuRepository menuRepository) {
+        this.menuRepository = menuRepository;
     }
 
 
+    @RequestMapping(value="/login",method = RequestMethod.POST)
+    public String index(@RequestParam("userName") String userName ,@RequestParam("password") String password , ModelMap modelMap) {
+        List<Menu> backMenusList = menuRepository.findByMenuType("1");
+        User user =  userRepository.findByUserNameAndPassword(userName,MD5Util.md5(password));
+        String url="";
+        if(null!=user){
+            modelMap.put("backMenusList", backMenusList);
+            url="forward:/back/portal/index";
+        }else{
+            url="/back/login/index";
+        }
+        return url;
+    }
+
+
+    @RequestMapping("/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        System.out.println("用户注销session----------------------");
+        return "/back/login/index";
+    }
+
 }
+
+
+

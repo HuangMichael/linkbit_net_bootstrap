@@ -4,10 +4,12 @@ com\linkbit\net\front\utils\KnowledgeType.class
 com\linkbit\net\back\web\BackNewsController.class
 com\linkbit\net\front\domain\news\News.class
 com\linkbit\net\front\domain\knowledge\KnowledgeRepository.class
+com\linkbit\net\back\utils\MD5Util.class
 com\linkbit\net\back\web\BackMenuController.class
 com\linkbit\net\front\domain\company\CompanyProperty.class
 com\linkbit\net\front\web\ProductController.class
 com\linkbit\net\ServletInitializer.class
+com\linkbit\net\back\domain\PortalNumberDTO.class
 com\linkbit\net\back\domain\HeaderDTO.class
 com\linkbit\net\back\web\BackLoginController.class
 com\linkbit\net\back\web\BackPortalController.class
@@ -24,6 +26,7 @@ com\linkbit\net\front\web\MainsiteErrorController.class
 com\linkbit\net\back\web\ContactController.class
 com\linkbit\net\front\web\BaseController.class
 com\linkbit\net\front\domain\message\MessageRepository.class
+com\linkbit\net\back\web\BackUserController.class
 com\linkbit\net\MvcConfig.class
 com\linkbit\net\front\domain\user\User.class
 com\linkbit\net\front\domain\product\ProductCharactor.class

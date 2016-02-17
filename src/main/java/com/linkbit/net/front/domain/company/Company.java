@@ -25,7 +25,7 @@ public class Company {
     private String address;//公司地址
     private String longtitude;  //维度
     private String latitude;  //经度
-    private String telphone; //  电话
+    private String telephone; //  电话
     private String fax;//传真
     private Date buildDate;//成立日期
     private Boolean status;//状态

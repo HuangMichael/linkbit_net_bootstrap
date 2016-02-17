@@ -16,6 +16,7 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\Application.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\ProductCharactor.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\productType\ProductTypeRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\message\Message.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\back\utils\MD5Util.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\menu\MenuRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackMessageController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\BaseController.java
@@ -26,7 +27,9 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackLoginController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\company\CompanyPropertyRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\news\NewsRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\message\MessageRepository.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\back\domain\PortalNumberDTO.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\KnowledgeController.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackUserController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\NewsController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\WebSecurityConfig.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\news\News.java

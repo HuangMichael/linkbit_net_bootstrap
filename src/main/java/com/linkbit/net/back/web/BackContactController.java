@@ -32,14 +32,13 @@ public class BackContactController {
     @RequestMapping("/index")
     public String index(ModelMap modelMap ) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
-        Company company = companyRepository.findAll().get(0);
-
+        List<Company> companiesList = companyRepository.findAll();
         HeaderDTO headerDTO = new HeaderDTO();
         headerDTO.setSystemName("网站后台管理系统");
         headerDTO.setAppName("公司信息");
         modelMap.put("headerDTO", headerDTO);
         modelMap.put("backMenusList", backMenusList);
-        modelMap.put("company", company);
+        modelMap.put("companiesList", companiesList);
         return "/back/contact/index";
     }
 

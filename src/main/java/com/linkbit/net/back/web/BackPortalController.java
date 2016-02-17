@@ -1,8 +1,14 @@
 package com.linkbit.net.back.web;
 
 import com.linkbit.net.back.domain.HeaderDTO;
+import com.linkbit.net.back.domain.PortalNumberDTO;
+import com.linkbit.net.front.domain.customers.CustomerRepository;
+import com.linkbit.net.front.domain.knowledge.KnowledgeRepository;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
+import com.linkbit.net.front.domain.message.MessageRepository;
+import com.linkbit.net.front.domain.news.NewsRepository;
+import com.linkbit.net.front.domain.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -25,6 +31,21 @@ public class BackPortalController {
     @Autowired
     MenuRepository menuRepository;
 
+    @Autowired
+    ProductRepository productRepository;
+
+    @Autowired
+    NewsRepository newsRepository;
+
+    @Autowired
+    KnowledgeRepository knowledgeRepository;
+
+    @Autowired
+    CustomerRepository customerRepository;
+
+    @Autowired
+    MessageRepository messageRepository;
+
 
     @RequestMapping("/index")
         public String index(ModelMap modelMap) {
@@ -34,7 +55,32 @@ public class BackPortalController {
         headerDTO.setSystemName("网站后台管理系统");
         headerDTO.setAppName(" 门户信息");
         modelMap.put("headerDTO", headerDTO);
+        //查询所有的产品数量  上线产品数量
+        long allProductsCount = productRepository.findAll().size();
 
+
+        //所有新闻数量
+        long allNewsCount = newsRepository.findAll().size();
+
+
+        //所有知识信息数量
+        long allKnowlegeCount = knowledgeRepository.findAll().size();
+
+        //所有知识信息数量
+
+        long allCustomersCount = customerRepository.findAll().size();
+
+        //所有知识信息数量
+
+        long allMessageCount = messageRepository.findAll().size();
+
+        PortalNumberDTO portalNumberDTO =  new PortalNumberDTO();
+        portalNumberDTO.setAllProductsCount(allProductsCount);
+        portalNumberDTO.setAllNewsCount(allNewsCount);
+        portalNumberDTO.setAllKnowlegeCount(allKnowlegeCount);
+        portalNumberDTO.setAllCustomersCount(allCustomersCount);
+        portalNumberDTO.setAllMessageCount(allMessageCount);
+        modelMap.put("portalNumberDTO", portalNumberDTO);
         return "/back/portal/index";
     }
 }
