@@ -11,11 +11,11 @@
             </a>
             <!-- /COMPANY LOGO -->
             <!-- TEAM STATUS FOR MOBILE -->
-            <div class="visible-xs">
+        <%--    <div class="visible-xs">
                 <a href="#" class="team-status-toggle switcher btn dropdown-toggle">
                     <i class="fa fa-users"></i>
                 </a>
-            </div>
+            </div>--%>
             <!-- /TEAM STATUS FOR MOBILE -->
             <!-- SIDEBAR COLLAPSE -->
             <div id="sidebar-collapse" class="sidebar-collapse btn">
