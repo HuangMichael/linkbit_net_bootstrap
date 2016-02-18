@@ -1,6 +1,8 @@
 <%@page contentType="text/html" %>
 <%@page pageEncoding="UTF-8" %>
 <script src="js/jquery/jquery-2.0.3.min.js"></script>
+
+<script src="js/jquery/jquery-form.js"></script>
 <!-- JQUERY UI-->
 <script src="js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
 <!-- BOOTSTRAP -->

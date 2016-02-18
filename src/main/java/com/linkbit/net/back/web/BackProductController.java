@@ -1,6 +1,7 @@
 package com.linkbit.net.back.web;
 
 import com.linkbit.net.back.domain.HeaderDTO;
+import com.linkbit.net.back.utils.SessionUtil;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
 import com.linkbit.net.front.domain.product.Product;
@@ -13,9 +14,13 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -97,9 +102,14 @@ public class BackProductController {
     }
 
     @RequestMapping("/detail/{id}")
-    public ModelAndView detail(@PathVariable("id") Long id) {
+    public ModelAndView detail(@PathVariable("id") Long id,ModelMap modelMap) {
         Product product = productRepository.findById(id);
-        Map<String,Product>  map = new HashMap<String, Product>();map.put("product",product);
+        Map<String,Product>  map = new HashMap<String, Product>();
+        map.put("product",product);
+        HeaderDTO headerDTO = new HeaderDTO();
+        headerDTO.setSystemName("网站后台管理系统");
+        headerDTO.setAppName("产品详细信息");
+        modelMap.put("headerDTO",headerDTO);
         ModelAndView mv = new ModelAndView("/back/product/detail",map);
         return mv;
     }
@@ -111,5 +121,31 @@ public class BackProductController {
         Product product = productRepository.findById(id);
         List<ProductCharactor> productCharactorList =  product.getProductCharactorSet();
         return productCharactorList;
+    }
+    @RequestMapping(value = "/upload", method = RequestMethod.GET)
+
+    public String handleFileUpload(@RequestParam("productId") long productId,@RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
+        String contextPath = SessionUtil.getContextPath(request);
+        System.out.println("上下文路径--------"+contextPath);
+        System.out.println("上下文路径--------"+contextPath);
+        String realPath = "F:/dev/linkbit/src/main/webapp";
+        String absolutePath = "/front/images/product/";
+        if (!file.isEmpty()) {
+            try {
+                byte[] bytes = file.getBytes();
+                FileOutputStream fileOutputStream = new FileOutputStream(new File(realPath+absolutePath + fileName));
+                BufferedOutputStream stream = new BufferedOutputStream(fileOutputStream);
+                stream.write(bytes);
+                stream.close();
+                Product product = productRepository.findById(productId);
+                product.setProductImgUrl(absolutePath+fileName);
+                productRepository.save(product);
+               return "redirect:/back/product/detail"+productId;
+            } catch (Exception e) {
+                return "上传失败" + e.getMessage();
+            }
+        } else {
+            return "上传失败，文件不能为空";
+        }
     }
 }

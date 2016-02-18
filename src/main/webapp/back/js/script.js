@@ -3428,7 +3428,7 @@ var App = function () {
                 handleJqgrid();	//Function to display jqGrid
             }
             if (App.isPage("forms")) {
-                handleTypeahead();	//Function to display autocomplete
+               handleTypeahead();	//Function to display autocomplete
                 handleAutosize(); //Function to handle textarea autosize
                 handleCountable(); //Function to handle char count
                 handleSelect2(); //Function to handle select2

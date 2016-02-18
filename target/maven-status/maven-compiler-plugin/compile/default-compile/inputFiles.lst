@@ -1,4 +1,5 @@
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\knowledge\Knowledge.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\back\utils\SessionUtil.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\company\CompanyRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\knowledge\KnowledgeRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\ProductRepository.java
@@ -33,7 +34,6 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\back\domain\PortalNumberDTO.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\KnowledgeController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackUserController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\NewsController.java
-F:\dev\linkbit\src\main\java\com\linkbit\net\WebSecurityConfig.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\news\News.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\MenuController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\company\Company.java
@@ -47,6 +47,7 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackProductTypeController.
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\user\User.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackNewsController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\interceptors\UserSecurityInterceptor.java
+F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackFileUploadController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\Product.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\menu\Menu.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\LoginController.java

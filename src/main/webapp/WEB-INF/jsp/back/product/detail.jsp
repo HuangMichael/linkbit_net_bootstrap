@@ -1,249 +1,305 @@
-<!-- /SIDEBAR -->
-<div id="main-content">
-    <div class="container">
-        <div class="row">
-            <div id="content" class="col-lg-12">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="page-header">
-                            <!-- BREADCRUMBS -->
-                            <ul class="breadcrumb">
-                                <li>
-                                    <i class="fa fa-home"></i>
-                                    <a href="/back/index">后台管理系统</a>
-                                </li>
-                                <li>产品信息</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- TABLE IN MODAL -->
-                <!-- EXPORT TABLES -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- BOX -->
-                        <div class="box border blue">
-                            <div class="box-title">
-                                <h4><i class="fa fa-table"></i>产品信息</h4>
+<%@page pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<!DOCTYPE html>
+<html lang="en">
+<%@include file="../common/head.jsp" %>
+<body>
+<!-- HEADER -->
+<%@include file="../common/header.jsp" %>
+<link rel="stylesheet" type="text/css" href="js/select2/select2.min.css" />
+<!--/HEADER -->
+<!-- PAGE -->
+<section id="page">
+    <!-- SIDEBAR -->
+    <%@include file="../common/siderBar.jsp" %>
+    <!-- /SIDEBAR -->
+    <div id="main-content">
+        <div class="container">
+            <div class="row">
+                <div id="content" class="col-lg-12">
+                    <%@include file="../common/banner.jsp" %>
+                    <!-- TABLE IN MODAL -->
+                    <!-- EXPORT TABLES -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- BOX -->
+                            <div class="box border blue">
+                                <%@include file="../common/menu.jsp" %>
 
-                                <div class="tools hidden-xs">
-                                    <a href="#box-config" data-toggle="modal" class="config">
-                                        <i class="fa fa-cog"></i>
-                                    </a>
-                                    <a href="javascript:;" class="reload">
-                                        <i class="fa fa-refresh"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collapse">
-                                        <i class="fa fa-chevron-up"></i>
-                                    </a>
-                                    <a href="javascript:;" class="remove">
-                                        <i class="fa fa-times"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="box-body">
-                                <button type="button" class="btn btn-default btn-mini navbar-btn"
-                                        data-toggle="modal"
-                                        data-target="#createModal">新建记录
-                                </button>
-                                <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
-                                       class="datatable table table-striped table-bordered table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th class="center">序号</th>
-                                        <th class="center">产品名称</th>
-                                        <th class="center hidden-xs">产品类型</th>
-                                        <th class="center">上市时间</th>
-                                        <th class="center hidden-xs">商品描述</th>
-                                        <th class="center ">编辑</th>
-                                        <th class="center ">删除</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody id="tbody">
-                                    <c:forEach items="${productList}" var="product" varStatus="status">
-                                        <tr class="gradeX" id="tr${product.id}">
-                                            <td class="center">${status.index+1}</td>
-                                            <td class="center"><a href="/back/product/detail/${product.id}">${product.productName}</a></td>
-                                            <td class=" center hidden-xs">${product.productType.typeName}</td>
-                                            <td class="center hidden-xs"><fmt:formatDate
-                                                    value="${product.onLineDate}" pattern="yyyy-MM-dd"/></td>
-                                            <td class="center">${product.productDesc}</td>
-                                            <td class="center "><a href="#" data-toggle="modal"
-                                                                   data-target="#myModal${product.id}">编辑</a></td>
-                                            <td class="center "><a id="delBtn${product.id}">删除</a>
-                                            </td>
-                                        </tr>
-                                        <div class="modal fade" id="myModal${product.id}" tabindex="-1"
-                                             role="dialog" aria-labelledby="myModalLabel">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                                aria-label="Close"><span
-                                                                aria-hidden="true">&times;</span></button>
-                                                        <h4 class="modal-title" id="myModalLabel">产品信息明细</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <form id="productForm${product.id}">
-                                                            <div class="form-group">
-                                                                <label for="productName${product.id}">产品名称</label>
-                                                                <input type="text" class="form-control"
-                                                                       id="productName${product.id}"
-                                                                       name="product.productName"
-                                                                       value="${product.productName}">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="productType${product.id}">产品类型</label>
-                                                                <select class="form-control"
-                                                                        id="productType${product.id}"
-                                                                        name="product.productType">
-                                                                    <option value="1">PDA</option>
-                                                                    <option value="2">手机</option>
-                                                                    <option value="3">导航仪</option>
-                                                                    <option value="4">指挥机</option>
-                                                                    <option value="5">手表</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="productDesc${product.id}">产品描述</label>
-                                                                <input type="text" class="form-control"
-                                                                       id="productDesc${product.id}"
-                                                                       name="product.productDesc"
-                                                                       value="${product.productDesc}">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="onLineDate${product.id}">上线日期</label>
-                                                                <input type="date" class="form-control"
-                                                                       id="onLineDate${product.id}"
-                                                                       name="product.onLineDate"
-                                                                       value="${product.onLineDate}">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="exampleInputFile">产品图片</label>
-                                                                <input type="file" id="exampleInputFile">
 
-                                                                <p class="help-block">上传一张产品图片吧</p>
-                                                            </div>
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox" id="online${product.id}"
-                                                                           name="product.online"
-                                                                           value="${product.online}"> 是否显示
-                                                                </label>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default"
-                                                                data-dismiss="modal">关闭
-                                                        </button>
-                                                        <button type="submit" id="save${product.id}" name="saveBtn"
-                                                                class="btn btn-primary">保存
-                                                        </button>
-                                                    </div>
+                               <%-- private long id;
+                                private String productName;
+                                private String productDesc;
+                                private String productImgUrl;
+                                private Boolean showInMainPage;
+                                private Long sortNo;
+                                @Temporal(TemporalType.DATE)
+                                private Date onLineDate;
+                                private boolean online;--%>
+
+
+                                <div class="box-body">
+
+                                    <%--<button type="button" class="btn btn-default btn-mini navbar-btn"
+                                            data-toggle="modal"
+                                            data-target="#createModal">上一条
+                                    </button>
+
+                                    <button type="button" class="btn btn-default btn-mini navbar-btn"
+                                            data-toggle="modal"
+                                            data-target="#createModal">下一条
+                                    </button>--%>
+
+
+                                   <%-- <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">产品名称</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"></span>
+                                                    <input type="text" class="form-control" placeholder="Username" value="${product.productName}">
                                                 </div>
                                             </div>
                                         </div>
-                                    </c:forEach>
-                                    </tbody>
-                                    <tfoot>
-                                    <tr>
-                                        <th class="center">序号</th>
-                                        <th class="center">产品名称</th>
-                                        <th class="center hidden-xs">产品类型</th>
-                                        <th class="center">上市时间</th>
-                                        <th class="center hidden-xs">商品描述</th>
-                                        <th class="center ">编辑</th>
-                                        <th class="center ">删除</th>
-                                    </tr>
-                                    </tfoot>
-                                </table>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">产品描述</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"></span>
+                                                    <input type="text" class="form-control" placeholder="Username" value="${product.productDesc}">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">图片路径</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"></span>
+                                                    <input type="text" class="form-control" value="${product.productImgUrl}" readonly/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">主页显示</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+													  <span class="input-group-addon">
+														<input type="checkbox">
+													  </span>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">是否上线</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"></span>
+                                                    <input type="text" class="form-control" value="${product.online}"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">上线日期</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"></span>
+                                                    <input type="date" class="form-control date-picker" value="${product.onLineDate}"/>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-3 control-label">排序</label>
+                                            <div class="col-sm-9">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"></span>
+                                                    <input type="number" class="form-control" value="${product.sortNo}"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>--%>
+
+
+                                    <form class="form-horizontal" role="form">
+
+
+
+                                        <div class="form-group">
+
+                                            <div class="col-sm-2">
+                                                <img src="${product.productImgUrl}" width="200px" />
+
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <div class="form-group">
+                                                    <label class="col-sm-1 control-label" for="ds_host">产品名称</label>
+                                                    <div class="col-sm-5">
+                                                        <input class="form-control" id="ds_host" type="text" placeholder="192.168.1.161" value="${product.productName}" readonly/>
+                                                    </div>
+                                                    <label class="col-sm-1 control-label" for="ds_name">产品描述</label>
+                                                    <div class="col-sm-5">
+                                                        <input class="form-control" id="ds_name" type="text" placeholder="msh"  value="${product.productDesc}" readonly/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-1 control-label" for="productImgUrl">图片路径</label>
+                                                    <div class="col-sm-5">
+                                                        <input class="form-control" id="productImgUrl" type="text" placeholder="root" value="${product.productImgUrl}" readonly/>
+                                                    </div>
+                                                    <label class="col-sm-1 control-label" for="onLineDate">上线日期</label>
+                                                    <div class="col-sm-5">
+                                                        <input class="form-control" id="onLineDate" type="date" placeholder="123456" value="${product.onLineDate}" readonly/>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+
+                                                    <label for="showInMainPage"  class="col-sm-1 control-label">主页显示</label>
+                                                    <div class="col-sm-5">
+                                                        <select id="showInMainPage" class="form-control" readonly>
+                                                            <option>是</option>
+                                                            <option>否</option>
+                                                        </select>
+                                                    </div>
+
+
+                                                    <label for="sortNo"  class="col-sm-1 control-label">排列顺序</label>
+                                                    <div class="col-sm-5">
+                                                        <input class="form-control" id="sortNo" type="number"  value="${product.sortNo}" readonly/>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <fieldset>
+                                            <legend>推送上线</legend>
+                                            <div class="form-group">
+                                                <label for="onLine"  class="col-sm-2 control-label">是否上线</label>
+                                                <div class="col-sm-10">
+                                                    <select id="onLine" class="form-control" readonly>
+                                                        <option>是</option>
+                                                        <option>否</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label" for="ds_password">上线日期</label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" id="ds_password" type="date" placeholder="123456" value="${product.onLineDate}" readonly/>
+                                                </div>
+                                        </div>
+                                        </fieldset>
+                                    </form>
+                                     <%--  <form method="POST"  class="form-horizontal" role="form" enctype="multipart/form-data" id="uploadForm">
+                                           <fieldset>
+                                               <legend>上传图片</legend>
+                                           <input type="hidden" name="fileName" id="fileName">
+                                           <div class="form-group">
+                                               <label class="col-sm-1 control-label" for="file">上传图片</label>
+                                               <div class="col-sm-10">
+                                                   <input class="form-control" id="file" type="file" placeholder="root" value="${product.productImgUrl}"/>
+                                               </div>
+                                               <div class="col-sm-1">
+                                                   <input class="form-control" id="submit" type="submit" placeholder="root" value="上传图片"/>
+                                               </div>
+                                           </div>
+                                           </fieldset>
+                                       </form>--%>
+
+
+                                       <form method="post" class="form-horizontal" role="form" enctype="multipart/form-data" id="uploadForm" action="/back/upload/upload">
+
+
+
+                                           <div class="form-group">
+                                               <input type="hidden" name="productId" id="productId" value="${product.id}"/>
+                                               <label class="col-sm-1 control-label" for="file">上传图片</label>
+
+                                               <div class="col-sm-6">
+                                                  <input type="file" class="form-control" name="file" id="file">
+                                               </div>
+                                               <div class="col-sm-1">
+                                                   <input type="submit" value="上传" id="submit" class="form-control btn-primary">
+                                               </div>
+                                               </div>
+                                       </form>
+                                </div>
+                                </div>
                             </div>
+                            <!-- /BOX -->
                         </div>
-                        <!-- /BOX -->
                     </div>
-                </div>
-                <!-- /EXPORT TABLES -->
-                <div class="footer-tools">
+                    <!-- /EXPORT TABLES -->
+                    <div class="footer-tools">
 							<span class="go-top">
 								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
-                </div>
-            </div><!-- /CONTENT-->
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade" id="createModal" tabindex="-1"
-     role="dialog" aria-labelledby="myModalLabel2">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"
-                        aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel2">新建产品信息</h4>
-            </div>
-            <div class="modal-body">
-                <form id="productCreateForm">
-                    <div class="form-group">
-                        <label for="productName">产品名称</label>
-                        <input type="text" class="form-control"
-                               id="productName"
-                               name="product.productName">
                     </div>
-                    <div class="form-group">
-                        <label for="productType">产品类型</label>
-                        <select class="form-control"
-                                id="productType"
-                                name="product.productType">
-                            <option value="1">PDA</option>
-                            <option value="2">手机</option>
-                            <option value="3">导航仪</option>
-                            <option value="4">指挥机</option>
-                            <option value="5">手表</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="productDesc">产品描述</label>
-                        <input type="text" class="form-control"
-                               id="productDesc"
-                               name="product.productDesc"
-                        >
-                    </div>
-                    <div class="form-group">
-                        <label for="onLineDate">上线日期</label>
-
-                        <div class="input-append date" id="onLineDate" data-date="12-02-2012"
-                             data-date-format="dd-mm-yyyy">
-                            <input class="span2" size="16" type="text" value="12-02-2012">
-                            <span class="add-on"><i class="icon-th"></i></span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputFile">产品图片</label>
-                        <input type="file" id="exampleInputFile2">
-
-                        <p class="help-block">上传一张产品图片吧</p>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="online"
-                                   name="product.online"
-                            > 是否显示
-                        </label>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default"
-                        data-dismiss="modal">关闭
-                </button>
-                <button type="button" id="create" name="createBtn"
-                        class="btn btn-primary">保存
-                </button>
+                </div><!-- /CONTENT-->
             </div>
         </div>
     </div>
-</div>
+
+</section>
+<!--/PAGE -->
+<!-- JAVASCRIPTS -->
+<!-- Placed at the end of the document so the pages load faster -->
+<%@include file="../common/footer.jsp" %>
+<script>
+    $(function () {
+       /* App.setPage("forms");  //Set current page*/
+        App.init(); //Initialise plugins and elements
+    });
+</script><!-- /JAVASCRIPTS -->
+
+<script type="text/javascript">
+    $(function() {
+
+
+
+        $('#uploadForm').on('submit', function() {
+
+
+            var options={
+                type: 'post', // 提交方式 get/post
+                url: '/back/product/upload', // 需要提交的 url
+                dateType:"json",
+                data: {
+                    'file': file,
+                    'fileName': fileName
+                },
+
+                timeout:5000,
+                success: function(data) {
+
+                }
+            };
+            var file = $("#file").val();
+            var fileName = getFileName(file);
+            $("#fileName").val(fileName);
+            $(this).attr("action","/back/product/upload");
+            $('#uploadForm').submit();
+            console.log("fileName-----------------" + fileName);
+           // $(this).ajaxSubmit(options);
+        });
+
+        function getFileName(o) {
+            var pos = o.lastIndexOf("\\");
+            return o.substring(pos + 1);
+        }
+
+    });
+</script>
+
+
+
+</body>
+</html>

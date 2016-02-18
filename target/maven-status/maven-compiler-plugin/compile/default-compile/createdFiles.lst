@@ -29,12 +29,14 @@ com\linkbit\net\back\interceptors\Interceptor2.class
 com\linkbit\net\back\web\BackUserController.class
 com\linkbit\net\MvcConfig.class
 com\linkbit\net\back\interceptors\UserSecurityInterceptor.class
+com\linkbit\net\back\web\BackFileUploadController.class
 com\linkbit\net\front\domain\user\User.class
 com\linkbit\net\front\domain\product\ProductCharactor.class
 com\linkbit\net\front\domain\knowledge\Knowledge.class
 com\linkbit\net\front\web\UserController.class
 com\linkbit\net\front\domain\news\NewsRepository.class
 com\linkbit\net\back\web\BackProductCharactorController.class
+com\linkbit\net\back\utils\SessionUtil.class
 com\linkbit\net\front\domain\customers\CustomerRepository.class
 com\linkbit\net\back\web\BackContactController.class
 com\linkbit\net\front\domain\message\Message.class
