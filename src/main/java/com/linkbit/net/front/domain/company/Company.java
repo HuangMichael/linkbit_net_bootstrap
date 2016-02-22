@@ -1,7 +1,8 @@
 package com.linkbit.net.front.domain.company;
 
 
-import lombok.Data;
+import lombok.*;
+import lombok.extern.log4j.Log4j;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -16,6 +17,11 @@ import java.util.List;
 @Entity
 @Table(name = "T_COMPANY")
 @Data
+@Setter
+@Getter
+@Log4j
+@NoArgsConstructor
+@AllArgsConstructor
 public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

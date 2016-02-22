@@ -28,4 +28,85 @@ public class Knowledge {
     private Date publishTime;//发布时间
     private Boolean display;//是否显示
     private Boolean showInMainPage;//  是否主页显示
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getKeywords() {
+        return keywords;
+    }
+
+    public void setKeywords(String keywords) {
+        this.keywords = keywords;
+    }
+
+    public String getKnowledgeDesc() {
+        return knowledgeDesc;
+    }
+
+    public void setKnowledgeDesc(String knowledgeDesc) {
+        this.knowledgeDesc = knowledgeDesc;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public KnowledgeType getKnowledgeType() {
+        return knowledgeType;
+    }
+
+    public void setKnowledgeType(KnowledgeType knowledgeType) {
+        this.knowledgeType = knowledgeType;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public Date getPublishTime() {
+        return publishTime;
+    }
+
+    public void setPublishTime(Date publishTime) {
+        this.publishTime = publishTime;
+    }
+
+    public Boolean getDisplay() {
+        return display;
+    }
+
+    public void setDisplay(Boolean display) {
+        this.display = display;
+    }
+
+    public Boolean getShowInMainPage() {
+        return showInMainPage;
+    }
+
+    public void setShowInMainPage(Boolean showInMainPage) {
+        this.showInMainPage = showInMainPage;
+    }
 }

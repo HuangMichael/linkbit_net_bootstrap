@@ -42,8 +42,6 @@ public class BackFileUploadController {
         modelMap.put("backMenusList", backMenusList);
         return "/back/upload/index";
     }
-
-
     @RequestMapping(value = "/upload", method = RequestMethod.GET)
     @ResponseBody
     public String provideUploadInfo() {
@@ -51,9 +49,7 @@ public class BackFileUploadController {
     }
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    @ResponseBody
     public String handleFileUpload(@RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
-
         String contextPath = SessionUtil.getContextPath(request);
         String imgPath = "F:/dev/linkbit/src/main/webapp/front/images/product/";
         System.out.println("文件路径----------------" + imgPath);
@@ -65,7 +61,7 @@ public class BackFileUploadController {
                 BufferedOutputStream stream = new BufferedOutputStream(fileOutputStream);
                 stream.write(bytes);
                 stream.close();
-                return "已成功上传到 " + imgPath + fileName;
+                return "forward:/back/portal/index";
             } catch (Exception e) {
                 return "上传失败" + e.getMessage();
             }

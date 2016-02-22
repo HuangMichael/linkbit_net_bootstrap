@@ -26,104 +26,12 @@
                             <!-- BOX -->
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
-
-
-                               <%-- private long id;
-                                private String productName;
-                                private String productDesc;
-                                private String productImgUrl;
-                                private Boolean showInMainPage;
-                                private Long sortNo;
-                                @Temporal(TemporalType.DATE)
-                                private Date onLineDate;
-                                private boolean online;--%>
-
-
                                 <div class="box-body">
-                                   <%-- <form class="form-horizontal" role="form">
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">产品名称</label>
-                                            <div class="col-sm-9">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"></span>
-                                                    <input type="text" class="form-control" placeholder="Username" value="${product.productName}">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">产品描述</label>
-                                            <div class="col-sm-9">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"></span>
-                                                    <input type="text" class="form-control" placeholder="Username" value="${product.productDesc}">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">图片路径</label>
-                                            <div class="col-sm-9">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"></span>
-                                                    <input type="text" class="form-control" value="${product.productImgUrl}" readonly/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">主页显示</label>
-                                            <div class="col-sm-9">
-                                                <div class="input-group">
-													  <span class="input-group-addon">
-														<input type="checkbox">
-													  </span>
-                                                    <input type="text" class="form-control">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">是否上线</label>
-                                            <div class="col-sm-9">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"></span>
-                                                    <input type="text" class="form-control" value="${product.online}"/>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">上线日期</label>
-                                            <div class="col-sm-9">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"></span>
-                                                    <input type="date" class="form-control date-picker" value="${product.onLineDate}"/>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">排序</label>
-                                            <div class="col-sm-9">
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"></span>
-                                                    <input type="number" class="form-control" value="${product.sortNo}"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>--%>
-
-
                                     <form class="form-horizontal" role="form">
-
-
-
                                         <div class="form-group">
 
                                             <div class="col-sm-2">
                                                 <img src="${product.productImgUrl}" width="200px" />
-
                                             </div>
                                             <div class="col-sm-10">
                                                 <div class="form-group">
@@ -146,8 +54,6 @@
                                                         <input class="form-control" id="onLineDate" type="date" placeholder="123456" value="${product.onLineDate}" readonly/>
                                                     </div>
                                                 </div>
-
-
                                                 <div class="form-group">
 
                                                     <label for="showInMainPage"  class="col-sm-1 control-label">主页显示</label>
@@ -157,8 +63,6 @@
                                                             <option>否</option>
                                                         </select>
                                                     </div>
-
-
                                                     <label for="sortNo"  class="col-sm-1 control-label">排列顺序</label>
                                                     <div class="col-sm-5">
                                                         <input class="form-control" id="sortNo" type="number"  value="${product.sortNo}" readonly/>
@@ -186,28 +90,20 @@
                                         </div>
                                         </fieldset>
                                     </form>
-                                     <%--  <form method="POST"  class="form-horizontal" role="form" enctype="multipart/form-data" id="uploadForm">
-                                           <fieldset>
-                                               <legend>上传图片</legend>
-                                           <input type="hidden" name="fileName" id="fileName">
+                                    <form id="uploadForm" method="post" class="form-horizontal" role="form"
+                                          enctype="multipart/form-data" id="uploadForm" action="/back/product/upload">
                                            <div class="form-group">
+                                               <input type="hidden" name="productId" id="productId" value="${product.id}"/>
+                                               <input type="hidden" name="fileName" id="fileName"/>
                                                <label class="col-sm-1 control-label" for="file">上传图片</label>
-                                               <div class="col-sm-10">
-                                                   <input class="form-control" id="file" type="file" placeholder="root" value="${product.productImgUrl}"/>
+
+                                               <div class="col-sm-6">
+                                                  <input type="file" class="form-control" name="file" id="file">
                                                </div>
                                                <div class="col-sm-1">
-                                                   <input class="form-control" id="submit" type="submit" placeholder="root" value="上传图片"/>
+                                                   <input type="submit" value="上传" id="submit" class="form-control btn-primary">
                                                </div>
                                            </div>
-                                           </fieldset>
-                                       </form>--%>
-
-
-                                       <form method="post" enctype="multipart/form-data" id="uploadForm" action="/back/upload/upload">
-
-                                           <input type="hidden" name="productId" id="productId" value="${product.id}"/>
-                                           文件上传: <input type="file" name="file" id="file"><br/>
-                                           文件名: <input type="text" name="fileName" id="fileName"> <input type="submit" value="上传" id="submit">
                                        </form>
                                 </div>
                                 </div>
@@ -239,44 +135,33 @@
 </script><!-- /JAVASCRIPTS -->
 
 <script type="text/javascript">
-    $(function() {
+    $(function () {
+        /**
+         * 提交上传文件
+         * */
+        $("#submit").on("click", function (data) {
+            var fullName = $("#file").val();
+            $("#uploadForm").attr("action", url);
+            $("#uploadForm").submit();
+
+        })
+
+        $("#file").on("change", function () {
+            $("#fileName").val((getFileName($(this).val())));
+        })
 
 
-
-        $('#uploadForm').on('submit', function() {
-
-
-            var options={
-                type: 'post', // 提交方式 get/post
-                url: '/back/product/upload', // 需要提交的 url
-                dateType:"json",
-                data: {
-                    'file': file,
-                    'fileName': fileName
-                },
-
-                timeout:5000,
-                success: function(data) {
-
-                }
-            };
-            var file = $("#file").val();
-            var fileName = getFileName(file);
-            $("#fileName").val(fileName);
-            $(this).attr("action","/back/product/upload");
-            $('#uploadForm').submit();
-            console.log("fileName-----------------" + fileName);
-           // $(this).ajaxSubmit(options);
-        });
-
+        /**
+         * 获取文件名称
+         * */
         function getFileName(o) {
             var pos = o.lastIndexOf("\\");
             return o.substring(pos + 1);
-        }
+                }
 
-    });
+
+    })
 </script>
-
 
 
 </body>

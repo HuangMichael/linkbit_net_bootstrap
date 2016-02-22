@@ -122,12 +122,9 @@ public class BackProductController {
         List<ProductCharactor> productCharactorList =  product.getProductCharactorSet();
         return productCharactorList;
     }
-    @RequestMapping(value = "/upload", method = RequestMethod.GET)
-
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public String handleFileUpload(@RequestParam("productId") long productId,@RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
         String contextPath = SessionUtil.getContextPath(request);
-        System.out.println("上下文路径--------"+contextPath);
-        System.out.println("上下文路径--------"+contextPath);
         String realPath = "F:/dev/linkbit/src/main/webapp";
         String absolutePath = "/front/images/product/";
         if (!file.isEmpty()) {
@@ -140,7 +137,7 @@ public class BackProductController {
                 Product product = productRepository.findById(productId);
                 product.setProductImgUrl(absolutePath+fileName);
                 productRepository.save(product);
-               return "redirect:/back/product/detail"+productId;
+                return "forward:/back/product/detail/"+productId;
             } catch (Exception e) {
                 return "上传失败" + e.getMessage();
             }

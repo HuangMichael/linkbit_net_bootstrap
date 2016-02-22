@@ -1,5 +1,6 @@
 package com.linkbit.net.back.web;
 
+import com.linkbit.net.back.domain.AppAccessLogRepository;
 import com.linkbit.net.back.domain.HeaderDTO;
 import com.linkbit.net.back.domain.PortalNumberDTO;
 import com.linkbit.net.front.domain.customers.CustomerRepository;
@@ -46,6 +47,9 @@ public class BackPortalController {
     @Autowired
     MessageRepository messageRepository;
 
+    @Autowired
+    AppAccessLogRepository appAccessLogRepository;
+
 
     @RequestMapping("/index")
         public String index(ModelMap modelMap) {
@@ -81,6 +85,19 @@ public class BackPortalController {
         portalNumberDTO.setAllCustomersCount(allCustomersCount);
         portalNumberDTO.setAllMessageCount(allMessageCount);
         modelMap.put("portalNumberDTO", portalNumberDTO);
+
+
+
+
+        //
+       List<String> appAccessLogList = appAccessLogRepository.findLast5DaysAccess();
+
+       /* for(String l:appAccessLogList){
+
+            System.out.println("---------------------"+l.toString());
+        }*/
+
+
         return "/back/portal/index";
     }
 }

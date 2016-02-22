@@ -1,7 +1,8 @@
 package com.linkbit.net.front.domain.news;
 
 
-import lombok.Data;
+import lombok.*;
+import lombok.extern.log4j.Log4j;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -13,14 +14,18 @@ import java.util.Date;
 
 @Entity
 @Table(name = "T_NEWS")
+
 @Data
-public class News {
+@Log4j
+@NoArgsConstructor
+@AllArgsConstructor
+public  class News {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private String newsTitle;
     private String newsDesc;
-    private String imgUrl;
+    private @Getter @Setter String imgUrl;
     private String newsContent;
     @Temporal(TemporalType.DATE)
     private Date publishTime;

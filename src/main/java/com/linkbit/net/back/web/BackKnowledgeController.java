@@ -23,7 +23,7 @@ import java.util.Map;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/back/knowledge")
-@SessionAttributes("backMenusList")
+@SessionAttributes({"backMenusList","headerDTO"})
 public class BackKnowledgeController {
 
     @Autowired
@@ -40,8 +40,6 @@ public class BackKnowledgeController {
         headerDTO.setSystemName("网站后台管理系统");
         headerDTO.setAppName("知识信息");
         modelMap.put("headerDTO", headerDTO);
-
-
         modelMap.put("backMenusList", backMenusList);
         modelMap.put("knowledgeList", knowledgeList);
         return "/back/knowledge/index";
@@ -75,5 +73,29 @@ public class BackKnowledgeController {
         knowledgeRepository.save(knowledge);
         return "/back/knowledge/index";
     }
+
+   /* @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    public String handleFileUpload(@RequestParam("productId") long productId, @RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
+        String contextPath = SessionUtil.getContextPath(request);
+        String realPath = "F:/dev/linkbit/src/main/webapp";
+        String absolutePath = "/front/images/product/";
+        if (!file.isEmpty()) {
+            try {
+                byte[] bytes = file.getBytes();
+                FileOutputStream fileOutputStream = new FileOutputStream(new File(realPath+absolutePath + fileName));
+                BufferedOutputStream stream = new BufferedOutputStream(fileOutputStream);
+                stream.write(bytes);
+                stream.close();
+                Knowledge knowledge = knowledgeRepository.findById(productId);
+                knowledge.set
+                knowledgeRepository.save(product);
+                return "forward:/back/product/detail/"+productId;
+            } catch (Exception e) {
+                return "上传失败" + e.getMessage();
+            }
+        } else {
+            return "上传失败，文件不能为空";
+        }
+    }*/
 
 }

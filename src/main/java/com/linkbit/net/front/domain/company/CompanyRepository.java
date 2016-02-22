@@ -6,7 +6,7 @@ import org.springframework.data.repository.Repository;
 import java.util.List;
 
 /**
- * Created by Administrator on 2016/1/13 0013.
+ * Created by huangbin on 2016/1/13 0013.
  */
 public interface CompanyRepository extends Repository<Company, Long> {
     /**
@@ -18,4 +18,8 @@ public interface CompanyRepository extends Repository<Company, Long> {
      * 根据id查询对应的公司信息
      */
     Company findById(Long id);
+    /**
+     * 保存公司信息
+     */
+    Company save(Company company);
 }

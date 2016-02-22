@@ -7,7 +7,7 @@
         <div class="navbar-brand">
             <!-- COMPANY LOGO -->
             <a href="/back/portal/index">
-                <img src="img/logo/logo.png" alt="${user.userName}" class="img-responsive" height="30" width="120">
+                <img src="img/logo/logo.png" alt="${user.userName}" class="img-responsive" >
             </a>
             <!-- /COMPANY LOGO -->
             <!-- TEAM STATUS FOR MOBILE -->

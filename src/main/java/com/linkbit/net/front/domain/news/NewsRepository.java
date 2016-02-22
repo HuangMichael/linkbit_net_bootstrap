@@ -19,4 +19,10 @@ public interface NewsRepository extends Repository<News, Long> {
      * 根据id查询对应的新闻信息
      */
     News findById(Long id);
+
+
+    /**
+     * 保存新闻信息
+     */
+    News save(News news);
 }
