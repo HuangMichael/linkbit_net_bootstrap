@@ -33,19 +33,6 @@
                                     <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
                                            class="datatable table table-striped table-bordered table-hover">
                                         <thead>
-
-
-
-                                       <%-- private Long id;//id
-                                        private String companyName;//公司名称
-                                        private String logoPath;//logo地址
-                                        private String address;//公司地址
-                                        private String longtitude;  //维度
-                                        private String latitude;  //经度
-                                        private String telphone; //  电话
-                                        private String fax;//传真
-                                        private Date buildDate;//成立日期
-                                        private Boolean status;//状态--%>
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">公司名称</th>
@@ -62,7 +49,7 @@
                                         <c:forEach items="${companyList}" var="company" varStatus="status">
                                             <tr class="gradeX" id="tr${company.id}">
                                                 <td class="center">${status.index+1}</td>
-                                                <td class="center">${company.companyName}</td>
+                                                <td class="center"><a href="/back/company/detail/${company.id}">${company.companyName}</a></td>
                                                 <td class="center">${company.logoPath}</td>
                                                 <td class="center">${company.address}</td>
                                                 <td class="center">${company.longtitude}</td>

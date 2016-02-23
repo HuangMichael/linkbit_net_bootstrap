@@ -60,7 +60,7 @@
                                             <tr class="gradeX" id="tr${customer.id}">
                                                 <td class="center">${status.index+1}</td>
                                                 <td class="center"><a href="/back/customer/detail/${customer.id}">${customer.customerName}</a></td>
-                                                <td class=" center hidden-xs">${customer.telphone}</td>
+                                                <td class=" center hidden-xs">${customer.telephone}</td>
 
                                                 <td class="center"><input type="checkbox" checked="${customer.showInMainPage}"/></td>
                                                 <td class="center"><input type="checkbox" checked="${customer.status}"/></td>
@@ -173,7 +173,7 @@
     </div>
 
 
-    <div class="modal fade" id="createModal" tabindex="-1"
+   <%-- <div class="modal fade" id="createModal" tabindex="-1"
          role="dialog" aria-labelledby="myModalLabel2">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -244,7 +244,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 
 </section>
 <!--/PAGE -->

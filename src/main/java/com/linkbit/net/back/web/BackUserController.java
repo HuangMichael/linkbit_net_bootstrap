@@ -55,24 +55,24 @@ public class BackUserController {
         userRepository.save(user);
         return user;
     }
-    /*
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST)
+
+   /* @RequestMapping(value = "/update", method = RequestMethod.POST)
     @ResponseBody
     public Product update(@ModelAttribute Product product, HttpServletRequest request) {
         String id = request.getParameter("id");
         Product oldProduct = productRepository.findById(Long.valueOf(id));
         productRepository.save(product);
         return product;
-    }
+    }*/
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
     public void delete(@PathVariable long id) {
-       Product product =  productRepository.findById(id);
-        productRepository.delete(product);
+       User user =  userRepository.findById(id);
+        userRepository.delete(user);
 
-    }*/
+    }
 
 
 

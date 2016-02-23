@@ -5,7 +5,6 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\company\CompanyReposit
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\knowledge\KnowledgeRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\ProductRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\ProductController.java
-F:\dev\linkbit\src\main\java\com\linkbit\net\MvcConfig.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackPortalController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\domain\HeaderDTO.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackProductController.java
@@ -24,7 +23,6 @@ F:\dev\linkbit\src\main\java\com\linkbit\net\back\utils\MD5Util.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\menu\MenuRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\web\BackMessageController.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\web\BaseController.java
-F:\dev\linkbit\src\main\java\com\linkbit\net\ServletInitializer.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\front\domain\product\ProductCharactorRepository.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\listener\ApplicationStartup.java
 F:\dev\linkbit\src\main\java\com\linkbit\net\back\domain\SysConfig.java

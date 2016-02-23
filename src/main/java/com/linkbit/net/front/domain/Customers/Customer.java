@@ -21,9 +21,9 @@ public class Customer {
     private String customerName;
     private String logoPath;
     private String address;
-    private String telphone;
+    private String telephone;
     private String fax;
-    private String mainpage;
+    private String mainPage;
     private String masterName;
     private Date beginDate;
     private Boolean showInMainPage;

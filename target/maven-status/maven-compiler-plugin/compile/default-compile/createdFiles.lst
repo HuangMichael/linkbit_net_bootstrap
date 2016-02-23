@@ -10,7 +10,6 @@ com\linkbit\net\back\web\BackMenuController.class
 com\linkbit\net\front\domain\company\CompanyProperty.class
 com\linkbit\net\front\web\ProductController.class
 com\linkbit\net\back\web\BackSysConfigController.class
-com\linkbit\net\ServletInitializer.class
 com\linkbit\net\back\domain\PortalNumberDTO.class
 com\linkbit\net\back\listener\StartupCommandRunner.class
 com\linkbit\net\back\domain\AppAccessLog.class
@@ -33,7 +32,6 @@ com\linkbit\net\front\web\BaseController.class
 com\linkbit\net\front\domain\message\MessageRepository.class
 com\linkbit\net\back\interceptors\Interceptor2.class
 com\linkbit\net\back\web\BackUserController.class
-com\linkbit\net\MvcConfig.class
 com\linkbit\net\back\interceptors\UserSecurityInterceptor.class
 com\linkbit\net\back\web\BackFileUploadController.class
 com\linkbit\net\front\domain\user\User.class

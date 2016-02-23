@@ -45,15 +45,17 @@
                                         </thead>
                                         <tbody id="tbody">
                                         <c:forEach items="${sysconfigList}" var="sysconfig" varStatus="status">
-                                            <tr class="gradeX" id="tr${user.id}">
+                                            <tr class="gradeX" id="tr${sysconfig.id}">
                                                 <td class="center">${status.index+1}</td>
                                                 <td class=" center">${sysconfig.paraDesc}</td>
-                                                <td class=" center">${sysconfig.paraName}</td>
+                                                <td class=" center"><a
+                                                        href="/back/sysconfig/detail/${sysconfig.id}">${sysconfig.paraName}</a>
+                                                </td>
                                                 <td class=" center">${sysconfig.paraValue}</td>
                                                 <td class=" center"><input type="checkbox" checked="${sysconfig.status}">
                                                 </td>
-                                                <td class="center "><a href="#" data-toggle="modal"
-                                                                       data-target="#myModal${sysconfig.id}">编辑</a></td>
+                                                <td class="center "><a
+                                                        href="/back/sysconfig/edit/${sysconfig.id}">编辑</a></td>
                                                 <td class="center "><a id="delBtn${sysconfig.id}">删除</a>
                                                 </td>
                                             </tr>
@@ -89,51 +91,50 @@
 
 
     <div class="modal fade" id="createModal" tabindex="-1"
-         role="dialog" aria-labelledby="myModalLabel2">
+         role="dialog" aria-labelledby="createModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"
                             aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel2">新建${headerDTO.appName}</h4>
+                    <h4 class="modal-title" id="createModalLabel">新建${headerDTO.appName}</h4>
                 </div>
                 <div class="modal-body">
-                    <form id="productCreateForm">
-                        <div class="form-group">
-                            <label for="paraDesc">参数描述</label>
-                            <input type="text" class="form-control"
-                                   id="paraDesc"
-                                   name="sysconfig.paraDesc">
-                        </div>
-                        <div class="form-group">
-                            <label for="paraName">参数名</label>
-                            <input type="text" class="form-control"
-                                   id="paraName"
-                                   name="sysconfig.paraName">
-                        </div>
-                        <div class="form-group">
-                            <label for="paraValue">参数值</label>
-                            <input type="text" class="form-control"
-                                   id="paraValue"
-                                   name="sysconfig.paraValue">
-                        </div>
-                        <div class="form-group">
-                            <label for="status">使用状态</label>
-                            <select class="form-control"
-                                    id="status"
-                                    name="user.status">
-                                <option value="1" selected>启用</option>
-                                <option value="0">禁用</option>
-                            </select>
-                        </div>
-                    </form>
+                    <%@include file="_form.jsp" %>
                 </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default"
                             data-dismiss="modal">关闭
                     </button>
                     <button type="button" id="create" name="createBtn"
+                            class="btn btn-primary">保存
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1"
+         role="dialog" aria-labelledby="editModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="editModalLabel">编辑${headerDTO.appName}</h4>
+                </div>
+                <div class="modal-body">
+                    <%@include file="_form.jsp" %>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" id="update" name="createBtn"
                             class="btn btn-primary">保存
                     </button>
                 </div>

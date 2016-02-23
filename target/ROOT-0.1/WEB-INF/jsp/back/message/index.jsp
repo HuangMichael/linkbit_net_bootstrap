@@ -26,10 +26,10 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
-                                    <button type="button" class="btn btn-default btn-mini navbar-btn"
+                                   <%-- <button type="button" class="btn btn-default btn-mini navbar-btn"
                                             data-toggle="modal"
                                             data-target="#createModal">新建记录
-                                    </button>
+                                    </button>--%>
                                     <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
                                            class="datatable table table-striped table-bordered table-hover">
                                         <thead>
@@ -45,6 +45,7 @@
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">留言人</th>
+                                            <th class="center">留言内容</th>
                                             <th class="center hidden-xs">邮箱</th>
                                             <th class="center">电话</th>
                                             <th class="center hidden-xs">留言时间</th>
@@ -57,6 +58,7 @@
                                             <tr class="gradeX" id="tr${message.id}">
                                                 <td class="center">${status.index+1}</td>
                                                 <td class="center"><a href="/back/message/detail/${message.id}">${message.userName}</a></td>
+                                                <td class="center">${message.content}</td>
                                                 <td class=" center hidden-xs">${message.email}</td>
                                                 <td class="center hidden-xs">${message.telephone}</td>
                                                 <td class="center">${message.messageTime}</td>
@@ -141,6 +143,7 @@
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">留言人</th>
+                                            <th class="center">留言内容</th>
                                             <th class="center hidden-xs">邮箱</th>
                                             <th class="center">电话</th>
                                             <th class="center hidden-xs">留言时间</th>

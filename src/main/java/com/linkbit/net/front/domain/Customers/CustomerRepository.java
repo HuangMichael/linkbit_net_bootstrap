@@ -19,4 +19,15 @@ public interface CustomerRepository extends Repository<Customer, Long> {
      * 查询所有的客户信息
      */
     List<Customer> findAll();
+
+    /**
+     * 根据id查询 的客户信息
+     */
+    Customer findById(long id);
+
+
+    /**
+     * 保存客户信息
+     */
+    Customer save(Customer customer);
 }

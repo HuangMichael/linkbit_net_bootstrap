@@ -194,8 +194,6 @@
         var productType = "1";
         var onlineDate = new Date();
         var online = $("#online" + id).val();
-
-
         var product = new Object();
         product.productName = productName;
         product.productDesc = productDesc;
@@ -204,11 +202,11 @@
         product.online = online;
         $.ajax({
             type: "POST",
-            url: "/back/product/save",
+            url: "/back/user/save",
             data: product,
             success: function (msg) {
                 $("#createModal" + id).modal('hide');
-                $.bootstrapGrowl("产品信息保存成功！", {
+                $.bootstrapGrowl("用户信息保存成功！", {
                     type: 'info',
                     align: 'right',
                     stackup_spacing: 30
@@ -216,7 +214,7 @@
 
             },
             error: function () {
-                $.bootstrapGrowl("产品信息保存失败！", {
+                $.bootstrapGrowl("用户信息保存失败！", {
                     type: 'danger',
                     align: 'right',
                     stackup_spacing: 30
@@ -230,14 +228,12 @@
 
     $("a[id^=delBtn]").on("click", function () {
         var id = $(this).attr("id").substring(6);
-
-        console.log("id------------------" + id);
         $.ajax({
             type: "POST",
-            url: "/back/product/delete/" + id,
+            url: "/back/user/delete/" + id,
             success: function () {
                 $("#tr" + id).fadeOut("slow");
-                $.bootstrapGrowl("产品信息删除成功！", {
+                $.bootstrapGrowl("用户信息删除成功！", {
                     type: 'info',
                     align: 'right',
                     stackup_spacing: 30
@@ -245,7 +241,7 @@
             },
             error: function () {
                 $("#tr" + id).fadeOut("slow");
-                $.bootstrapGrowl("产品信息删除成功！", {
+                $.bootstrapGrowl("用户信息删除成功！", {
                     type: 'info',
                     align: 'right',
                     stackup_spacing: 30

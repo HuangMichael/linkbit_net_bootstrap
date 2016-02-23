@@ -19,4 +19,10 @@ public interface MessageRepository extends CrudRepository<Message,Long> {
      */
 
     List<Message> findAll();
+
+    /**
+     * 根据id查询留言
+     */
+
+    Message findById(long id);
 }
