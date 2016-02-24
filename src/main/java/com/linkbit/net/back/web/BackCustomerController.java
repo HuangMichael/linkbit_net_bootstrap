@@ -13,10 +13,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -53,6 +50,15 @@ public class BackCustomerController extends BaseController {
     }
 
 
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+    @ResponseBody
+    public void delete(@PathVariable long id) {
+        Customer customer =  customerRepository.findById(id);
+        customerRepository.delete(customer);
+    }
+
+
+
     @RequestMapping("/detail/{id}")
     public ModelAndView detail(@PathVariable("id") Long id, ModelMap modelMap) {
         Customer customer = customerRepository.findById(id);
@@ -81,4 +87,35 @@ public class BackCustomerController extends BaseController {
 
     }
 
+
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    @ResponseBody
+    public Customer save(@ModelAttribute Customer customer) {
+        customerRepository.save(customer);
+        return customer;
+    }
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public String update(@ModelAttribute("customer") Customer customer,@RequestParam("objId")Long objId) {
+        System.out.println("objId---------------------"+objId);
+        if (objId != null) {
+            Customer oldObj = customerRepository.findById(objId);
+            oldObj.setCustomerName(customer.getCustomerName());
+            oldObj.setAddress(customer.getAddress());
+            oldObj.setFax(customer.getFax());
+            oldObj.setTelephone(customer.getTelephone());
+            customerRepository.save(oldObj);
+        }
+        return "redirect:/back/customer/index";
+    }
+
+    @RequestMapping(value = "/edit/{id}",method = RequestMethod.GET)
+    public ModelAndView edit(@PathVariable("id") Long id, ModelMap modelMap) {
+        Customer customer = customerRepository.findById(id);
+        Map<String, Customer> map = new HashMap<String, Customer>();
+        map.put("customer", customer);
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑客户信息");
+        modelMap.put("headerDTO", headerDTO);
+        ModelAndView mv = new ModelAndView("/back/customer/edit", map);
+        return mv;
+    }
 }

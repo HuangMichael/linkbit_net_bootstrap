@@ -49,8 +49,7 @@
                                         <c:forEach items="${knowledgeList}" var="knowledge" varStatus="status">
                                             <tr class="gradeX" id="tr${knowledge.id}">
                                                 <td class="center">${status.index+1}</td>
-                                                <td class="center"><a
-                                                        href="/back/knowledge/detail/${knowledge.id}">${knowledge.title}</a>
+                                                <td class="center"><a href="/back/knowledge/detail/${knowledge.id}">${knowledge.title}</a>
                                                 </td>
                                                 <td class=" center">${knowledge.keywords}</td>
                                                 <td class=" center">${knowledge.publisher}</td>
@@ -59,82 +58,11 @@
                                                         value="${knowledge.publishTime}" pattern="yyyy-MM-dd"/></td>
                                                 <td class=" center hidden-xs"><input type="checkbox" checked="${knowledge.display==true}"></td>
                                                 <td class=" center hidden-xs"><input type="checkbox" checked="${knowledge.showInMainPage==true}"></td>
-                                                <td class="center "><a href="#" data-toggle="modal"
-                                                                       data-target="#myModal${knowledge.id}">编辑</a></td>
+                                                <td class="center "><a href="/back/knowledge/edit/${knowledge.id}">编辑</a></td>
                                                 <td class="center "><a id="delBtn${knowledge.id}">删除</a>
                                                 </td>
                                             </tr>
-                                            <%-- <div class="modal fade" id="myModal${knowledge.id}" tabindex="-1"
-                                                  role="dialog" aria-labelledby="myModalLabel">
-                                                 <div class="modal-dialog" role="document">
-                                                     <div class="modal-content">
-                                                         <div class="modal-header">
-                                                             <button type="button" class="close" data-dismiss="modal"
-                                                                     aria-label="Close"><span
-                                                                     aria-hidden="true">&times;</span></button>
-                                                             <h4 class="modal-title" id="myModalLabel">产品信息明细</h4>
-                                                         </div>
-                                                         <div class="modal-body">
-                                                             <form id="knowledgeForm${knowledge.id}">
-                                                                 <div class="form-group">
-                                                                     <label for="knowledgeName${knowledge.id}">产品名称</label>
-                                                                     <input type="text" class="form-control"
-                                                                            id="knowledgeName${knowledge.id}"
-                                                                            name="knowledge.knowledgeName"
-                                                                            value="${knowledge.knowledgeName}">
-                                                                 </div>
-                                                                 <div class="form-group">
-                                                                     <label for="knowledgeType${knowledge.id}">产品类型</label>
-                                                                     <select class="form-control"
-                                                                             id="knowledgeType${knowledge.id}"
-                                                                             name="knowledge.knowledgeType">
-                                                                         <option value="1">PDA</option>
-                                                                         <option value="2">手机</option>
-                                                                         <option value="3">导航仪</option>
-                                                                         <option value="4">指挥机</option>
-                                                                         <option value="5">手表</option>
-                                                                     </select>
-                                                                 </div>
-                                                                 <div class="form-group">
-                                                                     <label for="knowledgeDesc${knowledge.id}">产品描述</label>
-                                                                     <input type="text" class="form-control"
-                                                                            id="knowledgeDesc${knowledge.id}"
-                                                                            name="knowledge.knowledgeDesc"
-                                                                            value="${knowledge.knowledgeDesc}">
-                                                                 </div>
-                                                                 <div class="form-group">
-                                                                     <label for="onLineDate${knowledge.id}">上线日期</label>
-                                                                     <input type="date" class="form-control"
-                                                                            id="onLineDate${knowledge.id}"
-                                                                            name="knowledge.onLineDate"
-                                                                            value="${knowledge.onLineDate}">
-                                                                 </div>
-                                                                 <div class="form-group">
-                                                                     <label for="exampleInputFile">产品图片</label>
-                                                                     <input type="file" id="exampleInputFile">
 
-                                                                     <p class="help-block">上传一张产品图片吧</p>
-                                                                 </div>
-                                                                 <div class="checkbox">
-                                                                     <label>
-                                                                         <input type="checkbox" id="online${knowledge.id}"
-                                                                                name="knowledge.online"
-                                                                                value="${knowledge.online}"> 是否显示
-                                                                     </label>
-                                                                 </div>
-                                                             </form>
-                                                         </div>
-                                                         <div class="modal-footer">
-                                                             <button type="button" class="btn btn-default"
-                                                                     data-dismiss="modal">关闭
-                                                             </button>
-                                                             <button type="submit" id="save${knowledge.id}" name="saveBtn"
-                                                                     class="btn btn-primary">保存
-                                                             </button>
-                                                         </div>
-                                                     </div>
-                                                 </div>
-                                             </div>--%>
                                         </c:forEach>
                                         </tbody>
                                         <tfoot>
@@ -168,6 +96,19 @@
     </div>
 
 
+
+   <%-- private String title; //文章名称
+    private String keywords;  //关键字
+    private String knowledgeDesc;  //摘要
+    private String content; //内容
+    private String publisher; //发布者
+    @Temporal(TemporalType.DATE)
+    private Date publishTime;//发布时间
+    private Boolean display;//是否显示
+    private Boolean showInMainPage;//  是否主页显示--%>
+
+
+
     <div class="modal fade" id="createModal" tabindex="-1"
          role="dialog" aria-labelledby="myModalLabel2">
         <div class="modal-dialog" role="document">
@@ -182,15 +123,11 @@
                     <form id="knowledgeCreateForm">
                         <div class="form-group">
                             <label for="title">文章名称</label>
-                            <input type="text" class="form-control"
-                                   id="title"
-                                   name="title">
+                            <input type="text" class="form-control" id="title" name="title">
                         </div>
                         <div class="form-group">
                             <label for="keywords">关键字</label>
-                            <input type="text" class="form-control"
-                                   id="keywords"
-                                   name="keywords">
+                            <input type="text" class="form-control" id="keywords" name="keywords">
                         </div>
                         <div class="form-group">
                             <label for="knowledgeDesc">摘要</label>
@@ -385,25 +322,10 @@
 <%@include file="../common/footer.jsp" %>
 <script>
     $(function () {
-
         // 富文本和动态表格插件同时加载有冲突
         App.setPage("dynamic_table");  //Set current page
-       // App.setPage("rich_text_editors");
         App.init(); //Initialise plugins and elements
     });
-
-
-    /*  private String title; //文章名称
-     private String keywords;  //关键字
-     private String knowledgeDesc;  //摘要
-     private String content; //内容
-     private KnowledgeType knowledgeType;//知识库类型
-     private String publisher; //发布者
-
-     private Date publishTime;//发布时间
-     private Boolean display;//是否显示
-     private Boolean showInMainPage;//  是否主页显示*/
-
     //新建记录
     $("#create").on("click", function () {
         var knowledge = {
@@ -416,9 +338,6 @@
             display: $("#display").attr("checked"),
             showInMainPage: $("#showInMainPage").attr("checked"),
         };
-
-        console.log("knowledge--------------"+JSON.stringify(knowledge));
-
         $.ajax({
             type: "post",
             url: "/back/knowledge/save",

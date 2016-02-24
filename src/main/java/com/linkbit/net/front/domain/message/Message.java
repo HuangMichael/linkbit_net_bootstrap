@@ -22,6 +22,7 @@ public class Message {
     private String telephone;
     private String workplace;
     private String content;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date messageTime;
     private String status;
 }

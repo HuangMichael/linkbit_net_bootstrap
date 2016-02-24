@@ -30,4 +30,8 @@ public interface CustomerRepository extends Repository<Customer, Long> {
      * 保存客户信息
      */
     Customer save(Customer customer);
+    /**
+     * 删除客户信息
+     */
+   void  delete(Customer customer);
 }

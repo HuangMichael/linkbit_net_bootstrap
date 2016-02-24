@@ -12,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
@@ -57,5 +59,12 @@ public class BackMessageController extends BaseController {
         modelMap.put("headerDTO",headerDTO);
         ModelAndView mv = new ModelAndView("/back/message/detail",map);
         return mv;
+    }
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+    @ResponseBody
+    public void delete(@PathVariable long id) {
+        Message message =  messageRepository.findById(id);
+        messageRepository.delete(message);
     }
 }
