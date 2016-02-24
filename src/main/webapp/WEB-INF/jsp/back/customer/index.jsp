@@ -48,8 +48,8 @@
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">客户名称</th>
-                                            <th class="center hidden-xs">联系电话</th>
-                                            <th class="center">主页显示</th>
+                                            <th class="center ">联系电话</th>
+                                            <th class="center hidden-xs">主页显示</th>
                                             <th class="center hidden-xs">状态</th>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
@@ -60,10 +60,10 @@
                                             <tr class="gradeX" id="tr${customer.id}">
                                                 <td class="center">${status.index+1}</td>
                                                 <td class="center"><a href="/back/customer/detail/${customer.id}">${customer.customerName}</a></td>
-                                                <td class=" center hidden-xs">${customer.telephone}</td>
+                                                <td class=" center ">${customer.telephone}</td>
 
-                                                <td class="center"><input type="checkbox" checked="${customer.showInMainPage}"/></td>
-                                                <td class="center"><input type="checkbox" checked="${customer.status}"/></td>
+                                                <td class="center hidden-xs"><input type="checkbox" checked="${customer.showInMainPage}"/></td>
+                                                <td class="center hidden-xs"><input type="checkbox" checked="${customer.status}"/></td>
                                                 <td class="center "><a href="#" data-toggle="modal"
                                                                        data-target="#myModal${customer.id}">编辑</a></td>
                                                 <td class="center "><a id="delBtn${customer.id}">删除</a>
@@ -147,8 +147,8 @@
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">客户名称</th>
-                                            <th class="center hidden-xs">联系电话</th>
-                                            <th class="center">主页显示</th>
+                                            <th class="center ">联系电话</th>
+                                            <th class="center hidden-xs">主页显示</th>
                                             <th class="center hidden-xs">状态</th>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>

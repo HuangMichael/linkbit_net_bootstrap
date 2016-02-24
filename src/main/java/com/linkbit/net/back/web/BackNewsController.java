@@ -64,6 +64,36 @@ public class BackNewsController {
         return mv;
     }
 
+    @RequestMapping("/edit/{id}")
+    public ModelAndView edit(@PathVariable("id") Long id) {
+        News news = newsRepository.findById(id);
+        Map<String, News> map = new HashMap<String, News>();
+        map.put("news", news);
+        ModelAndView mv = new ModelAndView("/back/news/edit", map);
+        return mv;
+    }
+
+
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public String update(@ModelAttribute("news") News news, @RequestParam("objId")Long objId) {
+        System.out.println("objId---------------------"+objId);
+        if (objId != null) {
+            News oldObj =  newsRepository.findById(objId);
+            oldObj.setImgUrl(news.getImgUrl());
+            oldObj.setPublishTime(news.getPublishTime());
+            oldObj.setKeywords(news.getKeywords());
+            oldObj.setNewsContent(news.getNewsContent());
+            oldObj.setNewsDesc(news.getNewsDesc());
+            oldObj.setNewsTitle(news.getNewsTitle());
+            oldObj.setStatus(news.getStatus());
+            newsRepository.save(oldObj);
+        }
+        return "forward:/back/news/index";
+    }
+
+
+
     @Transactional
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public String handleFileUpload(@RequestParam("newsId") long newsId, @RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
@@ -77,5 +107,15 @@ public class BackNewsController {
         return "forward:/back/news/detail/" + newsId;
 
     }
+
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+    @ResponseBody
+    public void delete(@PathVariable long id) {
+        News news =  newsRepository.findById(id);
+        newsRepository.delete(news);
+
+    }
+
 
 }

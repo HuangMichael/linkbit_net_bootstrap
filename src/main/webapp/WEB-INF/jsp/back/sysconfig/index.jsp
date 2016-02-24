@@ -26,6 +26,7 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
+                                    <a type="button" class="btn btn-default btn-mini navbar-btn" href="/back/sysconfig/index">信息列表 </a>
                                     <button type="button" class="btn btn-default btn-mini navbar-btn"
                                             data-toggle="modal"
                                             data-target="#createModal">新建记录
@@ -52,7 +53,9 @@
                                                         href="/back/sysconfig/detail/${sysconfig.id}">${sysconfig.paraName}</a>
                                                 </td>
                                                 <td class=" center">${sysconfig.paraValue}</td>
-                                                <td class=" center"><input type="checkbox" checked="${sysconfig.status}">
+                                                <td class=" center">
+                                                    <c:if test="${sysconfig.status==1}">是</c:if>
+                                                    <c:if test="${sysconfig.status!=1}">否</c:if>
                                                 </td>
                                                 <td class="center "><a
                                                         href="/back/sysconfig/edit/${sysconfig.id}">编辑</a></td>
@@ -272,9 +275,13 @@
                 });
             }
         });
-
-
     });
+
+
+  /*  $('a[id^="delBtn"]').scojs_confirm({
+        content: "Ain't that cute?",
+        action: "http://google.com"
+    });*/
 
 
 </script><!-- /JAVASCRIPTS -->

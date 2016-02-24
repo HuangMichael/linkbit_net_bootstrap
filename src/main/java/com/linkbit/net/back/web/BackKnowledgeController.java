@@ -12,6 +12,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,6 +56,15 @@ public class BackKnowledgeController {
         return mv;
     }
 
+    @RequestMapping("/edit/{id}")
+    public ModelAndView edit(@PathVariable("id") Long id) {
+        Knowledge knowledge = knowledgeRepository.findById(id);
+        Map<String, Knowledge> map = new HashMap<String, Knowledge>();
+        map.put("knowledge", knowledge);
+        ModelAndView mv = new ModelAndView("/back/knowledge/edit", map);
+        return mv;
+    }
+
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
@@ -62,6 +72,23 @@ public class BackKnowledgeController {
         Knowledge knowledge = knowledgeRepository.findById(id);
         knowledgeRepository.delete(knowledge);
 
+    }
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public String update(@ModelAttribute("knowledge") Knowledge knowledge, @RequestParam("objId")Long objId) {
+        System.out.println("objId---------------------"+objId);
+        if (objId != null) {
+            Knowledge oldObj = knowledgeRepository.findById(objId);
+            oldObj.setTitle(knowledge.getTitle());
+            oldObj.setContent(knowledge.getContent());
+            oldObj.setDisplay(knowledge.getDisplay());
+            oldObj.setKeywords(knowledge.getKeywords());
+            oldObj.setKnowledgeDesc(knowledge.getKnowledgeDesc());
+            oldObj.setPublisher("xxx");
+            oldObj.setPublishTime(new Date());
+            knowledgeRepository.save(oldObj);
+        }
+        return "forward:/back/knowledge/index";
     }
 
 

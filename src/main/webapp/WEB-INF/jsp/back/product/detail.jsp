@@ -90,21 +90,25 @@
                                         </div>
                                         </fieldset>
                                     </form>
+
                                     <form id="uploadForm" method="post" class="form-horizontal" role="form"
                                           enctype="multipart/form-data" id="uploadForm" action="/back/product/upload">
-                                           <div class="form-group">
-                                               <input type="hidden" name="productId" id="productId" value="${product.id}"/>
-                                               <input type="hidden" name="fileName" id="fileName"/>
-                                               <label class="col-sm-1 control-label" for="file">上传图片</label>
+                                        <div class="form-group">
+                                            <input type="hidden" name="productId" id="productId" value="${product.id}"/>
+                                            <input type="hidden" name="fileName" id="fileName"/>
+                                            <label class="col-sm-1 control-label" for="file">上传图片</label>
 
-                                               <div class="col-sm-6">
-                                                  <input type="file" class="form-control" name="file" id="file">
-                                               </div>
-                                               <div class="col-sm-1">
-                                                   <input type="submit" value="上传" id="submit" class="form-control btn-primary">
-                                               </div>
-                                           </div>
-                                       </form>
+                                            <div class="col-sm-6">
+                                                <input type="file" class="form-control" name="file" id="file" required>
+                                            </div>
+                                            <div class="col-sm-1">
+                                                <input type="submit" value="上传" id="submit"
+                                                       class="form-control btn-primary">
+                                            </div>
+                                        </div>
+                                    </form>
+
+
                                 </div>
                                 </div>
                             </div>
@@ -136,6 +140,8 @@
 
 <script type="text/javascript">
     $(function () {
+
+
         /**
          * 提交上传文件
          * */
@@ -157,8 +163,7 @@
         function getFileName(o) {
             var pos = o.lastIndexOf("\\");
             return o.substring(pos + 1);
-                }
-
+        }
 
     })
 </script>

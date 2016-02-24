@@ -25,4 +25,10 @@ public interface NewsRepository extends Repository<News, Long> {
      * 保存新闻信息
      */
     News save(News news);
+
+
+    /**
+     * 删除新闻信息
+     */
+    void delete(News news);
 }

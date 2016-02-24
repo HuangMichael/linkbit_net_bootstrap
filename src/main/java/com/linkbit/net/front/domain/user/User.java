@@ -3,9 +3,10 @@ package com.linkbit.net.front.domain.user;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
- * Created by Administrator on 2015/12/24 0024.
+ * Created by huangbin on 2015/12/24 0024.
  */
 @Entity
 @Table(name="T_USER")
@@ -14,51 +15,14 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String userName;
-    private String password;
-    private String status;
+    private String userName;//用户名
+    private String password;//密码
+    private String imgUrl; //头像存放路径
+    private String gender; //性别
+    private String personName;//姓名
+    private String email ;//电子邮箱
+    @Temporal(TemporalType.DATE)
+    private Date birthday;//出生日期
+    private String status;//用户状态
 
-
-    public User() {
-    }
-
-
-    public User(String userName, String password,String status) {
-        this.userName = userName;
-        this.password = password;
-        this.status =status;
-    }
-
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }

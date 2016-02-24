@@ -51,15 +51,12 @@
                                                         href="/back/news/detail/${news.id}">${news.newsTitle}</a>
                                                 </td>
                                                 <td class=" center">${news.newsDesc}</td>
-
-
                                                 <td class=" center hidden-xs"><fmt:formatDate
                                                         value="${news.publishTime}" pattern="yyyy-MM-dd"/></td>
                                                     <%-- <td class=" center hidden-xs">${news.display}</td>--%>
                                                 <td class=" center hidden-xs"><input type="checkbox" checked="${news.status}"></td>
-                                                <td class="center "><a href="#" data-toggle="modal"
-                                                                       data-target="#myModal${news.id}">编辑</a></td>
-                                                <td class="center "><a id="delBtn${news.id}">删除</a>
+                                                <td class="center "><a href="/back/news/edit/${news.id}">编辑</a></td>
+                                                <td class="center "><a  id="delBtn${news.id}">删除</a>
                                                 </td>
                                             </tr>
                                             <%-- <div class="modal fade" id="myModal${news.id}" tabindex="-1"

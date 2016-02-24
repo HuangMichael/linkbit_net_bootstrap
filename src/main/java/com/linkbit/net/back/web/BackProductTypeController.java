@@ -44,7 +44,7 @@ public class BackProductTypeController {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(@ModelAttribute ProductType productType) {
         productTypeRepository.save(productType);
-        return "/index";
+        return "/back/productType/index";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)

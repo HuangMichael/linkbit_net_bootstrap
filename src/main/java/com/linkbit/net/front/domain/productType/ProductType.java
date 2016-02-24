@@ -24,7 +24,7 @@ public class ProductType {
     private Long id;
     private String typeName;
     private boolean status;
-    @OneToMany(mappedBy = "productType", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "productType", cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     @JsonBackReference("productList")
     private List<Product> productList = new ArrayList<Product>();
 

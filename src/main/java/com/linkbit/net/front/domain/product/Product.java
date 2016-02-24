@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * Created by huangbin on 2016/1/11 0011.
+ * 产品信息
  */
 @Entity
 @Table(name = "T_PRODUCT")
@@ -19,91 +20,18 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String productName;
-    private String productDesc;
-    private String productImgUrl;
-    private Boolean showInMainPage;
-    private Long sortNo;
+    private String productName;  //产品名称
+    private String productDesc; //产品描述
+    private String productImgUrl; //产品图片路径
+    private Boolean showInMainPage;//产品是否显示在首页
+    private Long sortNo;//排序
     @Temporal(TemporalType.DATE)
-    private Date onLineDate;
-    private boolean online;
+    private Date onLineDate;//产品上线日期
+    private boolean online;//产品是否上线
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonBackReference("productCharactorSet")
-    private List<ProductCharactor> productCharactorSet = new ArrayList<ProductCharactor>();
-    @ManyToOne(cascade = CascadeType.ALL, optional = true, fetch = FetchType.LAZY)
+    private List<ProductCharactor> productCharactorSet = new ArrayList<ProductCharactor>(); //产品属性集合
+    @ManyToOne(cascade = CascadeType.REFRESH, optional = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "product_type_id", referencedColumnName = "id")
-    private ProductType productType;
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-
-
-    public String getProductDesc() {
-        return productDesc;
-    }
-
-    public void setProductDesc(String productDesc) {
-        this.productDesc = productDesc;
-    }
-
-    public String getProductImgUrl() {
-        return productImgUrl;
-    }
-
-    public void setProductImgUrl(String productImgUrl) {
-        this.productImgUrl = productImgUrl;
-    }
-
-    public Boolean getShowInMainPage() {
-        return showInMainPage;
-    }
-
-    public void setShowInMainPage(Boolean showInMainPage) {
-        this.showInMainPage = showInMainPage;
-    }
-
-    public Long getSortNo() {
-        return sortNo;
-    }
-
-    public void setSortNo(Long sortNo) {
-        this.sortNo = sortNo;
-    }
-
-    public Date getOnLineDate() {
-        return onLineDate;
-    }
-
-    public void setOnLineDate(Date onLineDate) {
-        this.onLineDate = onLineDate;
-    }
-
-    public boolean isOnline() {
-        return online;
-    }
-
-    public void setOnline(boolean online) {
-        this.online = online;
-    }
-
-    public List<ProductCharactor> getProductCharactorSet() {
-        return productCharactorSet;
-    }
-
-    public void setProductCharactorSet(List<ProductCharactor> productCharactorSet) {
-        this.productCharactorSet = productCharactorSet;
-    }
+    private ProductType productType; //产品类型
 }

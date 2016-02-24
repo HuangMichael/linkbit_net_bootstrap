@@ -7,16 +7,8 @@
         <div class="navbar-brand">
             <!-- COMPANY LOGO -->
             <a href="/back/portal/index">
-                <img src="img/logo/logo.png" alt="${user.userName}" class="img-responsive" >
+                <img src="img/logo/logo.png" alt="${user.userName}" class="img-responsive" />
             </a>
-            <!-- /COMPANY LOGO -->
-            <!-- TEAM STATUS FOR MOBILE -->
-        <%--    <div class="visible-xs">
-                <a href="#" class="team-status-toggle switcher btn dropdown-toggle">
-                    <i class="fa fa-users"></i>
-                </a>
-            </div>--%>
-            <!-- /TEAM STATUS FOR MOBILE -->
             <!-- SIDEBAR COLLAPSE -->
             <div id="sidebar-collapse" class="sidebar-collapse btn">
                 <i class="fa fa-bars"
@@ -33,12 +25,12 @@
             <!-- BEGIN USER LOGIN DROPDOWN -->
             <li class="dropdown user" id="header-user">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <img alt="" src="img/avatars/avatar3.jpg"/>
-                    <span class="username">${user.userName}</span>
+                    <img alt="" src="${user.imgUrl}"/>
+                    <span class="username">${user.userName}(${user.personName})</span>
                     <i class="fa fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#"><i class="fa fa-user"></i>个人信息</a></li>
+                    <li><a href="/back/user/profile/${sessionScope.user.id}"><i class="fa fa-user"></i>个人信息</a></li>
                     <li><a href="#"><i class="fa fa-cog"></i>账户设置</a></li>
                     <li><a href="/" target="_blank"><i class="fa fa-eye"></i>进入网站</a></li>
                     <li><a href="/back/logout"><i class="fa fa-power-off"></i>退出登录</a></li>

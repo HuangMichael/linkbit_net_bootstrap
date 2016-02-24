@@ -2,6 +2,7 @@ package com.linkbit.net.back.web;
 
 import com.linkbit.net.back.domain.HeaderDTO;
 import com.linkbit.net.back.utils.SessionUtil;
+import com.linkbit.net.back.utils.UploadUtil;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
 import com.linkbit.net.front.domain.product.Product;
@@ -12,15 +13,13 @@ import com.linkbit.net.front.domain.productType.ProductTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +31,7 @@ import java.util.Map;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/back/product/")
-@SessionAttributes("backMenusList")
+@SessionAttributes({"backMenusList","productTypeList"})
 public class BackProductController {
     /**
      * 菜单接口
@@ -44,24 +43,18 @@ public class BackProductController {
      */
     @Autowired
     ProductRepository productRepository;
-
     /**
      * 产品类型接口
      */
     @Autowired
     ProductTypeRepository productTypeRepository;
-
     @RequestMapping("/index")
     public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<Product> productList = productRepository.findAll();
         List<ProductType> productTypeList = productTypeRepository.findByStatus(true);
-
-        HeaderDTO headerDTO = new HeaderDTO();
-        headerDTO.setSystemName("网站后台管理系统");
-        headerDTO.setAppName("产品信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "产品信息");
         modelMap.put("headerDTO",headerDTO);
-
         modelMap.put("productTypeList", productTypeList);
         modelMap.put("backMenusList", backMenusList);
         modelMap.put("productList", productList);
@@ -79,7 +72,7 @@ public class BackProductController {
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     @ResponseBody
     public Product save(@ModelAttribute Product product) {
-        
+        product.setProductCharactorSet(null);
         productRepository.save(product);
         return product;
     }
@@ -92,6 +85,19 @@ public class BackProductController {
         productRepository.save(product);
         return product;
     }
+
+
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    public ModelAndView edit(@PathVariable("id") Long id, ModelMap modelMap) {
+        Product product = productRepository.findById(id);
+        Map<String, Product> map = new HashMap<String, Product>();
+        map.put("product", product);
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑产品信息");
+        modelMap.put("headerDTO", headerDTO);
+        ModelAndView mv = new ModelAndView("/back/product/edit", map);
+        return mv;
+    }
+
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
@@ -122,27 +128,18 @@ public class BackProductController {
         List<ProductCharactor> productCharactorList =  product.getProductCharactorSet();
         return productCharactorList;
     }
+
+    @Transactional
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public String handleFileUpload(@RequestParam("productId") long productId,@RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
+    public String handleFileUpload(@RequestParam("productId") long newsId, @RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
         String contextPath = SessionUtil.getContextPath(request);
-        String realPath = "F:/dev/linkbit/src/main/webapp";
-        String absolutePath = "/front/images/product/";
-        if (!file.isEmpty()) {
-            try {
-                byte[] bytes = file.getBytes();
-                FileOutputStream fileOutputStream = new FileOutputStream(new File(realPath+absolutePath + fileName));
-                BufferedOutputStream stream = new BufferedOutputStream(fileOutputStream);
-                stream.write(bytes);
-                stream.close();
-                Product product = productRepository.findById(productId);
-                product.setProductImgUrl(absolutePath+fileName);
-                productRepository.save(product);
-                return "forward:/back/product/detail/"+productId;
-            } catch (Exception e) {
-                return "上传失败" + e.getMessage();
-            }
-        } else {
-            return "上传失败，文件不能为空";
-        }
+        String realPath = "/front/images/news/" + fileName;
+        String filePath = contextPath + realPath;
+        UploadUtil.uploadFile(file, filePath);
+        Product product = productRepository.findById(newsId);
+        product.setProductImgUrl(realPath);
+        productRepository.save(product);
+        return "forward:/back/product/detail/" + newsId;
+
     }
 }

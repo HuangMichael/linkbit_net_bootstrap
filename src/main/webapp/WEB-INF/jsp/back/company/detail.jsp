@@ -26,28 +26,6 @@
                             <!-- BOX -->
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
-
-
-
-                                <%--
-
-    private Long id;//id
-    private String companyName;//公司名称
-    private String logoPath;//logo地址
-    private String address;//公司地址
-    private String longtitude;  //维度
-    private String latitude;  //经度
-    private String telephone; //  电话
-    private String fax;//传真
-    private Date buildDate;//成立日期
-    private Boolean status;//状态
-
-
-
-                                --%>
-
-
-
                                 <div class="box-body">
                                     <form class="form-horizontal" role="form">
                                         <div class="form-group">

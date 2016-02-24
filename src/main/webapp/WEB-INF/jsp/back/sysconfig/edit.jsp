@@ -27,20 +27,11 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
+                                    <a type="button" class="btn btn-default btn-mini navbar-btn" href="/back/sysconfig/index">信息列表 </a>
                                     <form class="form-horizontal" role="form" action="/back/sysconfig/update" method="post">
                                         <div class="form-group">
                                             <div class="col-sm-12">
-
-
-                                              <%--  <div class="form-group">
-                                                    <label class="col-sm-2 control-label" for="paraName">传递参数</label>
-                                                    <div class="col-sm-8">
-                                                        <input class="form-control" id="objId" type="hidden" name="objId" value="${sysConfig.id}" required/>
-                                                    </div>
-                                                </div>--%>
                                                   <input class="form-control" id="objId" type="hidden" name="objId" value="${sysConfig.id}" required/>
-
-
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label" for="paraName">参数名称</label>
                                                     <div class="col-sm-8">
@@ -62,7 +53,15 @@
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label" for="status">使用状态</label>
                                                     <div class="col-sm-8">
-                                                        <input class="form-control" id="status" type="text" name="status" value="${sysConfig.status}" required/>
+                                                        <%--
+                                                                                                                <input class="form-control" id="status" type="text" name="status" value="${sysConfig.status}" required/>
+                                                        --%>
+                                                        <form:select id="status"  path="sysConfig.status" cssClass="form-control"
+                                                                     itemValue="${sysConfig.status}">
+                                                            <form:option value="1"  >是</form:option>
+                                                            <form:option value="0" >否</form:option>
+                                                        </form:select>
+
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
