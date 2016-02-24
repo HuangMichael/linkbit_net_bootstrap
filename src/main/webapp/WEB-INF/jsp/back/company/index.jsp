@@ -26,10 +26,6 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
-                                    <button type="button" class="btn btn-default btn-mini navbar-btn"
-                                            data-toggle="modal"
-                                            data-target="#createModal">新建记录
-                                    </button>
                                     <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
                                            class="datatable table table-striped table-bordered table-hover">
                                         <thead>
@@ -38,11 +34,7 @@
                                             <th class="center">公司名称</th>
                                             <th class="center">logo地址</th>
                                             <th class="center">公司地址</th>
-                                            <th class="center">维度</th>
-                                            <th class="center">经度</th>
                                             <th class="center">电话</th>
-                                            <th class="center ">编辑</th>
-                                            <th class="center ">删除</th>
                                         </tr>
                                         </thead>
                                         <tbody id="tbody">
@@ -52,11 +44,7 @@
                                                 <td class="center"><a href="/back/company/detail/${company.id}">${company.companyName}</a></td>
                                                 <td class="center">${company.logoPath}</td>
                                                 <td class="center">${company.address}</td>
-                                                <td class="center">${company.longtitude}</td>
-                                                <td class="center">${company.latitude}</td>
                                                 <td class="center">${company.telephone}</td>
-                                                <td class="center ">编辑</td>
-                                                <td class="center ">删除</td>
                                             </tr>
                                         </c:forEach>
                                         </tbody>
@@ -67,11 +55,7 @@
                                             <th class="center">公司名称</th>
                                             <th class="center hidden-xs">logo地址</th>
                                             <th class="center">公司地址</th>
-                                            <th class="center">维度</th>
-                                            <th class="center">经度</th>
                                             <th class="center hidden-xs">电话</th>
-                                            <th class="center ">编辑</th>
-                                            <th class="center ">删除</th>
                                         </tr>
                                         </tr>
                                         </tfoot>
