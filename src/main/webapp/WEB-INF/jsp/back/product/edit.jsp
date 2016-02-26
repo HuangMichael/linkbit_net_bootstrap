@@ -27,7 +27,7 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
-                                    <form class="form-horizontal" role="form">
+                                    <form class="form-horizontal" role="form" method="post" action="/back/product/update">
                                         <div class="form-group">
 
                                             <div class="col-sm-2">
@@ -113,7 +113,7 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <a class="btn btn-default" href="/back/sysconfig/index">关闭</a>
+                                            <a class="btn btn-default" href="/back/product/index">关闭</a>
                                             <button type="submit" id="save${product.id}" name="saveBtn"
                                                     class="btn btn-primary">保存
                                             </button>

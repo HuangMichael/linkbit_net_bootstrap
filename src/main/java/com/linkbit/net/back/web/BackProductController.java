@@ -77,13 +77,22 @@ public class BackProductController {
         return product;
     }
 
+
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    @ResponseBody
-    public Product update(@ModelAttribute Product product, HttpServletRequest request) {
-        String id = request.getParameter("id");
-        Product oldProduct = productRepository.findById(Long.valueOf(id));
-        productRepository.save(product);
-        return product;
+    public ModelAndView update(@ModelAttribute("product")  Product product ,@RequestParam("objId")Long objId) {
+        if (objId != null) {
+            Product oldObj = productRepository.findById(objId);
+            oldObj.setProductImgUrl(product.getProductImgUrl());
+            oldObj.setOnLineDate(product.getOnLineDate());
+            oldObj.setProductDesc(product.getProductDesc());
+            oldObj.setProductName(product.getProductName());
+            oldObj.setProductType(product.getProductType());
+            oldObj.setShowInMainPage(product.getShowInMainPage());
+            oldObj.setSortNo(product.getSortNo());
+            productRepository.save(oldObj);
+        }
+        ModelAndView modelAndView = new ModelAndView("/back/product/index");
+        return modelAndView;
     }
 
 
@@ -129,9 +138,13 @@ public class BackProductController {
         return productCharactorList;
     }
 
+    /**
+    * 上传图片 之后跳转至明细界面
+    *
+    * */
     @Transactional
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public String handleFileUpload(@RequestParam("productId") long newsId, @RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
+    public ModelAndView handleFileUpload(@RequestParam("productId") long newsId, @RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
         String contextPath = SessionUtil.getContextPath(request);
         String realPath = "/front/images/news/" + fileName;
         String filePath = contextPath + realPath;
@@ -139,7 +152,8 @@ public class BackProductController {
         Product product = productRepository.findById(newsId);
         product.setProductImgUrl(realPath);
         productRepository.save(product);
-        return "forward:/back/product/detail/" + newsId;
+        ModelAndView modelAndView =   new ModelAndView("redirect:/back/product/detail/" + newsId);
+        return modelAndView;
 
     }
 }

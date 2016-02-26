@@ -215,18 +215,18 @@
 
                         <div class="form-group">
                             <label for="productDesc">是否上线</label>
-                            <select class="form-control" id="online" name="product.online">
-                                    <option >请选择</option>
+                            <select class="form-control" id="online" name="product.online" required>
+                                <option value="">请选择</option>
+                                <option value="1">是</option>
                                     <option value="0">否</option>
-                                    <option value="1">是</option>
+
                             </select>
                         </div>
 
 
                         <div class="form-group">
                             <label for="productDesc">上线日期</label>
-                            <input type="date" class="form-control" id="onLineDate" name="product.onLineDate"
-                            >
+                            <input type="date" class="form-control" id="onLineDate" name="product.onLineDate">
                         </div>
                     </form>
                 </div>
