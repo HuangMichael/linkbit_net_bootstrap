@@ -10,9 +10,11 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by huangbin on 2016/1/18 0018.
@@ -41,6 +43,10 @@ public class BackProductTypeController {
         modelMap.put("productTypeList", productTypeList);
         return "/back/productType/index";
     }
+
+    /**
+    * 保存产品类别信息
+    * */
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(@ModelAttribute ProductType productType) {
         productType.setStatus("1"); //默认启用
@@ -48,15 +54,39 @@ public class BackProductTypeController {
         return "/back/productType/index";
     }
 
+    /**
+     * 更新产品类别信息
+     * */
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    @ResponseBody
-    public ProductType update(@ModelAttribute ProductType productType, HttpServletRequest request) {
-        String id = request.getParameter("id");
-        ProductType oldProduct = productTypeRepository.findById(Long.valueOf(id));
-        productTypeRepository.save(productType);
-        return productType;
+    public ModelAndView update(@ModelAttribute ProductType productType, Long objId) {
+        if (objId != null) {
+            ProductType oldObj = productTypeRepository.findById(objId);
+            oldObj.setTypeName(productType.getTypeName());
+            oldObj.setStatus(productType.getStatus());
+            productTypeRepository.save(oldObj);
+        }
+        ModelAndView modelAndView = new ModelAndView("redirect:/back/productType/index");
+        return modelAndView;
     }
 
+    /**
+     * 编辑产品类别信息
+     * */
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    public ModelAndView edit(@PathVariable("id") Long id, ModelMap modelMap) {
+        ProductType productType = productTypeRepository.findById(id);
+        Map<String, ProductType> map = new HashMap<String, ProductType>();
+        map.put("productType", productType);
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑产品类别信息");
+        modelMap.put("headerDTO", headerDTO);
+        ModelAndView mv = new ModelAndView("/back/productType/edit", map);
+        return mv;
+    }
+
+
+    /**
+     * 删除产品类别信息
+     * */
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
     public void delete(@PathVariable long id) {

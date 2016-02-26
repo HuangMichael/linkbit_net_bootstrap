@@ -53,6 +53,7 @@ public class ProductController extends BaseController {
         //封装对象 传递到页面
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/front/productDetail");
+
         modelAndView.addObject("product", product);
         return modelAndView;
     }
