@@ -34,8 +34,7 @@
 			if (self.options.title === '') {
 				self.options.title = '&nbsp;';
 			}
-		};
-
+		}
 		init();
 	}
 

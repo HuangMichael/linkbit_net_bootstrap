@@ -169,7 +169,7 @@
             paraName: paraName,
             paraValue: paraValue,
             status: status
-        }
+        };
         $.ajax({
             type: "POST",
             url: "/back/sysconfig/save",
@@ -221,7 +221,7 @@
         var online = $("#online" + id).val();
 
 
-        var product = new Object();
+        var product = {};
         product.productName = productName;
         product.productDesc = productDesc;
         product.productType = productType;

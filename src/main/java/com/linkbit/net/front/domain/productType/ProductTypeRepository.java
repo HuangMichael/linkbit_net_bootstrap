@@ -24,6 +24,6 @@ public interface ProductTypeRepository extends CrudRepository<ProductType, Long>
     /**
      * 查询所有的启用产品类型
      */
-    List<ProductType> findByStatus(Boolean status);
+    List<ProductType> findByStatus(String status);
 
 }

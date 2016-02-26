@@ -285,7 +285,7 @@ function cleanCStyle(code) {
                     i++;
                 }
                 if (!incomment) {
-                    while (code.charAt(++i).match(/\s/));;
+                    while (code.charAt(++i).match(/\s/));
                     i--;
                     c += tabs();
                 }
@@ -313,7 +313,7 @@ function cleanCStyle(code) {
             else if (code.substr(i).match(/^for\s*\(/)) {
                 infor = 1;
                 out += 'for (';
-                while ('(' != code.charAt(++i));;
+                while ('(' != code.charAt(++i));
             }
             else if ('//' == code.substr(i, 2)) {
                 incomment = '//';
@@ -337,19 +337,19 @@ function cleanCStyle(code) {
             else if ('{' == c) {
                 level++;
                 out = out.replace(/\s*$/, '') + ' {\n' + tabs();
-                while (code.charAt(++i).match(/\s/));;
+                while (code.charAt(++i).match(/\s/));
                 i--;
             }
             else if ('}' == c) {
                 out = out.replace(/\s*$/, '');
                 level--;
                 out += '\n' + tabs() + '}\n' + tabs();
-                while (code.charAt(++i).match(/\s/));;
+                while (code.charAt(++i).match(/\s/));
                 i--;
             }
             else if (';' == c && !infor) {
                 out += ';\n' + tabs();
-                while (code.charAt(++i).match(/\s/));;
+                while (code.charAt(++i).match(/\s/));
                 i--;
             }
             else if ('\n' == c) {
@@ -413,7 +413,7 @@ function cleanJson(code) {
             else if ('{' == c || '[' == c) {
                 level++;
                 out += c + '\n' + tabs();
-                while (code.charAt(++i).match(/\s/));;
+                while (code.charAt(++i).match(/\s/));
                 i--;
             }
             else if ('}' == c || ']' == c) {
@@ -421,12 +421,12 @@ function cleanJson(code) {
                 level--;
                 if (!out.match(/({|\[)$/)) out += '\n' + tabs();
                 out += c;
-                while (code.charAt(++i).match(/\s/));;
+                while (code.charAt(++i).match(/\s/));
                 i--;
             }
             else if (',' == c) {
                 out += ',\n' + tabs();
-                while (code.charAt(++i).match(/\s/));;
+                while (code.charAt(++i).match(/\s/));
                 i--;
             }
             else {

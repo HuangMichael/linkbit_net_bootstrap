@@ -183,7 +183,7 @@
 
             userName: userName,
             status: status
-        }
+        };
         $.ajax({
             type: "POST",
             url: "/back/user/save",
@@ -233,7 +233,7 @@
         var productType = "1";
         var onlineDate = new Date();
         var online = $("#online" + id).val();
-        var product = new Object();
+        var product = {};
         product.productName = productName;
         product.productDesc = productDesc;
         product.productType = productType;

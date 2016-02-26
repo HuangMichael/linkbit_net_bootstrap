@@ -41,7 +41,7 @@ public class ProductController extends BaseController {
     public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         modelMap.put("backMenusList", backMenusList);
-        List<ProductType> productTypeList = productTypeRepository.findByStatus(true);
+        List<ProductType> productTypeList = productTypeRepository.findByStatus("1");
         modelMap.put("productTypeList", productTypeList);
         return "/front/product";
     }

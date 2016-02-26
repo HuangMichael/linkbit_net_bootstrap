@@ -261,7 +261,7 @@
         var productType = $("#productType").val();
         var onLineDate = new Date();
         var online = $("#online").val();
-        var product = new Object();
+        var product = {};
         product.productName = productName;
         product.productDesc = productDesc;
         product.productType = productType;
@@ -306,7 +306,7 @@
         html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
         html += '</tr>';
         $("#tbody").prepend(html);
-    }
+    };
 
     //更新操作
     $(":submit").click(function () {
@@ -316,7 +316,7 @@
         var productType = "1";
         var onlineDate = new Date();
         var online = $("#online" + id).val();
-        var product = new Object();
+        var product = {};
         product.productName = productName;
         product.productDesc = productDesc;
         product.productType = productType;

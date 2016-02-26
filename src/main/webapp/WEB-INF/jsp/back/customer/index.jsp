@@ -262,7 +262,7 @@
             status:status,
             showInMainPage:showInMainPage
 
-        }
+        };
         $.ajax({
             type: "POST",
             url: "/back/customer/save",
@@ -301,7 +301,7 @@
         html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
         html += '</tr>';
         $("#tbody").prepend(html);
-    }
+    };
     //删除操作
 
     $("a[id^=delBtn]").on("click", function () {

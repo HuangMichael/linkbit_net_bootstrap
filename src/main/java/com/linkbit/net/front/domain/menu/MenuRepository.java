@@ -1,23 +1,28 @@
 package com.linkbit.net.front.domain.menu;
 
 
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
 /**
  * Created by huangbin on 2016/1/8 0008.
  */
-public interface MenuRepository extends Repository<Menu, Long> {
+public interface MenuRepository extends CrudRepository<Menu, Long> {
     /**
      * 查询所有菜单
      */
     List<Menu> findAll();
 
     /**
-     * 根据菜单类型查询菜单集合
+     * 根据菜单类型查询菜单集合  0为前台菜单   1 为后台菜单
      */
     List<Menu> findByMenuType(String menuType);
+
+    /**
+     * 批量保存菜单信息
+     */
+    //List<Menu> save(List<Menu> menuList);
 
 
 

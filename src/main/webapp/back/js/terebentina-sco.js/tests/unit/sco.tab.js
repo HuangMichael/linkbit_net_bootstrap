@@ -58,14 +58,14 @@ $(function () {
 	module('tab data-api');
 
 		test('should default to first tab', function() {
-			var $fixture = $('#qunit-fixture').append('<ul data-trigger="tab"><li><a href="#">header 1</a></li><li><a href="#"><a href="#">header 2</a></li><li><a href="#">header 3</a></li></ul><div class="pane-wrapper"><div>content 1</div><div>content 2</div><div>content 3</div></div>')
+			var $fixture = $('#qunit-fixture').append('<ul data-trigger="tab"><li><a href="#">header 1</a></li><li><a href="#"><a href="#">header 2</a></li><li><a href="#">header 3</a></li></ul><div class="pane-wrapper"><div>content 1</div><div>content 2</div><div>content 3</div></div>');
 			$('[data-trigger="tab"]').scojs_tab();
 			ok($('#qunit-fixture ul > li').eq(0).hasClass('active'), 'first tab is active');
 			ok($('#qunit-fixture .pane-wrapper > div').eq(0).hasClass('active'), 'first pane is active');
 		});
 
 		test('click on headers should switch tabs', function() {
-			var $fixture = $('#qunit-fixture').append('<ul data-trigger="tab"><li><a href="#">header 1</a></li><li><a href="#"><a href="#">header 2</a></li><li><a href="#">header 3</a></li></ul><div class="pane-wrapper"><div>content 1</div><div>content 2</div><div>content 3</div></div>')
+			var $fixture = $('#qunit-fixture').append('<ul data-trigger="tab"><li><a href="#">header 1</a></li><li><a href="#"><a href="#">header 2</a></li><li><a href="#">header 3</a></li></ul><div class="pane-wrapper"><div>content 1</div><div>content 2</div><div>content 3</div></div>');
 			$('[data-trigger="tab"]').scojs_tab();
 			$('#qunit-fixture ul > li a').eq(1).trigger('click');
 			ok(!$('#qunit-fixture ul > li').eq(0).hasClass('active'), 'first tab is not active - header');

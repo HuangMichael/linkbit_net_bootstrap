@@ -43,6 +43,7 @@ public class BackProductTypeController {
     }
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(@ModelAttribute ProductType productType) {
+        productType.setStatus("1"); //默认启用
         productTypeRepository.save(productType);
         return "/back/productType/index";
     }

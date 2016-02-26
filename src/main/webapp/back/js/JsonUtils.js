@@ -23,11 +23,11 @@ $.fn.serializeObject = function () {
  * from 序列化后的字符串转换为对象
  * */
 function convertToObject(str) {
-    var o = new Object();
+    var o = {};
     var array = str.split("&");
     for (var x in array) {
         console.log(array[x].split("=")[0]+"-------------"+array[x].split("=")[1]);
         o[array[x].split("=")[0]] = array[x].split("=")[1];
     }
     return o;
-};
+}

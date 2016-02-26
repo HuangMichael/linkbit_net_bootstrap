@@ -52,7 +52,7 @@ public class BackProductController {
     public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<Product> productList = productRepository.findAll();
-        List<ProductType> productTypeList = productTypeRepository.findByStatus(true);
+        List<ProductType> productTypeList = productTypeRepository.findByStatus("1");
         HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "产品信息");
         modelMap.put("headerDTO",headerDTO);
         modelMap.put("productTypeList", productTypeList);

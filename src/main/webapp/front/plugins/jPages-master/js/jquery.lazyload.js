@@ -79,7 +79,7 @@
                             self.loaded = true;
                         })
                         .attr("src", $(self).data("original"));
-                };
+                }
             });
 
             /* When wanted event is triggered load original image */

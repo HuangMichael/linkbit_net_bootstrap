@@ -128,11 +128,11 @@
             $("#uploadForm").attr("action", url);
             $("#uploadForm").submit();
 
-        })
+        });
 
         $("#file").on("change", function () {
             $("#fileName").val((getFileName($(this).val())));
-        })
+        });
 
 
         /**

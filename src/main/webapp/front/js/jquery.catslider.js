@@ -124,7 +124,7 @@
 			}, 25);
 		}
 
-	}
+	};
 
 	$.fn.catslider = function( options ) {
 		var instance = $.data( this, 'catslider' );

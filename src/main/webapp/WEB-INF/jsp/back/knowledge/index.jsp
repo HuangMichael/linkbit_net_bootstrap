@@ -377,7 +377,7 @@
         html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
         html += '</tr>';
         $("#tbody").prepend(html);
-    }
+    };
 
 
     /*  //更新操作

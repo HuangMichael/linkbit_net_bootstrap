@@ -23,7 +23,7 @@ public class ProductType {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String typeName;
-    private boolean status;
+    private String status; //(0禁用1启用)
     @OneToMany(mappedBy = "productType", cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     @JsonBackReference("productList")
     private List<Product> productList = new ArrayList<Product>();

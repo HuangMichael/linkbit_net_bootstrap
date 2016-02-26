@@ -94,7 +94,7 @@
         var productType = "1";
         var onLineDate = new Date();
         var online = $("#online").val();
-        var product = new Object();
+        var product = {};
         product.productName = productName;
         product.productDesc = productDesc;
         product.productType = productType;
@@ -138,7 +138,7 @@
         html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
         html += '</tr>';
         $("#tbody").prepend(html);
-    }
+    };
 
 
     //更新操作
@@ -151,7 +151,7 @@
         var online = $("#online" + id).val();
 
 
-        var product = new Object();
+        var product = {};
         product.productName = productName;
         product.productDesc = productDesc;
         product.productType = productType;

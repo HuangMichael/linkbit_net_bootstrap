@@ -4,7 +4,7 @@
 
 
 function getRandomAnimation() {
-    var array = new Array();
+    var array = [];
     array.push("fadeIn");
     array.push("fadeInUp");
     array.push("fadeInDown");
