@@ -1,5 +1,7 @@
 package com.linkbit.net.back.utils;
 
+import com.linkbit.net.front.domain.user.User;
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -27,4 +29,14 @@ public class SessionUtil {
         String serverRealPath = application.getRealPath("/") ;
         return  serverRealPath;
     }
+
+    /**
+     * 获取当前用户信息
+     */
+    public static User getCurrentUser(HttpServletRequest request) {
+        User user = (User) request.getSession().getAttribute("user");
+        return user;
+    }
+
+
 }

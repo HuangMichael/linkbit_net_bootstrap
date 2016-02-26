@@ -33,24 +33,12 @@
                                     <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
                                            class="datatable table table-striped table-bordered table-hover">
                                         <thead>
-
-                                       <%-- private Long id;
-                                        private String customerName;
-                                        private String logoPath;
-                                        private String address;
-                                        private String telphone;
-                                        private String fax;
-                                        private String mainpage;
-                                        private String masterName;
-                                        private Date beginDate;
-                                        private Boolean showInMainPage;
-                                        private Boolean status;--%>
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">客户名称</th>
-                                            <th class="center hidden-xs">联系电话</th>
-                                            <th class="center">主页显示</th>
-                                            <th class="center hidden-xs">状态</th>
+                                            <th class="center ">联系电话</th>
+                                            <th class="center hidden-xs">主页显示</th>
+                                            <th class="center hidden-xs">使用状态</th>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
                                         </tr>
@@ -60,12 +48,13 @@
                                             <tr class="gradeX" id="tr${customer.id}">
                                                 <td class="center">${status.index+1}</td>
                                                 <td class="center"><a href="/back/customer/detail/${customer.id}">${customer.customerName}</a></td>
-                                                <td class=" center hidden-xs">${customer.telephone}</td>
+                                                <td class=" center ">${customer.telephone}</td>
 
-                                                <td class="center"><input type="checkbox" checked="${customer.showInMainPage}"/></td>
-                                                <td class="center"><input type="checkbox" checked="${customer.status}"/></td>
-                                                <td class="center "><a href="#" data-toggle="modal"
-                                                                       data-target="#myModal${customer.id}">编辑</a></td>
+                                                <td class="center hidden-xs"><c:if test="${customer.showInMainPage}">是</c:if>
+                                                    <c:if test="${!customer.showInMainPage}">否</c:if></td>
+                                                <td class="center hidden-xs"><c:if test="${customer.status}">是</c:if>
+                                                    <c:if test="${!customer.status}">否</c:if></td>
+                                                <td class="center "><a href="/back/customer/edit/${customer.id}">编辑</a></td>
                                                 <td class="center "><a id="delBtn${customer.id}">删除</a>
                                                 </td>
                                             </tr>
@@ -147,8 +136,8 @@
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">客户名称</th>
-                                            <th class="center hidden-xs">联系电话</th>
-                                            <th class="center">主页显示</th>
+                                            <th class="center ">联系电话</th>
+                                            <th class="center hidden-xs">主页显示</th>
                                             <th class="center hidden-xs">状态</th>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
@@ -173,7 +162,9 @@
     </div>
 
 
-   <%-- <div class="modal fade" id="createModal" tabindex="-1"
+
+
+  <div class="modal fade" id="createModal" tabindex="-1"
          role="dialog" aria-labelledby="myModalLabel2">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -186,51 +177,49 @@
                 <div class="modal-body">
                     <form id="productCreateForm">
                         <div class="form-group">
-                            <label for="productName">客户名称</label>
+                            <label for="customerName">客户名称</label>
                             <input type="text" class="form-control"
-                                   id="productName"
-                                   name="product.productName">
+                                   id="customerName"
+                                   name="customerName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">客户地址</label>
+                            <input type="text" class="form-control"
+                                   id="address"
+                                   name="address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">联系电话</label>
+                            <input type="text" class="form-control"
+                                   id="telephone"
+                                   name="telephone" required>
                         </div>
                         <div class="form-group">
-                            <label for="productType">客户类型</label>
-                            <select class="form-control"
-                                    id="productType"
-                                    name="product.productType">
-                                <option value="1">PDA</option>
-                                <option value="2">手机</option>
-                                <option value="3">导航仪</option>
-                                <option value="4">指挥机</option>
-                                <option value="5">手表</option>
+                            <label for="fax">传真</label>
+                            <input type="text" class="form-control"
+                                   id="fax"
+                                   name="fax" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fax">传真</label>
+                            <select class="form-control" name="status" id="status" required>
+                                <option value="">请选择</option>
+                                <option value="1">是</option>
+                                <option value="0">否</option>
+
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label for="productDesc">客户描述</label>
-                            <input type="text" class="form-control"
-                                   id="productDesc"
-                                   name="product.productDesc"
-                            >
-                        </div>
-                        <div class="form-group">
-                            <label for="onLineDate">上线日期</label>
 
-                            <div class="input-append date" id="onLineDate" data-date="12-02-2012"
-                                 data-date-format="dd-mm-yyyy">
-                                <input class="span2" size="16" type="text" value="12-02-2012">
-                                <span class="add-on"><i class="icon-th"></i></span>
-                            </div>
-                        </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">客户图片</label>
-                            <input type="file" id="exampleInputFile2">
-
-                            <p class="help-block">上传一张客户图片吧</p>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" id="online"
-                                       name="product.online"
-                                > 是否显示
-                            </label>
+                            <label for="fax">传真</label>
+                            <select class="form-control" name="showInMainPage" id="showInMainPage" required>
+                                <option value="">请选择</option>
+                                <option value="1">是</option>
+                                <option value="0">否</option>
+                            </select>
                         </div>
                     </form>
                 </div>
@@ -256,28 +245,31 @@
         App.setPage("dynamic_table");  //Set current page
         App.init(); //Initialise plugins and elements
     });
-
-
     //新建记录
     $("#create").click(function () {
-        var productName = $("#productName").val();
-        var productDesc = $("#productDesc").val();
-        var productType = "1";
-        var onLineDate = new Date();
-        var online = $("#online").val();
-        var product = new Object();
-        product.productName = productName;
-        product.productDesc = productDesc;
-        product.productType = productType;
-        product.onLineDate = onLineDate;
-        product.online = online;
+        var customerName = $("#customerName").val();
+        var address = $("#address").val();
+        var telephone = $("#telephone").val();
+        var fax =  $("#fax").val();
+        var showInMainPage = $("#showInMainPage").val();
+        var status = $("#status").val();
+        var customer ={
+
+            customerName:customerName,
+        address:address,
+                telephone:telephone,
+                fax:fax,
+            status:status,
+            showInMainPage:showInMainPage
+
+        };
         $.ajax({
             type: "POST",
-            url: "/back/product/save",
-            data: product,
+            url: "/back/customer/save",
+            data: customer,
             success: function (msg) {
                 $("#createModal").modal('hide');
-                addRow(product);
+               // addRow(customer);
                 $.bootstrapGrowl("客户信息添加成功！", {
                     type: 'info',
                     align: 'right',
@@ -309,58 +301,14 @@
         html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
         html += '</tr>';
         $("#tbody").prepend(html);
-    }
-
-
-    //更新操作
-    $(":submit").click(function () {
-        var id = $(this).attr("id").substring(4);
-        var productName = $("#productName" + id).val();
-        var productDesc = $("#productDesc" + id).val();
-        var productType = "1";
-        var onlineDate = new Date();
-        var online = $("#online" + id).val();
-
-
-        var product = new Object();
-        product.productName = productName;
-        product.productDesc = productDesc;
-        product.productType = productType;
-        product.onlineDate = onlineDate;
-        product.online = online;
-        $.ajax({
-            type: "POST",
-            url: "/back/product/save",
-            data: product,
-            success: function (msg) {
-                $("#createModal" + id).modal('hide');
-                $.bootstrapGrowl("客户信息保存成功！", {
-                    type: 'info',
-                    align: 'right',
-                    stackup_spacing: 30
-                });
-
-            },
-            error: function () {
-                $.bootstrapGrowl("客户信息保存失败！", {
-                    type: 'danger',
-                    align: 'right',
-                    stackup_spacing: 30
-                });
-            }
-        });
-    });
-
-
+    };
     //删除操作
 
     $("a[id^=delBtn]").on("click", function () {
         var id = $(this).attr("id").substring(6);
-
-        console.log("id------------------"+id);
         $.ajax({
             type: "POST",
-            url: "/back/product/delete/" + id,
+            url: "/back/customer/delete/" + id,
             success: function () {
                 $("#tr" + id).fadeOut("slow");
                 $.bootstrapGrowl("客户信息删除成功！", {
@@ -371,7 +319,7 @@
             },
             error: function () {
                 $("#tr" + id).fadeOut("slow");
-                $.bootstrapGrowl("客户信息删除成功！", {
+                $.bootstrapGrowl("客户信息删除失败！", {
                     type: 'info',
                     align: 'right',
                     stackup_spacing: 30

@@ -4,9 +4,6 @@
     <h4><i class="fa fa-table"></i>${headerDTO.appName}</h4>
 
     <div class="tools hidden-xs">
-        <a href="#box-config" data-toggle="modal" class="config">
-            <i class="fa fa-cog"></i>
-        </a>
         <a href="javascript:;" class="reload">
             <i class="fa fa-refresh"></i>
         </a>

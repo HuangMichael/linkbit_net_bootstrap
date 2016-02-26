@@ -50,87 +50,14 @@
                                                 <td class="center"><a href="/back/productType/detail/${productType.id}">${productType.typeName}</a>
                                                 </td>
                                                 <td class="center">
-                                                    <div class="switch">
-
-                                                        <input type="checkbox" name="my-checkbox"
-                                                               checked="${productType.status}"/></div>
+                                                    <c:if test="${productType.status==1}">是</c:if>
+                                                    <c:if test="${productType.status!=1}">否</c:if>
                                                 </td>
-                                                <td class="center "><a href="#" data-toggle="modal"
-                                                                       data-target="#myModal${productType.id}">编辑</a></td>
+                                                <td class="center "><a href="/back/productType/edit/${productType.id}">编辑</a>
+                                                </td>
                                                 <td class="center "><a id="delBtn${productType.id}">删除</a>
                                                 </td>
                                             </tr>
-                                            <%--<div class="modal fade" id="myModal${product.id}" tabindex="-1"
-                                                 role="dialog" aria-labelledby="myModalLabel">
-                                                <div class="modal-dialog" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal"
-                                                                    aria-label="Close"><span
-                                                                    aria-hidden="true">&times;</span></button>
-                                                            <h4 class="modal-title" id="myModalLabel">产品类型信息明细</h4>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <form id="productForm${product.id}">
-                                                                <div class="form-group">
-                                                                    <label for="productName${product.id}">产品类型名称</label>
-                                                                    <input type="text" class="form-control"
-                                                                           id="productName${product.id}"
-                                                                           name="product.productName"
-                                                                           value="${product.productName}">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="productType${product.id}">产品类型类型</label>
-                                                                    <select class="form-control"
-                                                                            id="productType${product.id}"
-                                                                            name="product.productType">
-                                                                        <option value="1">PDA</option>
-                                                                        <option value="2">手机</option>
-                                                                        <option value="3">导航仪</option>
-                                                                        <option value="4">指挥机</option>
-                                                                        <option value="5">手表</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="productDesc${product.id}">产品类型描述</label>
-                                                                    <input type="text" class="form-control"
-                                                                           id="productDesc${product.id}"
-                                                                           name="product.productDesc"
-                                                                           value="${product.productDesc}">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="onLineDate${product.id}">上线日期</label>
-                                                                    <input type="date" class="form-control"
-                                                                           id="onLineDate${product.id}"
-                                                                           name="product.onLineDate"
-                                                                           value="${product.onLineDate}">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="exampleInputFile">产品类型图片</label>
-                                                                    <input type="file" id="exampleInputFile">
-
-                                                                    <p class="help-block">上传一张产品类型图片吧</p>
-                                                                </div>
-                                                                <div class="checkbox">
-                                                                    <label>
-                                                                        <input type="checkbox" id="online${product.id}"
-                                                                               name="product.online"
-                                                                               value="${product.online}"> 是否显示
-                                                                    </label>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-default"
-                                                                    data-dismiss="modal">关闭
-                                                            </button>
-                                                            <button type="submit" id="save${product.id}" name="saveBtn"
-                                                                    class="btn btn-primary">保存
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>--%>
                                         </c:forEach>
                                         </tbody>
                                         <tfoot>
@@ -171,19 +98,12 @@
                     <h4 class="modal-title" id="myModalLabel2">新建产品类型信息</h4>
                 </div>
                 <div class="modal-body">
-                    <form id="productCreateForm">
+                    <form id="productCreateForm" id="createForm">
                         <div class="form-group">
                             <label for="typeName">产品类型名称</label>
                             <input type="text" class="form-control"
                                    id="typeName"
-                                   name="productType.typeName">
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" id="status"
-                                       name="productType.status"
-                                > 是否显示
-                            </label>
+                                   name="productType.typeName" required>
                         </div>
                     </form>
                 </div>
@@ -216,12 +136,10 @@
     $("#create").click(function () {
         var typeName = $("#typeName").val();
         var status = $("#status").val();
-
         var productType = {
             typeName: typeName,
             status: status
-        }
-
+        };
         console.log("productType----" + JSON.stringify(productType));
         $.ajax({
             type: "POST",
@@ -249,59 +167,23 @@
     });
 
 
-    var addRow = function (product) {
-        var dateString = product.onLineDate.Format('yyyy-MM-dd');
-        var html = '<tr class="gradeX">';
-        html += '<td class="center">1</td>';
-        html += '<td class ="center"><a href ="#" data-toggle="modal" data-target="#myModal" >' + product.productName + '</a></td>';
-        html += '<td class= "center hidden-xs" >' + product.productType + '</td>';
-        html += '<td class= "center hidden-xs" >' + dateString + ' </td>';
-        html += '<td class = "center">' + product.productDesc + '</td>';
-        html += '<td class = "center"><a href = "#" > 编辑 </a> </td>';
-        html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
-        html += '</tr>';
-        $("#tbody").prepend(html);
-    }
 
+/*
+    <tr class="gradeX" id="tr${productType.id}">
+            <td class="center">${status.index+1}</td>
+            <td class="center"><a href="/back/productType/detail/${productType.id}">${productType.typeName}</a>
+            </td>
+            <td class="center">
+            <div class="switch">
 
-    //更新操作
-    $(":submit").click(function () {
-        var id = $(this).attr("id").substring(4);
-        var productName = $("#productName" + id).val();
-        var productDesc = $("#productDesc" + id).val();
-        var productType = "1";
-        var onlineDate = new Date();
-        var online = $("#online" + id).val();
-
-
-        var product = new Object();
-        product.productName = productName;
-        product.productDesc = productDesc;
-        product.productType = productType;
-        product.onlineDate = onlineDate;
-        product.online = online;
-        $.ajax({
-            type: "POST",
-            url: "/back/product/save",
-            data: product,
-            success: function (msg) {
-                $("#createModal" + id).modal('hide');
-                $.bootstrapGrowl("产品类型信息保存成功！", {
-                    type: 'info',
-                    align: 'right',
-                    stackup_spacing: 30
-                });
-
-            },
-            error: function () {
-                $.bootstrapGrowl("产品类型信息保存失败！", {
-                    type: 'danger',
-                    align: 'right',
-                    stackup_spacing: 30
-                });
-            }
-        });
-    });
+            <input type="checkbox" name="my-checkbox"
+    checked="${productType.status}"/></div>
+            </td>
+            <td class="center "><a href="/back/productType/edit/${productType.id}">编辑</a>
+            </td>
+            <td class="center "><a id="delBtn${productType.id}">删除</a>
+            </td>
+            </tr>*/
 
 
     //删除操作
@@ -309,7 +191,10 @@
     $("a[id^=delBtn]").on("click", function () {
         var id = $(this).attr("id").substring(6);
 
-        console.log("id------------------" + id);
+
+        if (confirm("确定删除该记录么？")) {
+
+
         $.ajax({
             type: "POST",
             url: "/back/productType/delete/" + id,
@@ -330,7 +215,7 @@
                 });
             }
         });
-
+        }
 
     });
 

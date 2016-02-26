@@ -1,6 +1,7 @@
 package com.linkbit.net.back.web;
 
 import com.linkbit.net.back.domain.HeaderDTO;
+import com.linkbit.net.back.utils.SessionUtil;
 import com.linkbit.net.front.domain.knowledge.Knowledge;
 import com.linkbit.net.front.domain.knowledge.KnowledgeRepository;
 import com.linkbit.net.front.domain.menu.Menu;
@@ -12,6 +13,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -55,6 +57,19 @@ public class BackKnowledgeController {
         ModelAndView mv = new ModelAndView("/back/knowledge/detail", map);
         return mv;
     }
+
+
+
+    @RequestMapping("/create")
+    public ModelAndView create(HttpServletRequest request) {
+        ModelAndView mv = new ModelAndView("/back/knowledge/create");
+        Knowledge knowledge =  new Knowledge();
+        knowledge.setPublishTime(new Date());
+        knowledge.setPublisher(SessionUtil.getCurrentUser(request).getUserName());
+        mv.addObject("knowledge",knowledge);
+        return mv;
+    }
+
 
     @RequestMapping("/edit/{id}")
     public ModelAndView edit(@PathVariable("id") Long id) {

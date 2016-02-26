@@ -161,7 +161,7 @@
     </div>
 
 
-    <%-- <div class="modal fade" id="createModal" tabindex="-1"
+   <div class="modal fade" id="createModal" tabindex="-1"
           role="dialog" aria-labelledby="myModalLabel2">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
@@ -171,19 +171,6 @@
                              aria-hidden="true">&times;</span></button>
                      <h4 class="modal-title" id="myModalLabel2">新建新闻信息</h4>
                  </div>
-
-
-                 &lt;%&ndash; private String title; //文章名称
-                  private String keywords;  //关键字
-                  private String newsDesc;  //摘要
-                  private String content; //内容
-                  private KnowledgeType newsType;//新闻库类型
-                  private String publisher; //发布者
-                  @Temporal(TemporalType.DATE)
-                  private Date publishTime;//发布时间
-                  private Boolean display;//是否显示
-                  private Boolean showInMainPage;//  是否主页显示&ndash;%&gt;
-
 
                  <div class="modal-body">
                      <form id="newsCreateForm">
@@ -383,7 +370,7 @@
                  </div>
              </div>
          </div>
-     </div>--%>
+     </div>
 
 </section>
 <!--/PAGE -->
@@ -398,16 +385,6 @@
     });
 
 
-    /*  private String title; //文章名称
-     private String keywords;  //关键字
-     private String newsDesc;  //摘要
-     private String content; //内容
-     private KnowledgeType newsType;//新闻库类型
-     private String publisher; //发布者
-
-     private Date publishTime;//发布时间
-     private Boolean display;//是否显示
-     private Boolean showInMainPage;//  是否主页显示*/
 
     //新建记录
     $("#create").on("click", function () {

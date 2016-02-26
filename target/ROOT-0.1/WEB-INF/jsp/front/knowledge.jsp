@@ -16,7 +16,6 @@
     <div class="container">
         <div class="holder"></div>
         <ul id="itemContainer">
-
             <c:forEach items="${knowledgeList}" var="k">
                 <li class="list-inline">
             <div class="col-md-12 news_title"><a href="/knowledge/detail/${k.id}">${k.title}</a></div>
@@ -43,9 +42,10 @@
     /* when document is ready */
     $(function () {
 
+/*
         var perPage = 4;
         var animation = getRandomAnimation();
-        /* initiciate jPages */
+        /!* initiciate jPages *!/
         $("div.holder").jPages({
             containerID: "itemContainer",
             animation: animation,
@@ -53,12 +53,13 @@
         });
 
 
-        /* destroy jPages and initiate plugin again */
+        /!* destroy jPages and initiate plugin again *!/
         $("div.holder").jPages("destroy").jPages({
             containerID: "itemContainer",
             animation: animation,
             perPage: perPage
         });
+*/
 
 
         $(".link").on("click", function () {

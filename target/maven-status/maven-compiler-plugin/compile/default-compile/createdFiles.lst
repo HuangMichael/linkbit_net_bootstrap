@@ -12,6 +12,7 @@ com\linkbit\net\front\web\ProductController.class
 com\linkbit\net\back\web\BackSysConfigController.class
 com\linkbit\net\back\domain\PortalNumberDTO.class
 com\linkbit\net\back\listener\StartupCommandRunner.class
+com\linkbit\net\front\web\CompanyController.class
 com\linkbit\net\back\domain\AppAccessLog.class
 com\linkbit\net\back\domain\HeaderDTO.class
 com\linkbit\net\back\web\BackLoginController.class

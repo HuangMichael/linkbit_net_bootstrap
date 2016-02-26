@@ -49,7 +49,7 @@
     $(function () {
         $("#send").on("click", function () {
             var url = "/message0/save";
-            var message = new Object();
+            var message = {};
             message.userName = $("#userName").val();
             message.telephone = $("#telephone").val();
             message.worksplace = $("#worksplace").val();

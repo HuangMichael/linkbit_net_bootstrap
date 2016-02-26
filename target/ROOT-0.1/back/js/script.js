@@ -359,7 +359,7 @@ var App = function () {
     var handleTeamView = function () {
         c();
         $(".team-status-toggle").click(function (y) {
-            y.preventDefault();0
+            y.preventDefault();0;
             w(this);
             $(this).parent().toggleClass("open");
             var z = x(this);

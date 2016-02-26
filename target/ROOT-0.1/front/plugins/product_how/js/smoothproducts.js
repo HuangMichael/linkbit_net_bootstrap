@@ -1,5 +1,5 @@
 // Add some markup & set some CSS
-// ´úÂëÕûÀí£º´óÍ·Íø www.datouwang.com
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ www.datouwang.com
 $('.sp-wrap').append('<div class="sp-large"></div><div class="sp-thumbs sp-tb-active"></div>');
 $('.sp-wrap a').appendTo('.sp-thumbs');
 $('.sp-thumbs a:first').addClass('sp-current').clone().removeClass('sp-current').appendTo('.sp-large');
@@ -106,7 +106,7 @@ window.ondeviceorientation = function(event) {
                 top : pitch + 'px'
             }); 
         }
-    }
+    };
 
 
 // Zoom out

@@ -26,97 +26,52 @@
                             <!-- BOX -->
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
-
-
-
-                                <%--
-
-    private Long id;//id
-    private String companyName;//公司名称
-    private String logoPath;//logo地址
-    private String address;//公司地址
-    private String longtitude;  //维度
-    private String latitude;  //经度
-    private String telephone; //  电话
-    private String fax;//传真
-    private Date buildDate;//成立日期
-    private Boolean status;//状态
-
-
-
-                                --%>
-
-
-
                                 <div class="box-body">
-                                    <form class="form-horizontal" role="form">
+                                    <a type="button" class="btn btn-default btn-mini navbar-btn" href="/back/sysconfig/index">信息列表 </a>
+                                    <form class="form-horizontal" role="form" action="/back/sysconfig/update" method="post">
                                         <div class="form-group">
-
-                                            <div class="col-sm-2">
-                                                <img src="${company.logoPath}" width="200px" />
-                                            </div>
-                                            <div class="col-sm-10">
+                                            <div class="col-sm-12">
+                                                  <input class="form-control" id="objId" type="hidden" name="objId" value="${sysConfig.id}" required/>
                                                 <div class="form-group">
-                                                    <label class="col-sm-1 control-label" for="ds_host">公司名称</label>
-                                                    <div class="col-sm-5">
-                                                        <input class="form-control" id="ds_host" type="text" placeholder="192.168.1.161" value="${company.companyName}" readonly/>
-                                                    </div>
-                                                    <label class="col-sm-1 control-label" for="ds_name">公司地址</label>
-                                                    <div class="col-sm-5">
-                                                        <input class="form-control" id="ds_name" type="text" placeholder="msh"  value="${company.address}" readonly/>
+                                                    <label class="col-sm-2 control-label" for="paraName">参数名称</label>
+                                                    <div class="col-sm-8">
+                                                        <input class="form-control" id="paraName" type="text" name="paraName" value="${sysConfig.paraName}" required/>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-1 control-label" for="longtitude">维度</label>
-                                                    <div class="col-sm-5">
-                                                        <input class="form-control" id="longtitude" type="text" placeholder="root" value="${company.longtitude}" readonly/>
-                                                    </div>
-                                                    <label class="col-sm-1 control-label" for="latitude">经度</label>
-                                                    <div class="col-sm-5">
-                                                        <input class="form-control" id="latitude" type="text" placeholder="123456" value="${company.latitude}" readonly/>
+                                                    <label class="col-sm-2 control-label" for="paraDesc">描述</label>
+                                                    <div class="col-sm-8">
+                                                        <input class="form-control" id="paraDesc" type="text" name="paraDesc" value="${sysConfig.paraDesc}" required/>
                                                     </div>
                                                 </div>
-
                                                 <div class="form-group">
-                                                    <label class="col-sm-1 control-label" for="telephone">电话</label>
-                                                    <div class="col-sm-5">
-                                                        <input class="form-control" id="telephone" type="text" placeholder="root" value="${company.telephone}" readonly/>
-                                                    </div>
-                                                    <label class="col-sm-1 control-label" for="fax">传真</label>
-                                                    <div class="col-sm-5">
-                                                        <input class="form-control" id="fax" type="text" placeholder="123456" value="${company.fax}" readonly/>
+                                                    <label class="col-sm-2 control-label" for="paraValue">参数值</label>
+                                                    <div class="col-sm-8">
+                                                        <input class="form-control" id="paraValue" type="text" name="paraValue" value="${sysConfig.paraValue}" required/>
                                                     </div>
                                                 </div>
-
                                                 <div class="form-group">
-                                                    <label class="col-sm-1 control-label" for="buildDate">成立日期</label>
-                                                    <div class="col-sm-5">
-                                                        <input class="form-control" id="buildDate" type="date" placeholder="root" value="${company.buildDate}" readonly/>
-                                                    </div>
-                                                    <label class="col-sm-1 control-label" for="status">状态</label>
-                                                    <div class="col-sm-5">
-                                                        <input class="form-control" id="status" type="text" placeholder="123456" value="${company.status}" readonly/>
+                                                    <label class="col-sm-2 control-label" for="status">使用状态</label>
+                                                    <div class="col-sm-8">
+                                                        <%--
+                                                                                                                <input class="form-control" id="status" type="text" name="status" value="${sysConfig.status}" required/>
+                                                        --%>
+                                                        <form:select id="status"  path="sysConfig.status" cssClass="form-control"
+                                                                     itemValue="${sysConfig.status}">
+                                                            <form:option value="1"  >是</form:option>
+                                                            <form:option value="0" >否</form:option>
+                                                        </form:select>
+
                                                     </div>
                                                 </div>
-
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-default" href="/back/sysconfig/index">关闭</a>
+                                                    <button type="submit" id="save${product.id}" name="saveBtn" class="btn btn-primary">保存
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>
-                                    <form id="uploadForm" method="post" class="form-horizontal" role="form"
-                                          enctype="multipart/form-data" id="uploadForm" action="/back/company/upload">
-                                           <div class="form-group">
-                                               <input type="hidden" name="companyId" id="companyId" value="${company.id}"/>
-                                               <input type="hidden" name="fileName" id="fileName"/>
-                                               <label class="col-sm-1 control-label" for="file">上传图片</label>
-
-                                               <div class="col-sm-6">
-                                                  <input type="file" class="form-control" name="file" id="file">
-                                               </div>
-                                               <div class="col-sm-1">
-                                                   <input type="submit" value="上传" id="submit" class="form-control btn-primary">
-                                               </div>
-                                           </div>
-                                       </form>
                                 </div>
                                 </div>
                             </div>
@@ -148,28 +103,8 @@
 
 <script type="text/javascript">
     $(function () {
-        /**
-         * 提交上传文件
-         * */
-        $("#submit").on("click", function (data) {
-            var fullName = $("#file").val();
-            $("#uploadForm").attr("action", url);
-            $("#uploadForm").submit();
-
-        })
-
-        $("#file").on("change", function () {
-            $("#fileName").val((getFileName($(this).val())));
-        })
 
 
-        /**
-         * 获取文件名称
-         * */
-        function getFileName(o) {
-            var pos = o.lastIndexOf("\\");
-            return o.substring(pos + 1);
-                }
 
 
     })

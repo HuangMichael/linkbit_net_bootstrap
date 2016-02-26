@@ -30,6 +30,10 @@
                                             data-toggle="modal"
                                             data-target="#createModal">新建记录
                                     </button>
+
+                                   <%-- <a  class="btn btn-default btn-mini navbar-btn" href="/back/knowledge/create"
+                                    >新建记录
+                                    </a>--%>
                                     <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
                                            class="datatable table table-striped table-bordered table-hover">
                                         <thead>
@@ -324,6 +328,7 @@
     $(function () {
         // 富文本和动态表格插件同时加载有冲突
         App.setPage("dynamic_table");  //Set current page
+        App.setPage("rich_text_editors");  //Set current page
         App.init(); //Initialise plugins and elements
     });
     //新建记录
@@ -333,7 +338,7 @@
             keywords: $("#keywords").val(),
             knowledgeDesc: $("#knowledgeDesc").val(),
             publisher: $("#publisher").val(),
-          //  content: $("#editor").html(),
+            content: $("#editor").html(),
             publishTime: new Date(),
             display: $("#display").attr("checked"),
             showInMainPage: $("#showInMainPage").attr("checked"),

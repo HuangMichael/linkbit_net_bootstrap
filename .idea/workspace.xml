@@ -5,11 +5,422 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b24faae-27e6-4984-b946-aadada685aee" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/product1.jsp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/create.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/company/back.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/company/bussiness.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/company/company.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/company/contact.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/company/logo1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/company/rz0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/det_pic.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/fb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/news0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/news1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/news2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/no.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/pic1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/pic2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/pic3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/images/twt.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/auto.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/blanklinks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/callback.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/css/animate.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/css/github.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/css/jPages.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/cssanimation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/custombuttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/customizebuttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/defaults.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/destroy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/direction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/documentation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/download.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/gallery.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/back.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/gallery/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (10).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (100).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (101).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (102).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (103).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (104).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (105).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (106).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (107).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (108).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (109).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (11).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (110).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (111).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (112).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (113).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (114).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (115).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (116).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (117).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (118).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (119).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (12).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (120).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (121).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (122).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (123).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (124).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (125).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (126).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (127).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (128).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (129).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (13).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (130).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (131).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (132).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (133).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (134).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (135).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (136).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (137).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (138).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (14).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (15).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (16).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (17).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (18).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (19).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (2).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (20).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (21).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (22).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (23).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (24).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (25).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (26).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (27).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (28).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (29).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (3).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (30).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (31).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (32).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (33).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (34).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (35).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (36).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (37).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (38).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (39).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (4).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (40).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (41).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (42).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (43).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (44).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (45).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (46).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (47).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (48).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (49).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (5).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (50).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (51).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (52).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (53).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (54).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (55).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (56).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (57).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (58).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (59).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (6).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (60).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (61).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (62).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (63).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (64).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (65).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (66).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (67).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (68).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (69).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (7).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (70).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (71).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (72).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (73).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (74).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (75).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (76).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (77).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (78).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (79).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (8).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (80).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (81).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (82).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (83).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (84).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (85).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (86).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (87).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (88).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (89).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (9).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (90).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (91).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (92).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (93).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (94).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (95).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (96).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (97).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (98).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/img (99).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/next.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/preload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/img/theauthor.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/itemsperpage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/jqueryanimation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/js/highlight.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/js/jPages.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/js/jPages.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/js/jquery-1.8.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/js/jquery.lazyload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/js/js.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/js/tabifier.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/jumptopage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/keybrowse.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/lazyload.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/mosaic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/pagination.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/scrollbrowse.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/table.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/front/plugins/jPages-master/titlelinks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/product/product1.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/auto.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/blanklinks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/callback.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/css/animate.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/css/github.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/css/jPages.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/cssanimation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/custombuttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/customizebuttons.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/defaults.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/destroy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/direction.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/documentation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/download.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/gallery.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/back.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/gallery/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (10).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (100).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (101).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (102).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (103).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (104).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (105).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (106).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (107).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (108).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (109).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (11).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (110).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (111).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (112).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (113).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (114).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (115).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (116).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (117).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (118).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (119).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (12).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (120).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (121).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (122).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (123).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (124).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (125).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (126).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (127).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (128).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (129).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (13).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (130).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (131).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (132).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (133).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (134).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (135).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (136).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (137).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (138).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (14).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (15).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (16).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (17).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (18).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (19).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (2).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (20).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (21).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (22).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (23).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (24).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (25).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (26).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (27).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (28).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (29).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (3).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (30).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (31).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (32).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (33).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (34).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (35).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (36).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (37).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (38).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (39).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (4).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (40).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (41).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (42).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (43).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (44).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (45).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (46).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (47).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (48).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (49).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (5).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (50).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (51).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (52).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (53).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (54).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (55).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (56).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (57).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (58).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (59).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (6).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (60).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (61).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (62).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (63).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (64).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (65).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (66).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (67).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (68).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (69).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (7).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (70).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (71).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (72).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (73).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (74).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (75).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (76).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (77).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (78).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (79).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (8).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (80).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (81).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (82).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (83).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (84).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (85).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (86).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (87).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (88).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (89).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (9).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (90).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (91).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (92).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (93).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (94).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (95).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (96).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (97).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (98).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/img (99).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/next.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/preload.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/img/theauthor.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/itemsperpage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/jqueryanimation.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/highlight.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/jPages.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/jPages.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/jquery-1.8.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/jquery.lazyload.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/js.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/tabifier.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/jumptopage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/keybrowse.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/lazyload.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/mosaic.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/pagination.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/scrollbrowse.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/table.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/titlelinks.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1.war.original" afterPath="$PROJECT_DIR$/target/ROOT-0.1.war.original" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/utils/SessionUtil.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/utils/SessionUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackKnowledgeController.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackKnowledgeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/utils/SessionUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/utils/SessionUtil.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductController.java" afterPath="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/edit.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/edit.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/utils/SessionUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/utils/SessionUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackKnowledgeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackKnowledgeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/news/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/news/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/knowledge.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/knowledge.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/application.properties" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/knowledge.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/knowledge.jsp" />
     </list>
     <list id="2f985057-9418-4726-b522-fd364c087c1a" name="Rejected commit: Default" comment="product typeName">
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/contact.jsp" afterPath="" />
@@ -24,7 +435,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/images/product/zhj.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/images/product/新建文本文档.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1.war" afterPath="$PROJECT_DIR$/target/ROOT-0.1.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1.war.original" afterPath="$PROJECT_DIR$/target/ROOT-0.1.war.original" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/Application.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/Application.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/listener/ApplicationStartup.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/listener/ApplicationStartup.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/listener/StartupCommandRunner.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/listener/StartupCommandRunner.class" />
@@ -64,7 +474,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/news/index.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/news/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/product/detail.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/product/detail.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/product/index.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/product/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/product/product1.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/product/product1.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/productType/index.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/productType/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/sysconfig/detail.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/sysconfig/detail.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/sysconfig/edit.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/sysconfig/edit.jsp" />
@@ -79,10 +488,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/js/Utils.js" afterPath="$PROJECT_DIR$/target/ROOT-0.1/front/js/Utils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/js/jquery.catslider.js" afterPath="$PROJECT_DIR$/target/ROOT-0.1/front/js/jquery.catslider.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/js/jquery.slicebox.js" afterPath="$PROJECT_DIR$/target/ROOT-0.1/front/js/jquery.slicebox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/jPages.js" afterPath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/jPages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/jquery.lazyload.js" afterPath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/jquery.lazyload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/js.js" afterPath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/js.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/tabifier.js" afterPath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/jPages-master/js/tabifier.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/product_how/js/jquery.1.8.3.js" afterPath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/product_how/js/jquery.1.8.3.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/product_how/js/smoothproducts.js" afterPath="$PROJECT_DIR$/target/ROOT-0.1/front/plugins/product_how/js/smoothproducts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
@@ -111,43 +516,103 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BackKnowledgeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackKnowledgeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Knowledge.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/knowledge/Knowledge.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="14.153846">
+              <caret line="356" column="19" selection-start-line="356" selection-start-column="19" selection-end-line="356" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="knowledge.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/knowledge.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.807693">
+              <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/news/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="smoothproducts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/front/plugins/product_how/js/smoothproducts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.23077">
-              <caret line="217" column="99" selection-start-line="217" selection-start-column="99" selection-end-line="217" selection-end-column="99" />
+            <state vertical-scroll-proportion="0.547756">
+              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="edit.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/edit.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.6153846">
-              <caret line="29" column="120" selection-start-line="29" selection-start-column="120" selection-end-line="29" selection-end-column="120" />
+            <state vertical-scroll-proportion="-19.961538">
+              <caret line="290" column="38" selection-start-line="290" selection-start-column="21" selection-end-line="290" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BackProductController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductController.java">
+      <file leaf-file-name="create.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/create.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29095355">
-              <caret line="81" column="111" selection-start-line="81" selection-start-column="111" selection-end-line="81" selection-end-column="111" />
-              <folding>
-                <element signature="e#4573#4590#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackSysConfigController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="70" column="5" selection-start-line="58" selection-start-column="4" selection-end-line="70" selection-end-column="5" />
+            <state vertical-scroll-proportion="-16.346153">
+              <caret line="28" column="97" selection-start-line="28" selection-start-column="97" selection-end-line="28" selection-end-column="97" />
               <folding />
             </state>
           </provider>
@@ -184,9 +649,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/user/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/domain/HeaderDTO.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/sysconfig/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/sysconfig/_form.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/domain/SysConfig.java" />
@@ -201,14 +663,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/product/Product.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/common/head.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/common/footer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/knowledge/Knowledge.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackKnowledgeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/news/NewsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackNewsController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/news/edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/news/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/sysconfig/edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/sysconfig/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/user/profile.jsp" />
@@ -228,13 +686,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/productType/ProductType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/productType/ProductTypeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/ProductController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/productType/edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/productType/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductTypeController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/create.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/utils/SessionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackKnowledgeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/knowledge.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/knowledge/Knowledge.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/news/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/index.jsp" />
       </list>
     </option>
   </component>
@@ -554,82 +1019,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sysconfig" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="productType" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="product" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -659,34 +1048,8 @@
               <option name="myItemId" value="front" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -715,12 +1078,34 @@
               <option name="myItemId" value="front" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="linkbit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="linkbit" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -797,7 +1182,7 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="sys&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;product&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;app&#9;FILE&#9;file://F:/dev/linkbit/src/main/resources/application.properties&#10;pro&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/ProductController.java&#10;backproduc&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;type&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/productType/ProductType.java&#10;Crudreposi&#9;PSI&#9;JAVA://org.springframework.data.repository.CrudRepository&#10;customer&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackCustomerController.java&#10;cus&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackCustomerController&#10;message&#9;PSI&#9;JAVA://com.linkbit.net.front.domain.message.Message&#10;user&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackUserController.java&#10;sysconfig&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;news&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackNewsController.java&#10;knowledge&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackKnowledgeController&#10;foot&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/footer.jsp&#10;head&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/head.jsp&#10;produc&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;PRODUCT&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/product/Product.java&#10;User&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackUserController.java&#10;header&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/header.jsp&#10;dataTables&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js&#10;datatables&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js&#10;TableTools&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/extras/TableTools/media/js/TableTools.min.js&#10;ZeroClipboard.min.js&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/extras/TableTools/media/js/ZeroClipboard.min.js&#10;script&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/script.js&#10;footer&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/footer.jsp&#10;s&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;applicat&#9;FILE&#9;file://F:/dev/linkbit/src/main/resources/application.properties&#10;pom&#9;FILE&#9;file://F:/dev/linkbit/pom.xml&#10;PRODU&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;comp&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/company/Company.java&#10;contact&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackContactController&#10;NEWS&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackNewsController&#10;kno&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackKnowledgeController&#10;porta&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackPortalController.java&#10;upload&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackFileUploadController.java&#10;scrip&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/script.js&#10;scr&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/script.js&#10;uplo&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackFileUploadController.java&#10;backcontact&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackContactController.java&#10;port&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackPortalController.java&#10;login&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackLoginController.java&#10;foo&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/front/footer.jsp&#10;h&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/head.jsp&#10;cook&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/jQuery-Cookie/jquery.cookie.min.js&#10;html5&#9;null&#9;null&#10;excanvas&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/flot/excanvas.min.js&#10;back&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackContactController.java&#10;sider&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/siderBar.jsp&#10;productT&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackProductTypeController" />
+    <property name="SearchEverywhereHistoryKey" value="app&#9;FILE&#9;file://F:/dev/linkbit/src/main/resources/application.properties&#10;sess&#9;PSI&#9;JAVA://com.linkbit.net.back.utils.SessionUtil&#10;know&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackKnowledgeController.java&#10;sys&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;product&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;pro&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/ProductController.java&#10;backproduc&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;type&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/productType/ProductType.java&#10;Crudreposi&#9;PSI&#9;JAVA://org.springframework.data.repository.CrudRepository&#10;customer&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackCustomerController.java&#10;cus&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackCustomerController&#10;message&#9;PSI&#9;JAVA://com.linkbit.net.front.domain.message.Message&#10;user&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackUserController.java&#10;sysconfig&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;news&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackNewsController.java&#10;knowledge&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackKnowledgeController&#10;foot&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/footer.jsp&#10;head&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/head.jsp&#10;produc&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;PRODUCT&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/product/Product.java&#10;User&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackUserController.java&#10;header&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/header.jsp&#10;dataTables&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js&#10;datatables&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js&#10;TableTools&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/extras/TableTools/media/js/TableTools.min.js&#10;ZeroClipboard.min.js&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/extras/TableTools/media/js/ZeroClipboard.min.js&#10;script&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/script.js&#10;footer&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/footer.jsp&#10;s&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;applicat&#9;FILE&#9;file://F:/dev/linkbit/src/main/resources/application.properties&#10;pom&#9;FILE&#9;file://F:/dev/linkbit/pom.xml&#10;PRODU&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;comp&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/company/Company.java&#10;contact&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackContactController&#10;NEWS&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackNewsController&#10;kno&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackKnowledgeController&#10;porta&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackPortalController.java&#10;upload&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackFileUploadController.java&#10;scrip&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/script.js&#10;scr&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/script.js&#10;uplo&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackFileUploadController.java&#10;backcontact&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackContactController.java&#10;port&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackPortalController.java&#10;login&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackLoginController.java&#10;foo&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/front/footer.jsp&#10;h&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/head.jsp&#10;cook&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/jQuery-Cookie/jquery.cookie.min.js&#10;html5&#9;null&#9;null&#10;excanvas&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/flot/excanvas.min.js&#10;back&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackContactController.java" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="256" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="263" />
@@ -823,10 +1208,10 @@
       <recent name="com.linkbit.net.front.domain.productType" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\dev\linkbit\src\main\webapp\WEB-INF\jsp\back\knowledge" />
       <recent name="F:\dev\linkbit\src\main\webapp\WEB-INF\jsp\back\productType" />
       <recent name="F:\dev\linkbit\src\main\webapp\WEB-INF\jsp\back\customer" />
       <recent name="F:\dev\linkbit\src\main\webapp\WEB-INF\jsp\back\news" />
-      <recent name="F:\dev\linkbit\src\main\webapp\WEB-INF\jsp\back\knowledge" />
       <recent name="F:\dev\linkbit\src\main\webapp\back\js" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1476,7 +1861,7 @@
       <workItem from="1456194731097" duration="21080000" />
       <workItem from="1456275538337" duration="23625000" />
       <workItem from="1456448657482" duration="3005000" />
-      <workItem from="1456451695515" duration="11591000" />
+      <workItem from="1456451695515" duration="17003000" />
     </task>
     <task id="LOCAL-00001" summary="findall报错 product">
       <created>1452504443422</created>
@@ -1628,11 +2013,17 @@
       <option name="project" value="LOCAL" />
       <updated>1456462635959</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="c">
+      <created>1456465890274</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1456465890274</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="508536000" />
+    <option name="totallyTimeSpent" value="513948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1648,7 +2039,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16044776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17424242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4642857" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.083333336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3365801" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17750533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1730,7 +2121,8 @@
     <MESSAGE value="客户管理完工" />
     <MESSAGE value="新增初始化基础数据功能" />
     <MESSAGE value="产品类别已测试 已修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="产品类别已测试 已修改" />
+    <MESSAGE value="c" />
+    <option name="LAST_COMMIT_MESSAGE" value="c" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1746,63 +2138,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/utils/KnowledgeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/knowledge/Knowledge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="27" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.961538">
-          <caret line="295" column="42" selection-start-line="176" selection-start-column="35" selection-end-line="295" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.26923">
-          <caret line="301" column="74" selection-start-line="301" selection-start-column="74" selection-end-line="301" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/news/detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.653847">
-          <caret line="110" column="53" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackKnowledgeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="0" selection-start-line="76" selection-start-column="4" selection-end-line="92" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/news/NewsRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/news/News.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/news/edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.96153843">
@@ -1822,13 +2157,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3076923">
           <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/news/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.923077">
-          <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -2092,14 +2420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/productType/edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7839806">
@@ -2126,14 +2446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.23077">
-          <caret line="217" column="99" selection-start-line="217" selection-start-column="99" selection-end-line="217" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.6153846">
@@ -2142,21 +2454,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="76" selection-start-line="93" selection-start-column="76" selection-end-line="93" selection-end-column="76" />
+          <folding>
+            <element signature="e#4573#4590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="5" selection-start-line="58" selection-start-column="4" selection-end-line="70" selection-end-column="5" />
+          <caret line="73" column="78" selection-start-line="73" selection-start-column="78" selection-end-line="73" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/utils/SessionUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29095355">
-          <caret line="81" column="111" selection-start-line="81" selection-start-column="111" selection-end-line="81" selection-end-column="111" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/create.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="28" column="97" selection-start-line="28" selection-start-column="97" selection-end-line="28" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.961538">
+          <caret line="290" column="38" selection-start-line="290" selection-start-column="21" selection-end-line="290" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="14.153846">
+          <caret line="356" column="19" selection-start-line="356" selection-start-column="19" selection-end-line="356" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/knowledge/Knowledge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackKnowledgeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="18" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/knowledge.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.807693">
+          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/news/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/front/plugins/product_how/js/smoothproducts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding>
-            <element signature="e#4573#4590#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.547756">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -26,6 +26,10 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
+
+
+                                    <a class="btn btn-default btn-mini navbar-btn">信息列表
+                                    </a>
                                     <button type="button" class="btn btn-default btn-mini navbar-btn"
                                             data-toggle="modal"
                                             data-target="#createModal">新建记录
@@ -33,9 +37,23 @@
                                     <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
                                            class="datatable table table-striped table-bordered table-hover">
                                         <thead>
+
+                                        <%-- private String userName;//用户名
+                                         private String password;//密码
+                                         private String imgUrl; //头像存放路径
+                                         private String gender; //性别
+                                         private String personName;//姓名
+                                         private String email ;//电子邮箱
+                                         private Date birthday;//出生日期--%>
+
+
                                         <tr>
                                             <th class="center">序号</th>
+                                            <th class="center">用户头像</th>
                                             <th class="center">用户名</th>
+                                            <th class="center">姓名</th>
+                                            <th class="center">性别</th>
+                                            <th class="center">出生日期</th>
                                             <th class="center">用户状态</th>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
@@ -45,7 +63,12 @@
                                         <c:forEach items="${userList}" var="user" varStatus="status">
                                             <tr class="gradeX" id="tr${user.id}">
                                                 <td class="center">${status.index+1}</td>
+                                                <td class=" center"><img src="${user.imgUrl}" width="20px" height="20px"
+                                                                         class="img-circle"/></td>
                                                 <td class=" center">${user.userName}</td>
+                                                <td class=" center">${user.personName}</td>
+                                                <td class=" center">${user.gender}</td>
+                                                <td class=" center">${user.birthday}</td>
                                                 <td class=" center"><input type="checkbox" checked="${user.status}">
                                                 </td>
                                                 <td class="center "><a href="#" data-toggle="modal"
@@ -58,7 +81,11 @@
                                         <tfoot>
                                         <tr>
                                             <th class="center">序号</th>
+                                            <th class="center">用户头像</th>
                                             <th class="center">用户名</th>
+                                            <th class="center">姓名</th>
+                                            <th class="center">性别</th>
+                                            <th class="center">出生日期</th>
                                             <th class="center">用户状态</th>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
@@ -92,6 +119,18 @@
                             aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel2">新建用户信息</h4>
                 </div>
+
+
+                <%--private String userName;//用户名
+                private String password;//密码
+                private String imgUrl; //头像存放路径
+                private String gender; //性别
+                private String personName;//姓名
+                private String email ;//电子邮箱
+                private Date birthday;//出生日期
+                private String status;//用户状态--%>
+
+
                 <div class="modal-body">
                     <form id="productCreateForm">
                         <div class="form-group">
@@ -144,7 +183,7 @@
 
             userName: userName,
             status: status
-        }
+        };
         $.ajax({
             type: "POST",
             url: "/back/user/save",
@@ -194,7 +233,7 @@
         var productType = "1";
         var onlineDate = new Date();
         var online = $("#online" + id).val();
-        var product = new Object();
+        var product = {};
         product.productName = productName;
         product.productDesc = productDesc;
         product.productType = productType;
