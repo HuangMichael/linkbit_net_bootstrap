@@ -38,7 +38,7 @@
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">产品类型名称</th>
-                                            <th class="center">状态</th>
+                                            <th class="center">是否启用</th>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
                                         </tr>
@@ -60,15 +60,6 @@
                                             </tr>
                                         </c:forEach>
                                         </tbody>
-                                        <tfoot>
-                                        <tr>
-                                            <th class="center">序号</th>
-                                            <th class="center">产品类型名称</th>
-                                            <th class="center">状态</th>
-                                            <th class="center ">编辑</th>
-                                            <th class="center ">删除</th>
-                                        </tr>
-                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
