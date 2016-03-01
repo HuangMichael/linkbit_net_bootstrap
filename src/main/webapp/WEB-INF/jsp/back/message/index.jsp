@@ -51,7 +51,7 @@
                                             </tr>
                                         </c:forEach>
                                         </tbody>
-                                        <tfoot>
+                                       <%-- <tfoot>
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">留言人</th>
@@ -60,7 +60,7 @@
                                             <th class="center">电话</th>
                                             <th class="center hidden-xs">留言时间</th>
                                         </tr>
-                                        </tfoot>
+                                        </tfoot>--%>
                                     </table>
                                 </div>
                             </div>
