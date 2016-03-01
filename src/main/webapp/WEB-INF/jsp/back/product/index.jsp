@@ -135,7 +135,7 @@
                                         </c:forEach>
                                         </tbody>
                                         <tfoot>
-                                        <tr>
+                                   <%--     <tr>
                                             <th class="center">序号</th>
                                             <th class="center">产品图片</th>
                                             <th class="center">产品名称</th>
@@ -144,7 +144,7 @@
                                             <th class="center hidden-xs">商品描述</th>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
-                                        </tr>
+                                        </tr>--%>
                                         </tfoot>
                                     </table>
                                 </div>
