@@ -75,13 +75,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                  <%--  <input type="hidden" name="companyId" id="companyId" value="${company.id}"/>
+                                                   <input type="hidden" name="userId" id="userId" value="${user.id}"/>
                                                     <input type="hidden" name="fileName" id="fileName"/>
                                                     <label class="col-sm-2 control-label" for="file">上传图片</label>
 
                                                     <div class="col-sm-8">
                                                         <input type="file" class="form-control" name="file" id="file">
-                                                    </div>--%>
+                                                    </div>
                                                     <div class="col-sm-1">
                                                         <input type="submit" value="上传" id="submit" class="form-control btn-primary">
                                                     </div>
