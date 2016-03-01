@@ -13,7 +13,11 @@ import org.springframework.context.annotation.Configuration;
 @EnableAutoConfiguration
 @ComponentScan
 @SpringBootApplication
+
 public class Application {
+
+
+
  public static void main(String[] args) {
      SpringApplication springApplication = new SpringApplication(Application.class);
      springApplication.addListeners(new ApplicationStartup());

@@ -30,10 +30,6 @@
                                             data-toggle="modal"
                                             data-target="#createModal">新建记录
                                     </button>
-
-                                   <%-- <a  class="btn btn-default btn-mini navbar-btn" href="/back/knowledge/create"
-                                    >新建记录
-                                    </a>--%>
                                     <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
                                            class="datatable table table-striped table-bordered table-hover">
                                         <thead>

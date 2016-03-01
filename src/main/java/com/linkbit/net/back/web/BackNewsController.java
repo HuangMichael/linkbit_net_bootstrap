@@ -75,6 +75,15 @@ public class BackNewsController {
 
 
 
+    /**
+     * 保存新闻信息
+     */
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public String save(@ModelAttribute News news) {
+        newsRepository.save(news);
+        return "/back/news/index";
+    }
+
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public String update(@ModelAttribute("news") News news, @RequestParam("objId")Long objId) {
         System.out.println("objId---------------------"+objId);

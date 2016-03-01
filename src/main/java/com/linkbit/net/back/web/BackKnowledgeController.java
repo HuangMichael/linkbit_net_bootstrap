@@ -60,7 +60,7 @@ public class BackKnowledgeController {
 
 
 
-    @RequestMapping("/create")
+    @RequestMapping(value = "/create",method = RequestMethod.GET)
     public ModelAndView create(HttpServletRequest request) {
         ModelAndView mv = new ModelAndView("/back/knowledge/create");
         Knowledge knowledge =  new Knowledge();
@@ -111,9 +111,11 @@ public class BackKnowledgeController {
      * 保存知识信息
      */
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String save(@ModelAttribute  Knowledge knowledge) {
+    @ResponseBody
+    public Knowledge save(@ModelAttribute  Knowledge knowledge) {
+        System.out.println(knowledge.toString());
         knowledgeRepository.save(knowledge);
-        return "/back/knowledge/index";
+        return knowledge;
     }
 
    /* @RequestMapping(value = "/upload", method = RequestMethod.POST)

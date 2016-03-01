@@ -380,7 +380,7 @@
 <script>
     $(function () {
         App.setPage("dynamic_table");  //Set current page
-       // App.setPage("rich_text_editors");
+        App.setPage("rich_text_editors");
         App.init(); //Initialise plugins and elements
     });
 
@@ -398,6 +398,9 @@
             display: $("#display").val(),
             showInMainPage: $("#showInMainPage").val()
         };
+
+
+        console.log(JSON.stringify("news---------------"+news));
 
         $.ajax({
             type: "POST",

@@ -26,12 +26,11 @@
                             <!-- BOX -->
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
-                                <form class="box-body" METHOD="post" ACTION="/back/knowledge/save">
+                                <div class="box-body">
                                     <a type="button" class="btn btn-default btn-mini navbar-btn"
                                        href="/back/knowledge/index">信息列表 </a>
 
-                                    <form id="editForm" class="form-horizontal" role="form"
-                                          action="/back/knowledge/save" method="post">
+                                    <form id="createForm" class="form-horizontal" role="form" action="/back/knowledge/save" method="post">
                                         <div class="form-group">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
@@ -77,9 +76,9 @@
                                                     <label class="col-sm-2 control-label" for="publishTime">发布时间</label>
 
                                                     <div class="col-sm-4">
-                                                        <input class="form-control" id="publishTime" type="date"
-                                                               name="display" value="${knowledge.publishTime}" required
-                                                               readonly/>
+                                                        <input class="form-control" id="publishTime" type="text"
+                                                               name="publishTime" value="2016-03-01" required
+                                                               />
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -249,15 +248,17 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="modal-footer">
+                                                <a class="btn btn-default" href="/back/knowledge/index">关闭</a>
+                                                <button type="submit" id="save${knowledge.id}" name="saveBtn"
+                                                        class="btn btn-primary">保存
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <a class="btn btn-default" href="/back/knowledge/index">关闭</a>
-                                            <button type="submit" id="save${knowledge.id}" name="saveBtn"
-                                                    class="btn btn-primary">保存
-                                            </button>
-                                        </div>
+                                </div>
+                                </form>
 
-                                    </form>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -290,11 +291,9 @@
 <script type="text/javascript">
     $(function () {
         $(":submit").on("click", function () {
-            var content = $("#editor").html();
+            var content=$("#editor").html();
             $("#content_hidden").val("content");
-
-            console.log("--------------------" + $("#editForm").serializeArray());
-            $("#editForm").submit();
+            $("#createForm").submit();
         });
     })
 </script>

@@ -33,21 +33,6 @@
                     <div class="clearfix"></div>
                 </li>
             </c:forEach>
-            <li class="list-inline" style="min-height: 150px">
-                <div class="col-md-3">
-                    <img src="/front/images/qr.png" width="160px" height=160px"
-                         class="img-responsive img-thumbnail" alt=""/>
-                </div>
-                <div class="col-md-9">
-                    <h5><a href="#">移动终端访问</a></h5>
-
-                    <p>
-                        扫二维码使用手机客户端访问
-                    </p>
-
-                </div>
-                <div class="clearfix"></div>
-            </li>
         </ul>
         <div class="holder"></div>
     </div>

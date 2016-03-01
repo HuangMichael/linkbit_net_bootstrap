@@ -29,9 +29,6 @@ import java.util.List;
 @RequestMapping("/back/")
 @SessionAttributes("user")
 public class BackLoginController extends BaseController {
-
-
-
     @Autowired
     MenuRepository menuRepository;
 
@@ -64,7 +61,6 @@ public class BackLoginController extends BaseController {
     @RequestMapping("/logout")
     public String logout(HttpSession session) {
         session.invalidate();
-        System.out.println("用户注销session----------------------");
         return "/back/login/index";
     }
 

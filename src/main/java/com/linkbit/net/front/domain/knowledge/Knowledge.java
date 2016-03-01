@@ -22,7 +22,7 @@ public class Knowledge {
     private String knowledgeDesc;  //摘要
     private String content; //内容
     private String publisher; //发布者
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date publishTime;//发布时间
     private Boolean display;//是否显示
     private Boolean showInMainPage;//  是否主页显示

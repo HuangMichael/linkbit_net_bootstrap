@@ -37,43 +37,56 @@
                                                 <div class="form-group">
                                                     <label class="col-sm-1 control-label" for="ds_host">公司名称</label>
                                                     <div class="col-sm-5">
-                                                        <input class="form-control" id="ds_host" type="text" placeholder="192.168.1.161" value="${company.companyName}" readonly/>
+                                                        <input class="form-control" id="ds_host" type="text"
+                                                               value="${company.companyName}" readonly/>
                                                     </div>
                                                     <label class="col-sm-1 control-label" for="ds_name">公司地址</label>
                                                     <div class="col-sm-5">
-                                                        <input class="form-control" id="ds_name" type="text" placeholder="msh"  value="${company.address}" readonly/>
+                                                        <input class="form-control" id="ds_name" type="text"
+                                                               value="${company.address}" readonly/>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="col-sm-1 control-label" for="longtitude">维度</label>
                                                     <div class="col-sm-5">
-                                                        <input class="form-control" id="longtitude" type="text" placeholder="root" value="${company.longtitude}" readonly/>
+                                                        <input class="form-control" id="longtitude" type="text"
+                                                               value="${company.longtitude}" readonly/>
                                                     </div>
                                                     <label class="col-sm-1 control-label" for="latitude">经度</label>
                                                     <div class="col-sm-5">
-                                                        <input class="form-control" id="latitude" type="text" placeholder="123456" value="${company.latitude}" readonly/>
+                                                        <input class="form-control" id="latitude" type="text"
+                                                               value="${company.latitude}" readonly/>
                                                     </div>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label class="col-sm-1 control-label" for="telephone">电话</label>
                                                     <div class="col-sm-5">
-                                                        <input class="form-control" id="telephone" type="text" placeholder="root" value="${company.telephone}" readonly/>
+                                                        <input class="form-control" id="telephone" type="text"
+                                                               value="${company.telephone}" readonly/>
                                                     </div>
                                                     <label class="col-sm-1 control-label" for="fax">传真</label>
                                                     <div class="col-sm-5">
-                                                        <input class="form-control" id="fax" type="text" placeholder="123456" value="${company.fax}" readonly/>
+                                                        <input class="form-control" id="fax" type="text"
+                                                               value="${company.fax}" readonly/>
                                                     </div>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label class="col-sm-1 control-label" for="buildDate">成立日期</label>
                                                     <div class="col-sm-5">
-                                                        <input class="form-control" id="buildDate" type="date" placeholder="root" value="${company.buildDate}" readonly/>
+                                                        <input class="form-control" id="buildDate" type="date"
+                                                               value="${company.buildDate}" readonly/>
                                                     </div>
                                                     <label class="col-sm-1 control-label" for="status">状态</label>
                                                     <div class="col-sm-5">
-                                                        <input class="form-control" id="status" type="text" placeholder="123456" value="${company.status}" readonly/>
+                                                        <form:select id="status" path="company.status"
+                                                                     cssClass="form-control"
+                                                                     itemValue="${company.status}">
+                                                            <form:option value="1">是</form:option>
+                                                            <form:option value="0">否</form:option>
+                                                        </form:select>
+
                                                     </div>
                                                 </div>
 
@@ -95,13 +108,71 @@
                                                </div>
                                            </div>
                                        </form>
+
+
                                 </div>
+
+                                </div>
+                            </div>
+
+                        <div class="col-md-12">
+                            <!-- BOX -->
+                            <div class="box border blue">
+                                <div class="box-title">
+                                    <h4><i class="fa fa-table"></i>公司属性</h4>
+
+                                    <div class="tools">
+                                        <a href="#box-config" data-toggle="modal" class="config">
+                                            <i class="fa fa-cog"></i>
+                                        </a>
+                                        <a href="javascript:;" class="reload">
+                                            <i class="fa fa-refresh"></i>
+                                        </a>
+                                        <a href="javascript:;" class="collapse">
+                                            <i class="fa fa-chevron-up"></i>
+                                        </a>
+                                        <a href="javascript:;" class="remove">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>属性标题</th>
+                                            <th>属性描述</th>
+                                            <th>图片</th>
+                                            <th>是否显示</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <c:forEach items="${company.companyPropertyList}" var="p" varStatus="status">
+                                            <tr>
+                                                <td>${status.index+1}</td>
+                                                <td>${p.title}</td>
+                                                <td>${p.propertyDesc}</td>
+                                                <td><img src="${p.imgUrl}" width="20px" height="20px"
+                                                         class="img-circle"/></td>
+                                                <td>
+                                                    <c:if test="${p.status}">是</c:if>
+                                                    <c:if test="${!p.status}">否</c:if>
+                                                </td>
+                                            </tr>
+                                        </c:forEach>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <!-- /BOX -->
                         </div>
+                        <!-- /BOX -->
                     </div>
-                    <!-- /EXPORT TABLES -->
+                    </div>
+
+
+                <!-- /EXPORT TABLES -->
                     <div class="footer-tools">
 							<span class="go-top">
 								<i class="fa fa-chevron-up"></i>回到顶部
