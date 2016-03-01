@@ -47,7 +47,8 @@
                                         <c:forEach items="${productTypeList}" var="productType" varStatus="status">
                                             <tr class="gradeX" id="tr${productType.id}">
                                                 <td class="center">${status.index+1}</td>
-                                                <td class="center"><a href="/back/productType/detail/${productType.id}">${productType.typeName}</a>
+                                                <td class="center"><a
+                                                        href="/back/productType/detail/${productType.id}">${productType.typeName}</a>
                                                 </td>
                                                 <td class="center">
                                                     <c:if test="${productType.status==1}">是</c:if>
@@ -95,6 +96,7 @@
                             <input type="text" class="form-control"
                                    id="typeName"
                                    name="productType.typeName" required>
+                            <%--<div id="typeName_msg">产品类型名称已存在</div>--%>
                         </div>
                     </form>
                 </div>
@@ -119,7 +121,6 @@
     $(function () {
         App.setPage("dynamic_table");  //Set current page
         App.init(); //Initialise plugins and elements
-       // $("[name='my-checkbox']").bootstrapSwitch();
     });
 
 
@@ -131,7 +132,6 @@
             typeName: typeName,
             status: status
         };
-        console.log("productType----" + JSON.stringify(productType));
         $.ajax({
             type: "POST",
             url: "/back/productType/save",
@@ -156,56 +156,31 @@
             }
         });
     });
-
-
-
-/*
-    <tr class="gradeX" id="tr${productType.id}">
-            <td class="center">${status.index+1}</td>
-            <td class="center"><a href="/back/productType/detail/${productType.id}">${productType.typeName}</a>
-            </td>
-            <td class="center">
-            <div class="switch">
-
-            <input type="checkbox" name="my-checkbox"
-    checked="${productType.status}"/></div>
-            </td>
-            <td class="center "><a href="/back/productType/edit/${productType.id}">编辑</a>
-            </td>
-            <td class="center "><a id="delBtn${productType.id}">删除</a>
-            </td>
-            </tr>*/
-
-
     //删除操作
 
     $("a[id^=delBtn]").on("click", function () {
         var id = $(this).attr("id").substring(6);
-
-
         if (confirm("确定删除该记录么？")) {
-
-
-        $.ajax({
-            type: "POST",
-            url: "/back/productType/delete/" + id,
-            success: function () {
-                $("#tr" + id).fadeOut("slow");
-                $.bootstrapGrowl("产品类型信息删除成功！", {
-                    type: 'info',
-                    align: 'right',
-                    stackup_spacing: 30
-                });
-            },
-            error: function () {
-                $("#tr" + id).fadeOut("slow");
-                $.bootstrapGrowl("产品类型信息删除失败！", {
-                    type: 'info',
-                    align: 'right',
-                    stackup_spacing: 30
-                });
-            }
-        });
+            $.ajax({
+                type: "POST",
+                url: "/back/productType/delete/" + id,
+                success: function () {
+                    $("#tr" + id).fadeOut("slow");
+                    $.bootstrapGrowl("产品类型信息删除成功！", {
+                        type: 'info',
+                        align: 'right',
+                        stackup_spacing: 30
+                    });
+                },
+                error: function () {
+                    $("#tr" + id).fadeOut("slow");
+                    $.bootstrapGrowl("产品类型信息删除失败！", {
+                        type: 'info',
+                        align: 'right',
+                        stackup_spacing: 30
+                    });
+                }
+            });
         }
 
     });

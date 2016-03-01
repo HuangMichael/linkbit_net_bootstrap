@@ -38,7 +38,11 @@ public class CompanyController extends BaseController {
     public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         modelMap.put("backMenusList", backMenusList);
-        Company company = companyRepository.findAll().get(0);
+        Company company = null;
+        List<Company> companyList =  companyRepository.findAll();
+        if(!companyList.isEmpty()){
+            companyList.get(0);
+        }
         modelMap.put("company", company);
         return "/front/company";
     }

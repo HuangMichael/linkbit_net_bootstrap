@@ -22,6 +22,7 @@ public class ProductType {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(nullable=false,unique=true)
     private String typeName;
     private String status; //(0禁用1启用)
     @OneToMany(mappedBy = "productType", cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
