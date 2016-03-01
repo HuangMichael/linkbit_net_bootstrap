@@ -64,7 +64,7 @@
                                             </tr>
                                         </c:forEach>
                                         </tbody>
-                                        <tfoot>
+                                       <%-- <tfoot>
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">参数描述</th>
@@ -74,7 +74,7 @@
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
                                         </tr>
-                                        </tfoot>
+                                        </tfoot>--%>
                                     </table>
                                 </div>
                             </div>
