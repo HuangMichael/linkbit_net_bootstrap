@@ -3356,7 +3356,7 @@ var App = function () {
                 // (string | mandatory) the text inside the notification
                 text: '欢迎光临江苏凌比特微电子技术有限公司官网！',
                 // (string | optional) the image to display on the left
-                image: 'img/gritter/cloud.png',
+                image: '/front/images/company/logo.png',
                 // (bool | optional) if you want it to fade out on its own or just sit there
                 sticky: true,
                 // (int | optional) the time you want it to be alive for before fading out
