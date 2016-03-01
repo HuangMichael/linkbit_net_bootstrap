@@ -42,6 +42,16 @@
                         </div>
                         <div class="communt">
                             <div class="communt-left">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </div>
+                            <div class="communt-right">
+                                <h4>产品描述</h4>
+                                <p>${product.productDesc}</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="communt">
+                            <div class="communt-left">
                                 <i class="glyphicon glyphicon-th-list"></i>
                             </div>
                             <div class="communt-right">
