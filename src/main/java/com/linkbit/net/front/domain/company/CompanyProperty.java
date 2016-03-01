@@ -1,7 +1,7 @@
 package com.linkbit.net.front.domain.company;
 
 
-
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -25,5 +25,6 @@ public class CompanyProperty {
     private Boolean status;//是否显示
     @ManyToOne(cascade = CascadeType.ALL, optional = false)
     @JoinColumn(name = "company_id", referencedColumnName = "id")//
+    @JsonBackReference("company")
     private Company company;
 }

@@ -4,6 +4,8 @@ import com.linkbit.net.back.domain.HeaderDTO;
 import com.linkbit.net.back.utils.SessionUtil;
 import com.linkbit.net.back.utils.UploadUtil;
 import com.linkbit.net.front.domain.company.Company;
+import com.linkbit.net.front.domain.company.CompanyProperty;
+import com.linkbit.net.front.domain.company.CompanyPropertyRepository;
 import com.linkbit.net.front.domain.company.CompanyRepository;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
@@ -35,6 +37,9 @@ public class BackCompanyController {
     MenuRepository menuRepository;
     @Autowired
     CompanyRepository companyRepository;
+    @Autowired
+
+    CompanyPropertyRepository companyPropertyRepository;
 
     @RequestMapping("/index")
     public String index(ModelMap modelMap ) {
@@ -53,8 +58,10 @@ public class BackCompanyController {
     @RequestMapping("/detail/{id}")
     public ModelAndView detail(@PathVariable("id") Long id, ModelMap modelMap) {
         Company company = companyRepository.findById(id);
-        Map<String, Company> map = new HashMap<String, Company>();
+        Map<String, Object> map = new HashMap<String, Object>();
         map.put("company", company);
+        List<Company> companyList = companyRepository.findAll();
+        map.put("companyList", companyList);
         HeaderDTO headerDTO = new HeaderDTO();
         headerDTO.setSystemName("网站后台管理系统");
         headerDTO.setAppName("公司信息");
@@ -76,5 +83,20 @@ public class BackCompanyController {
         return "forward:/back/company/detail/" + companyId;
 
     }
+
+    @RequestMapping(value = "/saveProperty", method = RequestMethod.POST)
+    @ResponseBody
+    public CompanyProperty saveProperty(@ModelAttribute("companyProperty") CompanyProperty companyProperty, @RequestParam("cid") long cid) {
+        System.out.println("companyProperty----------------------"+companyProperty.toString());
+        System.out.println("cid----------------------"+cid);
+        CompanyProperty obj = companyProperty;
+        obj.setCompany(companyRepository.findById(cid));
+        System.out.println("obj----------------------".toString());
+        companyPropertyRepository.save(obj);
+        return companyProperty;
+    }
+
+
+
 
 }

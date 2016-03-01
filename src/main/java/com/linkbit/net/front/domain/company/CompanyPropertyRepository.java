@@ -19,4 +19,10 @@ public interface CompanyPropertyRepository extends Repository<CompanyProperty,Lo
      * 根据id查询对应的公司 属性信息
      */
     CompanyProperty findById(Long id);
+
+
+    /**
+     * 保存公司属性信息
+     */
+    CompanyProperty  save(CompanyProperty companyProperty);
 }

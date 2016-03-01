@@ -27,6 +27,13 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
+
+                                    <button type="button" class="btn btn-default btn-mini navbar-btn"
+                                            data-toggle="modal"
+                                            data-target="#createModal">新建记录
+                                    </button>
+
+
                                     <form class="form-horizontal" role="form">
                                         <div class="form-group">
 
@@ -101,7 +108,8 @@
                                                <label class="col-sm-1 control-label" for="file">上传图片</label>
 
                                                <div class="col-sm-6">
-                                                  <input type="file" class="form-control" name="file" id="file">
+                                                   <input type="file" class="form-control" name="file" id="file"
+                                                          required>
                                                </div>
                                                <div class="col-sm-1">
                                                    <input type="submit" value="上传" id="submit" class="form-control btn-primary">
@@ -120,11 +128,6 @@
                             <div class="box border blue">
                                 <div class="box-title">
                                     <h4><i class="fa fa-table"></i>公司属性</h4>
-
-                                    <div class="tools">
-                                        <a href="#box-config" data-toggle="modal" class="config">
-                                            <i class="fa fa-cog"></i>
-                                        </a>
                                         <a href="javascript:;" class="reload">
                                             <i class="fa fa-refresh"></i>
                                         </a>
@@ -145,6 +148,7 @@
                                             <th>属性描述</th>
                                             <th>图片</th>
                                             <th>是否显示</th>
+                                            <th>删除</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -159,6 +163,7 @@
                                                     <c:if test="${p.status}">是</c:if>
                                                     <c:if test="${!p.status}">否</c:if>
                                                 </td>
+                                                <td><a name="delBtn" data-pid="${p.id}">删除</a></td>
                                             </tr>
                                         </c:forEach>
                                         </tbody>
@@ -184,6 +189,191 @@
     </div>
 
 </section>
+
+
+<div class="modal fade" id="createModal" tabindex="-1"
+     role="dialog" aria-labelledby="createModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="createModalLabel">新建公司属性信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="title">标题</label>
+                    <input type="text" class="form-control"
+                           id="title"
+                           name="title" value="${companyProperty.title}">
+                </div>
+                <div class="form-group">
+                    <label for="propertyDesc">属性描述</label>
+                    <input type="text" class="form-control"
+                           id="propertyDesc"
+                           name="propertyDesc" value="${companyProperty.propertyDesc}">
+                </div>
+                <div class="form-group">
+                    <label for="content">属性值</label>
+                    <input type="hidden" value="${company.id}" name="cid" id="cid"/>
+
+                    <div id="alerts"></div>
+                    <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+                        <div class="btn-group">
+                            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title=""
+                               data-original-title="Font"><i class="fa fa-font"></i><b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a data-edit="fontName Serif" style="font-family:'Serif'">Serif</a>
+                                </li>
+                                <li><a data-edit="fontName Sans" style="font-family:'Sans'">Sans</a>
+                                </li>
+                                <li><a data-edit="fontName Arial" style="font-family:'Arial'">Arial</a>
+                                </li>
+                                <li><a data-edit="fontName Arial Black"
+                                       style="font-family:'Arial Black'">Arial Black</a></li>
+                                <li><a data-edit="fontName Courier" style="font-family:'Courier'">Courier</a>
+                                </li>
+                                <li><a data-edit="fontName Courier New"
+                                       style="font-family:'Courier New'">Courier New</a></li>
+                                <li><a data-edit="fontName Comic Sans MS"
+                                       style="font-family:'Comic Sans MS'">Comic Sans MS</a></li>
+                                <li><a data-edit="fontName Helvetica" style="font-family:'Helvetica'">Helvetica</a>
+                                </li>
+                                <li><a data-edit="fontName Impact"
+                                       style="font-family:'Impact'">Impact</a></li>
+                                <li><a data-edit="fontName Lucida Grande"
+                                       style="font-family:'Lucida Grande'">Lucida Grande</a></li>
+                                <li><a data-edit="fontName Lucida Sans"
+                                       style="font-family:'Lucida Sans'">Lucida Sans</a></li>
+                                <li><a data-edit="fontName Tahoma"
+                                       style="font-family:'Tahoma'">Tahoma</a></li>
+                                <li><a data-edit="fontName Times" style="font-family:'Times'">Times</a>
+                                </li>
+                                <li><a data-edit="fontName Times New Roman"
+                                       style="font-family:'Times New Roman'">Times New Roman</a></li>
+                                <li><a data-edit="fontName Verdana" style="font-family:'Verdana'">Verdana</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title=""
+                               data-original-title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a data-edit="fontSize 5"><font size="5">Huge</font></a></li>
+                                <li><a data-edit="fontSize 3"><font size="3">Normal</font></a></li>
+                                <li><a data-edit="fontSize 1"><font size="1">Small</font></a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn btn-default" data-edit="bold" title=""
+                               data-original-title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                            <a class="btn btn-default" data-edit="italic" title=""
+                               data-original-title="Italic (Ctrl/Cmd+I)"><i
+                                    class="fa fa-italic"></i></a>
+                            <a class="btn btn-default" data-edit="strikethrough" title=""
+                               data-original-title="Strikethrough"><i
+                                    class="fa fa-strikethrough"></i></a>
+                            <a class="btn btn-default" data-edit="underline" title=""
+                               data-original-title="Underline (Ctrl/Cmd+U)"><i
+                                    class="fa fa-underline"></i></a>
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn btn-default" data-edit="insertunorderedlist" title=""
+                               data-original-title="Bullet list"><i class="fa fa-list-ul"></i></a>
+                            <a class="btn btn-default" data-edit="insertorderedlist" title=""
+                               data-original-title="Number list"><i class="fa fa-list-ol"></i></a>
+                            <a class="btn btn-default" data-edit="outdent" title=""
+                               data-original-title="Reduce indent (Shift+Tab)"><i
+                                    class="fa fa-outdent"></i></a>
+                            <a class="btn btn-default" data-edit="indent" title=""
+                               data-original-title="Indent (Tab)"><i class="fa fa-indent"></i></a>
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn btn-default" data-edit="justifyleft" title=""
+                               data-original-title="Align Left (Ctrl/Cmd+L)"><i
+                                    class="fa fa-align-left"></i></a>
+                            <a class="btn btn-default" data-edit="justifycenter" title=""
+                               data-original-title="Center (Ctrl/Cmd+E)"><i
+                                    class="fa fa-align-center"></i></a>
+                            <a class="btn btn-default" data-edit="justifyright" title=""
+                               data-original-title="Align Right (Ctrl/Cmd+R)"><i
+                                    class="fa fa-align-right"></i></a>
+                            <a class="btn btn-default" data-edit="justifyfull" title=""
+                               data-original-title="Justify (Ctrl/Cmd+J)"><i
+                                    class="fa fa-align-justify"></i></a>
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" title=""
+                               data-original-title="Hyperlink"><i class="fa fa-link"></i></a>
+
+                            <div class="dropdown-menu input-append">
+                                <input class="span2" placeholder="URL" type="text"
+                                       data-edit="createLink">
+                                <button class="btn btn-default" type="button">Add</button>
+                            </div>
+                            <a class="btn btn-default" data-edit="unlink" title=""
+                               data-original-title="Remove Hyperlink"><i class="fa fa-scissors"></i></a>
+
+                        </div>
+
+                        <div class="btn-group">
+                            <a class="btn btn-default" title="" id="pictureBtn"
+                               data-original-title="Insert picture (or just drag &amp; drop)"><i
+                                    class="fa fa-picture-o"></i></a>
+                            <input type="file" data-role="magic-overlay" data-target="#pictureBtn"
+                                   data-edit="insertImage"
+                                   style="opacity: 0; position: absolute; top: 0px; left: 0px; width: 41px; height: 34px;">
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn btn-default" data-edit="undo" title=""
+                               data-original-title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                            <a class="btn btn-default" data-edit="redo" title=""
+                               data-original-title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                        </div>
+                        <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech=""
+                               style="display: none;">
+                    </div>
+                    <div id="editor" contenteditable="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">产品类型</label>
+                    <select class="form-control" id="company" name="companyProperty.company">
+                        <c:forEach items="${companies}" var="company">
+                            <option value="${company.id}">${company.companyName}</option>
+                        </c:forEach>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="status">使用状态</label>
+                    <select class="form-control"
+                            id="status"
+                            name="user.status">
+                        <option value="1" selected>启用</option>
+                        <option value="0">禁用</option>
+                    </select>
+                </div>
+
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+                <button type="button" id="create" name="createBtn"
+                        class="btn btn-primary">保存
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 <!--/PAGE -->
 <!-- JAVASCRIPTS -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -191,6 +381,8 @@
 <script>
     $(function () {
        /* App.setPage("forms");  //Set current page*/
+
+        App.setPage("rich_text_editors");
         App.init(); //Initialise plugins and elements
     });
 </script><!-- /JAVASCRIPTS -->
@@ -221,7 +413,50 @@
                 }
 
 
-    })
+    });
+
+
+    //新建记录
+    $("#create").click(function () {
+        var title = $("#title").val();
+        var propertyDesc = $("#propertyDesc").val();
+        var content = $("#editor").html().trim();
+        var status = $("#status").val();
+        var cid =$("#cid").val();
+        var companyProperty = {
+            title: title,
+            propertyDesc: propertyDesc,
+            content: content,
+            imgUrl:"as",
+            status: status
+
+        }
+        console.log("companyProperty-------------" + JSON.stringify(companyProperty));
+        console.log("cid-------------" + cid);
+        $.ajax({
+            type: "POST",
+            url: "/back/company/saveProperty",
+            data: {"companyProperty": companyProperty},
+            success: function (msg) {
+                $("#createModal").modal('hide');
+                //App.init();
+                $.bootstrapGrowl("公司属性信息添加成功！", {
+                    type: 'info',
+                    align: 'right',
+                    stackup_spacing: 30
+                });
+                $(this).attr("disabled", "disabled");
+
+            },
+            error: function () {
+                $.bootstrapGrowl("公司属性信息添加失败！", {
+                    type: 'danger',
+                    align: 'right',
+                    stackup_spacing: 30
+                });
+            }
+        });
+    });
 </script>
 
 
