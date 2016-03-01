@@ -49,7 +49,7 @@
                                         </c:forEach>
                                         </tbody>
                                         <tfoot>
-                                        <tr>
+                                        <%--<tr>
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">公司名称</th>
@@ -57,7 +57,7 @@
                                             <th class="center">公司地址</th>
                                             <th class="center hidden-xs">电话</th>
                                         </tr>
-                                        </tr>
+                                        </tr>--%>
                                         </tfoot>
                                     </table>
                                 </div>
