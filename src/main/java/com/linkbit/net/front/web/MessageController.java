@@ -18,7 +18,7 @@ import java.util.Date;
 
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/message0")
+@RequestMapping("/front/message0")
 public class MessageController {
     @Autowired
     MessageRepository messageRepository;

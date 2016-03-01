@@ -20,7 +20,7 @@ import java.util.List;
  */
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/knowledge")
+@RequestMapping("/front/knowledge")
 public class KnowledgeController extends BaseController{
 
     @Autowired

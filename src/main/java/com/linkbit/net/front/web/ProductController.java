@@ -23,7 +23,7 @@ import java.util.List;
  */
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/product")
+@RequestMapping("/front/product")
 @SessionAttributes("backMenusList")
 public class ProductController extends BaseController {
     @Autowired

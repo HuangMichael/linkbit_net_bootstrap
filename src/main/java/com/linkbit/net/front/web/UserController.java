@@ -19,7 +19,7 @@ import java.util.List;
  */
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/user")
+@RequestMapping("/front/user")
 public class UserController extends BaseController {
     @Autowired
     UserRepository userRepository;

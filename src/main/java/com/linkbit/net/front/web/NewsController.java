@@ -20,7 +20,7 @@ import java.util.List;
  */
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/news")
+@RequestMapping("/front/news")
 public class NewsController extends BaseController {
 
     @Autowired

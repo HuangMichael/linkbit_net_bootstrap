@@ -17,7 +17,7 @@ import java.util.List;
  */
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/menu")
+@RequestMapping("/front/menu")
 public class MenuController extends BaseController {
     @Autowired
     MenuRepository menuRepository;

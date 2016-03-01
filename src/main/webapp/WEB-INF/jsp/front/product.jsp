@@ -12,7 +12,7 @@
                 <c:forEach items="${productTypeList}" var="type">
                     <ul>
                         <c:forEach items="${type.productList}" var="p">
-                            <li><a href="/product/detail/${p.id}">
+                            <li><a href="/front/product/detail/${p.id}">
                                 <img src="${p.productImgUrl}" alt="${p.productName}" id="${p.id}" title="${p.productName}" class="img-responsive">
                                 <h4>${p.productName}</h4></a></li>
                         </c:forEach>

@@ -29,7 +29,7 @@ import java.util.List;
  */
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/")
+@RequestMapping("/front")
 @SessionAttributes("menusList")
 public class LoginController extends BaseController {
     @Autowired

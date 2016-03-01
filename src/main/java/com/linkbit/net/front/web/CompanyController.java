@@ -20,7 +20,7 @@ import java.util.List;
  */
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/company")
+@RequestMapping("/front/company")
 @SessionAttributes("backMenusList")
 public class CompanyController extends BaseController {
     @Autowired
