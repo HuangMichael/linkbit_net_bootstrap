@@ -146,7 +146,7 @@ public class BackProductController {
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public ModelAndView handleFileUpload(@RequestParam("productId") long newsId, @RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
         String contextPath = SessionUtil.getContextPath(request);
-        String realPath = "/front/images/news/" + fileName;
+        String realPath = "/front/images/product/" + fileName;
         String filePath = contextPath + realPath;
         UploadUtil.uploadFile(file, filePath);
         Product product = productRepository.findById(newsId);
