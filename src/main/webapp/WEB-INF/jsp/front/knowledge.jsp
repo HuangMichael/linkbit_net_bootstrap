@@ -64,7 +64,7 @@
 
         $(".link").on("click", function () {
             var id = $(this).attr("id");
-            var url = "/knowledge/findById";
+            var url = "/front/knowledge/findById";
             $.getJSON(url, {id: id}, function (data) {
                 $("#content" + id).show("fast", function () {
                     $("#content" + id).html(data["content"]);

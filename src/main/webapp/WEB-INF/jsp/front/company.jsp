@@ -16,7 +16,7 @@
     <div class="container">
         <div class="holder"></div>
         <ul id="itemContainer">
-            <c:forEach items="${company.companyPropertyList}" var="companyProperty">
+            <c:forEach items="${companyPropertyList}" var="companyProperty">
                 <li class="list-inline" style="min-height: 150px">
                     <div class="col-md-3">
                         <img src="${companyProperty.imgUrl}" width="160px" height=120px"
@@ -37,10 +37,10 @@
         <div class="holder"></div>
     </div>
 </div>
-<script type="text/javascript" src="/front/plugins/jPages-master/js/highlight.pack.js"></script>
-<script type="text/javascript" src="/front/plugins/jPages-master/js/tabifier.js"></script>
-<script src="/front/plugins/jPages-master/js/js.js"></script>
-<script src="/front/plugins/jPages-master/js/jPages.js"></script>
+<%--<script type="text/javascript" src="/front/plugins/jPages-master/js/highlight.pack.js"></script>
+<script type="text/javascript" src="/front/plugins/jPages-master/js/tabifier.js"></script>--%>
+<%--<script src="/front/plugins/jPages-master/js/js.js"></script>
+<script src="/front/plugins/jPages-master/js/jPages.js"></script>--%>
 
 <!-- footer -->
 <jsp:include page="footer.jsp"/>
@@ -48,9 +48,9 @@
     /* when document is ready */
     $(function () {
 
-        var perPage = 4;
+       /* var perPage = 4;
         var animation = getRandomAnimation();
-        /* initiciate jPages */
+        /!* initiciate jPages *!/
         $("div.holder").jPages({
             containerID: "itemContainer",
             animation: animation,
@@ -58,24 +58,24 @@
         });
 
 
-        /* destroy jPages and initiate plugin again */
+        /!* destroy jPages and initiate plugin again *!/
         $("div.holder").jPages("destroy").jPages({
             containerID: "itemContainer",
             animation: animation,
             perPage: perPage
-        });
+        });*/
 
 
-        $(".link").on("click", function () {
+       /* $(".link").on("click", function () {
             var id = $(this).attr("id");
-            var url = "/knowledge/findById";
+            var url = "/com/findById";
             $.getJSON(url, {id: id}, function (data) {
                 $("#content" + id).show("fast", function () {
                     $("#content" + id).html(data["content"]);
                     $("#" + id).html("收起明细");
                 });
             });
-        });
+        });*/
 
     });
 </script>

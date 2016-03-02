@@ -1,6 +1,7 @@
 package com.linkbit.net.front.web;
 
 import com.linkbit.net.front.domain.company.Company;
+import com.linkbit.net.front.domain.company.CompanyProperty;
 import com.linkbit.net.front.domain.company.CompanyPropertyRepository;
 import com.linkbit.net.front.domain.company.CompanyRepository;
 import com.linkbit.net.front.domain.menu.Menu;
@@ -41,9 +42,12 @@ public class CompanyController extends BaseController {
         Company company = null;
         List<Company> companyList =  companyRepository.findAll();
         if(!companyList.isEmpty()){
-            companyList.get(0);
+            company= companyList.get(0);
+            modelMap.put("company", company);
+            List<CompanyProperty> companyPropertyList = company.getCompanyPropertyList();
+            modelMap.put("companyPropertyList", companyPropertyList);
         }
-        modelMap.put("company", company);
+
         return "/front/company";
     }
 

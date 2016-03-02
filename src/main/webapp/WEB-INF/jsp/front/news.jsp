@@ -35,8 +35,8 @@
 </div>
 <script type="text/javascript" src="/front/plugins/jPages-master/js/highlight.pack.js"></script>
 <script type="text/javascript" src="/front/plugins/jPages-master/js/tabifier.js"></script>
-<script src="/front/plugins/jPages-master/js/js.js"></script>
-<script src="/front/plugins/jPages-master/js/jPages.js"></script>
+<%--<script src="/front/plugins/jPages-master/js/js.js"></script>
+<script src="/front/plugins/jPages-master/js/jPages.js"></script>--%>
 
 <!-- footer -->
 <jsp:include page="footer.jsp"/>
@@ -44,9 +44,9 @@
     /* when document is ready */
     $(function () {
 
-        var perPage = 4;
+       /* var perPage = 4;
         var animation = getRandomAnimation();
-        /* initiciate jPages */
+        /!* initiciate jPages *!/
         $("div.holder").jPages({
             containerID: "itemContainer",
             animation: animation,
@@ -54,17 +54,17 @@
         });
 
 
-        /* destroy jPages and initiate plugin again */
+        /!* destroy jPages and initiate plugin again *!/
         $("div.holder").jPages("destroy").jPages({
             containerID: "itemContainer",
             animation: animation,
             perPage: perPage
-        });
+        });*/
 
 
         $(".link").on("click", function () {
             var id = $(this).attr("id");
-            var url = "/knowledge/findById";
+            var url = "/front/news/findById";
             $.getJSON(url, {id: id}, function (data) {
                 $("#content" + id).show("fast", function () {
                     $("#content" + id).html(data["content"]);
