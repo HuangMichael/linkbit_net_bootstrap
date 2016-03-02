@@ -11,6 +11,7 @@ com\linkbit\net\back\web\BackMenuController.class
 com\linkbit\net\front\domain\company\CompanyProperty.class
 com\linkbit\net\front\web\ProductController.class
 com\linkbit\net\back\web\BackSysConfigController.class
+com\linkbit\net\ServletInitializer.class
 com\linkbit\net\back\domain\PortalNumberDTO.class
 com\linkbit\net\back\listener\StartupCommandRunner.class
 com\linkbit\net\front\web\CompanyController.class
@@ -45,6 +46,7 @@ com\linkbit\net\back\listener\ApplicationStartup.class
 com\linkbit\net\front\domain\news\NewsRepository.class
 com\linkbit\net\back\domain\SysConfigRepository.class
 com\linkbit\net\back\web\BackProductCharactorController.class
+com\linkbit\net\back\listener\LinkbitSessionListener.class
 com\linkbit\net\back\utils\SessionUtil.class
 com\linkbit\net\front\domain\customers\CustomerRepository.class
 com\linkbit\net\front\domain\message\Message.class

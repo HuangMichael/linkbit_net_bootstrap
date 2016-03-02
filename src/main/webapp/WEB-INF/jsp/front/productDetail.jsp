@@ -7,16 +7,20 @@
 <!-- header -->
 <link rel="stylesheet" href="/front/plugins/product_how/css/datouwang.css">
 <div class="about-section">
-    <div class="container" style="min-height: 604px">
-        <div class="col-md-5 thought-left page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
                 <div class="sp-wrap">
                     <a href="${product.productImgUrl}">
                         <img src="${product.productImgUrl}" alt="${product.productName}" class="img-responsive img-thumb img-rounded" />
                     </a>
                 </div>
         </div>
-        <div class="col-md-7 thought-right">
+            <div class="col-md-7">
             <div class="communt">
+                <div class="communt-left">
+                    <div class="col-md-1"></div>
+                </div>
                 <div class="communt-right">
                     <h4>产品名称</h4>
                     <p>${product.productName}</p>
@@ -25,7 +29,7 @@
             </div>
             <div class="communt">
                 <div class="communt-left">
-
+                    <div class="col-md-1"></div>
                 </div>
                 <div class="communt-right">
                     <h4>上市时间</h4>
@@ -35,7 +39,7 @@
             </div>
             <div class="communt">
                 <div class="communt-left">
-
+                    <div class="col-md-1"></div>
                 </div>
                 <div class="communt-right">
                     <h4>产品特点</h4>

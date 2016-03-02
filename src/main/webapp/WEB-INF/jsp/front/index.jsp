@@ -140,9 +140,9 @@
         </div>
         <div class="col-md-6">
             <address>
-                <strong>江苏凌比特微电子技术有限公司</strong><br>
-                <strong>地址:</strong>江苏省南京市浦口区惠达路6号北斗大厦602<br>
-                <abbr title="Phone">电话:</abbr>025-53580278
+                <strong>${company.companyName}</strong><br>
+                <strong>${company.address}</strong><br>
+                <c:if test="${company.telephone!=null}"><abbr title="Phone">电话:</abbr><strong>${company.telephone}</strong></c:if>
             </address>
         </div>
 

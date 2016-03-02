@@ -75,12 +75,18 @@ public class LoginController extends BaseController {
         List<Knowledge> latestKnowledgeList = knowledgeRepository.findByShowInMainPage(true);
         //查询客户信息
         List<Customer> customerList = customerRepository.findByShowInMainPage(true);
+        Company company = null;
+        List<Company> companies = companyRepository.findAll();
+        if (!companies.isEmpty()) {
+            company = companies.get(0);
+        }
         //封装对象 传递到页面
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/front/index");
         modelAndView.addObject("latestProductList", latestProductList);
         modelAndView.addObject("latestKnowledgeList", latestKnowledgeList);
         modelAndView.addObject("customerList", customerList);
+        modelAndView.addObject("company", company);
         return modelAndView;
     }
 

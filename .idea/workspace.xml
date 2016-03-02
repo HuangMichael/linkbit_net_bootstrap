@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b24faae-27e6-4984-b946-aadada685aee" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/linkbit/net/ServletInitializer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/CompanyController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/CompanyController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/KnowledgeController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/KnowledgeController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/MenuController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/MenuController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/MessageController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/MessageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/NewsController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/NewsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/ProductController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackCompanyController.java" afterPath="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackCompanyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/company/CompanyProperty.java" afterPath="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/company/CompanyProperty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/company/CompanyPropertyRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/company/CompanyPropertyRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/company/detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/company/detail.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/productDetail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/productDetail.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <list id="2f985057-9418-4726-b522-fd364c087c1a" name="Rejected commit: Default" comment="product typeName" />
     <ignored path="linkbit.iws" />
@@ -42,97 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="detail.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/company/detail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.73077">
-              <caret line="345" column="53" selection-start-line="345" selection-start-column="44" selection-end-line="345" selection-end-column="53" />
-              <folding>
-                <element signature="n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Company.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/company/Company.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="30" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="30" />
-              <folding>
-                <element signature="e#944#961#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/CompanyController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackCompanyController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackCompanyController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31620112">
-              <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
-              <folding>
-                <element signature="e#2239#2255#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/company/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="14.384615">
-              <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackProductController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BackProductController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-1.115983">
               <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyPropertyRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/company/CompanyPropertyRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyProperty.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/company/CompanyProperty.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="214" column="30" selection-start-line="207" selection-start-column="24" selection-end-line="214" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -169,12 +81,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/message/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/message/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/customers/CustomerRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackCustomerController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/customer/edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/customer/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/company/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/menu/MenuRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/listener/ApplicationStartup.java" />
@@ -187,28 +94,22 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/utils/SessionUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/knowledge.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/news/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackNewsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/knowledge/Knowledge.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackKnowledgeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/create.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/company.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/knowledge/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/listener/HttpSessionListenerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/listener/HttpSessionListener.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackLoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/Application.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/listener/LinkbitSessionListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/listener/MyListener.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/back/js/script.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/CompanyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/KnowledgeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/MenuController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/MessageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/NewsController.java" />
@@ -220,6 +121,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/domain/company/CompanyProperty.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/company/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackCompanyController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/knowledge.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/news.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/company.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/CompanyController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/customer/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/productDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/linkbit/net/ServletInitializer.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -400,236 +312,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -640,7 +322,7 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="company&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/company/Company.java&#10;product&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;backcomp&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackCompanyController&#10;comp&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/CompanyController.java&#10;COMP&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/company/CompanyProperty.java&#10;fil&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/filter/SessionFilter.java&#10;detail&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/company/detail.jsp&#10;log&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/LoginController.java&#10;backuser&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackUserController&#10;user&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/UserController.java&#10;login&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackLoginController.java&#10;appli&#9;FILE&#9;file://F:/dev/linkbit/src/main/resources/application.properties&#10;compan&#9;PSI&#9;JAVA://com.linkbit.net.front.domain.company.CompanyProperty&#10;compa&#9;PSI&#9;JAVA://com.linkbit.net.front.domain.company.Company&#10;sys&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;know&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/knowledge/Knowledge.java&#10;knowledge&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackKnowledgeController.java&#10;news&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackNewsController.java&#10;app&#9;FILE&#9;file://F:/dev/linkbit/src/main/resources/application.properties&#10;sess&#9;PSI&#9;JAVA://com.linkbit.net.back.utils.SessionUtil&#10;pro&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/ProductController.java&#10;backproduc&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;type&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/productType/ProductType.java&#10;Crudreposi&#9;PSI&#9;JAVA://org.springframework.data.repository.CrudRepository&#10;customer&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackCustomerController.java&#10;cus&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackCustomerController&#10;message&#9;PSI&#9;JAVA://com.linkbit.net.front.domain.message.Message&#10;sysconfig&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;foot&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/footer.jsp&#10;head&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/head.jsp&#10;produc&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;PRODUCT&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/product/Product.java&#10;User&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackUserController.java&#10;header&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/header.jsp&#10;dataTables&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js&#10;datatables&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js&#10;TableTools&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/extras/TableTools/media/js/TableTools.min.js&#10;ZeroClipboard.min.js&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/extras/TableTools/media/js/ZeroClipboard.min.js&#10;script&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/script.js&#10;footer&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/footer.jsp&#10;s&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;applicat&#9;FILE&#9;file://F:/dev/linkbit/src/main/resources/application.properties&#10;pom&#9;FILE&#9;file://F:/dev/linkbit/pom.xml&#10;PRODU&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;contact&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackContactController&#10;NEWS&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackNewsController&#10;kno&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackKnowledgeController&#10;porta&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackPortalController.java&#10;upload&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackFileUploadController.java&#10;scrip&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/script.js" />
+    <property name="SearchEverywhereHistoryKey" value="app&#9;FILE&#9;file://F:/dev/linkbit/src/main/resources/application.properties&#10;login&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/LoginController.java&#10;com&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/CompanyController.java&#10;company&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/company/Company.java&#10;product&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;backcomp&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackCompanyController&#10;comp&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/CompanyController.java&#10;COMP&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/company/CompanyProperty.java&#10;fil&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/filter/SessionFilter.java&#10;detail&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/company/detail.jsp&#10;log&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/LoginController.java&#10;backuser&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackUserController&#10;user&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/UserController.java&#10;appli&#9;FILE&#9;file://F:/dev/linkbit/src/main/resources/application.properties&#10;compan&#9;PSI&#9;JAVA://com.linkbit.net.front.domain.company.CompanyProperty&#10;compa&#9;PSI&#9;JAVA://com.linkbit.net.front.domain.company.Company&#10;sys&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;know&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/knowledge/Knowledge.java&#10;knowledge&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackKnowledgeController.java&#10;news&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackNewsController.java&#10;sess&#9;PSI&#9;JAVA://com.linkbit.net.back.utils.SessionUtil&#10;pro&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/web/ProductController.java&#10;backproduc&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;type&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/productType/ProductType.java&#10;Crudreposi&#9;PSI&#9;JAVA://org.springframework.data.repository.CrudRepository&#10;customer&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackCustomerController.java&#10;cus&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackCustomerController&#10;message&#9;PSI&#9;JAVA://com.linkbit.net.front.domain.message.Message&#10;sysconfig&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;foot&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/footer.jsp&#10;head&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/head.jsp&#10;produc&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;PRODUCT&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/front/domain/product/Product.java&#10;User&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackUserController.java&#10;header&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/header.jsp&#10;dataTables&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js&#10;datatables&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/media/js/jquery.dataTables.min.js&#10;TableTools&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/extras/TableTools/media/js/TableTools.min.js&#10;ZeroClipboard.min.js&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/datatables/extras/TableTools/media/js/ZeroClipboard.min.js&#10;script&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/back/js/script.js&#10;footer&#9;FILE&#9;file://F:/dev/linkbit/src/main/webapp/WEB-INF/jsp/back/common/footer.jsp&#10;s&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackSysConfigController.java&#10;applicat&#9;FILE&#9;file://F:/dev/linkbit/src/main/resources/application.properties&#10;pom&#9;FILE&#9;file://F:/dev/linkbit/pom.xml&#10;PRODU&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackProductController.java&#10;contact&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackContactController&#10;NEWS&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackNewsController&#10;kno&#9;PSI&#9;JAVA://com.linkbit.net.back.web.BackKnowledgeController&#10;porta&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackPortalController.java&#10;upload&#9;FILE&#9;file://F:/dev/linkbit/src/main/java/com/linkbit/net/back/web/BackFileUploadController.java" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="256" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="263" />
@@ -660,6 +342,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/ROOT-0.1.war" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1324,6 +1007,8 @@
       <workItem from="1456798476630" duration="3457000" />
       <workItem from="1456802927370" duration="3381000" />
       <workItem from="1456807943442" duration="14724000" />
+      <workItem from="1456881474480" duration="10331000" />
+      <workItem from="1456901744123" duration="6990000" />
     </task>
     <task id="LOCAL-00001" summary="findall报错 product">
       <created>1452504443422</created>
@@ -1499,33 +1184,38 @@
       <option name="project" value="LOCAL" />
       <updated>1456815479329</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="修改页面显示细节部分">
+      <created>1456883855170</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1456883855170</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="539872000" />
+    <option name="totallyTimeSpent" value="557193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5465368" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16044776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45021644" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5465368" sideWeight="0.4978678" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16044776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17424242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5443723" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56926405" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2034632" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27813852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30916846" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30916846" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49242425" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1537,6 +1227,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49242425" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1605,7 +1296,8 @@
     <MESSAGE value="添加过滤器 添加监听器" />
     <MESSAGE value="加入登录过滤器 经过测试" />
     <MESSAGE value="加入登录过滤器 排除前台" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入登录过滤器 排除前台" />
+    <MESSAGE value="修改页面显示细节部分" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改页面显示细节部分" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1621,55 +1313,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2352941">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6153846">
-          <caret line="29" column="120" selection-start-line="29" selection-start-column="120" selection-end-line="29" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/utils/SessionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/knowledge.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3096297">
-          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/front/plugins/product_how/js/smoothproducts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36376604">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackNewsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39800286">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/sysconfig/detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1691,7 +1338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1699,7 +1345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="76" column="70" selection-start-line="76" selection-start-column="70" selection-end-line="76" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1707,7 +1352,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5769231">
           <caret line="274" column="35" selection-start-line="274" selection-start-column="35" selection-end-line="274" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1715,23 +1359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/company.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1743,19 +1370,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/listener/LinkbitSessionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1763,13 +1381,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#580#581#0" expanded="false" />
-            <element signature="e#639#640#0" expanded="false" />
-            <element signature="e#854#855#0" expanded="false" />
-            <element signature="e#914#915#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1777,7 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="28" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1785,7 +1395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1793,13 +1402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0083333">
           <caret line="3393" column="79" selection-start-line="3393" selection-start-column="79" selection-end-line="3393" selection-end-column="79" />
-          <folding>
-            <marker date="1456813341229" expanded="true" signature="30666:30703" placeholder="..." />
-            <marker date="1456813341229" expanded="true" signature="69772:69804" placeholder="..." />
-            <marker date="1456813341229" expanded="true" signature="144434:144447" placeholder="..." />
-            <marker date="1456813341229" expanded="true" signature="144659:144671" placeholder="..." />
-            <marker date="1456813341229" expanded="true" signature="144721:144734" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1807,7 +1409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1815,7 +1416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1823,7 +1423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1831,7 +1430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1839,7 +1437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21303259">
           <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1847,15 +1444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1863,7 +1451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1871,17 +1458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/productDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1101036">
-          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1889,7 +1465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4183938">
           <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1897,7 +1472,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46867168">
           <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1905,7 +1479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1913,15 +1486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/customer/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="31" column="45" selection-start-line="28" selection-start-column="36" selection-end-line="31" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1929,7 +1493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.538462">
           <caret line="119" column="10" selection-start-line="95" selection-start-column="3" selection-end-line="119" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1937,7 +1500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6153846">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="30" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1945,7 +1507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1953,7 +1514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-115.11539">
           <caret line="406" column="28" selection-start-line="406" selection-start-column="24" selection-end-line="406" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1961,17 +1521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.0">
           <caret line="326" column="61" selection-start-line="326" selection-start-column="7" selection-end-line="326" selection-end-column="61" />
-          <folding>
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/CompanyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1979,7 +1528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1987,15 +1535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2003,7 +1542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="214" column="30" selection-start-line="207" selection-start-column="24" selection-end-line="214" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2011,37 +1549,143 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="30" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="30" />
-          <folding>
-            <element signature="e#944#961#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/company/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.384615">
+        <state vertical-scroll-proportion="0.0">
           <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/company/detail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.73077">
+        <state vertical-scroll-proportion="0.0">
           <caret line="345" column="53" selection-start-line="345" selection-start-column="44" selection-end-line="345" selection-end-column="53" />
-          <folding>
-            <element signature="n#div#1;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/knowledge.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5668073">
+          <caret line="66" column="24" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/message.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.57383966">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/news.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.90154713">
+          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackCompanyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31620112">
+        <state vertical-scroll-proportion="0.39484397">
           <caret line="61" column="36" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/company.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28691983">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/customer/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36146274">
+          <caret line="151" column="10" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/product/detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47819972">
+          <caret line="101" column="10" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/productDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8129395">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/CompanyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7842605">
+          <caret line="47" column="69" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/front/web/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
-            <element signature="e#2239#2255#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1959#1960#0" expanded="false" />
+            <element signature="e#1989#1990#0" expanded="false" />
+            <element signature="e#3164#3165#0" expanded="false" />
+            <element signature="e#3201#3202#0" expanded="false" />
+            <element signature="e#3267#3268#0" expanded="false" />
+            <element signature="e#3307#3308#0" expanded="false" />
+            <element signature="e#3702#3703#0" expanded="false" />
+            <element signature="e#3740#3741#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/ServletInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3606789">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34948605">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16831683">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/linkbit/net/back/web/BackProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.115983">
+          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
