@@ -67,7 +67,7 @@
             var url = "/front/news/findById";
             $.getJSON(url, {id: id}, function (data) {
                 $("#content" + id).show("fast", function () {
-                    $("#content" + id).html(data["content"]);
+                    $("#content" + id).html(data["newsContent"]);
                     $("#" + id).html("收起明细");
                 });
             });

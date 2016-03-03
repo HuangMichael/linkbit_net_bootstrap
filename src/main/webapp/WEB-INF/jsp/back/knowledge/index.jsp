@@ -56,28 +56,20 @@
 
                                                 <td class=" center hidden-xs"><fmt:formatDate
                                                         value="${knowledge.publishTime}" pattern="yyyy-MM-dd"/></td>
-                                                <td class=" center hidden-xs"><input type="checkbox" checked="${knowledge.display==true}"></td>
-                                                <td class=" center hidden-xs"><input type="checkbox" checked="${knowledge.showInMainPage==true}"></td>
+                                                <td class=" center hidden-xs">
+                                                    <c:if test="${knowledge.display==1}">是</c:if>
+                                                    <c:if test="${knowledge.display!=1}">否</c:if>
+                                                </td>
+                                                <td class=" center hidden-xs">
+                                                    <c:if test="${knowledge.showInMainPage==1}">是</c:if>
+                                                    <c:if test="${knowledge.showInMainPage!=1}">否</c:if>
+                                                </td>
                                                 <td class="center "><a href="/back/knowledge/edit/${knowledge.id}">编辑</a></td>
                                                 <td class="center "><a id="delBtn${knowledge.id}">删除</a>
                                                 </td>
                                             </tr>
-
                                         </c:forEach>
                                         </tbody>
-                                        <tfoot>
-                                        <tr>
-                                            <th class="center">序号</th>
-                                            <th class="center">文章名称</th>
-                                            <th class="center hidden-xs">关键字</th>
-                                            <th class="center">发布者</th>
-                                            <th class="center hidden-xs">发布时间</th>
-                                            <th class="center hidden-xs">是否显示</th>
-                                            <th class="center hidden-xs">主页显示</th>
-                                            <th class="center ">编辑</th>
-                                            <th class="center ">删除</th>
-                                        </tr>
-                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
@@ -137,17 +129,21 @@
                             >
                         </div>
                         <div class="form-group">
-                            <label>
-                                <input type="checkbox" id="display"
-                                       name="display"
-                                > 是否显示
-                            </label>
+                            <label for="display">是否启用</label>
+                            <select class="form-control" name="display" id="display" required>
+                                <option value="">请选择</option>
+                                <option value="1">是</option>
+                                <option value="0">否</option>
+                            </select>
                         </div>
+
                         <div class="form-group">
-                            <label>
-                                <input type="checkbox" id="showInMainPage"
-                                       name="showInMainPage"> 主页显示
-                            </label>
+                            <label for="showInMainPage">主页显示</label>
+                            <select class="form-control" name="showInMainPage" id="showInMainPage" required>
+                                <option value="">请选择</option>
+                                <option value="1">是</option>
+                                <option value="0">否</option>
+                            </select>
                         </div>
 
                         <div class="form-group">
@@ -336,8 +332,8 @@
             publisher: $("#publisher").val(),
             content: $("#editor").html(),
             publishTime: new Date(),
-            display: $("#display").attr("checked"),
-            showInMainPage: $("#showInMainPage").attr("checked"),
+            display: $("#display").val(),
+            showInMainPage: $("#showInMainPage").val()
         };
         $.ajax({
             type: "post",
