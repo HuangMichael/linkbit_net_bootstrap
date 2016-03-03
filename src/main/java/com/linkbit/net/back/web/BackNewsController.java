@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -80,6 +81,7 @@ public class BackNewsController {
      */
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(@ModelAttribute News news) {
+        news.setPublishTime(new Date());
         newsRepository.save(news);
         return "/back/news/index";
     }

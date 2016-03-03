@@ -54,95 +54,21 @@
                                                 <td class=" center hidden-xs"><fmt:formatDate
                                                         value="${news.publishTime}" pattern="yyyy-MM-dd"/></td>
                                                     <%-- <td class=" center hidden-xs">${news.display}</td>--%>
-                                                <td class=" center hidden-xs"><input type="checkbox" checked="${news.status}"></td>
+                                                <td class=" center hidden-xs">
+
+
+                                                    <c:if test="${news.status==1}">是</c:if>
+                                                    <c:if test="${news.status!=1}">否</c:if>
+
+
+                                                </td>
                                                 <td class="center "><a href="/back/news/edit/${news.id}">编辑</a></td>
                                                 <td class="center "><a  id="delBtn${news.id}">删除</a>
                                                 </td>
                                             </tr>
-                                            <%-- <div class="modal fade" id="myModal${news.id}" tabindex="-1"
-                                                  role="dialog" aria-labelledby="myModalLabel">
-                                                 <div class="modal-dialog" role="document">
-                                                     <div class="modal-content">
-                                                         <div class="modal-header">
-                                                             <button type="button" class="close" data-dismiss="modal"
-                                                                     aria-label="Close"><span
-                                                                     aria-hidden="true">&times;</span></button>
-                                                             <h4 class="modal-title" id="myModalLabel">产品信息明细</h4>
-                                                         </div>
-                                                         <div class="modal-body">
-                                                             <form id="newsForm${news.id}">
-                                                                 <div class="form-group">
-                                                                     <label for="newsName${news.id}">产品名称</label>
-                                                                     <input type="text" class="form-control"
-                                                                            id="newsName${news.id}"
-                                                                            name="news.newsName"
-                                                                            value="${news.newsName}">
-                                                                 </div>
-                                                                 <div class="form-group">
-                                                                     <label for="newsType${news.id}">产品类型</label>
-                                                                     <select class="form-control"
-                                                                             id="newsType${news.id}"
-                                                                             name="news.newsType">
-                                                                         <option value="1">PDA</option>
-                                                                         <option value="2">手机</option>
-                                                                         <option value="3">导航仪</option>
-                                                                         <option value="4">指挥机</option>
-                                                                         <option value="5">手表</option>
-                                                                     </select>
-                                                                 </div>
-                                                                 <div class="form-group">
-                                                                     <label for="newsDesc${news.id}">产品描述</label>
-                                                                     <input type="text" class="form-control"
-                                                                            id="newsDesc${news.id}"
-                                                                            name="news.newsDesc"
-                                                                            value="${news.newsDesc}">
-                                                                 </div>
-                                                                 <div class="form-group">
-                                                                     <label for="onLineDate${news.id}">上线日期</label>
-                                                                     <input type="date" class="form-control"
-                                                                            id="onLineDate${news.id}"
-                                                                            name="news.onLineDate"
-                                                                            value="${news.onLineDate}">
-                                                                 </div>
-                                                                 <div class="form-group">
-                                                                     <label for="exampleInputFile">产品图片</label>
-                                                                     <input type="file" id="exampleInputFile">
 
-                                                                     <p class="help-block">上传一张产品图片吧</p>
-                                                                 </div>
-                                                                 <div class="checkbox">
-                                                                     <label>
-                                                                         <input type="checkbox" id="online${news.id}"
-                                                                                name="news.online"
-                                                                                value="${news.online}"> 是否显示
-                                                                     </label>
-                                                                 </div>
-                                                             </form>
-                                                         </div>
-                                                         <div class="modal-footer">
-                                                             <button type="button" class="btn btn-default"
-                                                                     data-dismiss="modal">关闭
-                                                             </button>
-                                                             <button type="submit" id="save${news.id}" name="saveBtn"
-                                                                     class="btn btn-primary">保存
-                                                             </button>
-                                                         </div>
-                                                     </div>
-                                                 </div>
-                                             </div>--%>
                                         </c:forEach>
                                         </tbody>
-                                        <tfoot>
-                                        <tr>
-                                            <th class="center">序号</th>
-                                            <th class="center">新闻标题</th>
-                                            <th class="center">新闻描述</th>
-                                            <th class="center hidden-xs">发布时间</th>
-                                            <th class="center hidden-xs">是否显示</th>
-                                            <th class="center ">编辑</th>
-                                            <th class="center ">删除</th>
-                                        </tr>
-                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
@@ -175,36 +101,40 @@
                  <div class="modal-body">
                      <form id="newsCreateForm">
                          <div class="form-group">
-                             <label for="title">新闻标题</label>
+                             <label for="newsTitle">新闻标题</label>
                              <input type="text" class="form-control"
-                                    id="title"
-                                    name="title">
+                                    id="newsTitle"
+                                    name="newsTitle" required>
                          </div>
                          <div class="form-group">
                              <label for="keywords">关键字</label>
                              <input type="text" class="form-control"
                                     id="keywords"
-                                    name="keywords">
+                                    name="keywords" required>
                          </div>
                          <div class="form-group">
                              <label for="newsDesc">摘要</label>
                              <input type="text" class="form-control"
                                     id="newsDesc"
-                                    name="newsDesc"
+                                    name="newsDesc" required
                              >
                          </div>
                          <div class="form-group">
-                             <label>
-                                 <input type="checkbox" id="display"
-                                        name="display"
-                                 > 是否显示
-                             </label>
+                             <label for="status">是否启用</label>
+                             <select class="form-control" name="status" id="status" required>
+                                 <option value="">请选择</option>
+                                 <option value="1">是</option>
+                                 <option value="0">否</option>
+                             </select>
                          </div>
+
                          <div class="form-group">
-                             <label>
-                                 <input type="checkbox" id="showInMainPage"
-                                        name="showInMainPage"> 主页显示
-                             </label>
+                             <label for="showInMainPage">主页显示</label>
+                             <select class="form-control" name="showInMainPage" id="showInMainPage" required>
+                                 <option value="">请选择</option>
+                                 <option value="1">是</option>
+                                 <option value="0">否</option>
+                             </select>
                          </div>
 
                          <div class="form-group">
@@ -389,25 +319,21 @@
     //新建记录
     $("#create").on("click", function () {
         var news = {
-            title: $("#title").val(),
+            newsTitle: $("#newsTitle").val(),
             keywords: $("#keywords").val(),
             newsDesc: $("#newsDesc").val(),
-            publisher: $("#publisher").val(),
-            content: $("#editor").html(),
-            display: $("#display").val(),
+            //publisher: $("#publisher").val(),
+            newsContent: $("#editor").html(),
+            status: $("#status").val(),
             showInMainPage: $("#showInMainPage").val()
         };
-
-
-        console.log("news---------------"+JSON.stringify(news.toString));
-
         $.ajax({
             type: "POST",
             url: "/back/news/save",
             data: news,
             success: function (msg) {
                 $("#createModal").modal('hide');
-                addRow(news);
+              //  addRow(news);
                 $.bootstrapGrowl("新闻信息添加成功！", {
                     type: 'info',
                     align: 'right',
@@ -428,7 +354,7 @@
     ;
 
 
-    var addRow = function (news) {
+    /*var addRow = function (news) {
         var dateString = news.onLineDate.Format('yyyy-MM-dd');
         var html = '<tr class="gradeX">';
         html += '<td class="center">1</td>';
@@ -440,7 +366,7 @@
         html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
         html += '</tr>';
         $("#tbody").prepend(html);
-    };
+    };*/
 
 
     //删除操作

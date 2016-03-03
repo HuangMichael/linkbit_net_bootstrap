@@ -30,5 +30,5 @@ public  class News {
     @Temporal(TemporalType.DATE)
     private Date publishTime;
     private String keywords;
-    private Boolean status;
+    private String status;
 }
