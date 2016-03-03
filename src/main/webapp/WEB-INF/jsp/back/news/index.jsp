@@ -175,7 +175,7 @@
                  <div class="modal-body">
                      <form id="newsCreateForm">
                          <div class="form-group">
-                             <label for="title">文章名称</label>
+                             <label for="title">新闻标题</label>
                              <input type="text" class="form-control"
                                     id="title"
                                     name="title">
@@ -394,13 +394,12 @@
             newsDesc: $("#newsDesc").val(),
             publisher: $("#publisher").val(),
             content: $("#editor").html(),
-            publishTime: new Date(),
             display: $("#display").val(),
             showInMainPage: $("#showInMainPage").val()
         };
 
 
-        console.log(JSON.stringify("news---------------"+news));
+        console.log("news---------------"+JSON.stringify(news.toString));
 
         $.ajax({
             type: "POST",
@@ -442,46 +441,6 @@
         html += '</tr>';
         $("#tbody").prepend(html);
     };
-
-
-    /*  //更新操作
-     $(":submit").click(function () {
-     var id = $(this).attr("id").substring(4);
-     var newsName = $("#newsName" + id).val();
-     var newsDesc = $("#newsDesc" + id).val();
-     var newsType = "1";
-     var onlineDate = new Date();
-     var online = $("#online" + id).val();
-
-
-     var news = new Object();
-     news.newsName = newsName;
-     news.newsDesc = newsDesc;
-     news.newsType = newsType;
-     news.onlineDate = onlineDate;
-     news.online = online;
-     $.ajax({
-     type: "POST",
-     url: "/back/news/save",
-     data: news,
-     success: function (msg) {
-     $("#createModal" + id).modal('hide');
-     $.bootstrapGrowl("新闻信息保存成功！", {
-     type: 'info',
-     align: 'right',
-     stackup_spacing: 30
-     });
-
-     },
-     error: function () {
-     $.bootstrapGrowl("新闻信息保存失败！", {
-     type: 'danger',
-     align: 'right',
-     stackup_spacing: 30
-     });
-     }
-     });
-     });*/
 
 
     //删除操作

@@ -136,9 +136,9 @@
 <!-- our-ne -->
 <div class="our-ne">
     <div class="container">
-        <div class="col-md-6"><img src="images/company/contact.png" height="80px" width="120px" class="img-circle img-thumbnail img-responsive">
+        <div class="col-md-2"><img src="/front/images/company/contact.jpg" height="40px" width="40px" class="img-thumbnail img-responsive">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-10">
             <address>
                 <strong>${company.companyName}</strong><br>
                 <strong>${company.address}</strong><br>

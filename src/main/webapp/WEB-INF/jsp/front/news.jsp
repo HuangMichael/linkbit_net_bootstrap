@@ -4,8 +4,8 @@
 <body>
 <!-- header -->
 <jsp:include page="header.jsp"/>
-<link rel="stylesheet" href="/front/plugins/jPages-master/css/jPages.css">
-<link rel="stylesheet" href="/front/plugins/jPages-master/css/animate.css">
+<%--<link rel="stylesheet" href="/front/plugins/jPages-master/css/jPages.css">
+<link rel="stylesheet" href="/front/plugins/jPages-master/css/animate.css">--%>
 <%--<link rel="stylesheet" href="/front/plugins/jPages-master/css/style.css">
 
 <link rel="stylesheet" href="/front/plugins/jPages-master/css/github.css">
@@ -33,8 +33,8 @@
         </ul>
     </div>
 </div>
-<script type="text/javascript" src="/front/plugins/jPages-master/js/highlight.pack.js"></script>
-<script type="text/javascript" src="/front/plugins/jPages-master/js/tabifier.js"></script>
+<%--<script type="text/javascript" src="/front/plugins/jPages-master/js/highlight.pack.js"></script>
+<script type="text/javascript" src="/front/plugins/jPages-master/js/tabifier.js"></script>--%>
 <%--<script src="/front/plugins/jPages-master/js/js.js"></script>
 <script src="/front/plugins/jPages-master/js/jPages.js"></script>--%>
 
