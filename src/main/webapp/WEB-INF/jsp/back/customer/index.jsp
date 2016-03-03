@@ -120,17 +120,16 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="fax">传真</label>
+                            <label for="fax">是否启用</label>
                             <select class="form-control" name="status" id="status" required>
                                 <option value="">请选择</option>
                                 <option value="1">是</option>
                                 <option value="0">否</option>
-
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="fax">传真</label>
+                            <label for="fax">主页显示</label>
                             <select class="form-control" name="showInMainPage" id="showInMainPage" required>
                                 <option value="">请选择</option>
                                 <option value="1">是</option>
