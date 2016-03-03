@@ -20,10 +20,11 @@ public class Knowledge {
     private String title; //文章名称
     private String keywords;  //关键字
     private String knowledgeDesc;  //摘要
+    @Column(columnDefinition = "LONGTEXT")
     private String content; //内容
     private String publisher; //发布者
     @Temporal(TemporalType.TIMESTAMP)
     private Date publishTime;//发布时间
-    private Boolean display;//是否显示
-    private Boolean showInMainPage;//  是否主页显示
+    private String display;//是否显示
+    private String showInMainPage;//  是否主页显示
 }

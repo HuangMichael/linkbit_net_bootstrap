@@ -26,6 +26,7 @@ public  class News {
     private String newsTitle;
     private String newsDesc;
     private @Getter @Setter String imgUrl;
+    @Column(columnDefinition = "LONGTEXT")
     private String newsContent;
     @Temporal(TemporalType.DATE)
     private Date publishTime;
