@@ -50,7 +50,7 @@
                             </div>
                             <div class="clearfix"> </div>
                         </div>
-                        <div class="communt">
+                       <%-- <div class="communt">
                             <div class="communt-left">
                                 <i class="glyphicon glyphicon-th-list"></i>
                             </div>
@@ -63,7 +63,7 @@
                                 </p>
                             </div>
                             <div class="clearfix"> </div>
-                        </div>
+                        </div>--%>
 
                     </div>
                     <div class="clearfix"> </div>

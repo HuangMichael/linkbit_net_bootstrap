@@ -27,7 +27,8 @@ public class Product {
     private Long sortNo;//排序
     @Temporal(TemporalType.DATE)
     private Date onLineDate;//产品上线日期
-    private boolean online;//产品是否上线
+    @Column(columnDefinition = "Boolean")
+    private Boolean online;//产品是否上线
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonBackReference("productCharactorSet")
     private List<ProductCharactor> productCharactorSet = new ArrayList<ProductCharactor>(); //产品属性集合

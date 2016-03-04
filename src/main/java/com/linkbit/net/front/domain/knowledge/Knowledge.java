@@ -25,6 +25,6 @@ public class Knowledge {
     private String publisher; //发布者
     @Temporal(TemporalType.TIMESTAMP)
     private Date publishTime;//发布时间
-    private String display;//是否显示
-    private String showInMainPage;//  是否主页显示
+    private Boolean display;//是否显示
+    private Boolean showInMainPage;//  是否主页显示
 }
