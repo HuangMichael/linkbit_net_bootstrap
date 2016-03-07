@@ -32,7 +32,7 @@
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">公司名称</th>
-                                            <th class="center">logo地址</th>
+                                            <th class="center">logo</th>
                                             <th class="center">公司地址</th>
                                             <th class="center">电话</th>
                                         </tr>
@@ -42,23 +42,12 @@
                                             <tr class="gradeX" id="tr${company.id}">
                                                 <td class="center">${status.index+1}</td>
                                                 <td class="center"><a href="/back/company/detail/${company.id}">${company.companyName}</a></td>
-                                                <td class="center">${company.logoPath}</td>
+                                                <td class="center"><img src="${company.logoPath}" width="40px" height="40px" class="img-responsive img-rounded"></td>
                                                 <td class="center">${company.address}</td>
                                                 <td class="center">${company.telephone}</td>
                                             </tr>
                                         </c:forEach>
                                         </tbody>
-                                        <tfoot>
-                                        <%--<tr>
-                                        <tr>
-                                            <th class="center">序号</th>
-                                            <th class="center">公司名称</th>
-                                            <th class="center hidden-xs">logo地址</th>
-                                            <th class="center">公司地址</th>
-                                            <th class="center hidden-xs">电话</th>
-                                        </tr>
-                                        </tr>--%>
-                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
