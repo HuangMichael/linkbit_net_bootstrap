@@ -357,7 +357,9 @@ span{
 }
 .footer{
 	background:#575859;
-	padding:5em 0;
+	padding:2em 0;
+
+	/*将原有的5em修改为2em*/
 }
 .footer p{
 	color:#6f6f6f;
