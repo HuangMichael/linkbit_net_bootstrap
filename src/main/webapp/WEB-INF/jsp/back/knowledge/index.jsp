@@ -57,12 +57,12 @@
                                                 <td class=" center hidden-xs"><fmt:formatDate
                                                         value="${knowledge.publishTime}" pattern="yyyy-MM-dd"/></td>
                                                 <td class=" center hidden-xs">
-                                                    <c:if test="${knowledge.display==1}">是</c:if>
-                                                    <c:if test="${knowledge.display!=1}">否</c:if>
+                                                    <c:if test="${knowledge.display}">是</c:if>
+                                                    <c:if test="${!knowledge.display}">否</c:if>
                                                 </td>
                                                 <td class=" center hidden-xs">
-                                                    <c:if test="${knowledge.showInMainPage==1}">是</c:if>
-                                                    <c:if test="${knowledge.showInMainPage!=1}">否</c:if>
+                                                    <c:if test="${knowledge.showInMainPage}">是</c:if>
+                                                    <c:if test="${!knowledge.showInMainPage}">否</c:if>
                                                 </td>
                                                 <td class="center "><a href="/back/knowledge/edit/${knowledge.id}">编辑</a></td>
                                                 <td class="center "><a id="delBtn${knowledge.id}">删除</a>
