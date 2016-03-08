@@ -7,10 +7,12 @@ import com.linkbit.net.front.domain.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  * Created by huangbin on 2016/1/20 0018.
@@ -28,9 +30,13 @@ public class BackProductCharactorController {
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     @ResponseBody
-    public String save(ProductCharactor productCharactor) {
-        Product product = productRepository.findById(1);
+    public String save(@RequestParam("charactorName")String charactorName ,@RequestParam("charactorDesc")String charactorDesc,  @RequestParam("pid") Long pid) {
+        Product product = productRepository.findById(pid);
+        ProductCharactor  productCharactor =  new ProductCharactor();
+        productCharactor.setCharactorDesc(charactorDesc);
+        productCharactor.setCharactorName(charactorName);
         productCharactor.setProduct(product);
+        productCharactor.setStatus(true);
         productCharactorRepository.save(productCharactor);
         return "redirect:/back/product/index";
     }
