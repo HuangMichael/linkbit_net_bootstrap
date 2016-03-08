@@ -1,6 +1,9 @@
 package com.linkbit.net.front.domain.message;
 
+import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -12,6 +15,8 @@ import java.util.Date;
 @Entity
 @Table(name = "T_MESSAGE")
 @Data
+@Setter
+@Getter
 public class Message {
 
     @Id

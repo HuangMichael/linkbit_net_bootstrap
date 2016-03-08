@@ -18,15 +18,15 @@ import java.util.Date;
 
 @Controller
 @EnableAutoConfiguration
-@RequestMapping("/front/message0")
+@RequestMapping("/front/message")
 public class MessageController {
     @Autowired
     MessageRepository messageRepository;
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     @ResponseBody
     public Message save(@ModelAttribute Message message) {
-        message.setStatus("0");
-        message.setMessageTime(new Date());
+
+        System.out.print("message-------------------"+message);
         return  messageRepository.save(message);
     }
 

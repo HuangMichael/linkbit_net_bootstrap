@@ -16,14 +16,6 @@ public interface ProductCharactorRepository extends CrudRepository<ProductCharac
      * 保存产品属性信息
      */
     ProductCharactor save(ProductCharactor productCharactor);
-
-
-    /**
-     * 删除产品属性 信息
-     */
-    void delete(Long id);
-
-
     /**
      * 删除产品属性 信息
      */

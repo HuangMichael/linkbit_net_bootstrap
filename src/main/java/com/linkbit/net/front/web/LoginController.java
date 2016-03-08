@@ -52,6 +52,7 @@ public class LoginController extends BaseController {
 
     @Autowired
     MenuRepository menuRepository;
+
     @RequestMapping("/")
     public String login(ModelMap modelMap) {
         //查询导航主菜单
@@ -64,32 +65,32 @@ public class LoginController extends BaseController {
     public String logout() {
         return "index";
     }
+
     @RequestMapping("/index")
     public ModelAndView index(ModelMap modelMap) {
 
-       List<Menu> menusList = menuRepository.findByMenuType("0");
+        List<Menu> menusList = menuRepository.findByMenuType("0");
         modelMap.put("menusList", menusList);
         // 查询最新产品
         List<Product> latestProductList = productRepository.findByOnline(true);
         //查询最新知识库信息
-     List<Knowledge> latestKnowledgeList = knowledgeRepository.findByShowInMainPage(true);
+        List<Knowledge> latestKnowledgeList = knowledgeRepository.findByShowInMainPage(true);
         //查询客户信息
-        /*    List<Customer> customerList = customerRepository.findByShowInMainPage(true);
+        List<Customer> customerList = customerRepository.findByShowInMainPage(true);
         Company company = null;
         List<Company> companies = companyRepository.findAll();
         if (!companies.isEmpty()) {
             company = companies.get(0);
-        }*/
+        }
         //封装对象 传递到页面
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/front/index");
         modelAndView.addObject("latestProductList", latestProductList);
         modelAndView.addObject("latestKnowledgeList", latestKnowledgeList);
-       /* modelAndView.addObject("customerList", customerList);
-        modelAndView.addObject("company", company);*/
+        modelAndView.addObject("customerList", customerList);
+        modelAndView.addObject("company", company);
         return modelAndView;
     }
-
 
 
     @RequestMapping("/about")
@@ -111,6 +112,7 @@ public class LoginController extends BaseController {
         modelAndView.addObject("company", company);
         return modelAndView;
     }
+
     @RequestMapping("/showDetail")
     public String showDetail() {
         return "/front/detail";

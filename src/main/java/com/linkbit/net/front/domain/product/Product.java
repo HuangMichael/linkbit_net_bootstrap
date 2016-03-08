@@ -2,7 +2,8 @@ package com.linkbit.net.front.domain.product;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.linkbit.net.front.domain.productType.ProductType;
-import lombok.Data;
+import lombok.*;
+import lombok.extern.log4j.Log4j;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -16,6 +17,11 @@ import java.util.List;
 @Entity
 @Table(name = "T_PRODUCT")
 @Data
+@Log4j
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
