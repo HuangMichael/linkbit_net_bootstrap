@@ -38,7 +38,7 @@
                 <div class="col-md-4 col-md-offset-4">
                     <div id="logo">
                         <a href="index.html"><img src="/back/img/logo/logo.png" height="40" alt="logo name"/></a>
-                      <%--  <h1>江苏凌比特微电子技术有限公司</h1>--%>
+                        <%--  <h1>江苏凌比特微电子技术有限公司</h1>--%>
                     </div>
 
                 </div>
@@ -168,43 +168,31 @@
 <!-- JAVASCRIPTS -->
 <!-- Placed at the end of the document so the pages load faster -->
 <!-- JQUERY -->
-<script src="/back/js/jquery/jquery-2.0.3.min.js"></script>
+<script src="js/jquery/jquery-2.0.3.min.js"></script>
 <!-- JQUERY UI-->
-<script src="/back/js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
 <!-- BOOTSTRAP -->
-<script src="/back/bootstrap-dist/js/bootstrap.min.js"></script>
+<script src="bootstrap-dist/js/bootstrap.min.js"></script>
 
 
 <!-- UNIFORM -->
-<script type="text/javascript" src="/back/js/uniform/jquery.uniform.min.js"></script>
+<script type="text/javascript" src="js/uniform/jquery.uniform.min.js"></script>
 <!-- BACKSTRETCH -->
-<script type="text/javascript" src="/back/js/backstretch/jquery.backstretch.min.js"></script>
-<script type="text/javascript" src="/back/js/jQuery-Cookie/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="js/backstretch/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="js/jQuery-Cookie/jquery.cookie.min.js"></script>
 <!-- CUSTOM SCRIPT -->
-<script src="/back/js/script.js"></script>
+<script src="js/script.js"></script>
 <script>
-    jQuery(document).ready(function () {
+    $(document).ready(function () {
         App.setPage("login_bg");  //Set current page
         App.init(); //Initialise plugins and elements
     });
 
-/*
-    $("#login_btn").on("click",function () {
-        var userName = $("#userName").val();
-        var password = $("#password").val();
-        var user = {
-            userName: userName,
-            password: password
-        };
-        var url = "/back/login";
-        $.post(url, {user: user});
-
-    })*/
 </script>
 <script type="text/javascript">
     function swapScreen(id) {
-        jQuery('.visible').removeClass('visible animated fadeInUp');
-        jQuery('#' + id).addClass('visible animated fadeInUp');
+        $('.visible').removeClass('visible animated fadeInUp');
+        $('#' + id).addClass('visible animated fadeInUp');
     }
 </script>
 <!-- /JAVASCRIPTS -->
