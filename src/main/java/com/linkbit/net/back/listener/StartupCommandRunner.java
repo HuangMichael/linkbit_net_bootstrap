@@ -56,7 +56,7 @@ public class StartupCommandRunner implements CommandLineRunner {
         List<Menu> frontMenuList = menuRepository.findByMenuType("0");
         if (frontMenuList.isEmpty()) {
             for (int i = 0; i < menuNameArray.length; i++) {
-                menuRepository.save(new Menu(i + 1, menuNameArray[i], menuDescArray[i], "", "/front/" + menuNameArray[i] + "/", frontMenuType, i + 1));
+                menuRepository.save(new Menu(i + 1, menuNameArray[i], menuDescArray[i], "", "/front/" + menuNameArray[i] + "/", frontMenuType, i + 1,"1"));
             }
         }
         //初始化数据信息添加后台菜单信息
@@ -79,7 +79,7 @@ public class StartupCommandRunner implements CommandLineRunner {
         String backMenuType = "1";
         if (backMenuList.isEmpty()) {
             for (int i = 0; i < backMenuNameArray.length; i++) {
-                menuRepository.save(new Menu(i + menuNameArray.length + 1, backMenuNameArray[i], backMenuDescArray[i], backMenuClassArray[i], "/back/" + backMenuNameArray[i] + "/index", backMenuType, i + 1));
+                menuRepository.save(new Menu(i + menuNameArray.length + 1, backMenuNameArray[i], backMenuDescArray[i], backMenuClassArray[i], "/back/" + backMenuNameArray[i] + "/index", backMenuType, i + 1,"1"));
             }
 
 

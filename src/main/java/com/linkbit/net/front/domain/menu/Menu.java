@@ -1,7 +1,7 @@
 package com.linkbit.net.front.domain.menu;
 
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -10,31 +10,22 @@ import javax.persistence.*;
  * 菜单
  */
 @Entity
-@Table(name="T_MENU")
+@Table(name = "T_MENU")
 @Data
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Menu {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String menuName;
     private String menuDesc;
     private String iconClass;
     private String url;
     private String menuType;
-
     private long sortNo;
-
-
-    public Menu() {
-
-    }
-    public Menu(long id, String menuName, String menuDesc, String iconClass, String url, String menuType, long sortNo) {
-        this.id = id;
-        this.menuName = menuName;
-        this.menuDesc = menuDesc;
-        this.iconClass = iconClass;
-        this.url = url;
-        this.menuType = menuType;
-        this.sortNo = sortNo;
-    }
+    private String status;
 }
+

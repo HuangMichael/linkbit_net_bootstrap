@@ -71,14 +71,7 @@ public class SessionFilter implements javax.servlet.Filter {
             String returnUrl = httpRequest.getContextPath() + "/back/logout";
             httpRequest.setCharacterEncoding("UTF-8");
             httpResponse.setContentType("text/html; charset=UTF-8"); // 转码
-            httpResponse
-                    .getWriter()
-                    .println(
-                            "<script language=\"javascript\">alert(\"您还没有登录，请先登录!\");if(window.opener==null){window.top.location.href=\""
-                                    + returnUrl
-                                    + "\";}else{window.opener.top.location.href=\""
-                                    + returnUrl
-                                    + "\";window.close();}</script>");
+            httpResponse.sendRedirect(returnUrl);
             return;
         }
 

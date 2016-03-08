@@ -20,10 +20,9 @@ public interface MenuRepository extends CrudRepository<Menu, Long> {
     List<Menu> findByMenuType(String menuType);
 
     /**
-     * 批量保存菜单信息
+     * 根据id查询
      */
-    //List<Menu> save(List<Menu> menuList);
-
+    Menu findById(long id);
 
 
 }
