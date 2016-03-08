@@ -9,54 +9,46 @@
 <div class="about-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <div class="sp-wrap">
                     <a href="${product.productImgUrl}">
-                        <img src="${product.productImgUrl}" alt="${product.productName}" class="img-responsive img-thumb img-rounded" />
+                        <img src="${product.productImgUrl}" alt="${product.productName}"
+                             class="img-responsive img-thumb img-rounded"/>
                     </a>
                 </div>
-        </div>
-            <div class="col-md-7">
-            <div class="communt">
-                <div class="communt-left">
-                    <div class="col-md-1"></div>
-                </div>
-                <div class="communt-right">
-                    <h4>产品名称</h4>
-                    <p>${product.productName}</p>
-                </div>
-                <div class="clearfix"></div>
             </div>
-            <div class="communt">
-                <div class="communt-left">
-                    <div class="col-md-1"></div>
-                </div>
-                <div class="communt-right">
-                    <h4>上市时间</h4>
-                    <p>${product.onLineDate}</p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="communt">
-                <div class="communt-left">
-                    <div class="col-md-1"></div>
-                </div>
-                <div class="communt-right">
-                    <h4>产品特点</h4>
+            <div class="col-md-6">
+                <c:forEach items="${product.productCharactorSet}" var="productchar">
+                    <div class="communt">
+                            <%-- <div class="communt-left">
+                                 <i class="glyphicon glyphicon-home"></i>
+                             </div>--%>
+                        <div class="communt">
+                            <h4>${productchar.charactorName}:${productchar.charactorDesc}</h4>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </c:forEach>
+                <%-- <div class="communt">
+                     <div class="communt-left">
+                         <div class="col-md-1"></div>
+                     </div>
+                     <div class="communt-right">
+                         <h4>产品特点</h4>
 
-                    <p>
-                        <c:forEach items="${product.productCharactorSet}" var="productchar">
-                            ${productchar.charactorDesc}  <br>
-                        </c:forEach>
+                         <p>
 
-                    </p>
-                </div>
-                <div class="clearfix"></div>
+
+                         </p>
+                     </div>
+                     <div class="clearfix"></div>
+                 </div>--%>
             </div>
+            <div class="clearfix"></div>
         </div>
-        <div class="clearfix"></div>
     </div>
 </div>
+<div style="padding-bottom: 10px"></div>
 <jsp:include page="footer.jsp"/>
 <script type="text/javascript" src="/front/plugins/product_how/js/smoothproducts.js"></script>
 <!-- footer -->

@@ -13,26 +13,28 @@
                      class="img-responsive img-thumbnail img-rounded message_bg">
             </div>
             <div class="col-md-6">
-                <form id="messageForm" action="/message0/save" action="post">
+                <form id="messageForm">
                     <div class="register-top-grid">
                         <h3>您的联系方式</h3>
+
                         <div class="col-md-6"><span>姓名<label>*</label></span>
-                            <input type="text" id="userName" name="message.userName" required></div>
+                            <input type="text" id="userName" name="userName" required></div>
                         <div class="col-md-6"><span>电话<label>*</label></span>
-                            <input type="text" id="telephone" name="message.telephone" required></div>
+                            <input type="text" id="telephone" name="telephone" required></div>
                         <div class="col-md-6"><span>工作单位<label>*</label></span>
-                            <input type="text" id="workplace" name="message.workplace"></div>
+                            <input type="text" id="workplace" name="workplace"></div>
                         <div class="col-md-6"><span>电子邮箱<label>*</label></span>
-                            <input type="text" id="email" name="message.email"></div>
+                            <input type="text" id="email" name="email"></div>
                         <div class="col-md-6"><span>留言<label>*</label></span>
-                            <textarea id="content" name="msg" cols="45" rows="5" required></textarea></div>
+                            <textarea id="content" name="content" cols="45" rows="5" required></textarea></div>
                         <div class="clearfix"></div>
                     </div>
-                <div class="clearfix"></div>
-                <div class="register-but">
-                    <input type="button" id="send" value="发送给我们">
+                    <div class="clearfix"></div>
+                    <div class="register-but">
+                        <input type="submit" id="send" value="发送给我们">
+
                         <div class="clearfix"></div>
-                </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -48,20 +50,21 @@
 <script type="text/javascript">
     $(function () {
         $("#send").on("click", function () {
-            var url = "/message0/save";
-            var message = {};
-            message.userName = $("#userName").val();
-            message.telephone = $("#telephone").val();
-            message.worksplace = $("#worksplace").val();
-            message.email = $("#email").val();
-            message.content = $("#content").val();
-            $.post(url,{ data: message},
-                 function (data) {
-                    $("#send").val("保存成功");
-                    $("#send").attr("disabled", "disabled")
+            var url = "/front/message/save";
+            var message = {
+                userName: $("#userName").val(),
+                telephone: $("#telephone").val(),
+                worksplace: $("#worksplace").val(),
+                email: $("#email").val(),
+                content: $("#content").val()
+            };
+            console.log("message------------------------" + JSON.stringify(message));
+            $.post(url, message,
+                    function (data) {
+                        $("#send").val("保存成功");
+                        $("#send").attr("disabled", "disabled")
 
-            });
-
+                    });
         })
     });
 </script>

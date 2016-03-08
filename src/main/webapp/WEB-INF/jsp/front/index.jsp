@@ -96,7 +96,7 @@
                     <c:forEach items="${latestKnowledgeList}" var="lk" varStatus="status">
                     <li>
                         <div class="tittle">
-                            <h4><a href="/knowledge/detail/${lk.id}">${lk.title}</a></h4>
+                            <h4><a href="/front/knowledge/detail/${lk.id}">${lk.title}</a></h4>
                             <p>${lk.keywords}</p>
                         </div>
                     </li>
@@ -136,9 +136,9 @@
 <!-- our-ne -->
 <div class="our-ne">
     <div class="container">
-        <div class="col-md-2"><img src="/front/images/company/contact.jpg" height="40px" width="40px" class="img-thumbnail img-responsive">
+        <div class="col-md-4"><img src="/front/images/company/contact.jpg" height="80px" width="80px" class="img-thumbnail img-responsive">
         </div>
-        <div class="col-md-10">
+        <div class="col-md-8">
             <address>
                 <strong>${company.companyName}</strong><br>
                 <strong>${company.address}</strong><br>

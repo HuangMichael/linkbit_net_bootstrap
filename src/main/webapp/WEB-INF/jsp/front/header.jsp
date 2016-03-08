@@ -1,8 +1,22 @@
 <%@page contentType="text/html" %>
 <%@page pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+
+
+<style type="text/css">
+    #top {
+        position:fixed;
+        left:0px;
+        top:0;
+        _position:absolute;
+        _top:expression(document.documentElement.clientHeight + document.documentElement.scrollTop - this.offsetHeight);
+        background: #575859;
+        width:100%;
+    }</style>
+
+
 <!-- header -->
-<div class="header">
+<div class="header" >
     <div class="container">
         <div class="logo">
             <img src="images/company/logo.png" width="110px" height="55px" class="img-responsive" alt=""/>
