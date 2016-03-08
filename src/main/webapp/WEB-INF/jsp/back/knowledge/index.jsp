@@ -37,8 +37,6 @@
                                             <th class="center">序号</th>
                                             <th class="center">文章名称</th>
                                             <th class="center">关键字</th>
-                                            <th class="center">发布者</th>
-                                            <th class="center hidden-xs">发布时间</th>
                                             <th class="center hidden-xs">是否显示</th>
                                             <th class="center hidden-xs">主页显示</th>
                                             <th class="center ">编辑</th>
@@ -52,10 +50,6 @@
                                                 <td class="center"><a href="/back/knowledge/detail/${knowledge.id}">${knowledge.title}</a>
                                                 </td>
                                                 <td class=" center">${knowledge.keywords}</td>
-                                                <td class=" center">${knowledge.publisher}</td>
-
-                                                <td class=" center hidden-xs"><fmt:formatDate
-                                                        value="${knowledge.publishTime}" pattern="yyyy-MM-dd"/></td>
                                                 <td class=" center hidden-xs">
                                                     <c:if test="${knowledge.display}">是</c:if>
                                                     <c:if test="${!knowledge.display}">否</c:if>

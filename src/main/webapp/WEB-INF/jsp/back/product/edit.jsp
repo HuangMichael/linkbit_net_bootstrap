@@ -27,26 +27,31 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
-                                    <form class="form-horizontal" role="form" method="post" action="/back/product/update">
+                                    <form class="form-horizontal" role="form" method="post" id="form"
+                                          action="/back/product/update">
                                         <div class="form-group">
 
                                             <div class="col-sm-2">
                                                 <img src="${product.productImgUrl}" width="200px"/>
                                             </div>
+
+                                            <input type="hidden" id="objId" name="objId" value="${product.id}"/>
+
                                             <div class="col-sm-10">
                                                 <div class="form-group">
-                                                    <label class="col-sm-1 control-label" for="ds_host">产品名称</label>
+                                                    <label class="col-sm-1 control-label" for="productName">产品名称</label>
 
                                                     <div class="col-sm-5">
-                                                        <input class="form-control" id="ds_host" type="text"
-                                                               placeholder="192.168.1.161"
+                                                        <input class="form-control" id="productName" type="text"
+                                                               name="productName"
                                                                value="${product.productName}"/>
                                                     </div>
-                                                    <label class="col-sm-1 control-label" for="ds_name">产品描述</label>
+                                                    <label class="col-sm-1 control-label" for="productDesc">产品描述</label>
 
                                                     <div class="col-sm-5">
-                                                        <input class="form-control" id="ds_name" type="text"
-                                                               placeholder="msh" value="${product.productDesc}"
+                                                        <input class="form-control" id="productDesc" type="text"
+                                                               value="${product.productDesc}"
+                                                               name="productDesc"
                                                         />
                                                     </div>
                                                 </div>
@@ -56,14 +61,15 @@
 
                                                     <div class="col-sm-5">
                                                         <input class="form-control" id="productImgUrl" type="text"
-                                                               placeholder="root" value="${product.productImgUrl}"
+                                                               value="${product.productImgUrl}"
+                                                               name="productImgUrl"
                                                         />
                                                     </div>
                                                     <label class="col-sm-1 control-label" for="onLineDate">上线日期</label>
 
                                                     <div class="col-sm-5">
                                                         <input class="form-control" id="onLineDate" type="date"
-                                                               placeholder="123456" value="${product.onLineDate}"
+                                                               value="${product.onLineDate}"
                                                         />
                                                     </div>
                                                 </div>
@@ -73,15 +79,18 @@
                                                            class="col-sm-1 control-label">主页显示</label>
 
                                                     <div class="col-sm-5">
-                                                        <select id="showInMainPage" class="form-control">
-                                                            <option>是</option>
-                                                            <option>否</option>
-                                                        </select>
+                                                        <form:select id="showInMainPage" path="product.showInMainPage"
+                                                                     cssClass="form-control"
+                                                                     itemValue="${product.showInMainPage}">
+                                                            <form:option value="1">是</form:option>
+                                                            <form:option value="0">否</form:option>
+                                                        </form:select>
                                                     </div>
                                                     <label for="sortNo" class="col-sm-1 control-label">排列顺序</label>
 
                                                     <div class="col-sm-5">
                                                         <input class="form-control" id="sortNo" type="number"
+                                                               name="sortNo"
                                                                value="${product.sortNo}"/>
                                                     </div>
                                                 </div>
@@ -93,17 +102,21 @@
                                                            class="col-sm-1 control-label">是否上线</label>
 
                                                     <div class="col-sm-5">
-                                                        <select id="online" class="form-control">
-                                                            <option>是</option>
-                                                            <option>否</option>
-                                                        </select>
+
+                                                        <form:select id="online" path="product.online"
+                                                                     cssClass="form-control"
+                                                                     itemValue="${product.online}">
+                                                            <form:option value="1">是</form:option>
+                                                            <form:option value="0">否</form:option>
+                                                        </form:select>
                                                     </div>
 
                                                     <label for="showInMainPage"
                                                            class="col-sm-1 control-label">产品类型</label>
 
                                                     <div class="col-sm-5">
-                                                        <select class="form-control" id="productType" name="product.productType">
+                                                        <select class="form-control" id="productType"
+                                                                name="product.productType">
                                                             <c:forEach items="${productTypeList}" var="productType">
                                                                 <option value="${productType.id}">${productType.typeName}</option>
                                                             </c:forEach>
@@ -114,7 +127,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <a class="btn btn-default" href="/back/product/index">关闭</a>
-                                            <button type="submit" id="save${product.id}" name="saveBtn"
+                                            <button type="button" id="save${product.id}" name="saveBtn"
                                                     class="btn btn-primary">保存
                                             </button>
                                         </div>
@@ -151,8 +164,6 @@
 
 <script type="text/javascript">
     $(function () {
-
-
         /**
          * 提交上传文件
          * */
@@ -175,6 +186,37 @@
             var pos = o.lastIndexOf("\\");
             return o.substring(pos + 1);
         }
+
+        $(":button").on("click", function () {
+            var productName = $("#productName").val();
+            var productDesc = $("#productDesc").val();
+            var productImgUrl = $("#productImgUrl").val();
+            var onLineDate = $("#onLineDate").val();
+            var online = $("#online").val();
+            var productType = $("#productType").val();
+            var showInMainPage = $("#showInMainPage").val();
+            var sortNo = $("#sortNo").val();
+            var objId = $("#objId").val();
+
+
+            var product = {
+                productName: productName,
+                productDesc: productDesc,
+                productImgUrl: productImgUrl,
+                productType: productType,
+                showInMainPage: showInMainPage,
+                onLineDate: onLineDate,
+                online: online,
+                sortNo: sortNo
+
+            }
+            console.log("product---" + JSON.stringify(product));
+            var url = "/back/product/update";
+            $.post(url, {"product": product, "objId": objId}, function (data) {
+
+
+            })
+        });
 
     })
 </script>

@@ -79,7 +79,8 @@ public class BackProductController {
 
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public ModelAndView update(@ModelAttribute("product")  Product product ,@RequestParam("objId")Long objId) {
+    public ModelAndView update(@PathVariable Product product ,@RequestParam("objId")Long objId) {
+        System.out.println("product---------------"+product.toString());
         if (objId != null) {
             Product oldObj = productRepository.findById(objId);
             oldObj.setProductImgUrl(product.getProductImgUrl());

@@ -43,20 +43,6 @@
                         </div>
                     </div>
                     <!-- /PAGE HEADER -->
-<%--
-                    //所有产品信息数量
-                    private long allProductsCount;
-                    //所有新闻信息数量
-                    private long allNewsCount;
-                    //所有知识信息数量
-                    private long allKnowlegeCount;
-                    //所有客户信息数量
-                    private long allCustomersCount;
-                    //所有留言信息数量
-                    private long allMessageCount;--%>
-
-
-                    <!-- DASHBOARD CONTENT -->
                     <div class="row">
                         <!-- COLUMN 1 -->
                         <div class="col-md-6">

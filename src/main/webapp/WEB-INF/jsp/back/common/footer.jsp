@@ -45,7 +45,7 @@
 <!-- CKEDITOR -->
 <script type="text/javascript" src="js/ckeditor/ckeditor.js"></script>
 <!-- COOKIE -->
-<script type="text/javascript" src="js/jQuery-Cookie/jquery.cookie.min.js"></script>
+<%--<script type="text/javascript" src="js/jQuery-Cookie/jquery.cookie.min.js"></script>--%>
 <!-- CUSTOM SCRIPT -->
-<script src="js/script.js"></script>
+<%--<script src="js/script.js"></script>--%>
 <script src="js/terebentina-sco.js/js/sco.confirm.js"></script>
