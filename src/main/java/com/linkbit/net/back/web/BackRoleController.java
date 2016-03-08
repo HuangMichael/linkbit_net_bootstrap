@@ -98,4 +98,18 @@ public class BackRoleController {
 
     }
 
+    /**
+     * 编辑产品类别信息
+     * */
+    @RequestMapping(value = "/detail/{id}", method = RequestMethod.GET)
+    public ModelAndView detail(@PathVariable("id") Long id, ModelMap modelMap) {
+        Role  role = roleRepository.findById(id);
+        Map<String, Role> map = new HashMap<String, Role>();
+        map.put("role", role);
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "角色明细信息");
+        modelMap.put("headerDTO", headerDTO);
+        ModelAndView mv = new ModelAndView("/back/role/detail", map);
+        return mv;
+    }
+
 }

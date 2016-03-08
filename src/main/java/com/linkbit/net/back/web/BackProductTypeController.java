@@ -95,4 +95,18 @@ public class BackProductTypeController {
 
     }
 
+    /**
+     * 编辑产品类别信息
+     * */
+    @RequestMapping(value = "/detail/{id}", method = RequestMethod.GET)
+    public ModelAndView detail(@PathVariable("id") Long id, ModelMap modelMap) {
+        ProductType productType = productTypeRepository.findById(id);
+        Map<String, ProductType> map = new HashMap<String, ProductType>();
+        map.put("productType", productType);
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑产品类别信息");
+        modelMap.put("headerDTO", headerDTO);
+        ModelAndView mv = new ModelAndView("/back/productType/detail", map);
+        return mv;
+    }
+
 }
