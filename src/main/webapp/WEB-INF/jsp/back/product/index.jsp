@@ -41,7 +41,7 @@
                                             <th class="center">产品名称</th>
                                             <th class="center hidden-xs">产品类型</th>
                                             <th class="center">上市时间</th>
-                                            <th class="center hidden-xs">商品描述</th>
+                                           <%-- <th class="center hidden-xs">商品描述</th>--%>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
                                         </tr>
@@ -56,7 +56,7 @@
                                                 <td class=" center hidden-xs">${product.productType.typeName}</td>
                                                 <td class="center hidden-xs"><fmt:formatDate
                                                         value="${product.onLineDate}" pattern="yyyy-MM-dd"/></td>
-                                                <td class="center">${product.productDesc}</td>
+                                               <%-- <td class="center">${product.productDesc}</td>--%>
                                                 <td class="center "><a href="/back/product/edit/${product.id}">编辑</a></td>
                                                 <td class="center "><a id="delBtn${product.id}">删除</a>
                                                 </td>
@@ -175,22 +175,6 @@
                     <h4 class="modal-title" id="myModalLabel2">新建产品信息</h4>
                 </div>
                 <div class="modal-body">
-
-                   <%-- private long id;
-
-                    private String productDesc; //产品描述
-                    private String productImgUrl; //产品图片路径
-                    private Boolean showInMainPage;//产品是否显示在首页
-                    private Long sortNo;//排序
-                    @Temporal(TemporalType.DATE)
-                    private Date onLineDate;//产品上线日期
-                    private boolean online;//产品是否上线
-                    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-                    @JsonBackReference("productCharactorSet")
-                    private List<ProductCharactor> productCharactorSet = new ArrayList<ProductCharactor>(); //产品属性集合
-                    @ManyToOne(cascade = CascadeType.ALL, optional = true, fetch = FetchType.LAZY)
-                    @JoinColumn(name = "product_type_id", referencedColumnName = "id")
-                    private ProductType productType; //产品类型--%>
                     <form id="productCreateForm">
                         <div class="form-group">
                             <label for="productName">产品名称</label>
