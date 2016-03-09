@@ -41,6 +41,14 @@ public class BackMenuController {
 
     }
 
+    @RequestMapping("/findFrontMenus")
+    @ResponseBody
+    public List<Menu> findFrontMenus() {
+        List<Menu> menusList = menuRepository.findByMenuType("0");
+        return menusList;
+
+    }
+
 
     @RequestMapping("/index")
     public String index(ModelMap modelMap) {

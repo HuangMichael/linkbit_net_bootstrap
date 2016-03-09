@@ -2,17 +2,23 @@ package com.linkbit.net.back.web;
 
 import com.linkbit.net.back.domain.HeaderDTO;
 import com.linkbit.net.back.utils.MD5Util;
+import com.linkbit.net.back.utils.SessionUtil;
+import com.linkbit.net.back.utils.UploadUtil;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
+import com.linkbit.net.front.domain.product.Product;
 import com.linkbit.net.front.domain.user.User;
 import com.linkbit.net.front.domain.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -98,7 +104,24 @@ public class BackUserController {
     }
 
 
+    /**
+     * 上传图片 之后跳转至明细界面
+     *
+     * */
+    @Transactional
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    public ModelAndView handleFileUpload(@RequestParam("userId") long userId, @RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
+        String contextPath = SessionUtil.getContextPath(request);
+        String realPath = "/front/images/user/" + fileName;
+        String filePath = contextPath + realPath;
+        UploadUtil.uploadFile(file, filePath);
+        User user = userRepository.findById(userId);
+        user.setImgUrl(realPath);
+        userRepository.save(user);
+        ModelAndView modelAndView =   new ModelAndView("redirect:/back/user/profile/" + userId);
+        return modelAndView;
 
+    }
 
 
 

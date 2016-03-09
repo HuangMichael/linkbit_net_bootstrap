@@ -54,11 +54,11 @@ public class LoginController extends BaseController {
     MenuRepository menuRepository;
 
     @RequestMapping("/")
-    public String login(ModelMap modelMap) {
+    public String login() {
         //查询导航主菜单
 
         // 跳转到index
-        return "redirect:/index";
+        return "forward:/front/index";
     }
 
     @RequestMapping("/logout")
