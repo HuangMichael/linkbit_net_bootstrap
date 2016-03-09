@@ -50,21 +50,6 @@
                             </div>
                             <div class="clearfix"> </div>
                         </div>
-                       <%-- <div class="communt">
-                            <div class="communt-left">
-                                <i class="glyphicon glyphicon-th-list"></i>
-                            </div>
-                            <div class="communt-right">
-                                <h4>产品特点</h4>
-                                <p>
-                                    <c:forEach items="${product.productCharactorSet}" var="productchar">
-                                        ${productchar.charactorDesc}  <br>
-                                    </c:forEach>
-                                </p>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>--%>
-
                     </div>
                     <div class="clearfix"> </div>
                 </div>

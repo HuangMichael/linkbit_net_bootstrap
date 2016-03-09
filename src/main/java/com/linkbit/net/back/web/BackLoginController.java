@@ -35,24 +35,15 @@ public class BackLoginController extends BaseController {
     @Autowired
     UserRepository userRepository;
 
-    public MenuRepository getMenuRepository() {
-        return menuRepository;
-    }
-
-    public void setMenuRepository(MenuRepository menuRepository) {
-        this.menuRepository = menuRepository;
-    }
-
-
-    @RequestMapping(value="/login",method = RequestMethod.POST)
-    public String index(@RequestParam("userName") String userName ,@RequestParam("password") String password , ModelMap modelMap) {
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String index(@RequestParam("userName") String userName, @RequestParam("password") String password, ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
-        User user =  userRepository.findByUserNameAndPassword(userName,MD5Util.md5(password));
-        String url="/back/login/index";
-        if(null!=user){
+        User user = userRepository.findByUserNameAndPassword(userName, MD5Util.md5(password));
+        String url = "/back/login/index";
+        if (null != user) {
             modelMap.put("backMenusList", backMenusList);
-            modelMap.put("user",user);
-            url="forward:/back/portal/index";
+            modelMap.put("user", user);
+            url = "forward:/back/portal/index";
         }
         return url;
     }

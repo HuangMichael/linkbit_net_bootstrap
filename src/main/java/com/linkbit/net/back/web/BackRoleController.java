@@ -133,6 +133,7 @@ public class BackRoleController {
         User user;
         for (String userId : array) {
             user = userRepository.findById(Long.valueOf(userId));
+           // user.setRoles(null);
             userSet.add(user);
 
             System.out.println("userSet----------------------" + userSet.toString());
