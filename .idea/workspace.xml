@@ -4,53 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/back/upload/index.jsp" line="37" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b24faae-27e6-4984-b946-aadada685aee" name="Default" comment="" />
+    <list default="true" id="8b24faae-27e6-4984-b946-aadada685aee" name="Default" comment="配置pc" />
     <list id="2f985057-9418-4726-b522-fd364c087c1a" name="Rejected commit: Default" comment="product typeName">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1.war" afterPath="$PROJECT_DIR$/target/ROOT-0.1.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1.war.original" afterPath="$PROJECT_DIR$/target/ROOT-0.1.war.original" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/filter/SessionFilter.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/filter/SessionFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/listener/StartupCommandRunner.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/listener/StartupCommandRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackLoginController.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackLoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackMenuController.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackMenuController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackProductController.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackProductController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackProductTypeController.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackProductTypeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackUserController.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/back/web/BackUserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/front/domain/knowledge/Knowledge.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/front/domain/knowledge/Knowledge.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/front/domain/menu/Menu.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/front/domain/menu/Menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/front/domain/menu/MenuRepository.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/front/domain/menu/MenuRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/front/domain/user/User.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/front/domain/user/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/front/web/LoginController.class" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/classes/com/linkbit/net/front/web/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/filter/SessionFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/filter/SessionFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/listener/StartupCommandRunner.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/listener/StartupCommandRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/web/BackLoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/web/BackLoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/web/BackMenuController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/web/BackMenuController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/web/BackProductController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/web/BackProductController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/web/BackProductTypeController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/web/BackProductTypeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/web/BackUserController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/back/web/BackUserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/domain/knowledge/Knowledge.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/domain/knowledge/Knowledge.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/domain/menu/Menu.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/domain/menu/Menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/domain/menu/MenuRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/domain/menu/MenuRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/domain/user/User.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/domain/user/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/linkbit/net/front/web/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/common/footer.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/common/footer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/knowledge/index.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/knowledge/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/login/index.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/login/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/portal/index.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/portal/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/product/edit.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/product/edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/user/index.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/user/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/user/profile.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/back/user/profile.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/company.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/company.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/footer.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/footer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/head.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/head.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/header.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/index.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/knowledge.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/knowledge.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/news.jsp" afterPath="$PROJECT_DIR$/target/ROOT-0.1/WEB-INF/jsp/front/news.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/ROOT-0.1/back/js/script.js" afterPath="$PROJECT_DIR$/target/ROOT-0.1/back/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="linkbit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -145,8 +101,8 @@
       <file leaf-file-name="footer.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/footer.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40599">
-              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.37770382">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <marker date="1457494166953" expanded="true" signature="220:314" placeholder="{...}" />
               </folding>
@@ -431,142 +387,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="linkbit" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beijing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beijing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beijing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beijing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beijing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="linkbit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="beijing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1284,7 +1104,7 @@
       <workItem from="1457344614481" duration="58000" />
       <workItem from="1457402160866" duration="88000" />
       <workItem from="1457402282878" duration="26322000" />
-      <workItem from="1457484560915" duration="10086000" />
+      <workItem from="1457484560915" duration="10421000" />
     </task>
     <task id="LOCAL-00001" summary="findall报错 product">
       <created>1452504443422</created>
@@ -1560,11 +1380,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="611104000" />
+    <option name="totallyTimeSpent" value="611439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1386" height="788" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1576,7 +1396,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.005279035" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6012176" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5372907" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" x="14" y="186" width="1341" height="494" />
+      <window_info id="Terminal" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" x="14" y="380" width="1341" height="300" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11161388" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295626" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2089,8 +1909,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/front/footer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40599">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.37770382">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <marker date="1457494166953" expanded="true" signature="220:314" placeholder="{...}" />
           </folding>
