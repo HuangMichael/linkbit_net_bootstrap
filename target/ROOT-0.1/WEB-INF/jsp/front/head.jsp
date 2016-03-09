@@ -32,4 +32,5 @@
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/jquery.catslider.js"></script>
     <script src="js/Utils.js"></script>
+
 </head>

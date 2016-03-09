@@ -359,7 +359,8 @@ var App = function () {
     var handleTeamView = function () {
         c();
         $(".team-status-toggle").click(function (y) {
-            y.preventDefault();0;
+            y.preventDefault();
+            0;
             w(this);
             $(this).parent().toggleClass("open");
             var z = x(this);
@@ -1229,7 +1230,7 @@ var App = function () {
             "sPaginationType": "bs_full",
             sDom: "<'row'<'dataTables_header clearfix'<'col-md-4'l><'col-md-8'Tf>r>>t<'row'<'dataTables_footer clearfix'<'col-md-6'i><'col-md-6'p>>>",
             oTableTools: {
-              //  aButtons: ["copy", "print", "csv", "xls", "pdf"],
+                //  aButtons: ["copy", "print", "csv", "xls", "pdf"],
                 sSwfPath: "js/datatables/extras/TableTools/media/swf/copy_csv_xls_pdf.swf"
             }
         });
@@ -2394,41 +2395,41 @@ var App = function () {
     /*-----------------------------------------------------------------------------------*/
     /*	Easy Pie chart for profile
      /*-----------------------------------------------------------------------------------*/
- /*   var handleProfileSkillPie = function () {
+    /*   var handleProfileSkillPie = function () {
 
-        //Pie 1
-        $('#pie_1').easyPieChart({
-            easing: 'easeOutBounce',
-            onStep: function (from, to, percent) {
-                $(this.el).find('.percent').text(Math.round(percent) + "%");
-            },
-            lineWidth: 6,
-            barColor: '#F0AD4E'
-        });
-        var chart1 = window.chart = $('#pie_1').data('easyPieChart');
+     //Pie 1
+     $('#pie_1').easyPieChart({
+     easing: 'easeOutBounce',
+     onStep: function (from, to, percent) {
+     $(this.el).find('.percent').text(Math.round(percent) + "%");
+     },
+     lineWidth: 6,
+     barColor: '#F0AD4E'
+     });
+     var chart1 = window.chart = $('#pie_1').data('easyPieChart');
 
-        //Pie 2
-        $('#pie_2').easyPieChart({
-            easing: 'easeOutBounce',
-            onStep: function (from, to, percent) {
-                $(this.el).find('.percent').text(Math.round(percent) + "%");
-            },
-            lineWidth: 6,
-            barColor: '#D9534F'
-        });
-        var chart2 = window.chart = $('#pie_2').data('easyPieChart');
+     //Pie 2
+     $('#pie_2').easyPieChart({
+     easing: 'easeOutBounce',
+     onStep: function (from, to, percent) {
+     $(this.el).find('.percent').text(Math.round(percent) + "%");
+     },
+     lineWidth: 6,
+     barColor: '#D9534F'
+     });
+     var chart2 = window.chart = $('#pie_2').data('easyPieChart');
 
-        //Pie 3
-        $('#pie_3').easyPieChart({
-            easing: 'easeOutBounce',
-            onStep: function (from, to, percent) {
-                $(this.el).find('.percent').text(Math.round(percent) + "%");
-            },
-            lineWidth: 6,
-            barColor: '#70AFC4'
-        });
-        var chart3 = window.chart = $('#pie_3').data('easyPieChart');
-    };*/
+     //Pie 3
+     $('#pie_3').easyPieChart({
+     easing: 'easeOutBounce',
+     onStep: function (from, to, percent) {
+     $(this.el).find('.percent').text(Math.round(percent) + "%");
+     },
+     lineWidth: 6,
+     barColor: '#70AFC4'
+     });
+     var chart3 = window.chart = $('#pie_3').data('easyPieChart');
+     };*/
     /*-----------------------------------------------------------------------------------*/
     /*	Sparklines
      /*-----------------------------------------------------------------------------------*/
@@ -3269,7 +3270,7 @@ var App = function () {
         chart_select();
         chart_revenue();
 
-        //Pie 1
+        /*//Pie 1
         $('#dash_pie_1').easyPieChart({
             easing: 'easeOutBounce',
             onStep: function (from, to, percent) {
@@ -3297,7 +3298,7 @@ var App = function () {
             },
             lineWidth: 6,
             barColor: Theme.colors.pink
-        });
+        });*/
         var chart3 = window.chart = $('#dash_pie_3').data('easyPieChart');
 
         //Update the charts
@@ -3428,7 +3429,7 @@ var App = function () {
                 handleJqgrid();	//Function to display jqGrid
             }
             if (App.isPage("forms")) {
-               handleTypeahead();	//Function to display autocomplete
+                handleTypeahead();	//Function to display autocomplete
                 handleAutosize(); //Function to handle textarea autosize
                 handleCountable(); //Function to handle char count
                 handleSelect2(); //Function to handle select2
@@ -3489,10 +3490,10 @@ var App = function () {
                 handleActiveToggle(); //Function to handle active toggle
             }
             if (App.isPage("user_profile")) {
-              //  handleProfileSkillPie(); //Function to show skills in pie
-               // handleSparkline();	//Function to display sparklines
-              //  handleUniform();	//Function to handle uniform inputs
-               // handleProfileEdit();	//Function to handle profile edit tab
+                //  handleProfileSkillPie(); //Function to show skills in pie
+                // handleSparkline();	//Function to display sparklines
+                //  handleUniform();	//Function to handle uniform inputs
+                // handleProfileEdit();	//Function to handle profile edit tab
             }
             if (App.isPage("mini_sidebar")) {
                 collapseSidebar();	//Function to display mini menu

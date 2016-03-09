@@ -37,16 +37,6 @@
                                     <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
                                            class="datatable table table-striped table-bordered table-hover">
                                         <thead>
-
-                                        <%-- private String userName;//用户名
-                                         private String password;//密码
-                                         private String imgUrl; //头像存放路径
-                                         private String gender; //性别
-                                         private String personName;//姓名
-                                         private String email ;//电子邮箱
-                                         private Date birthday;//出生日期--%>
-
-
                                         <tr>
                                             <th class="center">序号</th>
                                             <th class="center">用户头像</th>
@@ -54,7 +44,7 @@
                                             <th class="center">姓名</th>
                                             <th class="center">性别</th>
                                             <th class="center">出生日期</th>
-                                            <th class="center">用户状态</th>
+                                            <th class="center">是否启用</th>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
                                         </tr>
@@ -67,9 +57,14 @@
                                                                          class="img-circle"/></td>
                                                 <td class=" center">${user.userName}</td>
                                                 <td class=" center">${user.personName}</td>
-                                                <td class=" center">${user.gender}</td>
+                                                <td class=" center">
+                                                    <c:if test="${user.gender=='1'}">男</c:if>
+                                                    <c:if test="${user.gender=='0'}">女</c:if>
+                                                </td>
                                                 <td class=" center">${user.birthday}</td>
-                                                <td class=" center"><input type="checkbox" checked="${user.status}">
+                                                <td class=" center">
+                                                    <c:if test="${user.status=='1'}">是</c:if>
+                                                    <c:if test="${user.status=='0'}">否</c:if>
                                                 </td>
                                                 <td class="center "><a href="#" data-toggle="modal"
                                                                        data-target="#myModal${user.id}">编辑</a></td>
@@ -78,19 +73,19 @@
                                             </tr>
                                         </c:forEach>
                                         </tbody>
-                                       <%-- <tfoot>
-                                        <tr>
-                                            <th class="center">序号</th>
-                                            <th class="center">用户头像</th>
-                                            <th class="center">用户名</th>
-                                            <th class="center">姓名</th>
-                                            <th class="center">性别</th>
-                                            <th class="center">出生日期</th>
-                                            <th class="center">用户状态</th>
-                                            <th class="center ">编辑</th>
-                                            <th class="center ">删除</th>
-                                        </tr>
-                                        </tfoot>--%>
+                                        <%-- <tfoot>
+                                         <tr>
+                                             <th class="center">序号</th>
+                                             <th class="center">用户头像</th>
+                                             <th class="center">用户名</th>
+                                             <th class="center">姓名</th>
+                                             <th class="center">性别</th>
+                                             <th class="center">出生日期</th>
+                                             <th class="center">用户状态</th>
+                                             <th class="center ">编辑</th>
+                                             <th class="center ">删除</th>
+                                         </tr>
+                                         </tfoot>--%>
                                     </table>
                                 </div>
                             </div>
@@ -190,7 +185,7 @@
             data: user,
             success: function (msg) {
                 $("#createModal").modal('hide');
-               // addRow(user);
+                // addRow(user);
                 $.bootstrapGrowl("用户信息添加成功！", {
                     type: 'info',
                     align: 'right',
@@ -211,18 +206,18 @@
 
 
     /*var addRow = function (product) {
-        var dateString = product.onLineDate.Format('yyyy-MM-dd');
-        var html = '<tr class="gradeX">';
-        html += '<td class="center">1</td>';
-        html += '<td class ="center"><a href ="#" data-toggle="modal" data-target="#myModal" >' + product.productName + '</a></td>';
-        html += '<td class= "center hidden-xs" >' + product.productType + '</td>';
-        html += '<td class= "center hidden-xs" >' + dateString + ' </td>';
-        html += '<td class = "center">' + product.productDesc + '</td>';
-        html += '<td class = "center"><a href = "#" > 编辑 </a> </td>';
-        html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
-        html += '</tr>';
-        $("#tbody").prepend(html);
-    }*/
+     var dateString = product.onLineDate.Format('yyyy-MM-dd');
+     var html = '<tr class="gradeX">';
+     html += '<td class="center">1</td>';
+     html += '<td class ="center"><a href ="#" data-toggle="modal" data-target="#myModal" >' + product.productName + '</a></td>';
+     html += '<td class= "center hidden-xs" >' + product.productType + '</td>';
+     html += '<td class= "center hidden-xs" >' + dateString + ' </td>';
+     html += '<td class = "center">' + product.productDesc + '</td>';
+     html += '<td class = "center"><a href = "#" > 编辑 </a> </td>';
+     html += '<td class  = "center"><a id = "delBtn">删除</a></td>';
+     html += '</tr>';
+     $("#tbody").prepend(html);
+     }*/
 
 
     //更新操作

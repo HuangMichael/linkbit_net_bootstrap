@@ -6,6 +6,7 @@ E:\program\beijing\src\main\java\com\linkbit\net\front\domain\productType\Produc
 E:\program\beijing\src\main\java\com\linkbit\net\back\domain\PortalNumberDTO.java
 E:\program\beijing\src\main\java\com\linkbit\net\front\domain\product\ProductRepository.java
 E:\program\beijing\src\main\java\com\linkbit\net\front\web\CompanyController.java
+E:\program\beijing\src\main\java\com\linkbit\net\front\domain\role\RoleRepository.java
 E:\program\beijing\src\main\java\com\linkbit\net\back\web\BackMenuController.java
 E:\program\beijing\src\main\java\com\linkbit\net\front\utils\KnowledgeType.java
 E:\program\beijing\src\main\java\com\linkbit\net\back\web\BackNewsController.java
@@ -15,6 +16,7 @@ E:\program\beijing\src\main\java\com\linkbit\net\front\web\BaseController.java
 E:\program\beijing\src\main\java\com\linkbit\net\front\web\MainsiteErrorController.java
 E:\program\beijing\src\main\java\com\linkbit\net\back\utils\SessionUtil.java
 E:\program\beijing\src\main\java\com\linkbit\net\back\web\BackSysConfigController.java
+E:\program\beijing\src\main\java\com\linkbit\net\back\web\BackRoleController.java
 E:\program\beijing\src\main\java\com\linkbit\net\back\web\BackUserController.java
 E:\program\beijing\src\main\java\com\linkbit\net\front\domain\message\MessageRepository.java
 E:\program\beijing\src\main\java\com\linkbit\net\front\web\MenuController.java
@@ -62,6 +64,7 @@ E:\program\beijing\src\main\java\com\linkbit\net\front\web\ProductController.jav
 E:\program\beijing\src\main\java\com\linkbit\net\front\domain\customers\Customer.java
 E:\program\beijing\src\main\java\com\linkbit\net\front\domain\company\CompanyPropertyRepository.java
 E:\program\beijing\src\main\java\com\linkbit\net\back\domain\HeaderDTO.java
+E:\program\beijing\src\main\java\com\linkbit\net\front\domain\role\Role.java
 E:\program\beijing\src\main\java\com\linkbit\net\back\domain\VAppAccessLog.java
 E:\program\beijing\src\main\java\com\linkbit\net\back\domain\SysConfigRepository.java
 E:\program\beijing\src\main\java\com\linkbit\net\front\domain\user\User.java

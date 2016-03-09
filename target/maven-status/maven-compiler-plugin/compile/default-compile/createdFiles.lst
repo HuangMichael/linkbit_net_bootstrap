@@ -1,4 +1,5 @@
 com\linkbit\net\back\web\BackKnowledgeController.class
+com\linkbit\net\back\web\BackRoleController.class
 com\linkbit\net\front\domain\menu\Menu.class
 com\linkbit\net\front\utils\KnowledgeType.class
 com\linkbit\net\back\utils\UploadUtil.class
@@ -25,6 +26,7 @@ com\linkbit\net\front\web\MenuController.class
 com\linkbit\net\back\web\BackProductController.class
 com\linkbit\net\front\domain\company\CompanyRepository.class
 com\linkbit\net\front\domain\product\ProductRepository.class
+com\linkbit\net\front\domain\role\RoleRepository.class
 com\linkbit\net\back\domain\AppAccessLogRepository.class
 com\linkbit\net\back\web\BackCustomerController.class
 com\linkbit\net\back\domain\SysConfig.class
@@ -52,6 +54,7 @@ com\linkbit\net\front\domain\message\Message.class
 com\linkbit\net\front\domain\company\CompanyPropertyRepository.class
 com\linkbit\net\front\web\NewsController.class
 com\linkbit\net\back\web\BackProductTypeController.class
+com\linkbit\net\front\domain\role\Role.class
 com\linkbit\net\back\web\BackMessageController.class
 com\linkbit\net\WebConfig.class
 com\linkbit\net\front\web\MessageController.class
