@@ -206,17 +206,17 @@
                     <label for="title">标题</label>
                     <input type="text" class="form-control"
                            id="title"
-                           name="title" value="${companyProperty.title}">
+                           name="title" value="${companyProperty.title}" required>
                 </div>
                 <div class="form-group">
                     <label for="propertyDesc">属性描述</label>
                     <input type="text" class="form-control"
                            id="propertyDesc"
-                           name="propertyDesc" value="${companyProperty.propertyDesc}">
+                           name="propertyDesc" value="${companyProperty.propertyDesc}" required>
                 </div>
                 <div class="form-group">
                     <label for="content">属性值</label>
-                    <input type="hidden" value="${company.id}" name="cid" id="cid"/>
+                    <input type="hidden" value="${company.id}" name="cid" id="cid" required/>
 
                     <div id="alerts"></div>
                     <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
@@ -339,17 +339,6 @@
                     <div id="editor" contenteditable="true">
                     </div>
                 </div>
-
-               <%-- <div class="form-group">
-                    <label for="company">产品类型</label>
-                    <select class="form-control" id="company" name="companyProperty.company">
-                        <c:forEach items="${companies}" var="company">
-                            <option value="${company.id}">${company.companyName}</option>
-                        </c:forEach>
-                    </select>
-                </div>--%>
-
-
                 <div class="form-group">
                     <label for="status">使用状态</label>
                     <select class="form-control"
