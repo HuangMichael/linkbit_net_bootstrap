@@ -91,87 +91,83 @@
                                                 </div>
                                             </div>
                                         </div>
-                                </form>
+                                    </form>
 
-                                <form id="uploadForm" method="post" class="form-horizontal" role="form"
-                                      enctype="multipart/form-data" id="uploadForm" action="/back/product/upload">
-                                    <div class="form-group">
-                                        <input type="hidden" name="productId" id="productId" value="${product.id}"/>
-                                        <input type="hidden" name="fileName" id="fileName"/>
-                                        <label class="col-sm-1 control-label" for="file">上传图片</label>
+                                    <form id="uploadForm" method="post" class="form-horizontal" role="form"
+                                          enctype="multipart/form-data" id="uploadForm" action="/back/product/upload">
+                                        <div class="form-group">
+                                            <input type="hidden" name="productId" id="productId" value="${product.id}"/>
+                                            <input type="hidden" name="fileName" id="fileName"/>
+                                            <label class="col-sm-1 control-label" for="file">上传图片</label>
 
-                                        <div class="col-sm-6">
-                                            <input type="file" class="form-control" name="file" id="file" required>
+                                            <div class="col-sm-6">
+                                                <input type="file" class="form-control" name="file" id="file" required>
+                                            </div>
+                                            <div class="col-sm-1">
+                                                <input type="submit" value="上传" id="submit"
+                                                       class="form-control btn-primary">
+                                            </div>
                                         </div>
-                                        <div class="col-sm-1">
-                                            <input type="submit" value="上传" id="submit"
-                                                   class="form-control btn-primary">
-                                        </div>
-                                    </div>
-                                </form>
+                                    </form>
 
 
+                                </div>
                             </div>
                         </div>
 
 
+                    </div>
+                    <div class="row">
                         <div class="col-md-12">
                             <!-- BOX -->
                             <div class="box border blue">
                                 <div class="box-title">
                                     <h4><i class="fa fa-table"></i>产品属性</h4>
-                                    <a href="javascript:;" class="reload">
-                                        <i class="fa fa-refresh"></i>
-                                    </a>
-                                    <a href="javascript:;" class="collapse">
-                                        <i class="fa fa-chevron-up"></i>
-                                    </a>
-                                    <a href="javascript:;" class="remove">
-                                        <i class="fa fa-times"></i>
-                                    </a>
                                 </div>
-                            </div>
-                            <div class="box-body">
-                                <table class="table table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>序号</th>
-                                        <th>属性名称</th>
-                                        <th>属性描述</th>
-                                        <th>是否显示</th>
-                                        <th>删除</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <c:forEach items="${product.productCharactorSet}" var="p" varStatus="status">
-                                        <tr id="tr${p.id}">
-                                            <td>${status.index+1}</td>
-                                            <td>${p.charactorName}</td>
-                                            <td>${p.charactorDesc}</td>
-                                            <td>
-                                                <c:if test="${p.status}">是</c:if>
-                                                <c:if test="${!p.status}">否</c:if>
-                                            </td>
-                                            <td><a name="delBtn" id="delBtn${p.id}" data-pid="${p.id}">删除</a></td>
+
+                                <div class="box-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>属性名称</th>
+                                            <th>属性描述</th>
+                                            <th>是否显示</th>
+                                            <th>删除</th>
                                         </tr>
-                                    </c:forEach>
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody>
+                                        <c:forEach items="${product.productCharactorSet}" var="p"
+                                                   varStatus="status">
+                                            <tr id="tr${p.id}">
+                                                <td>${status.index+1}</td>
+                                                <td>${p.charactorName}</td>
+                                                <td>${p.charactorDesc}</td>
+                                                <td>
+                                                    <c:if test="${p.status}">是</c:if>
+                                                    <c:if test="${!p.status}">否</c:if>
+                                                </td>
+                                                <td><a name="delBtn" id="delBtn${p.id}" data-pid="${p.id}">删除</a>
+                                                </td>
+                                            </tr>
+                                        </c:forEach>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                         <!-- /BOX -->
                     </div>
-                </div>
-                <!-- /EXPORT TABLES -->
-                <div class="footer-tools">
+                    <!-- /EXPORT TABLES -->
+                    <div class="footer-tools">
 							<span class="go-top">
 								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
+                    </div>
                 </div>
+                <!-- /CONTENT-->
             </div>
-            <!-- /CONTENT-->
         </div>
-    </div>
     </div>
 
 </section>
