@@ -54,24 +54,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-sm-1 control-label"
-                                                           for="productImgUrl">图片路径</label>
-
-                                                    <div class="col-sm-5">
-                                                        <input class="form-control" id="productImgUrl" type="text"
-                                                               placeholder="root" value="${product.productImgUrl}"
-                                                               readonly/>
-                                                    </div>
                                                     <label class="col-sm-1 control-label" for="onLineDate">上线日期</label>
 
                                                     <div class="col-sm-5">
                                                         <input class="form-control" id="onLineDate" type="date"
-                                                               placeholder="123456" value="${product.onLineDate}"
+                                                               value="${product.onLineDate}"
                                                                readonly/>
                                                     </div>
-                                                </div>
-                                                <div class="form-group">
-
                                                     <label for="showInMainPage"
                                                            class="col-sm-1 control-label">主页显示</label>
 
@@ -81,15 +70,15 @@
                                                             <option>否</option>
                                                         </select>
                                                     </div>
+
+                                                </div>
+                                                <div class="form-group">
                                                     <label for="sortNo" class="col-sm-1 control-label">排列顺序</label>
 
                                                     <div class="col-sm-5">
                                                         <input class="form-control" id="sortNo" type="number"
                                                                value="${product.sortNo}" readonly/>
                                                     </div>
-                                                </div>
-
-                                                <div class="form-group">
 
                                                     <label for="onLine" class="col-sm-1 control-label">是否上线</label>
 
@@ -102,7 +91,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                </div>
                                 </form>
 
                                 <form id="uploadForm" method="post" class="form-horizontal" role="form"
@@ -180,7 +168,8 @@
 								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
                 </div>
-            </div><!-- /CONTENT-->
+            </div>
+            <!-- /CONTENT-->
         </div>
     </div>
     </div>
@@ -239,7 +228,8 @@
         /* App.setPage("forms");  //Set current page*/
         App.init(); //Initialise plugins and elements
     });
-</script><!-- /JAVASCRIPTS -->
+</script>
+<!-- /JAVASCRIPTS -->
 
 <script type="text/javascript">
     $(function () {
@@ -277,17 +267,17 @@
         var pid = $("#pid").val();
 
         /*var productCharactor = {
-            charactorName: charactorName,
-            charactorDesc: charactorDesc
-        };*/
-       // console.log("productCharactor--------------------"+JSON.stringify(productCharactor));
+         charactorName: charactorName,
+         charactorDesc: charactorDesc
+         };*/
+        // console.log("productCharactor--------------------"+JSON.stringify(productCharactor));
         $.ajax({
             type: "POST",
             url: "/back/productCharactor/save",
-            data: {charactorName:charactorName,charactorDesc:charactorDesc, pid: pid},
+            data: {charactorName: charactorName, charactorDesc: charactorDesc, pid: pid},
             success: function (msg) {
                 $("#createModal").modal('hide');
-            /*    App.init();*/
+                /*    App.init();*/
                 $.bootstrapGrowl("产品信息保存成功！", {
                     type: 'info',
                     align: 'right',
@@ -310,7 +300,7 @@
 
     $("a[name^=delBtn]").on("click", function () {
         var id = $(this).attr("id").substring(6);
-        console.log("id--------------------"+id);
+        console.log("id--------------------" + id);
         $.ajax({
             type: "POST",
             url: "/back/productCharactor/delete/" + id,
