@@ -23,7 +23,7 @@ import java.util.Map;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/back/productType/")
-public class BackProductTypeController {
+public class BackProductTypeController  extends  BackBaseController{
 
     @Autowired
     MenuRepository menuRepository;
@@ -33,11 +33,13 @@ public class BackProductTypeController {
 
     @RequestMapping("/index")
     public String index(ModelMap modelMap) {
+        System.out.println( "indexUrl------------------"+    this.getIndexUrl());
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<ProductType> productTypeList = productTypeRepository.findAll();
         HeaderDTO headerDTO = new HeaderDTO();
         headerDTO.setSystemName("网站后台管理系统");
         headerDTO.setAppName("产品类型信息");
+        headerDTO.setUrlName(this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         modelMap.put("backMenusList", backMenusList);
         modelMap.put("productTypeList", productTypeList);
@@ -78,7 +80,7 @@ public class BackProductTypeController {
         ProductType productType = productTypeRepository.findById(id);
         Map<String, ProductType> map = new HashMap<String, ProductType>();
         map.put("productType", productType);
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑产品类别信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑产品类别信息",this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         ModelAndView mv = new ModelAndView("/back/productType/edit", map);
         return mv;
@@ -104,7 +106,7 @@ public class BackProductTypeController {
         ProductType productType = productTypeRepository.findById(id);
         Map<String, ProductType> map = new HashMap<String, ProductType>();
         map.put("productType", productType);
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑产品类别信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑产品类别信息",this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         ModelAndView mv = new ModelAndView("/back/productType/detail", map);
         return mv;

@@ -21,7 +21,7 @@ import java.util.Map;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/back/menu/")
-public class BackMenuController {
+public class BackMenuController extends  BackBaseController{
 
     @Autowired
     MenuRepository menuRepository;
@@ -54,7 +54,7 @@ public class BackMenuController {
     public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<Menu> menuList = menuRepository.findAll();
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "菜单信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "菜单信息",this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         modelMap.put("backMenusList", backMenusList);
         modelMap.put("menuList", menuList);
@@ -89,7 +89,7 @@ public class BackMenuController {
         Menu menu = menuRepository.findById(id);
         Map<String, Menu> map = new HashMap<String, Menu>();
         map.put("menu", menu);
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑菜单信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑菜单信息",this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         ModelAndView mv = new ModelAndView("/back/menu/edit", map);
         return mv;

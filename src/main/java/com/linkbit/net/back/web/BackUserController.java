@@ -31,7 +31,7 @@ import java.util.Map;
 @EnableAutoConfiguration
 @RequestMapping("/back/user/")
 @SessionAttributes("backMenusList")
-public class BackUserController {
+public class BackUserController extends BackBaseController  {
     /**
      * 菜单接口
      */
@@ -97,7 +97,7 @@ public class BackUserController {
         User user = userRepository.findById(id);
         Map<String, User> map = new HashMap<String, User>();
         map.put("user", user);
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "个人信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "个人信息",this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         ModelAndView mv = new ModelAndView("/back/user/profile", map);
         return mv;

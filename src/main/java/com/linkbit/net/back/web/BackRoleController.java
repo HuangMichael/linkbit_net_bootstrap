@@ -23,7 +23,7 @@ import java.util.*;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/back/role/")
-public class BackRoleController {
+public class BackRoleController extends BackBaseController {
 
     @Autowired
     MenuRepository menuRepository;
@@ -81,7 +81,7 @@ public class BackRoleController {
         Role role = roleRepository.findById(id);
         Map<String, Role> map = new HashMap<String, Role>();
         map.put("role", role);
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑角色信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑角色信息",this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         ModelAndView mv = new ModelAndView("/back/role/edit", map);
         return mv;
@@ -109,7 +109,7 @@ public class BackRoleController {
         Map<String, Role> map = new HashMap<String, Role>();
         map.put("role", role);
 
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "角色明细信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "角色明细信息",this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         ModelAndView mv = new ModelAndView("/back/role/detail", map);
         mv.addObject("usersList", usersList);

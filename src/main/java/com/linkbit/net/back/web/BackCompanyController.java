@@ -31,7 +31,7 @@ import java.util.Map;
 @EnableAutoConfiguration
 @RequestMapping("/back/company/")
 @SessionAttributes("backMenusList")
-public class BackCompanyController {
+public class BackCompanyController extends BackBaseController {
 
     @Autowired
     MenuRepository menuRepository;
@@ -45,9 +45,7 @@ public class BackCompanyController {
     public String index(ModelMap modelMap ) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<Company> companyList = companyRepository.findAll();
-        HeaderDTO headerDTO = new HeaderDTO();
-        headerDTO.setSystemName("网站后台管理系统");
-        headerDTO.setAppName("公司信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统","公司信息",this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         modelMap.put("backMenusList", backMenusList);
         modelMap.put("companyList", companyList);

@@ -10,6 +10,7 @@ import com.linkbit.net.front.domain.product.ProductCharactor;
 import com.linkbit.net.front.domain.product.ProductRepository;
 import com.linkbit.net.front.domain.productType.ProductType;
 import com.linkbit.net.front.domain.productType.ProductTypeRepository;
+import com.linkbit.net.front.web.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -32,7 +33,7 @@ import java.util.Map;
 @EnableAutoConfiguration
 @RequestMapping("/back/product/")
 @SessionAttributes({"backMenusList","productTypeList"})
-public class BackProductController {
+public class BackProductController extends BackBaseController {
     /**
      * 菜单接口
      */
@@ -43,6 +44,9 @@ public class BackProductController {
      */
     @Autowired
     ProductRepository productRepository;
+
+
+
     /**
      * 产品类型接口
      */
@@ -50,10 +54,13 @@ public class BackProductController {
     ProductTypeRepository productTypeRepository;
     @RequestMapping("/index")
     public String index(ModelMap modelMap) {
+
+       String indexUrl =  this.getIndexUrl();
+        System.out.println("indexUrl------------------"+indexUrl);
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<Product> productList = productRepository.findAll();
         List<ProductType> productTypeList = productTypeRepository.findByStatus("1");
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "产品信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "产品信息",this.getIndexUrl());
         modelMap.put("headerDTO",headerDTO);
         modelMap.put("productTypeList", productTypeList);
         modelMap.put("backMenusList", backMenusList);
@@ -102,7 +109,7 @@ public class BackProductController {
         Product product = productRepository.findById(id);
         Map<String, Product> map = new HashMap<String, Product>();
         map.put("product", product);
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑产品信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑产品信息",this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         ModelAndView mv = new ModelAndView("/back/product/edit", map);
         return mv;

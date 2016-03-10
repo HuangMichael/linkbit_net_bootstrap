@@ -29,7 +29,7 @@ import java.util.Map;
 @Controller
 @EnableAutoConfiguration
 @RequestMapping("/back/customer")
-public class BackCustomerController extends BaseController {
+public class BackCustomerController extends BackBaseController {
     @Autowired
     MenuRepository menuRepository;
 
@@ -113,7 +113,7 @@ public class BackCustomerController extends BaseController {
         Customer customer = customerRepository.findById(id);
         Map<String, Customer> map = new HashMap<String, Customer>();
         map.put("customer", customer);
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑客户信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑客户信息",this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         ModelAndView mv = new ModelAndView("/back/customer/edit", map);
         return mv;

@@ -85,17 +85,8 @@ public class BackPortalController {
         portalNumberDTO.setAllCustomersCount(allCustomersCount);
         portalNumberDTO.setAllMessageCount(allMessageCount);
         modelMap.put("portalNumberDTO", portalNumberDTO);
-
-
-
-
-        //
        List<String> appAccessLogList = appAccessLogRepository.findLast5DaysAccess();
 
-       /* for(String l:appAccessLogList){
-
-            System.out.println("---------------------"+l.toString());
-        }*/
 
 
         return "/back/portal/index";

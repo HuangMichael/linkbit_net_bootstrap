@@ -24,7 +24,7 @@ import java.util.Map;
 @EnableAutoConfiguration
 @RequestMapping("/back/sysconfig/")
 @SessionAttributes("backMenusList")
-public class BackSysConfigController {
+public class BackSysConfigController extends BackBaseController {
     /**
      * 菜单接口
      */
@@ -40,14 +40,13 @@ public class BackSysConfigController {
     @RequestMapping("/index")
     public String index(ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
-        List<SysConfig>   sysconfigList = sysConfigRepository.findAll();
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "系统设置信息");
-        modelMap.put("headerDTO",headerDTO);
+        List<SysConfig> sysconfigList = sysConfigRepository.findAll();
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "系统设置信息", this.getIndexUrl());
+        modelMap.put("headerDTO", headerDTO);
         modelMap.put("sysconfigList", sysconfigList);
         modelMap.put("backMenusList", backMenusList);
         return "/back/sysconfig/index";
     }
-
 
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
@@ -56,9 +55,10 @@ public class BackSysConfigController {
         sysConfigRepository.save(sysConfig);
         return sysConfig;
     }
+
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public String update(@ModelAttribute("sysConfig") SysConfig sysConfig,@RequestParam("objId")Long objId) {
-        System.out.println("objId---------------------"+objId);
+    public String update(@ModelAttribute("sysConfig") SysConfig sysConfig, @RequestParam("objId") Long objId) {
+        System.out.println("objId---------------------" + objId);
         if (objId != null) {
             SysConfig oldObj = sysConfigRepository.findById(objId);
             oldObj.setParaDesc(sysConfig.getParaDesc());
@@ -70,24 +70,24 @@ public class BackSysConfigController {
         return "redirect:/back/sysconfig/index";
     }
 
-    @RequestMapping(value = "/edit/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public ModelAndView edit(@PathVariable("id") Long id, ModelMap modelMap) {
         SysConfig sysConfig = sysConfigRepository.findById(id);
         Map<String, SysConfig> map = new HashMap<String, SysConfig>();
         map.put("sysConfig", sysConfig);
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑系统设置信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "编辑系统设置信息", this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         ModelAndView mv = new ModelAndView("/back/sysconfig/edit", map);
         return mv;
     }
 
 
-    @RequestMapping(value = "/detail/{id}",method = RequestMethod.POST)
+    @RequestMapping(value = "/detail/{id}", method = RequestMethod.POST)
     public ModelAndView detail(@PathVariable("id") Long id, ModelMap modelMap) {
         SysConfig sysConfig = sysConfigRepository.findById(id);
         Map<String, SysConfig> map = new HashMap<String, SysConfig>();
         map.put("sysConfig", sysConfig);
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "系统设置详细信息");
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "系统设置详细信息", this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         ModelAndView mv = new ModelAndView("/back/sysconfig/detail", map);
         return mv;
@@ -96,11 +96,10 @@ public class BackSysConfigController {
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
     public void delete(@PathVariable long id) {
-        SysConfig sysConfig =  sysConfigRepository.findById(id);
+        SysConfig sysConfig = sysConfigRepository.findById(id);
         sysConfigRepository.delete(sysConfig);
 
     }
-
 
 
 }
