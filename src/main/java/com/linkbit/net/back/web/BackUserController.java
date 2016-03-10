@@ -31,7 +31,7 @@ import java.util.Map;
 @EnableAutoConfiguration
 @RequestMapping("/back/user/")
 @SessionAttributes("backMenusList")
-public class BackUserController extends BackBaseController  {
+public class BackUserController extends BackBaseController {
     /**
      * 菜单接口
      */
@@ -51,19 +51,18 @@ public class BackUserController extends BackBaseController  {
         HeaderDTO headerDTO = new HeaderDTO();
         headerDTO.setSystemName("网站后台管理系统");
         headerDTO.setAppName("用户信息");
-        modelMap.put("headerDTO",headerDTO);
+        modelMap.put("headerDTO", headerDTO);
         modelMap.put("userList", userList);
         modelMap.put("backMenusList", backMenusList);
         return "/back/user/index";
     }
 
 
-
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     @ResponseBody
     public User save(@ModelAttribute User user) {
         String password = MD5Util.md5("123456");
-        System.out.println("password-------------------"+password);
+        System.out.println("password-------------------" + password);
         user.setPassword(password);
         userRepository.save(user);
         return user;
@@ -71,10 +70,10 @@ public class BackUserController extends BackBaseController  {
 
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public String update(@ModelAttribute("user") User user, @RequestParam("objId")Long objId) {
-        System.out.println("objId---------------------"+objId);
+    public String update(@ModelAttribute("user") User user, @RequestParam("objId") Long objId) {
+        System.out.println("objId---------------------" + objId);
         if (objId != null) {
-            User oldObj =  userRepository.findById(objId);
+            User oldObj = userRepository.findById(objId);
             oldObj.setBirthday(user.getBirthday());
             oldObj.setEmail(user.getEmail());
             oldObj.setGender(user.getGender());
@@ -86,18 +85,18 @@ public class BackUserController extends BackBaseController  {
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
     public void delete(@PathVariable long id) {
-       User user =  userRepository.findById(id);
+        User user = userRepository.findById(id);
         userRepository.delete(user);
 
     }
 
 
-    @RequestMapping(value = "/profile/{id}",method = RequestMethod.GET)
+    @RequestMapping(value = "/profile/{id}", method = RequestMethod.GET)
     public ModelAndView showProfile(@PathVariable("id") Long id, ModelMap modelMap) {
         User user = userRepository.findById(id);
         Map<String, User> map = new HashMap<String, User>();
         map.put("user", user);
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "个人信息",this.getIndexUrl());
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "个人信息", this.getIndexUrl());
         modelMap.put("headerDTO", headerDTO);
         ModelAndView mv = new ModelAndView("/back/user/profile", map);
         return mv;
@@ -106,8 +105,7 @@ public class BackUserController extends BackBaseController  {
 
     /**
      * 上传图片 之后跳转至明细界面
-     *
-     * */
+     */
     @Transactional
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public ModelAndView handleFileUpload(@RequestParam("userId") long userId, @RequestParam("fileName") String fileName, @RequestParam("file") MultipartFile file, HttpServletRequest request) {
@@ -118,11 +116,33 @@ public class BackUserController extends BackBaseController  {
         User user = userRepository.findById(userId);
         user.setImgUrl(realPath);
         userRepository.save(user);
-        ModelAndView modelAndView =   new ModelAndView("redirect:/back/user/profile/" + userId);
+        ModelAndView modelAndView = new ModelAndView("redirect:/back/user/profile/" + userId);
         return modelAndView;
 
     }
 
+    @Transactional
+    @RequestMapping(value = "/validatePwd", method = RequestMethod.POST)
+    @ResponseBody
+    public Boolean validatePwd(@RequestParam("oldPwd") String oldPwd, HttpServletRequest request) {
+        boolean result = false;
+        User user = SessionUtil.getCurrentUser(request);
+        if (user != null) {
+            result = MD5Util.md5(oldPwd).equals(user.getPassword());
+        }
+        return result;
+    }
+
+
+    @Transactional
+    @RequestMapping(value = "/changePassword", method = RequestMethod.POST)
+    @ResponseBody
+    public User changePassword(@RequestParam("oldPwd") String oldPwd,HttpServletRequest request) {
+        User user = SessionUtil.getCurrentUser(request);
+        user.setPassword(MD5Util.md5(oldPwd));
+        userRepository.save(user);
+        return  user ;
+    }
 
 
 }

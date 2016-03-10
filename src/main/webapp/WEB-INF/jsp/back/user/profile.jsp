@@ -27,24 +27,19 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
+
+                                    <button type="button" class="btn btn-default btn-mini navbar-btn"
+                                            data-toggle="modal"
+                                            data-target="#chpwdModal">修改密码
+                                    </button>
+
+
                                     <form class="form-horizontal" role="form" method="post" action="/back/user/update">
                                         <div class="form-group">
                                             <div class="col-sm-2 center">
                                                 <img src="${user.imgUrl}" width="200px"
                                                      class="img-responsive img-rounded img-thumbnail"/>
                                             </div>
-
-                                            <%-- private String userName;//用户名
-                                             private String password;//密码
-                                             private String imgUrl; //头像存放路径
-                                             private String gender; //性别
-                                             private String personName;//姓名
-                                             private String email ;//电子邮箱
-                                             @Temporal(TemporalType.DATE)
-                                             private Date birthday;//出生日期
-                                             private String status;//用户状态--%>
-
-
                                             <div class="col-sm-10">
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label" for="ds_host">姓名</label>
@@ -87,7 +82,8 @@
                                         </div>
                                     </form>
 
-                                    <form id="upload" class="form-horizontal"  enctype="multipart/form-data" role="form" method="post">
+                                    <form id="upload" class="form-horizontal" enctype="multipart/form-data" role="form"
+                                          method="post">
                                         <div class="form-group">
                                             <div class="col-sm-2 center">
 
@@ -121,12 +117,62 @@
 								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
                 </div>
-            </div><!-- /CONTENT-->
+            </div>
+            <!-- /CONTENT-->
         </div>
     </div>
     </div>
 
 </section>
+
+
+<div class="modal fade" id="chpwdModal" tabindex="-1"
+     role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel2">修改密码</h4>
+            </div>
+            <div class="modal-body">
+                <form id="changePwdForm" method="post">
+                    <div class="form-group">
+                        <label for="oldPwd">原密码</label>
+                        <input type="password" class="form-control"
+                               id="oldPwd"
+                               name="oldpwd" required maxlength="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newPwd">新密码</label>
+                        <input type="password" class="form-control"
+                               id="newPwd"
+                               name="newPwd" required maxlength="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPwd">重复密码</label>
+                        <input type="password" class="form-control"
+                               id="confirmPwd"
+                               name="confirmPwd" required maxlength="50">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+                <button type="submit" id="changePwd" name="createBtn"
+                        class="btn btn-primary">保存
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!--/PAGE -->
 <!-- JAVASCRIPTS -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -136,7 +182,8 @@
         /* App.setPage("forms");  //Set current page*/
         App.init(); //Initialise plugins and elements
     });
-</script><!-- /JAVASCRIPTS -->
+</script>
+<!-- /JAVASCRIPTS -->
 
 <script type="text/javascript">
     $(function () {
@@ -163,7 +210,90 @@
             return o.substring(pos + 1);
         }
 
+        var oldPwd, newPwd, confirmPwd;
+        $("#oldPwd").on("change", function (data) {
+            var oldPwd = $("#oldPwd").val();
+            var url = "/back/user/validatePwd";
+            if (!oldPwd) {
+                $("#oldPwd").css("border-color", "red").attr("title", "原始密码不能为空");
+                return;
+            }
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: "oldPwd=" + oldPwd,
+                success: function (msg) {
+                    if (msg) {
+                        $("#oldPwd").css("border-color", "green").attr("title", "原始密码正确");
+                    } else {
+                        $("#oldPwd").css("border-color", "red").attr("title", "原始密码错误");
+                    }
+                }
+            });
+        });
 
+
+       /* $("#newPwd").on("change", function (data) {
+            var newPwd = $("#newPwd").val();
+            if (!newPwd) {
+                $("#newPwd").css("border-color", "red").attr("title", "新密码不能为空");
+                return;
+            }
+        });*/
+        /*$("#confirmPwd").on("change", function (data) {
+            var confirmPwd = $("#confirmPwd").val();
+            if (!confirmPwd) {
+                $("#confirmPwd").css("border-color", "red").attr("title", "确认密码不能为空");
+                return;
+            }
+            if (confirmPwd != newPwd) {
+                $("#newPwd")[0].focus();
+                $("#newPwd").attr("value", "");
+                $("#confirmPwd").attr("value", "");
+                return;
+            }
+        });*/
+
+
+        $("#changePwd").on("click", function () {
+
+            var oldPwd = $("#oldPwd").val();
+            if (!oldPwd) {
+                $("#oldPwd").css("border-color", "red").attr("title", "新密码不能为空");
+                return;
+            }
+
+            var newPwd = $("#newPwd").val();
+            if (!newPwd) {
+                $("#newPwd").css("border-color", "red").attr("title", "新密码不能为空");
+                return;
+            }
+
+            if (!confirmPwd) {
+                $("#confirmPwd").css("border-color", "red").attr("title", "确认密码不能为空");
+                return;
+            }
+
+            if (confirmPwd != newPwd) {
+                alert("两次密码不一致");
+                return;
+            }
+
+
+            var url = "/back/user/changePassword";
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: "oldPwd=" + oldPwd,
+                success: function (msg) {
+                    alert("密码修改成功");
+                },
+                error: function (msg) {
+                    alert("密码修改失败");
+                }
+            });
+
+        });
     })
 </script>
 
