@@ -26,12 +26,7 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
-                                  <button type="button" class="btn btn-default btn-mini navbar-btn"
-                                            data-toggle="modal"
-                                            data-target="#createModal">新建记录
-                                    </button>
-
-
+                                    <%@include file="../common/menuBar.jsp" %>
                                     <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
                                            class="datatable table table-striped table-bordered table-hover">
                                         <thead>
@@ -41,7 +36,7 @@
                                             <th class="center">产品名称</th>
                                             <th class="center hidden-xs">产品类型</th>
                                             <th class="center">上市时间</th>
-                                           <%-- <th class="center hidden-xs">商品描述</th>--%>
+                                            <%-- <th class="center hidden-xs">商品描述</th>--%>
                                             <th class="center ">编辑</th>
                                             <th class="center ">删除</th>
                                         </tr>
@@ -50,14 +45,18 @@
                                         <c:forEach items="${productList}" var="product" varStatus="status">
                                             <tr class="gradeX" id="tr${product.id}">
                                                 <td class="center">${status.index+1}</td>
-                                                <th class=" center"><img src="${product.productImgUrl}" width="25px" height="25px"
+                                                <th class=" center"><img src="${product.productImgUrl}" width="25px"
+                                                                         height="25px"
                                                                          class="img-circle"/></th>
-                                                <td class="center"><a href="/back/product/detail/${product.id}">${product.productName}</a></td>
+                                                <td class="center"><a
+                                                        href="/back/product/detail/${product.id}">${product.productName}</a>
+                                                </td>
                                                 <td class=" center hidden-xs">${product.productType.typeName}</td>
                                                 <td class="center hidden-xs"><fmt:formatDate
                                                         value="${product.onLineDate}" pattern="yyyy-MM-dd"/></td>
-                                               <%-- <td class="center">${product.productDesc}</td>--%>
-                                                <td class="center "><a href="/back/product/edit/${product.id}">编辑</a></td>
+                                                    <%-- <td class="center">${product.productDesc}</td>--%>
+                                                <td class="center "><a href="/back/product/edit/${product.id}">编辑</a>
+                                                </td>
                                                 <td class="center "><a id="delBtn${product.id}">删除</a>
                                                 </td>
                                             </tr>
@@ -135,16 +134,16 @@
                                         </c:forEach>
                                         </tbody>
                                         <tfoot>
-                                   <%--     <tr>
-                                            <th class="center">序号</th>
-                                            <th class="center">产品图片</th>
-                                            <th class="center">产品名称</th>
-                                            <th class="center hidden-xs">产品类型</th>
-                                            <th class="center">上市时间</th>
-                                            <th class="center hidden-xs">商品描述</th>
-                                            <th class="center ">编辑</th>
-                                            <th class="center ">删除</th>
-                                        </tr>--%>
+                                        <%--     <tr>
+                                                 <th class="center">序号</th>
+                                                 <th class="center">产品图片</th>
+                                                 <th class="center">产品名称</th>
+                                                 <th class="center hidden-xs">产品类型</th>
+                                                 <th class="center">上市时间</th>
+                                                 <th class="center hidden-xs">商品描述</th>
+                                                 <th class="center ">编辑</th>
+                                                 <th class="center ">删除</th>
+                                             </tr>--%>
                                         </tfoot>
                                     </table>
                                 </div>
@@ -158,7 +157,8 @@
 								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
                     </div>
-                </div><!-- /CONTENT-->
+                </div>
+                <!-- /CONTENT-->
             </div>
         </div>
     </div>
@@ -185,7 +185,7 @@
 
                         <div class="form-group">
                             <label for="productDesc">产品描述</label>
-                            <input type="text" class="form-control"  id="productDesc" name="product.productDesc">
+                            <input type="text" class="form-control" id="productDesc" name="product.productDesc">
                         </div>
 
 
@@ -193,7 +193,7 @@
                             <label for="productType">产品类型</label>
                             <select class="form-control" id="productType" name="product.productType">
                                 <c:forEach items="${productTypeList}" var="productType">
-                                   <option value="${productType.id}">${productType.typeName}</option>
+                                    <option value="${productType.id}">${productType.typeName}</option>
                                 </c:forEach>
                             </select>
                         </div>
@@ -204,7 +204,7 @@
                             <select class="form-control" id="online" name="product.online" required>
                                 <option value="">请选择</option>
                                 <option value="1">是</option>
-                                    <option value="0">否</option>
+                                <option value="0">否</option>
 
                             </select>
                         </div>
@@ -253,7 +253,7 @@
         product.productType = productType;
         product.onLineDate = onLineDate;
         product.online = online;
-        console.log("product-------------"+JSON.stringify(product));
+        console.log("product-------------" + JSON.stringify(product));
         $.ajax({
             type: "POST",
             url: "/back/product/save",
@@ -360,7 +360,6 @@
 
 
     });
-
 
 
 </script>

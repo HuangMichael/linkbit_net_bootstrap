@@ -27,10 +27,7 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
-                                    <button type="button" class="btn btn-default btn-mini navbar-btn"
-                                            data-toggle="modal"
-                                            data-target="#createModal">新建记录
-                                    </button>
+                                   <%-- <%@include file="../common/menuBar.jsp" %>--%>
                                     <form class="form-horizontal" role="form">
                                         <div class="form-group">
 
