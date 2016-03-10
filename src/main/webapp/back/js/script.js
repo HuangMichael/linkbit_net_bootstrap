@@ -1661,7 +1661,7 @@ var App = function () {
     /*	Uniform
      /*-----------------------------------------------------------------------------------*/
     var handleUniform = function () {
-        $(".uniform").uniform();
+       // $(".uniform").uniform();
     };
     /*-----------------------------------------------------------------------------------*/
     /*	All Checkboxes
@@ -3469,8 +3469,8 @@ var App = function () {
                 handleUniform();	//Function to handle uniform inputs
             }
             if (App.isPage("login_bg")) {
-                handleUniform();	//Function to handle uniform inputs
-                handleBackstretch();	//Function to handle background images
+              //  handleUniform();	//Function to handle uniform inputs
+                //handleBackstretch();	//Function to handle background images
             }
             if (App.isPage("chats")) {
                 handleChat('chat-window');	//Function to handle chat
