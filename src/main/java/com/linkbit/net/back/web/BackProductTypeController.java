@@ -45,18 +45,19 @@ public class BackProductTypeController {
     }
 
     /**
-    * 保存产品类别信息
-    * */
+     * 保存产品类别信息
+     */
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String save(@ModelAttribute ProductType productType) {
-        productType.setStatus("1"); //默认启用
+    @ResponseBody
+    public ProductType save(@ModelAttribute ProductType productType) {
+        productType.setStatus("0"); //默认启用
         productTypeRepository.save(productType);
-        return "/back/productType/index";
+        return productType;
     }
 
     /**
      * 更新产品类别信息
-     * */
+     */
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public ModelAndView update(@ModelAttribute ProductType productType, Long objId) {
         if (objId != null) {
@@ -71,7 +72,7 @@ public class BackProductTypeController {
 
     /**
      * 编辑产品类别信息
-     * */
+     */
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public ModelAndView edit(@PathVariable("id") Long id, ModelMap modelMap) {
         ProductType productType = productTypeRepository.findById(id);
@@ -86,18 +87,18 @@ public class BackProductTypeController {
 
     /**
      * 删除产品类别信息
-     * */
+     */
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
     public void delete(@PathVariable long id) {
-        ProductType productType =  productTypeRepository.findById(id);
+        ProductType productType = productTypeRepository.findById(id);
         productTypeRepository.delete(productType);
 
     }
 
     /**
      * 编辑产品类别信息
-     * */
+     */
     @RequestMapping(value = "/detail/{id}", method = RequestMethod.GET)
     public ModelAndView detail(@PathVariable("id") Long id, ModelMap modelMap) {
         ProductType productType = productTypeRepository.findById(id);
