@@ -73,7 +73,8 @@
 								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
                     </div>
-                </div><!-- /CONTENT-->
+                </div>
+                <!-- /CONTENT-->
             </div>
         </div>
     </div>
@@ -96,7 +97,6 @@
                             <input type="text" class="form-control"
                                    id="typeName"
                                    name="productType.typeName" required>
-                            <%--<div id="typeName_msg">产品类型名称已存在</div>--%>
                         </div>
                     </form>
                 </div>
@@ -138,7 +138,7 @@
             data: productType,
             success: function (msg) {
                 $("#createModal").modal('hide');
-                // addRow(productType);
+                addRow(msg);
                 $.bootstrapGrowl("产品类型信息添加成功！", {
                     type: 'info',
                     align: 'right',
@@ -184,8 +184,21 @@
         }
 
     });
+    var addRow = function (msg) {
+        var html = '<tr class="gradeX even" id="tr' + msg.id + '">';
+        html += '<td class="center  sorting_1">' + 1 + '</td> ';
+        html += '<td class="center "><a href="/back/productType/detail/2">' + msg.typeName + '</a> </td>';
+        html += '<td class="center ">是</td><td class="center  "><a href="/back/productType/edit/' + msg.id + '">编辑</a></td>';
+        html += '<td class="center  "><a id="delBtn' + msg.id + '">删除</a></td>'
+        html += ' </tr>';
+        $("#tbody").prepend(html);
+        $("#tbody tr").each(function (index, element) {
+            $(element).children().eq(0).html((index+1));
+        });
+    };
 
 
-</script><!-- /JAVASCRIPTS -->
+</script>
+<!-- /JAVASCRIPTS -->
 </body>
 </html>
