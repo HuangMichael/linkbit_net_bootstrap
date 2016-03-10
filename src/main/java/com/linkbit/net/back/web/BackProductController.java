@@ -86,7 +86,7 @@ public class BackProductController extends BackBaseController {
 
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public ModelAndView update(@PathVariable Product product ,@RequestParam("objId")Long objId) {
+    public ModelAndView update(@ModelAttribute Product product ,@RequestParam("objId")Long objId) {
         System.out.println("product---------------"+product.toString());
         if (objId != null) {
             Product oldObj = productRepository.findById(objId);
@@ -99,7 +99,9 @@ public class BackProductController extends BackBaseController {
             oldObj.setSortNo(product.getSortNo());
             productRepository.save(oldObj);
         }
-        ModelAndView modelAndView = new ModelAndView("/back/product/index");
+
+        System.out.println("product---------------"+product.toString());
+        ModelAndView modelAndView = new ModelAndView("redirect:/back/product/index");
         return modelAndView;
     }
 

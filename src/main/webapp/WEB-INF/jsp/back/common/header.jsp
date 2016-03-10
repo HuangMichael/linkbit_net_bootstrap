@@ -7,7 +7,7 @@
         <div class="navbar-brand">
             <!-- COMPANY LOGO -->
             <a href="/back/portal/index">
-                <img src="img/logo/logo.png" alt="${user.userName}" class="img-responsive" />
+                <img src="img/logo/logo.png" alt="${user.userName}" class="img-responsive"/>
             </a>
             <!-- SIDEBAR COLLAPSE -->
             <div id="sidebar-collapse" class="sidebar-collapse btn">
@@ -31,7 +31,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="/back/user/profile/${sessionScope.user.id}"><i class="fa fa-user"></i>个人信息</a></li>
-                    <li><a href="#"><i class="fa fa-cog"></i>账户设置</a></li>
+                    <li><a href="#"><i class="fa fa-cog"></i>修改密码</a></li>
                     <li><a href="/front/index" target="_blank"><i class="fa fa-eye"></i>进入网站</a></li>
                     <li><a href="/back/logout"><i class="fa fa-power-off"></i>退出登录</a></li>
                 </ul>

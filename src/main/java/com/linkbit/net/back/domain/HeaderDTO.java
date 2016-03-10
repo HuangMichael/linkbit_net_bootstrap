@@ -13,6 +13,7 @@ import lombok.extern.log4j.Log4j;
 @NoArgsConstructor
 @AllArgsConstructor
 public class HeaderDTO {
-    private  String systemName;
-    private String appName;
+    private String systemName; //系统名称
+    private String appName; //应用名称
+    private String urlName;//url名称
 }

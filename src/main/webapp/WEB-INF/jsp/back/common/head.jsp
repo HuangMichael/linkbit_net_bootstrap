@@ -4,9 +4,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
 <head>
     <base href="<%=basePath%>back/">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -36,9 +34,4 @@
     <!-- FONTS -->
     <link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="js/terebentina-sco.js/css/scojs.css"/>
-
- <%--   <link href="bootstrap-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="js/bootstrap-switch/bootstrap-switch.min.css" rel="stylesheet">
-    <script src="js/jquery/jquery-2.0.3.min.js"></script>
-    <script src="js/bootstrap-switch/bootstrap-switch.min.js"></script>--%>
 </head>

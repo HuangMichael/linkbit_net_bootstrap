@@ -68,7 +68,7 @@
                                                     <label class="col-sm-1 control-label" for="onLineDate">上线日期</label>
 
                                                     <div class="col-sm-5">
-                                                        <input class="form-control" id="onLineDate" type="date"
+                                                        <input class="form-control" id="onLineDate" type="date" name="onLineDate"
                                                                value="${product.onLineDate}"
                                                         />
                                                     </div>
@@ -116,7 +116,7 @@
 
                                                     <div class="col-sm-5">
                                                         <select class="form-control" id="productType"
-                                                                name="product.productType">
+                                                                name="productType">
                                                             <c:forEach items="${productTypeList}" var="productType">
                                                                 <option value="${productType.id}">${productType.typeName}</option>
                                                             </c:forEach>
@@ -127,7 +127,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <a class="btn btn-default" href="/back/product/index">关闭</a>
-                                            <button type="button" id="save${product.id}" name="saveBtn"
+                                            <button type="submit" id="save${product.id}" name="saveBtn"
                                                     class="btn btn-primary">保存
                                             </button>
                                         </div>
@@ -157,16 +157,16 @@
 <%@include file="../common/footer.jsp" %>
 <script>
     $(function () {
-        /* App.setPage("forms");  //Set current page*/
+       // App.setPage("forms");  //Set current page*/
         App.init(); //Initialise plugins and elements
     });
 </script><!-- /JAVASCRIPTS -->
 
 <script type="text/javascript">
     $(function () {
-        /**
+    /*    *//**
          * 提交上传文件
-         * */
+         * *//*
         $("#submit").on("click", function (data) {
             var fullName = $("#file").val();
             $("#uploadForm").attr("action", url);
@@ -179,15 +179,15 @@
         });
 
 
-        /**
+        *//**
          * 获取文件名称
-         * */
+         * *//*
         function getFileName(o) {
             var pos = o.lastIndexOf("\\");
             return o.substring(pos + 1);
-        }
+        }*/
 
-        $(":button").on("click", function () {
+        /*$(":button").on("click", function () {
             var productName = $("#productName").val();
             var productDesc = $("#productDesc").val();
             var productImgUrl = $("#productImgUrl").val();
@@ -216,7 +216,7 @@
 
 
             })
-        });
+        });*/
 
     })
 </script>

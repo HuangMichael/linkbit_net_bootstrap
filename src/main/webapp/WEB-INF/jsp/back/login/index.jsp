@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     <div id="logo">
-                        <a href="index.html"><img src="/back/img/logo/logo.png" height="40" alt="logo name"/></a>
+                        <a href="index.html"><img src="img/logo/logo.png" height="40" alt="logo name"/></a>
                         <%--  <h1>江苏凌比特微电子技术有限公司</h1>--%>
                     </div>
 
@@ -60,86 +60,7 @@
             </div>
         </div>
     </section>
-    <!--/LOGIN -->
-    <!-- REGISTER -->
-    <section id="register_bg" class="font-400">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4">
-                    <div class="login-box">
-                        <h2 class="bigintro">用户注册</h2>
 
-                        <div class="divide-40"></div>
-                        <form role="form">
-                            <div class="form-group">
-                                <label for="exampleInputName">用户昵称</label>
-                                <i class="fa fa-font"></i>
-                                <input type="text" class="form-control" id="exampleInputName">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputUsername">用户名</label>
-                                <i class="fa fa-user"></i>
-                                <input type="text" class="form-control" id="exampleInputUsername">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">用户邮箱</label>
-                                <i class="fa fa-envelope"></i>
-                                <input type="email" class="form-control" id="exampleInputEmail1">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">用户密码</label>
-                                <i class="fa fa-lock"></i>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword2">重复密码</label>
-                                <i class="fa fa-check-square-o"></i>
-                                <input type="password" class="form-control" id="exampleInputPassword2">
-                            </div>
-                            <div>
-                                <label class="checkbox"> <input type="checkbox" class="uniform" value="">我同意 <a
-                                        href="#">服务条款</a> 和 <a href="#">法律法规政策</a></label>
-                                <button type="submit" class="btn btn-success">注册</button>
-                            </div>
-                        </form>
-                        <!-- /SOCIAL REGISTER -->
-                        <div class="login-helpers">
-                            <a href="#" onclick="swapScreen('login_bg');return false;">退到登录页面</a> <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--/REGISTER -->
-    <!-- FORGOT PASSWORD -->
-    <section id="forgot_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4">
-                    <div class="login-box">
-                        <h2 class="bigintro">忘记密码</h2>
-
-                        <div class="divide-40"></div>
-                        <form role="form">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">请输入您的邮箱</label>
-                                <i class="fa fa-envelope"></i>
-                                <input type="email" class="form-control" id="exampleInputEmail3">
-                            </div>
-                            <div>
-                                <button type="submit" class="btn btn-info">发送安全链接至邮箱</button>
-                            </div>
-                        </form>
-                        <div class="login-helpers">
-                            <a href="#" onclick="swapScreen('login_bg');return false;">退回登录</a> <br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- FORGOT PASSWORD -->
 </section>
 <%@include file="../common/footer.jsp" %>
 <script>

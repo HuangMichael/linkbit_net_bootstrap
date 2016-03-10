@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * Created by Administrator on 2016/3/1 0001.
+ * Created by HUANGBIN on 2016/3/1 0001.
  */
 @Component("sessionFilter")
 @WebFilter
@@ -37,7 +37,7 @@ public class SessionFilter implements javax.servlet.Filter {
         HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
         HttpSession session = httpRequest.getSession(true);
 
-        String[] strs = {"login", "logout","front"}; // 路径中包含这些字符串的,可以不用登录直接访问
+        String[] strs = {"login", "logout","/front"}; // 路径中包含这些字符串的,可以不用登录直接访问
         StringBuffer url = httpRequest.getRequestURL();
 
         /**
