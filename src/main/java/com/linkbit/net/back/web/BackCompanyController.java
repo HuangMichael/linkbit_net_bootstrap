@@ -80,18 +80,15 @@ public class BackCompanyController {
         Company company = companyRepository.findById(companyId);
         company.setLogoPath(realPath);
         companyRepository.save(company);
-        return "forward:/back/company/detail/" + companyId;
+        return "redirect:/back/company/detail/" + companyId;
 
     }
 
     @RequestMapping(value = "/saveProperty", method = RequestMethod.POST)
     @ResponseBody
     public CompanyProperty saveProperty(@ModelAttribute("companyProperty") CompanyProperty companyProperty, @RequestParam("cid") long cid) {
-        System.out.println("companyProperty----------------------"+companyProperty.toString());
-        System.out.println("cid----------------------"+cid);
         CompanyProperty obj = companyProperty;
         obj.setCompany(companyRepository.findById(cid));
-        System.out.println("obj----------------------".toString());
         companyPropertyRepository.save(obj);
         return companyProperty;
     }
