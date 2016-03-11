@@ -21,11 +21,8 @@
                                 </div>
                                 <div class="communt-right">
                                     <h4>产品名称</h4>
-
                                     <p>${product.productName}</p>
-
                                 </div>
-
                                 <div class="clearfix"></div>
                             </div>
                             <div class="communt">
@@ -34,9 +31,7 @@
                                 </div>
                                 <div class="communt-right">
                                     <h4>上市时间</h4>
-
                                     <p>${product.onLineDate}</p>
-
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -96,7 +91,7 @@
             $(window).load(function () {
                 $('.flexslider').flexslider({
                     animation: "slide",
-                    start: function (slider) {
+                    start: function () {
                         $('body').removeClass('loading');
                     }
                 });
@@ -125,7 +120,7 @@
 <!-- our-ne -->
 <div class="our-ne">
     <div class="container">
-        <div class="col-md-4"><img src="/front/images/company/contact.jpg" height="80px" width="80px"
+        <div class="col-md-4"><img src="images/company/contact.jpg" height="80px" width="80px"
                                    class="img-thumbnail img-responsive">
         </div>
         <div class="col-md-8">
