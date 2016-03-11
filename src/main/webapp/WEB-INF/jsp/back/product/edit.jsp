@@ -52,27 +52,27 @@
                                                         <input class="form-control" id="productDesc" type="text"
                                                                value="${product.productDesc}"
                                                                name="productDesc"
-                                                        />
+                                                                />
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label class="col-sm-1 control-label"
+
+                                                   <%-- <label class="col-sm-1 control-label"
                                                            for="productImgUrl">图片路径</label>
 
                                                     <div class="col-sm-5">
                                                         <input class="form-control" id="productImgUrl" type="text"
                                                                value="${product.productImgUrl}"
-                                                               name="productImgUrl"
-                                                        />
-                                                    </div>
-                                                    <label class="col-sm-1 control-label" for="onLineDate">上线日期</label>
+                                                               name="productImgUrl"/>
+                                                    </div>--%>
+                                                    <%-- <label class="col-sm-1 control-label" for="onLineDate">上线日期</label>
 
-                                                    <div class="col-sm-5">
-                                                        <input class="form-control" id="onLineDate" type="date" name="onLineDate"
-                                                               value="${product.onLineDate}"
-                                                        />
-                                                    </div>
-                                                </div>
+                                                     <div class="col-sm-5">
+                                                         <input class="form-control" id="onLineDate" type="date"
+                                                                name="onLineDate"
+                                                                value="${product.onLineDate}"
+                                                                 />
+                                                     </div>--%>
+
                                                 <div class="form-group">
 
                                                     <label for="showInMainPage"
@@ -116,7 +116,7 @@
 
                                                     <div class="col-sm-5">
                                                         <select class="form-control" id="productType"
-                                                                name="productType">
+                                                                name="productType.id">
                                                             <c:forEach items="${productTypeList}" var="productType">
                                                                 <option value="${productType.id}">${productType.typeName}</option>
                                                             </c:forEach>
@@ -145,7 +145,8 @@
 								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
                 </div>
-            </div><!-- /CONTENT-->
+            </div>
+            <!-- /CONTENT-->
         </div>
     </div>
     </div>
@@ -157,66 +158,71 @@
 <%@include file="../common/footer.jsp" %>
 <script>
     $(function () {
-       // App.setPage("forms");  //Set current page*/
+        // App.setPage("forms");  //Set current page*/
         App.init(); //Initialise plugins and elements
     });
-</script><!-- /JAVASCRIPTS -->
+</script>
+<!-- /JAVASCRIPTS -->
 
 <script type="text/javascript">
     $(function () {
-    /*    *//**
+        /*    */
+        /**
          * 提交上传文件
-         * *//*
-        $("#submit").on("click", function (data) {
-            var fullName = $("#file").val();
-            $("#uploadForm").attr("action", url);
-            $("#uploadForm").submit();
+         * */
+        /*
+         $("#submit").on("click", function (data) {
+         var fullName = $("#file").val();
+         $("#uploadForm").attr("action", url);
+         $("#uploadForm").submit();
 
-        });
+         });
 
-        $("#file").on("change", function () {
-            $("#fileName").val((getFileName($(this).val())));
-        });
+         $("#file").on("change", function () {
+         $("#fileName").val((getFileName($(this).val())));
+         });
 
 
-        *//**
+         */
+        /**
          * 获取文件名称
-         * *//*
-        function getFileName(o) {
-            var pos = o.lastIndexOf("\\");
-            return o.substring(pos + 1);
-        }*/
+         * */
+        /*
+         function getFileName(o) {
+         var pos = o.lastIndexOf("\\");
+         return o.substring(pos + 1);
+         }*/
 
         /*$(":button").on("click", function () {
-            var productName = $("#productName").val();
-            var productDesc = $("#productDesc").val();
-            var productImgUrl = $("#productImgUrl").val();
-            var onLineDate = $("#onLineDate").val();
-            var online = $("#online").val();
-            var productType = $("#productType").val();
-            var showInMainPage = $("#showInMainPage").val();
-            var sortNo = $("#sortNo").val();
-            var objId = $("#objId").val();
+         var productName = $("#productName").val();
+         var productDesc = $("#productDesc").val();
+         var productImgUrl = $("#productImgUrl").val();
+         var onLineDate = $("#onLineDate").val();
+         var online = $("#online").val();
+         var productType = $("#productType").val();
+         var showInMainPage = $("#showInMainPage").val();
+         var sortNo = $("#sortNo").val();
+         var objId = $("#objId").val();
 
 
-            var product = {
-                productName: productName,
-                productDesc: productDesc,
-                productImgUrl: productImgUrl,
-                productType: productType,
-                showInMainPage: showInMainPage,
-                onLineDate: onLineDate,
-                online: online,
-                sortNo: sortNo
+         var product = {
+         productName: productName,
+         productDesc: productDesc,
+         productImgUrl: productImgUrl,
+         productType: productType,
+         showInMainPage: showInMainPage,
+         onLineDate: onLineDate,
+         online: online,
+         sortNo: sortNo
 
-            }
-            console.log("product---" + JSON.stringify(product));
-            var url = "/back/product/update";
-            $.post(url, {"product": product, "objId": objId}, function (data) {
+         }
+         console.log("product---" + JSON.stringify(product));
+         var url = "/back/product/update";
+         $.post(url, {"product": product, "objId": objId}, function (data) {
 
 
-            })
-        });*/
+         })
+         });*/
 
     })
 </script>
