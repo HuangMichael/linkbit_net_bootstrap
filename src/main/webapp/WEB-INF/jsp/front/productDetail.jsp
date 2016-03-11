@@ -5,15 +5,14 @@
 <!-- header -->
 <jsp:include page="header.jsp"/>
 <!-- header -->
-<link rel="stylesheet" href="/front/plugins/product_how/css/datouwang.css">
+<link rel="stylesheet" href="plugins/product_how/css/datouwang.css">
 <div class="about-section">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="sp-wrap">
                     <a href="${product.productImgUrl}">
-                        <img src="${product.productImgUrl}" alt="${product.productName}"
-                             class="img-responsive img-thumb img-rounded"/>
+                        <img src="${product.productImgUrl}" alt="${product.productName}" class="img-responsive img-thumb img-rounded carousel-inner"/>
                     </a>
                 </div>
             </div>
@@ -50,7 +49,7 @@
 </div>
 <div style="padding-bottom: 10px"></div>
 <jsp:include page="footer.jsp"/>
-<script type="text/javascript" src="/front/plugins/product_how/js/smoothproducts.js"></script>
+<script type="text/javascript" src="plugins/product_how/js/smoothproducts.js"></script>
 <!-- footer -->
 </body>
 </html>
