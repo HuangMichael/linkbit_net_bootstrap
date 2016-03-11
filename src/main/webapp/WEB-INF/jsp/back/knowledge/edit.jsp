@@ -30,7 +30,8 @@
                                     <a type="button" class="btn btn-default btn-mini navbar-btn"
                                        href="/back/knowledge/index">信息列表 </a>
 
-                                    <form id="editForm" class="form-horizontal" role="form" action="/back/knowledge/update" method="post">
+                                    <form id="editForm" class="form-horizontal" role="form"
+                                          action="/back/knowledge/update" method="post">
                                         <div class="form-group">
                                             <div class="col-sm-12">
                                                 <input class="form-control" id="objId" type="hidden" name="objId"
@@ -41,7 +42,7 @@
 
                                                     <div class="col-sm-4">
                                                         <input class="form-control" id="title" type="text"
-                                                               name="paraName" value="${knowledge.title}" required/>
+                                                               name="title" value="${knowledge.title}" required/>
                                                     </div>
 
                                                     <label class="col-sm-2 control-label" for="knowledgeDesc">描述</label>
@@ -61,28 +62,16 @@
                                                     </div>
                                                     <label class="col-sm-2 control-label"
                                                            for="showInMainPage">主页显示</label>
-
                                                     <div class="col-sm-4">
-                                                        <input class="form-control" id="showInMainPage" type="text"
-                                                               name="showInMainPage" value="${knowledge.showInMainPage}"
-                                                               required/>
+                                                        <form:select id="showInMainPage" path="knowledge.showInMainPage"
+                                                                     cssClass="form-control"
+                                                                     itemValue="${knowledge.showInMainPage}">
+                                                            <form:option value="1">是</form:option>
+                                                            <form:option value="0">否</form:option>
+                                                        </form:select>
                                                     </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="col-sm-2 control-label" for="publisher">发布人</label>
 
-                                                    <div class="col-sm-4">
-                                                        <input class="form-control" id="publisher" type="text"
-                                                               name="publisher" value="${knowledge.publisher}" required
-                                                               readonly/>
-                                                    </div>
-                                                    <label class="col-sm-2 control-label" for="publishTime">发布时间</label>
 
-                                                    <div class="col-sm-4">
-                                                        <input class="form-control" id="publishTime" type="date"
-                                                               name="display" value="${knowledge.publishTime}" required
-                                                               readonly/>
-                                                    </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <div class="col-sm-12">
@@ -246,21 +235,18 @@
                                                         </div>
 
                                                         <input type="hidden" id="content_hidden" name="content"></div>
-                                                        <div id="editor" contenteditable="true">
-                                                            ${knowledge.content}
-                                                        </div>
+                                                    <div id="editor" contenteditable="true">
+                                                        ${knowledge.content}
                                                     </div>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <a class="btn btn-default" href="/back/knowledge/index">关闭</a>
-                                                    <button type="submit" id="save${knowledge.id}" name="saveBtn"
-                                                            class="btn btn-primary">保存
-                                                    </button>
-                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a class="btn btn-default" href="/back/knowledge/index">关闭</a>
+                                                <button type="submit" id="save${knowledge.id}" name="saveBtn"
+                                                        class="btn btn-primary">保存
+                                                </button>
                                             </div>
                                         </div>
-                                    </form>
-
                                     </form>
                                 </div>
                             </div>
@@ -274,7 +260,8 @@
 								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
                 </div>
-            </div><!-- /CONTENT-->
+            </div>
+            <!-- /CONTENT-->
         </div>
     </div>
     </div>
@@ -291,15 +278,15 @@
         App.setPage("rich_text_editors");
         App.init(); //Initialise plugins and elements
     });
-</script><!-- /JAVASCRIPTS -->
+</script>
+<!-- /JAVASCRIPTS -->
 
 <script type="text/javascript">
     $(function () {
         $(":submit").on("click", function () {
-            var content=$("#editor").html();
-            $("#content_hidden").val("content");
-
-       console.log("--------------------"+ $("#editForm").serializeArray());
+            var content = $("#editor").html();
+            $("#content_hidden").val(content);
+            console.log("--------------------" + $("#editForm").serializeArray());
             $("#editForm").submit();
         });
     })
