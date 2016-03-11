@@ -314,7 +314,6 @@
     $(function () {
         // 富文本和动态表格插件同时加载有冲突
         App.setPage("dynamic_table");  //Set current page
-        App.setPage("rich_text_editors");  //Set current page
         App.init(); //Initialise plugins and elements
     });
     //新建记录
