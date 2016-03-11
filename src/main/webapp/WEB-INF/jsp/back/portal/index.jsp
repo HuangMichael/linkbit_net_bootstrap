@@ -50,9 +50,9 @@
                                 <div class="col-lg-6">
                                     <div class="dashbox panel panel-default">
                                         <div class="panel-body">
-                                            <div class="panel-left red">
-                                                <i class="fa fa-instagram fa-3x"></i>
-                                            </div>
+                                           <%-- <div class="panel-left red">
+                                                &lt;%&ndash;<i class="fa fa-instagram fa-3x"></i>&ndash;%&gt;
+                                            </div>--%>
                                             <div class="panel-right">
                                                 <div class="number">${portalNumberDTO.allProductsCount}</div>
                                                 <div class="title">产品总数量</div>
@@ -66,14 +66,14 @@
                                 <div class="col-lg-6">
                                     <div class="dashbox panel panel-default">
                                         <div class="panel-body">
-                                            <div class="panel-left blue">
-                                                <i class="fa fa-twitter fa-3x"></i>
-                                            </div>
+                                           <%-- <div class="panel-left blue">
+                                                &lt;%&ndash;<i class="fa fa-twitter fa-3x"></i>&ndash;%&gt;
+                                            </div>--%>
                                             <div class="panel-right">
                                                 <div class="number"> ${portalNumberDTO.allCustomersCount}</div>
                                                 <div class="title">客户总数量</div>
 												<span class="label label-warning">
-                                                   3
+                                                    ${portalNumberDTO.allCustomersCount}
 												</span>
                                             </div>
                                         </div>
