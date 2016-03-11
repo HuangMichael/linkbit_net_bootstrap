@@ -7,6 +7,7 @@ import com.linkbit.net.front.domain.customers.CustomerRepository;
 import com.linkbit.net.front.domain.knowledge.KnowledgeRepository;
 import com.linkbit.net.front.domain.menu.Menu;
 import com.linkbit.net.front.domain.menu.MenuRepository;
+import com.linkbit.net.front.domain.message.Message;
 import com.linkbit.net.front.domain.message.MessageRepository;
 import com.linkbit.net.front.domain.news.NewsRepository;
 import com.linkbit.net.front.domain.product.ProductRepository;
@@ -52,9 +53,9 @@ public class BackPortalController {
 
 
     @RequestMapping("/index")
-        public String index(ModelMap modelMap) {
-            List<Menu> backMenusList = menuRepository.findByMenuType("1");
-            modelMap.put("backMenusList", backMenusList);
+    public String index(ModelMap modelMap) {
+        List<Menu> backMenusList = menuRepository.findByMenuType("1");
+        modelMap.put("backMenusList", backMenusList);
         HeaderDTO headerDTO = new HeaderDTO();
         headerDTO.setSystemName("网站后台管理系统");
         headerDTO.setAppName(" 门户信息");
@@ -76,17 +77,20 @@ public class BackPortalController {
 
         //所有知识信息数量
 
-        long allMessageCount = messageRepository.findAll().size();
 
-        PortalNumberDTO portalNumberDTO =  new PortalNumberDTO();
+        List<Message> unreadMessages  = messageRepository.findAllUnreadMessages();
+        long allMessageCount = unreadMessages.size();
+
+
+        PortalNumberDTO portalNumberDTO = new PortalNumberDTO();
         portalNumberDTO.setAllProductsCount(allProductsCount);
         portalNumberDTO.setAllNewsCount(allNewsCount);
         portalNumberDTO.setAllKnowlegeCount(allKnowlegeCount);
         portalNumberDTO.setAllCustomersCount(allCustomersCount);
         portalNumberDTO.setAllMessageCount(allMessageCount);
         modelMap.put("portalNumberDTO", portalNumberDTO);
-       List<String> appAccessLogList = appAccessLogRepository.findLast5DaysAccess();
-
+        modelMap.put("unreadMessages", unreadMessages);
+        List<String> appAccessLogList = appAccessLogRepository.findLast5DaysAccess();
 
 
         return "/back/portal/index";

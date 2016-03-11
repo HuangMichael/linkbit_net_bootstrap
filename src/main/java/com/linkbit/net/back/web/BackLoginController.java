@@ -49,7 +49,7 @@ public class BackLoginController extends BaseController {
     }
 
 
-    @RequestMapping("/logout")
+    @RequestMapping(value = "/logout", method = {RequestMethod.POST, RequestMethod.GET})
     public String logout(HttpSession session) {
         session.invalidate();
         return "/back/login/index";

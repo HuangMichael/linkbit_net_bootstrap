@@ -96,12 +96,12 @@ public class BackCustomerController extends BackBaseController {
     }
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public String update(@ModelAttribute("customer") Customer customer,@RequestParam("objId")Long objId) {
-        System.out.println("objId---------------------"+objId);
         if (objId != null) {
             Customer oldObj = customerRepository.findById(objId);
             oldObj.setCustomerName(customer.getCustomerName());
             oldObj.setAddress(customer.getAddress());
             oldObj.setFax(customer.getFax());
+            oldObj.setMainPage(customer.getMainPage());
             oldObj.setTelephone(customer.getTelephone());
             customerRepository.save(oldObj);
         }
