@@ -17,30 +17,33 @@
                         <div class="col-md-7 thought-right">
                             <div class="communt">
                                 <div class="communt-left">
-                                   <%-- <i class="glyphicon glyphicon-home"></i>--%>
+                                    <div class="col-md-2"></div>
                                 </div>
                                 <div class="communt-right">
                                     <h4>产品名称</h4>
+
                                     <p>${product.productName}</p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="communt">
                                 <div class="communt-left">
-                                  <%--  <i class="glyphicon glyphicon-calendar"></i>--%>
+                                    <div class="col-md-2"></div>
                                 </div>
                                 <div class="communt-right">
                                     <h4>上市时间</h4>
+
                                     <p>${product.onLineDate}</p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                             <div class="communt">
                                 <div class="communt-left">
-                                  <%--  <i class="glyphicon glyphicon-calendar"></i>--%>
+                                    <div class="col-md-2"></div>
                                 </div>
                                 <div class="communt-right">
                                     <h4>产品描述</h4>
+
                                     <p>${product.productDesc}</p>
                                 </div>
                                 <div class="clearfix"></div>
@@ -95,8 +98,6 @@
                         $('body').removeClass('loading');
                     }
                 });
-
-
             });
         </script>
         <!-- FlexSlider -->
@@ -120,15 +121,17 @@
 <!-- our-ne -->
 <div class="our-ne">
     <div class="container">
-        <div class="col-md-4"><img src="images/company/contact.jpg" height="80px" width="80px"
-                                   class="img-thumbnail img-responsive">
-        </div>
-        <div class="col-md-8">
+        <div class="col-md-12">
             <address>
-                <strong>${company.companyName}</strong><br>
-                <strong>${company.address}</strong><br>
-                <c:if test="${company.telephone!=null}"><abbr
-                        title="Phone">电话:</abbr><strong>${company.telephone}</strong></c:if>
+                <c:if test="${company.companyName!=null}">
+                    <strong>公司名称:</strong>${company.companyName}
+                </c:if>
+                <c:if test="${company.address!=null}">
+                    <strong>地址:</strong>${company.address}
+                </c:if>
+                <c:if test="${company.telephone!=null}">
+                    <abbr title="Phone">电话:</abbr>${company.telephone}
+                </c:if>
             </address>
         </div>
 
