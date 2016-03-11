@@ -4,8 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@include file="../common/head.jsp" %>
-
-
 <body>
 <!-- HEADER -->
 <%@include file="../common/header.jsp" %>

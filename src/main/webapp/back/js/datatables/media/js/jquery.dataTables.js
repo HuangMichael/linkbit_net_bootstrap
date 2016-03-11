@@ -4716,7 +4716,7 @@
 				{
 					throw new Error(sAlert);
 				}
-
+				return;
 			}
 			else if ( window.console && console.log )
 			{
@@ -9182,14 +9182,14 @@
 				 *      } );
 				 *    } );
 				 */
-				"sFirst": "第一页",
+				"sFirst": "First",
 			
 			
 				/**
 				 * Text to use when using the 'full_numbers' type of pagination for the
 				 * button to take the user to the last page.
 				 *  @type string
-				 *  @default 最后一页
+				 *  @default Last
 				 *  @dtopt Language
 				 * 
 				 *  @example
@@ -9203,7 +9203,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sLast": "最后一页",
+				"sLast": "Last",
 			
 			
 				/**
@@ -9224,7 +9224,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "下一页",
+				"sNext": "Next",
 			
 			
 				/**
@@ -9245,7 +9245,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "上一页"
+				"sPrevious": "Previous"
 			},
 		
 			/**
@@ -9287,7 +9287,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "显示第 _START_ 到 第_END_ 条共 _TOTAL_ 条记录",
+			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
 		
 		
 			/**
@@ -9306,7 +9306,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "显示0条共0条记录",
+			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
 		
 		
 			/**
@@ -9326,7 +9326,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoFiltered": "(filtered from _MAX_ total entries)",
+			"sInfoFiltered": "(从 _MAX_条记录中过滤 )",
 		
 		
 			/**
@@ -9429,7 +9429,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLoadingRecords": "数据加载中...",
+			"sLoadingRecords": "Loading...",
 		
 		
 			/**
@@ -9448,7 +9448,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sProcessing": "数据处理中...",
+			"sProcessing": "Processing...",
 		
 		
 			/**
@@ -9481,7 +9481,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "搜索:",
+			"sSearch": "Search:",
 		
 		
 			/**
@@ -9524,7 +9524,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sZeroRecords": "没有找到记录"
+			"sZeroRecords": "No matching records found"
 		},
 	
 	

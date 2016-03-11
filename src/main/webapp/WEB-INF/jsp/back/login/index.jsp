@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@include file="../common/head.jsp" %>
-<body class="login" background=" img/login/5.jpg">
+<body class="login">
 <!-- PAGE -->
 <section id="page">
     <!-- HEADER -->
@@ -27,7 +27,7 @@
     <!-- LOGIN -->
     <section id="login_bg" class="visible">
         <div class="container">
-            <div class="row" style="background: url('/back/img/login/5.jpg')">
+            <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     <div class="login-box">
                         <h2 class="bigintro"> 用户登录</h2>
@@ -45,16 +45,10 @@
                                 <input type="password" class="form-control" id="password" name="password">
                             </div>
                             <div>
-                                <label class="checkbox"> <input type="checkbox" class="uniform" value="">记住密码</label>
                                 <button type="submit" class="btn btn-danger" id="login_btn">登录</button>
                             </div>
                         </form>
                         <!-- /SOCIAL LOGIN -->
-                        <div class="login-helpers">
-                            <a href="#" onclick="swapScreen('forgot_bg');return false;">忘记密码?</a> <br>
-                            没有账号? <a href="#" onclick="swapScreen('register_bg');return false;">现在注册
-                        </a>
-                        </div>
                     </div>
                 </div>
             </div>

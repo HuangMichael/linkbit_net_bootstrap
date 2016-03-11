@@ -99,7 +99,7 @@
                                                 <c:forEach items="${unreadMessages}" var="message" varStatus="status">
                                                     <tr class="gradeX" id="tr${message.id}">
                                                         <td class="center">${status.index+1}</td>
-                                                        <td class="center"><a href="/back/message/detail/${message.id}">${message.userName}</a></td>
+                                                        <td class="center"><a href="/back/message/read/${message.id}">${message.userName}</a></td>
                                                         <td class="center hidden-xs">${message.telephone}</td>
                                                         <td class="center"><fmt:formatDate value="${message.messageTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
                                                         </td>

@@ -56,22 +56,22 @@
                                                     </div>
                                                 </div>
 
-                                                   <%-- <label class="col-sm-1 control-label"
-                                                           for="productImgUrl">图片路径</label>
+                                                <%-- <label class="col-sm-1 control-label"
+                                                        for="productImgUrl">图片路径</label>
 
-                                                    <div class="col-sm-5">
-                                                        <input class="form-control" id="productImgUrl" type="text"
-                                                               value="${product.productImgUrl}"
-                                                               name="productImgUrl"/>
-                                                    </div>--%>
-                                                    <%-- <label class="col-sm-1 control-label" for="onLineDate">上线日期</label>
+                                                 <div class="col-sm-5">
+                                                     <input class="form-control" id="productImgUrl" type="text"
+                                                            value="${product.productImgUrl}"
+                                                            name="productImgUrl"/>
+                                                 </div>--%>
+                                                <%-- <label class="col-sm-1 control-label" for="onLineDate">上线日期</label>
 
-                                                     <div class="col-sm-5">
-                                                         <input class="form-control" id="onLineDate" type="date"
-                                                                name="onLineDate"
-                                                                value="${product.onLineDate}"
-                                                                 />
-                                                     </div>--%>
+                                                 <div class="col-sm-5">
+                                                     <input class="form-control" id="onLineDate" type="date"
+                                                            name="onLineDate"
+                                                            value="${product.onLineDate}"
+                                                             />
+                                                 </div>--%>
 
                                                 <div class="form-group">
 
@@ -92,6 +92,10 @@
                                                         <input class="form-control" id="sortNo" type="number"
                                                                name="sortNo"
                                                                value="${product.sortNo}"/>
+
+                                                        <input class="form-control" id="productImgUrl" type="hidden"
+                                                               name="productImgUrl"
+                                                               value="${product.productImgUrl}"/>
                                                     </div>
                                                 </div>
 

@@ -25,6 +25,9 @@
 <script src="/front/plugins/jPages-master/js/js.js"></script>
 <script src="/front/plugins/jPages-master/js/jPages.js"></script>
 <script src="/back/js/terebentina-sco.js/js/sco.confirm.js"></script>
+<script src="/back/js/script.js"></script>
+<script src="/back/js/uniform/jquery.uniform.min.js"></script>
+
 <script>
     /*    $(function () {
      var url = "/back/menu/findFrontMenus";

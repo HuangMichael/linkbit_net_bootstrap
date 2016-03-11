@@ -5,10 +5,7 @@ import com.linkbit.net.front.domain.message.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 
@@ -22,12 +19,13 @@ import java.util.Date;
 public class MessageController {
     @Autowired
     MessageRepository messageRepository;
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
-    @ResponseBody
-    public Message save(@ModelAttribute Message message) {
 
-        System.out.print("message-------------------"+message);
-        return  messageRepository.save(message);
+    @RequestMapping(value = "/save", method = RequestMethod.POST)
+    public String save(@ModelAttribute Message message) {
+        message.setMessageTime(new Date());
+        message.setStatus("0");
+        messageRepository.save(message);
+        return "redirect:/front/message";
     }
 
 }
