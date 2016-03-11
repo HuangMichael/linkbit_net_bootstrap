@@ -27,7 +27,7 @@
                             <div class="box border blue">
                                 <%@include file="../common/menu.jsp" %>
                                 <div class="box-body">
-                                   <%-- <%@include file="../common/menuBar.jsp" %>--%>
+                                  <%@include file="../common/menuBar.jsp" %>
                                     <form class="form-horizontal" role="form">
                                         <div class="form-group">
 
