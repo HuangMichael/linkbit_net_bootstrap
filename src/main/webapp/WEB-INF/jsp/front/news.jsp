@@ -1,44 +1,39 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page pageEncoding="UTF-8" %>
 <jsp:include page="head.jsp" flush="true"/>
 <body>
 <!-- header -->
 <jsp:include page="header.jsp"/>
-<link rel="stylesheet" href="/front/plugins/jPages-master/css/jPages.css">
-<link rel="stylesheet" href="/front/plugins/jPages-master/css/animate.css">
-<link rel="stylesheet" href="/front/plugins/jPages-master/css/style.css">
-<link rel="stylesheet" href="/front/plugins/jPages-master/css/page.css">
+<link rel="stylesheet" href="plugins/jPages-master/css/jPages.css">
+<link rel="stylesheet" href="plugins/jPages-master/css/animate.css">
+<link rel="stylesheet" href="plugins/jPages-master/css/style.css">
+<link rel="stylesheet" href="plugins/jPages-master/css/page.css">
 
 <!-- about-section -->
 <div class="about-section">
     <div class="container">
         <div class="holder"></div>
         <ul id="itemContainer">
-            <c:forEach items="${newsList}" var="n">
+            <c:forEach items="${newsList}" var="n" varStatus="status">
+                <hr style="display: inline">
                 <li class="list-inline">
-                    <div class="col-md-12 news_title"><a href="/news/detail/${n.id}">${n.newsTitle}</a></div>
-                    <div class="col-md-9 ">关键字:<a class="badge badge-success">${n.keywords}</a></div>
-                    <div class="col-md-3 ">发布时间:${n.publishTime}</div>
-                    <div class="col-md-12 ">
-                        <img src="${n.imgUrl}" height="90px" width="120px"
-                             class="img-responsive img-thumbnail img-rounded news_content">
-                        <div id="content${n.id}" data-loaded="false" class="news_content">${n.newsTitle}<br></div>
-                        <a class="link" id="${n.id}">阅读明细</a>
-                    </div>
+                    <div class="col-md-8 news_title"><a data-id="${n.id}">${status.index+1}.${n.newsTitle}</a></div>
+                    <div id="content${n.id}" class="col-md-12"></div>
                 </li>
             </c:forEach>
         </ul>
     </div>
 </div>
-<script src="/front/plugins/jPages-master/js/js.js"></script>
-<script src="/front/plugins/jPages-master/js/jPages.js"></script>
+<script src="plugins/jPages-master/js/js.js"></script>
+<script src="plugins/jPages-master/js/jPages.js"></script>
 
 <!-- footer -->
 <jsp:include page="footer.jsp"/>
 <script>
     /* when document is ready */
     $(function () {
-        var perPage = 2;
+        var perPage = 20;
         var animation = getRandomAnimation();
         $("div.holder").jPages({
             containerID: "itemContainer",
@@ -50,17 +45,28 @@
             animation: animation,
             perPage: perPage
         });
-        $(".link").on("click", function () {
+/*        $(".link").on("click", function () {
             var id = $(this).attr("id");
-            var url = "/front/news/findById";
+            var url = "news/findById";
             $.getJSON(url, {id: id}, function (data) {
                 $("#content" + id).show("fast", function () {
                     $("#content" + id).html(data["newsContent"]);
                     $("#" + id).html("收起明细");
                 });
             });
-        });
+        });*/
 
+
+        $("a").on("click", function () {
+
+            var id = $(this).data("id");
+            var url = "news/findById";
+            $.getJSON(url, {id: id}, function (data) {
+                $("#content"+id).fadeIn("fast",function(){
+                    $("#content"+id).html(data["newsContent"]);
+                })
+            });
+        });
     });
 </script>
 <!-- footer -->

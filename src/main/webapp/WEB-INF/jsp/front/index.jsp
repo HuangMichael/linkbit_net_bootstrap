@@ -134,11 +134,8 @@
                 </c:if>
             </address>
         </div>
-
     </div>
 </div>
-<!-- our-ne -->
-<!-- footer -->
 <jsp:include page="footer.jsp" flush="true"/>
 <!-- footer -->
 </body>

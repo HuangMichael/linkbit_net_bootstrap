@@ -12,19 +12,14 @@
 <div class="about-section">
     <div class="container">
         <div class="holder"></div>
-        <ul id="itemContainer">
-            <c:forEach items="${knowledgeList}" var="k">
+        <ol id="itemContainer">
+            <c:forEach items="${knowledgeList}" var="k" varStatus=" status" >
                 <li class="list-inline">
-            <div class="col-md-12 news_title"><a href="/knowledge/detail/${k.id}">${k.title}</a></div>
-            <div class="col-md-9 ">关键字:<a class="badge badge-success">${k.keywords}</a></div>
-            <div class="col-md-3 ">发布时间:${k.publishTime}</div>
-            <div class="col-md-12 ">
-                <div id="content${k.id}" class="news_content">${k.knowledgeDesc}<br></div>
-                <a class="link" id="${k.id}">阅读明细</a>
-            </div>
+                    <div class="col-md-12 news_title"><a
+                            href="/front/knowledge/detail/${k.id}">${k.title}</a></div>
                 </li>
             </c:forEach>
-        </ul>
+        </ol>
         <div class="holder"></div>
     </div>
 </div>
@@ -38,7 +33,7 @@
 <script>
     /* when document is ready */
     $(function () {
-        var perPage = 3;
+        var perPage = 10;
         var animation = getRandomAnimation();
         $("div.holder").jPages({
             containerID: "itemContainer",
