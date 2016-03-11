@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="css/linkbit.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="css/product.css" type="text/css" media="screen"/>
     <script src="js/modernizr.custom.63321.js"></script>
-    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/jquery.catslider.js"></script>
     <script src="js/Utils.js"></script>
 
