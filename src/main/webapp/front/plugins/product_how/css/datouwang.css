@@ -36,11 +36,11 @@ html, body {
     height:50px;
 }
 .sp-thumbs a:link, .sp-thumbs a:visited {
-    border:5px solid #eee;
+    border:1px solid #eee;
     display:inline-block;
 }
 .sp-thumbs a:hover, .sp-thumbs a:active, .sp-current {
-    border:1px solid red!important;
+    border:1px solid lightseagreen!important;
 }
 .sp-zoom {
     position:absolute;
