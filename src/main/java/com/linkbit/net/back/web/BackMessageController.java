@@ -41,7 +41,7 @@ public class BackMessageController extends BaseController {
         HeaderDTO headerDTO = new HeaderDTO();
         headerDTO.setSystemName("网站后台管理系统");
         headerDTO.setAppName("留言信息");
-        modelMap.put("headerDTO",headerDTO);
+        modelMap.put("headerDTO", headerDTO);
         modelMap.put("backMenusList", backMenusList);
         modelMap.put("messageList", messageList);
         return "/back/message/index";
@@ -51,20 +51,30 @@ public class BackMessageController extends BaseController {
     @RequestMapping("/detail/{id}")
     public ModelAndView detail(@PathVariable("id") Long id, ModelMap modelMap) {
         Message message = messageRepository.findById(id);
-        Map<String,Message> map = new HashMap<String, Message>();
-        map.put("message",message);
+        Map<String, Message> map = new HashMap<String, Message>();
+        map.put("message", message);
         HeaderDTO headerDTO = new HeaderDTO();
         headerDTO.setSystemName("网站后台管理系统");
         headerDTO.setAppName("留言详细信息");
-        modelMap.put("headerDTO",headerDTO);
-        ModelAndView mv = new ModelAndView("/back/message/detail",map);
+        modelMap.put("headerDTO", headerDTO);
+        ModelAndView mv = new ModelAndView("/back/message/detail", map);
         return mv;
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
     @ResponseBody
     public void delete(@PathVariable long id) {
-        Message message =  messageRepository.findById(id);
+        Message message = messageRepository.findById(id);
         messageRepository.delete(message);
+    }
+
+    @RequestMapping("/read/{id}")
+    public ModelAndView updateReaded(@PathVariable("id") Long id, ModelMap modelMap) {
+        Message message = messageRepository.findById(id);
+        message.setStatus("1");//设置为已读
+        message = messageRepository.save(message);
+        modelMap.put("message", message);
+        ModelAndView mv = new ModelAndView("forward:/back/message/detail/" + id, modelMap);
+        return mv;
     }
 }
