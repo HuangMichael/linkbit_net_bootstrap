@@ -14,7 +14,7 @@
 <div id="bom" class="footer">
     <div class="container">
         <div class="col-md-12">
-            <p>&copy;该网站版权归<a href="/front/index">江苏凌比特微电子技术有限公司</a>所有
+            <p>&copy;该网站版权归<a href="/front/index">江苏凌比特微电子技术有限公司</a>所有<a href="/back/logout" style="color:#575859;">管理入口</a>
                 备案/许可证号：<a href="http://www.miibeian.gov.cn/">苏ICP备16007070号-2</a></p>
         </div>
         <div class="clearfix"></div>
