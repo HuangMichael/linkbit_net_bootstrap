@@ -17,7 +17,7 @@
     <div id="main-content">
         <div class="container">
             <div class="row">
-                <div id="content1" class="col-lg-12">
+                <div id="content" class="col-lg-12">
                     <%@include file="../common/banner.jsp" %>
                     <!-- TABLE IN MODAL -->
                     <!-- EXPORT TABLES -->
@@ -77,20 +77,20 @@
                                         </div>
                                     </form>
                                 </div>
-                                </div>
                             </div>
-                            <!-- /BOX -->
                         </div>
+                        <!-- /BOX -->
                     </div>
-                    <!-- /EXPORT TABLES -->
-                    <div class="footer-tools">
+                </div>
+                <!-- /EXPORT TABLES -->
+                <div class="footer-tools">
 							<span class="go-top">
 								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
-                    </div>
-                </div><!-- /CONTENT-->
-            </div>
+                </div>
+            </div><!-- /CONTENT-->
         </div>
+    </div>
     </div>
 
 </section>
@@ -100,7 +100,7 @@
 <%@include file="../common/footer.jsp" %>
 <script>
     $(function () {
-       /* App.setPage("forms");  //Set current page*/
+        /* App.setPage("forms");  //Set current page*/
         App.init(); //Initialise plugins and elements
     });
 </script><!-- /JAVASCRIPTS -->
