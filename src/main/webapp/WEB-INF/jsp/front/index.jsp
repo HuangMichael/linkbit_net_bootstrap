@@ -89,7 +89,7 @@
             </div>
         </section>
         <!-- FlexSlider -->
-        <script defer src="/front/js/jquery.flexslider.js"></script>
+        <script defer src="js/jquery.flexslider.js"></script>
         <script type="text/javascript">
             $(window).load(function () {
                 $('.flexslider').flexslider({
