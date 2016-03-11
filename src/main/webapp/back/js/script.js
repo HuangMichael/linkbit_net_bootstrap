@@ -2788,10 +2788,10 @@ var App = function () {
      /*-----------------------------------------------------------------------------------*/
     var handleBackstretch = function () {
         $.backstretch([
-            "img/login/1.jpg"
-            , "img/login/2.jpg"
-            , "img/login/3.jpg"
-            , "img/login/4.jpg"
+            "/back/img/login/1.jpg"
+            , "/back/img/login/2.jpg"
+            , "/back/img/login/3.jpg"
+            , "/back/img/login/4.jpg"
         ], {duration: 3000, fade: 750});
     }
     /*-----------------------------------------------------------------------------------*/
@@ -3350,11 +3350,11 @@ var App = function () {
         setTimeout(function () {
             var unique_id = $.gritter.add({
                 // (string | mandatory) the heading of the notification
-                title: 'Welcome to Cloud Admin!',
+                title: '欢迎登录网站后台发布系统!',
                 // (string | mandatory) the text inside the notification
-                text: 'Cloud is a feature-rich Responsive Admin Dashboard Template with a wide array of plugins!',
+                text: '江苏凌比特微电子有限公司版权所有!',
                 // (string | optional) the image to display on the left
-                image: 'img/gritter/cloud.png',
+                image: '/front/images/company/logo.png',
                 // (bool | optional) if you want it to fade out on its own or just sit there
                 sticky: true,
                 // (int | optional) the time you want it to be alive for before fading out
@@ -3372,68 +3372,11 @@ var App = function () {
             }, 12000);
         }, 2000);
 
-        setTimeout(function () {
-            var unique_id = $.gritter.add({
-                // (string | mandatory) the heading of the notification
-                title: 'Customize Cloud Admin!',
-                // (string | mandatory) the text inside the notification
-                text: 'Cloud Admin is easily customizable, lightweight and has a great User Experience.',
-                // (string | optional) the image to display on the left
-                image: 'img/gritter/settings.png',
-                // (bool | optional) if you want it to fade out on its own or just sit there
-                sticky: true,
-                // (int | optional) the time you want it to be alive for before fading out
-                time: '',
-                // (string | optional) the class name you want to apply to that specific message
-                class_name: 'my-sticky-class'
-            });
 
-            // You can have it return a unique id, this can be used to manually remove it later using
-            setTimeout(function () {
-                $.gritter.remove(unique_id, {
-                    fade: true,
-                    speed: 'slow'
-                });
-            }, 13000);
-        }, 8000);
 
-        setTimeout(function () {
 
-            $.extend($.gritter.options, {
-                position: 'top-left'
-            });
 
-            var unique_id = $.gritter.add({
-                position: 'top-left',
-                // (string | mandatory) the heading of the notification
-                title: 'Buy Cloud Admin!',
-                // (string | mandatory) the text inside the notification
-                text: 'Purchase Cloud Admin theme and get access to future updates at no extra cost. Buy now!',
-                // (string | optional) the image to display on the left
-                image: 'img/gritter/buy.png',
-                // (bool | optional) if you want it to fade out on its own or just sit there
-                sticky: true,
-                // (int | optional) the time you want it to be alive for before fading out
-                time: '',
-                // (string | optional) the class name you want to apply to that specific message
-                class_name: 'my-sticky-class'
-            });
-
-            $.extend($.gritter.options, {
-                position: 'top-right'
-            });
-
-            // You can have it return a unique id, this can be used to manually remove it later using
-            setTimeout(function () {
-                $.gritter.remove(unique_id, {
-                    fade: true,
-                    speed: 'slow'
-                });
-            }, 15000);
-
-        }, 15000);
-
-        setTimeout(function () {
+       /* setTimeout(function () {
 
             $.extend($.gritter.options, {
                 position: 'top-left'
@@ -3450,9 +3393,9 @@ var App = function () {
                 time: '',
                 // (string | optional) the class name you want to apply to that specific message
                 class_name: 'my-sticky-class'
-            });
+            });*/
 
-            setTimeout(function () {
+           /* setTimeout(function () {
                 $.gritter.remove(unique_id, {
                     fade: true,
                     speed: 'slow'
@@ -3463,9 +3406,9 @@ var App = function () {
                 position: 'top-right'
             });
 
-        }, 20000);
+        }, 20000);*/
 
-        setTimeout(function () {
+       /* setTimeout(function () {
 
             $.extend($.gritter.options, {
                 position: 'top-left'
@@ -3495,7 +3438,7 @@ var App = function () {
                 });
             }, 4000);
 
-        }, 25000);
+        }, 25000);*/
     }
     /*-----------------------------------------------------------------------------------*/
     /*	Handles Profile Edit
@@ -3546,6 +3489,7 @@ var App = function () {
             }
             if (App.isPage("dynamic_table")) {
                 handleDataTables();	//Function to display data tables
+                handleWysiwyg();	//Function to display wysiwyg
             }
             if (App.isPage("jqgrid_plugin")) {
                 handleJqgrid();	//Function to display jqGrid
