@@ -47,14 +47,18 @@
                                         <c:forEach items="${customerList}" var="customer" varStatus="status">
                                             <tr class="gradeX" id="tr${customer.id}">
                                                 <td class="center">${status.index+1}</td>
-                                                <td class="center"><a href="/back/customer/detail/${customer.id}">${customer.customerName}</a></td>
+                                                <td class="center"><a
+                                                        href="/back/customer/detail/${customer.id}">${customer.customerName}</a>
+                                                </td>
                                                 <td class=" center ">${customer.telephone}</td>
 
-                                                <td class="center hidden-xs"><c:if test="${customer.showInMainPage}">是</c:if>
+                                                <td class="center hidden-xs"><c:if
+                                                        test="${customer.showInMainPage}">是</c:if>
                                                     <c:if test="${!customer.showInMainPage}">否</c:if></td>
                                                 <td class="center hidden-xs"><c:if test="${customer.status}">是</c:if>
                                                     <c:if test="${!customer.status}">否</c:if></td>
-                                                <td class="center "><a href="/back/customer/edit/${customer.id}">编辑</a></td>
+                                                <td class="center "><a href="/back/customer/edit/${customer.id}">编辑</a>
+                                                </td>
                                                 <td class="center "><a id="delBtn${customer.id}">删除</a>
                                                 </td>
                                             </tr>
@@ -72,15 +76,14 @@
 								<i class="fa fa-chevron-up"></i>回到顶部
 							</span>
                     </div>
-                </div><!-- /CONTENT-->
+                </div>
+                <!-- /CONTENT-->
             </div>
         </div>
     </div>
 
 
-
-
-  <div class="modal fade" id="createModal" tabindex="-1"
+    <div class="modal fade" id="createModal" tabindex="-1"
          role="dialog" aria-labelledby="myModalLabel2">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -112,11 +115,20 @@
                                    id="telephone"
                                    name="telephone" required>
                         </div>
+
+
                         <div class="form-group">
                             <label for="fax">传真</label>
                             <input type="text" class="form-control"
                                    id="fax"
                                    name="fax" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mainPage">公司主页</label>
+                            <input type="text" class="form-control"
+                                   id="mainPage"
+                                   name="mainPage" required>
                         </div>
 
                         <div class="form-group">
@@ -165,17 +177,19 @@
         var customerName = $("#customerName").val();
         var address = $("#address").val();
         var telephone = $("#telephone").val();
-        var fax =  $("#fax").val();
+        var mainPage = $("#mainPage").val();
+        var fax = $("#fax").val();
         var showInMainPage = $("#showInMainPage").val();
         var status = $("#status").val();
-        var customer ={
+        var customer = {
 
-            customerName:customerName,
-        address:address,
-                telephone:telephone,
-                fax:fax,
-            status:status,
-            showInMainPage:showInMainPage
+            customerName: customerName,
+            address: address,
+            telephone: telephone,
+            fax: fax,
+            status: status,
+            mainPage: mainPage,
+            showInMainPage: showInMainPage
 
         };
         $.ajax({
@@ -184,7 +198,7 @@
             data: customer,
             success: function (msg) {
                 $("#createModal").modal('hide');
-               // addRow(customer);
+                addRow(customer);
                 $.bootstrapGrowl("客户信息添加成功！", {
                     type: 'info',
                     align: 'right',
@@ -246,8 +260,7 @@
     });
 
 
-
-
-</script><!-- /JAVASCRIPTS -->
+</script>
+<!-- /JAVASCRIPTS -->
 </body>
 </html>
