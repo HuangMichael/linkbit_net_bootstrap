@@ -310,7 +310,7 @@
 <script>
     $(function () {
         App.setPage("dynamic_table");  //Set current page
-        App.setPage("rich_text_editors");
+  /*      App.setPage("rich_text_editors");*/
         App.init(); //Initialise plugins and elements
     });
 
