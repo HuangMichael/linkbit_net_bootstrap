@@ -21,14 +21,10 @@
     </div>
     <div class="clearfix"></div>
 </div>
-
-
 <script src="/front/plugins/jPages-master/js/js.js"></script>
 <script src="/front/plugins/jPages-master/js/jPages.js"></script>
-
 <script>
-
-    $(function () {
+/*    $(function () {
         var url = "/back/menu/findFrontMenus";
         $.getJSON(url, function (data) {
             var html = "";
@@ -39,7 +35,7 @@
             }
             $("#menu_ul").html(html);
         });
-    });
+    });*/
 </script>
 
 
