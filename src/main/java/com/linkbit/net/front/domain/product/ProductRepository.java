@@ -1,5 +1,6 @@
 package com.linkbit.net.front.domain.product;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
@@ -10,11 +11,12 @@ import java.util.List;
 public interface ProductRepository extends CrudRepository<Product, Long> {
 
 
-    List<Product> findByProductName(String productName);
 
 
     List<Product> findByOnline(boolean online);
 
+
+    @Query("select p from Product p order by  p.productType.id, p.onLineDate")
     List<Product> findAll();
 
     /**
