@@ -11,13 +11,13 @@
                 <div class="banner-info">
                     <div class="container">
                         <div class="col-md-5 thought-left">
-                            <img src="${product.productImgUrl}" height="500px" width="500px" class="img-responsive"
+                            <img src="${product.productImgUrl}" height="500px" width="500px" class="img-responsive img-"
                                  alt=""/>
                         </div>
                         <div class="col-md-7 thought-right">
                             <div class="communt">
                                 <div class="communt-left">
-                                    <i class="glyphicon glyphicon-home"></i>
+                                   <%-- <i class="glyphicon glyphicon-home"></i>--%>
                                 </div>
                                 <div class="communt-right">
                                     <h4>产品名称</h4>
@@ -30,7 +30,7 @@
                             </div>
                             <div class="communt">
                                 <div class="communt-left">
-                                    <i class="glyphicon glyphicon-calendar"></i>
+                                  <%--  <i class="glyphicon glyphicon-calendar"></i>--%>
                                 </div>
                                 <div class="communt-right">
                                     <h4>上市时间</h4>
@@ -42,11 +42,10 @@
                             </div>
                             <div class="communt">
                                 <div class="communt-left">
-                                    <i class="glyphicon glyphicon-calendar"></i>
+                                  <%--  <i class="glyphicon glyphicon-calendar"></i>--%>
                                 </div>
                                 <div class="communt-right">
                                     <h4>产品描述</h4>
-
                                     <p>${product.productDesc}</p>
                                 </div>
                                 <div class="clearfix"></div>
