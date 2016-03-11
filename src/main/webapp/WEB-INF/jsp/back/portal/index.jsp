@@ -1,5 +1,6 @@
 <%@page pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <html lang="en">
@@ -84,25 +85,38 @@
                                 <div class="col-md-12">
                                     <div class="quick-pie panel panel-default">
                                         <div class="panel-body">
-                                            <div class="col-md-4 text-center">
-                                                <div id="dash_pie_1" class="piechart" data-percent="59">
-                                                    <span class="percent"></span>
-                                                </div>
-                                                <a href="#" class="title">知识信息 <i class="fa fa-angle-right"></i></a>
-                                            </div>
-                                            <div class="col-md-4 text-center">
-                                                <div id="dash_pie_2" class="piechart" data-percent="73">
-                                                    <span class="percent"></span>
-                                                </div>
-                                                <a href="#" class="title">北斗新闻 <i class="fa fa-angle-right"></i></a>
-                                            </div>
-                                            <div class="col-md-4 text-center">
-                                                <div id="dash_pie_3" class="piechart" data-percent="90">
-                                                    <span class="percent"></span>
-                                                </div>
-                                                <a href="#" class="title">留言信息<i
-                                                        class="fa fa-angle-right"></i></a>
-                                            </div>
+                                            <table id="datatable2" cellpadding="0" cellspacing="0" border="0"
+                                                   class="datatable table table-striped table-bordered table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th class="center">序号</th>
+                                                    <th class="center">留言人</th>
+                                                    <th class="center">电话</th>
+                                                    <th class="center hidden-xs">留言时间</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="tbody">
+                                                <c:forEach items="${unreadMessages}" var="message" varStatus="status">
+                                                    <tr class="gradeX" id="tr${message.id}">
+                                                        <td class="center">${status.index+1}</td>
+                                                        <td class="center"><a href="/back/message/detail/${message.id}">${message.userName}</a></td>
+                                                        <td class="center hidden-xs">${message.telephone}</td>
+                                                        <td class="center"><fmt:formatDate value="${message.messageTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
+                                                        </td>
+                                                    </tr>
+                                                </c:forEach>
+                                                </tbody>
+                                                <%-- <tfoot>
+                                                 <tr>
+                                                     <th class="center">序号</th>
+                                                     <th class="center">留言人</th>
+                                                     <th class="center">留言内容</th>
+                                                     <th class="center hidden-xs">邮箱</th>
+                                                     <th class="center">电话</th>
+                                                     <th class="center hidden-xs">留言时间</th>
+                                                 </tr>
+                                                 </tfoot>--%>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
