@@ -57,11 +57,10 @@ public class BackProductController extends BackBaseController {
     public String index(ModelMap modelMap) {
 
        String indexUrl =  this.getIndexUrl();
-        System.out.println("indexUrl------------------"+indexUrl);
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
         List<Product> productList = productRepository.findAll();
         List<ProductType> productTypeList = productTypeRepository.findByStatus("1");
-        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "产品信息",this.getIndexUrl());
+        HeaderDTO headerDTO = new HeaderDTO("网站后台管理系统", "产品信息",indexUrl);
         modelMap.put("headerDTO",headerDTO);
         modelMap.put("productTypeList", productTypeList);
         modelMap.put("backMenusList", backMenusList);
@@ -88,7 +87,6 @@ public class BackProductController extends BackBaseController {
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public ModelAndView update(@ModelAttribute Product product ,@RequestParam("objId")Long objId) {
-        System.out.println("product---------------"+product.toString());
         if (objId != null) {
             Product oldObj = productRepository.findById(objId);
             oldObj.setProductImgUrl(product.getProductImgUrl());
@@ -100,8 +98,6 @@ public class BackProductController extends BackBaseController {
             oldObj.setSortNo(product.getSortNo());
             productRepository.save(oldObj);
         }
-
-        System.out.println("product---------------"+product.toString());
         ModelAndView modelAndView = new ModelAndView("redirect:/back/product/index");
         return modelAndView;
     }
