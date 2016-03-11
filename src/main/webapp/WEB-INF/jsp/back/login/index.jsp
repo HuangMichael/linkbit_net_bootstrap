@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@include file="../common/head.jsp" %>
-<body class="login">
+<body class="login" background=" img/login/5.jpg">
 <!-- PAGE -->
 <section id="page">
     <!-- HEADER -->
@@ -27,7 +27,7 @@
     <!-- LOGIN -->
     <section id="login_bg" class="visible">
         <div class="container">
-            <div class="row">
+            <div class="row" style="background: url('/back/img/login/5.jpg')">
                 <div class="col-md-4 col-md-offset-4">
                     <div class="login-box">
                         <h2 class="bigintro"> 用户登录</h2>
@@ -35,12 +35,12 @@
                         <div class="divide-40"></div>
                         <form role="form" id="login_form" action="/back/login" method="post">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">用户名</label>
+                                <label for="userName">用户名</label>
                                 <i class="fa fa-envelope"></i>
                                 <input type="text" class="form-control" id="userName" name="userName">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">密码</label>
+                                <label for="password">密码</label>
                                 <i class="fa fa-lock"></i>
                                 <input type="password" class="form-control" id="password" name="password">
                             </div>
