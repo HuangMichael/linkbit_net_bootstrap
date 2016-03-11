@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -35,23 +36,37 @@ public class BackLoginController extends BaseController {
     @Autowired
     UserRepository userRepository;
 
+    /**
+     * 登录验证
+     */
+
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String index(@RequestParam("userName") String userName, @RequestParam("password") String password, ModelMap modelMap) {
+    public ModelAndView index(@RequestParam("userName") String userName, @RequestParam("password") String password, ModelMap modelMap) {
         List<Menu> backMenusList = menuRepository.findByMenuType("1");
-        User user = userRepository.findByUserNameAndPassword(userName, MD5Util.md5(password));
+        User user = userRepository.findByUserNameAndPasswordAndStatus(userName, MD5Util.md5(password), "1");
         String url = "/back/login/index";
+        ModelAndView modelAndView = new ModelAndView();
         if (null != user) {
             modelMap.put("backMenusList", backMenusList);
             modelMap.put("user", user);
             url = "forward:/back/portal/index";
+            modelAndView.setViewName(url);
+            return modelAndView;
         }
-        return url;
+        modelMap.put("message", "用户名或密码错误!");
+        modelAndView.setViewName(url);
+        return modelAndView;
     }
 
-
+    /**
+     * 退出时 清空用户信息
+     */
     @RequestMapping(value = "/logout", method = {RequestMethod.POST, RequestMethod.GET})
     public String logout(HttpSession session) {
-        session.invalidate();
+        User user = (User) session.getAttribute("user");
+        if (user != null) {
+            session.removeAttribute("user");
+        }
         return "/back/login/index";
     }
 
