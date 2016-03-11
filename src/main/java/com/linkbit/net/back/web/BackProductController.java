@@ -47,6 +47,7 @@ public class BackProductController extends BackBaseController {
 
 
 
+
     /**
      * 产品类型接口
      */
@@ -131,9 +132,10 @@ public class BackProductController extends BackBaseController {
         Product product = productRepository.findById(id);
         Map<String,Product>  map = new HashMap<String, Product>();
         map.put("product",product);
-        HeaderDTO headerDTO = new HeaderDTO();
+        HeaderDTO headerDTO =new HeaderDTO();
         headerDTO.setSystemName("网站后台管理系统");
         headerDTO.setAppName("产品详细信息");
+        headerDTO.setUrlName(this.getIndexUrl());
         modelMap.put("headerDTO",headerDTO);
         ModelAndView mv = new ModelAndView("/back/product/detail",map);
         return mv;
