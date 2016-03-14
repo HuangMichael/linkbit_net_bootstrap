@@ -1,6 +1,7 @@
 package com.linkbit.net.front.domain.news;
 
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public interface NewsRepository extends Repository<News, Long> {
     /**
      * 查询所有的新闻信息
      */
+    @Query("select  n from News n order by n.publishTime desc")
     List<News> findAll();
 
     /**
