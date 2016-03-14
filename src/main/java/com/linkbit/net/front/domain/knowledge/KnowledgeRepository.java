@@ -1,5 +1,6 @@
 package com.linkbit.net.front.domain.knowledge;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 
 import java.util.List;
@@ -12,12 +13,12 @@ public interface KnowledgeRepository extends Repository<Knowledge, Long> {
     /**
      * 查询首页中显示的信息
      */
-
     List<Knowledge> findByShowInMainPage(Boolean showInMainPage);
 
     /**
      * 查询所有的知识库信息
      */
+    @Query("select k  from Knowledge k order by  k.publishTime desc")
     List<Knowledge> findAll();
 
     /**
