@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     <div id="logo">
-                        <a href="#"><img src="/back/img/logo/logo.png" height="40" alt="logo name"/></a>
+                        <a href="javascript:void(0)"><img src="/back/img/logo/logo.png" height="40" alt="logo name"/></a>
                         <%--  <h1>江苏凌比特微电子技术有限公司</h1>--%>
                     </div>
 
@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     <div class="login-box">
-                        <h2 class="bigintro"> 用户登录</h2>
+                        <h2 class="bigintro"> 网站发布系统用户登录</h2>
 
                         <div class="divide-40"></div>
                         <form role="form" id="login_form" action="/back/login" method="post">
