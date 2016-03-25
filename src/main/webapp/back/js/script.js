@@ -2792,6 +2792,7 @@ var App = function () {
             , "/back/img/login/2.jpg"
             , "/back/img/login/3.jpg"
             , "/back/img/login/4.jpg"
+            , "/back/img/login/5.jpg"
         ], {duration: 3000, fade: 750});
     }
     /*-----------------------------------------------------------------------------------*/
