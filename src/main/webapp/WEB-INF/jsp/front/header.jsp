@@ -20,7 +20,7 @@
 
                     <li><a href="/front/product/" data-hover="公司产品">公司产品</a></li>
 
-                    <li><a href="/front/knowledge/" data-hover="关于北斗">关于北斗</a></li>
+                   <li><a href="/front/knowledge/" data-hover="关于北斗">关于北斗</a></li>
 
                     <li><a href="/front/news/" data-hover="行业资讯">行业资讯</a></li>
 

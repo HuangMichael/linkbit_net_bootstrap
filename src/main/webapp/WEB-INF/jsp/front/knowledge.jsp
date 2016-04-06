@@ -1,4 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page pageEncoding="UTF-8" %>
 <jsp:include page="head.jsp" flush="true"/>
 <body>
@@ -6,17 +7,23 @@
 <jsp:include page="header.jsp"/>
 <link rel="stylesheet" href="/front/plugins/jPages-master/css/jPages.css">
 <link rel="stylesheet" href="/front/plugins/jPages-master/css/animate.css">
-<link rel="stylesheet" href="/front/plugins/jPages-master/css/style.css">
-<link rel="stylesheet" href="/front/plugins/jPages-master/css/page.css">
+<%--<link rel="stylesheet" href="/front/plugins/jPages-master/css/style.css">
+<link rel="stylesheet" href="/front/plugins/jPages-master/css/page.css">--%>
 <!-- about-section -->
 <div class="about-section">
     <div class="container">
         <div class="holder"></div>
         <ol id="itemContainer">
-            <c:forEach items="${knowledgeList}" var="k" varStatus=" status" >
+            <c:forEach items="${knowledgeList}" var="knowledge" varStatus=" status" >
                 <li class="list-inline">
-                    <div class="col-md-12 news_title"><a
-                            href="/front/knowledge/detail/${k.id}">${k.title}</a></div>
+                    <div class="details">
+                        <h3 class="style1">${knowledge.title}</h3>
+                        <div class="det_text">
+                            <p class="para1">${knowledge.content}</p>
+                            <p class="para1">发布日期:${knowledge.publishTime}</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
                 </li>
             </c:forEach>
         </ol>

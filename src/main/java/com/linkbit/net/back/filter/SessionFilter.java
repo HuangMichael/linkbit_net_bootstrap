@@ -68,11 +68,10 @@ public class SessionFilter implements javax.servlet.Filter {
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
             // 用户不存在,踢回登录页面
-            String returnUrl = httpRequest.getContextPath() + "/back/logout";
+   /*         String returnUrl = httpRequest.getContextPath() + "/back/logout";
             httpRequest.setCharacterEncoding("UTF-8");
-            httpResponse.setContentType("text/html; charset=UTF-8"); // 转码
             httpResponse.sendRedirect(returnUrl);
-            return;
+            return;*/
         }
 
     }

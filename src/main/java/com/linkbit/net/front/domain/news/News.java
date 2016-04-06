@@ -28,7 +28,7 @@ public  class News {
     private @Getter @Setter String imgUrl;
     @Column(columnDefinition = "LONGTEXT")
     private String newsContent;
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date publishTime;
     private String keywords;
     private String status;

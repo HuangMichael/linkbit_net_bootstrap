@@ -10,9 +10,6 @@
         <div class="main">
             <div class="details">
                 <h3 class="style1">${knowledge.title}</h3>
-               <%-- <div class="det_pic">
-                    <img src="images/gallery3.jpg" class="img-responsive" alt="">
-                </div>--%>
                 <div class="det_text">
                     <p class="para1">${knowledge.content}</p>
                     <p class="para1">发布日期:${knowledge.publishTime}</p>

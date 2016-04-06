@@ -9,7 +9,7 @@
 <div class="about-section">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="sp-wrap">
                     <a href="${product.productImgUrl}">
                         <img src="${product.productImgUrl}" alt="${product.productName}" class="img-responsive img-thumb img-rounded carousel-inner"/>
@@ -22,9 +22,9 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
+                <h1>${product.productName}</h1>
                 <c:forEach items="${product.productCharactorSet}" var="productchar">
-                    <div class="communt">
                            <div class="communt-left">
                                 <div class="col-md-1"></div>
                              </div>
@@ -32,7 +32,7 @@
                             <h4>${productchar.charactorName}:${productchar.charactorDesc}</h4>
                         </div>
                         <div class="clearfix"></div>
-                    </div>
+
                 </c:forEach>
             </div>
             <div class="clearfix"></div>

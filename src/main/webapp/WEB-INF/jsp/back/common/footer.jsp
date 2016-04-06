@@ -15,18 +15,21 @@
 <!-- BLOCK UI -->
 <script type="text/javascript" src="js/jQuery-BlockUI/jquery.blockUI.min.js"></script>
 <!-- DATA TABLES -->
-<script type="text/javascript" src="js/datatables/media/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="js/datatables/media/assets/js/datatables.min.js"></script>
-<script type="text/javascript" src="js/datatables/extras/TableTools/media/js/TableTools.min.js"></script>
+<script type="text/javascript" src="js/datatables/media/js/jquery.dataTables.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/datatables/media/assets/js/datatables.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/datatables/extras/TableTools/media/js/TableTools.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="js/datatables/extras/TableTools/media/js/ZeroClipboard.min.js"></script>
 <!-- COOKIE -->
 <script type="text/javascript" src="js/jQuery-Cookie/jquery.cookie.min.js"></script>
 <script type="text/javascript" src="js/jquery.bootstrap-growl.min.js"></script>
 <!-- CUSTOM SCRIPT -->
-
 <script src="js/DateUtils.js"></script>
-<script type="text/javascript" src="js/backstretch/jquery.backstretch.min.js"></script>
-<script type="text/javascript" src="/back/js/uniform/jquery.uniform.min.js"></script>
+
+<script type="text/javascript" src="js/uniform/jquery.uniform.min.js"></script>
 <script src="js/script.js"></script>
+<script type="text/javascript" src="js/backstretch/jquery.backstretch.min.js"></script>
+
+
+
 
 

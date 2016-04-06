@@ -24,14 +24,13 @@
             <!-- END TODO DROPDOWN -->
             <!-- BEGIN USER LOGIN DROPDOWN -->
             <li class="dropdown user" id="header-user">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
                     <img alt="" src="${user.imgUrl}"/>
                     <span class="username">${user.userName}(${user.personName})</span>
                     <i class="fa fa-angle-down"></i>
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="/back/user/profile/${sessionScope.user.id}"><i class="fa fa-user"></i>个人信息</a></li>
-                    <li><a href="#"><i class="fa fa-cog"></i>修改密码</a></li>
                     <li><a href="/front/index" target="_blank"><i class="fa fa-eye"></i>进入网站</a></li>
                     <li><a href="/back/logout"><i class="fa fa-power-off"></i>退出登录</a></li>
                 </ul>

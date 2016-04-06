@@ -49,7 +49,7 @@ public class BackLoginController extends BaseController {
         if (null != user) {
             modelMap.put("backMenusList", backMenusList);
             modelMap.put("user", user);
-            url = "forward:/back/portal/index";
+            url = "redirect:/back/portal/index";
             modelAndView.setViewName(url);
             return modelAndView;
         }
@@ -61,12 +61,21 @@ public class BackLoginController extends BaseController {
     /**
      * 退出时 清空用户信息
      */
-    @RequestMapping(value = "/logout", method = {RequestMethod.POST, RequestMethod.GET})
+    @RequestMapping(value = "/logout", method = { RequestMethod.GET})
     public String logout(HttpSession session) {
         User user = (User) session.getAttribute("user");
         if (user != null) {
             session.removeAttribute("user");
         }
+        return "/back/login/index";
+    }
+
+
+    /**
+     * 退出时 清空用户信息
+     */
+    @RequestMapping(value = "/index", method = {RequestMethod.POST, RequestMethod.GET})
+    public String index() {
         return "/back/login/index";
     }
 

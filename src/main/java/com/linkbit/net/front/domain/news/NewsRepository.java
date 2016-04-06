@@ -14,7 +14,7 @@ public interface NewsRepository extends Repository<News, Long> {
     /**
      * 查询所有的新闻信息
      */
-    @Query("select  n from News n order by n.publishTime desc")
+    @Query("select  n from News n order by n.publishTime desc,id desc")
     List<News> findAll();
 
     /**
