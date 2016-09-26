@@ -87,7 +87,7 @@ public class LoginController extends BaseController {
         modelAndView.setViewName("/front/index");
         modelAndView.addObject("latestProductList", latestProductList);
         modelAndView.addObject("latestKnowledgeList", latestKnowledgeList);
-        modelAndView.addObject("customerList", customerList);
+        //modelAndView.addObject("customerList", customerList);
         modelAndView.addObject("company", company);
         return modelAndView;
     }

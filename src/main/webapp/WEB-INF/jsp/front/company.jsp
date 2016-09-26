@@ -39,23 +39,7 @@
 <script src="/front/plugins/jPages-master/js/jPages.js"></script>
 <!-- footer -->
 <jsp:include page="footer.jsp"/>
-<script>
-    /* when document is ready */
-    $(function () {
-        var perPage = 4;
-        var animation = getRandomAnimation();
-        $("div.holder").jPages({
-            containerID: "itemContainer",
-            animation: animation,
-            perPage: perPage
-        });
-        $("div.holder").jPages("destroy").jPages({
-            containerID: "itemContainer",
-            animation: animation,
-            perPage: perPage
-        });
-    });
-</script>
+
 <!-- footer -->
 </body>
 </html>
